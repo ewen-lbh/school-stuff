@@ -1,0 +1,9 @@
+--ask-for keys
+--ask-sentence <> ?
+--title Français: Caractéristiques des textes
+
+Gargantua: Mvlitt
+Humanisme
+
+Mme Bovary: Mvlitt
+Réalisme

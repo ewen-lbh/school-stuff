@@ -1,0 +1,18 @@
+--ask-sentence Quelle est l'équation de <> ?
+--ask-order random
+--title Maths: Suites
+--show-items-count
+
+Suites arithmétiques: Forme récursive
+U_(n+1)=U_n+r
+
+Suites arithmétiques: Forme fonctionnelle
+U_n=U_0+rn
+
+Suites géométriques: Forme récursive
+U_(n+1)=U_n*q
+
+Suites géométriques: Forme fonctionnelle
+U_n=U_0*q^n
+
+

@@ -1,0 +1,41 @@
+--show-items-count
+--ask-order random
+--or-syntax or
+--blacklist [x^n]
+--title Maths: Dérivées, tangeantes
+
+x^n
+nx^(n-1)
+
+1/x
+-1/x^2
+
+sqrt(x)
+1/2*sqrt(x)
+
+(u*v)'
+u'v+v'u
+
+(1/v)'
+v'/v^2
+
+(v/u)'
+v'u+u'v/v^2
+
+(k*u)'
+k*u'
+
+(u+v)'
+u'+v'
+
+T:y
+f'(a)(x-a)+f(a)
+
+u.v
+||u||*||v||*cos(u;v) or xx'+yy'
+
+u ortho v
+u.v=0
+
+u(a;b) normal à f
+ax+by+c=0

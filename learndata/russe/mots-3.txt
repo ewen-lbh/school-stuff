@@ -1,0 +1,270 @@
+--blacklist [fête, parents, ciseau, parce que, chaussette, après, rivière, couteau, vendre, nouveau, trousse, manteau, boire, dessiner, place, boisson, il faut, stylo, mémoire, peuple, réponse, par exemple, bouche, comprendre, copine, île, père, chanteuse, lac, chemin/voie, passer l'aspirateur, fois/jour, recherche, commencer, travailler, esclave, bras, inviter, lettre, après qqch/qqn, avoir besoin, octobre, chanson, simple, se reposer, informations/nouvelles, vêtement, automne, être contre, pourquoi, avant, météo, être content, chanter, mauvais, poste, répéter, minuit, déjeuner, ciel, très bien]
+--show-items-count
+--show-remaining-items-count
+--title Russe: Vocabulaire #2 (173-260)
+--auto-blacklist
+--ask-for keys
+--ask-for-typos
+--preset languages
+
+couteau
+нож
+
+ciseau
+ножницы
+
+ciel
+небо
+
+boisson
+напток
+
+par exemple
+например
+
+informations/nouvelles
+новости
+
+chaussette
+носок
+
+peuple
+народ
+
+il faut
+надо
+
+avoir besoin
+нужно
+
+semaine
+неделя
+
+# porter le titre
+# навквается
+se trouver
+находитса
+
+commencer
+начать
+
+nouveau
+новы
+
+lunettes
+очки
+
+attention
+осторожно
+
+automne
+осен
+
+octobre
+октябр
+
+réponse
+ответ
+
+île
+остров
+
+très bien
+холошо
+
+habitude
+обачно
+
+vêtement
+одежда
+
+# chaussure
+# башмак
+père
+отеш
+
+lac
+озеров
+
+fois/jour
+раз
+
+se reposer
+отдехать
+
+déjeuner
+обедать
+
+répondre
+отвичать
+
+copine
+подруза
+
+abeille
+пчела
+
+mauvais
+плохой
+
+poste
+почта
+
+lettre
+писмо
+
+chanson
+песня
+
+chanteuse
+певица
+
+trousse
+пенал
+
+après qqch/qqn
+после
+
+chemin/voie
+путь
+
+recherche
+поиск
+
+manteau
+полто
+
+être contre
+против
+
+minuit
+полноч
+
+place
+плошад
+
+après
+после
+
+vendredi
+петница
+
+pourquoi
+почему
+
+parce que
+потому что
+
+vérité
+правда
+
+météo
+погода
+
+# fourniture scolaire
+# продш
+simple
+прост
+
+robe
+пчате
+
+nature
+припода
+
+avant-hier
+позавчеда
+
+récré/changement
+перерыв
+
+fête
+праздник
+
+émission
+передача
+
+mémoire
+память
+
+comprendre
+понимать
+
+vendre
+продать
+
+montrer
+показивать
+
+acheter
+покупаеть
+
+boire
+пить
+
+chanter
+петь
+
+passer l'aspirateur
+пылесость
+
+# aider
+# подсказа
+répéter
+повторять
+
+se souvenir
+помнить
+
+écrire
+посать
+
+perdre
+потерять
+
+inviter
+пригласить
+
+demander de faire qqch
+прошть
+
+arriver
+приходить
+
+# faire des boutiques
+# ходить по магаи
+# цех
+avant
+ранше
+
+rivière
+река
+
+stylo
+ручка
+
+bras
+рика
+
+bouche
+рот
+
+être content
+рад
+
+esclave
+# ↓ pas sûr
+раб
+
+parents
+родотели
+
+travailler
+работать
+
+décider
+решить
+
+dessiner
+писсовать
+

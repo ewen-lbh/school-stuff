@@ -1,0 +1,124 @@
+﻿--case-sensitive
+--ask-sentence <>...
+--show-items-count
+--title Physique: Ions
+
+1ere colonne
+alcalins (sauf H)
+
+1ere col types d'ions
+X+
+
+1ere col atomes
+Li, Na, K
+
+2e col atomes
+Be, Mg, Ca
+
+16e col atomes
+O, S, Se
+
+17e col atomes
+F, Cl, Br, I
+
+2e colonne
+alcalins terreux
+
+2e col types d'ions
+X2+
+
+16e colonne
+chalogènes
+
+16e col types d'ions
+X2-
+
+17e colonne
+halogènes
+
+17e col types d'ions
+X-
+
+argent
+Ag+
+
+cuivre II
+Cu2+
+
+cuivre III
+Cu3+
+
+zinc II
+Zn2+
+
+manganèse
+Mn2+
+
+plomb II
+Pb2+
+
+Fer II
+Fe2+
+
+Fer III
+Fe3+
+
+aluminium
+Al3+
+
+hydrogène
+H+ ou le proton
+
+hydroxyde
+HO-
+
+nitrate
+NO_3^-
+
+sulfate
+SO_4^2-
+
+CO_3^2-
+carbonate
+
+phosphate
+PO_4^3-
+
+permanganate
+MnO_4^-
+
+dichromate
+Cr_2O_7^2-
+
+thiosulfate
+S_2O_3^2-
+
+éthanoate
+CH_3COO^-
+
+oxonium
+H_3O^+
+
+ammonium
+NH_4^+
+
+tétrahèdrique
+4l
+
+pyramidal
+3l 1nl
+
+linéaire
+2dl 2nl
+
+plane coudée
+2l 2nl
+
+triangulaire
+2l 1dl
+
+étapes dissolution
+dissociation, solvatation, dispersion
+
+liaisons hydrogène
+entre O & H et F & N
