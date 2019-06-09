@@ -191,10 +191,73 @@ Mélange des genres → création du drame
 Absence d'histoire, manque de continuité dans les actions
 
 ## Auteurs
+*&Delta; GENRE = Chef de file ou inventeur de GENRE*
 ### Albert Camus
+Période
+    : XXIe ?
+
+Mouvement(s)
+    : Surréalisme
+
+Genres
+    : Roman, nouvelle, essai, théâtre
+
+Oeuvres principales
+    : L'Étranger — Roman
+    : La Peste — Roman
+    : Les Justes — Pièce de théâtre
+
+- Fortement marqué par les deux guerres mondiales (il a vécu les 2)
+
 ### Voltaire
+
+Période
+    : XVIII e
+
+Mouvement
+    : Lumières
+
+Genres
+    : &Delta; Conte philosophique, théâtre, poésie
+
+Oeuvres principales
+    : Candide ou l'optimisme &mdash; Roman ?
+    : Zadig ou la destinée &mdash; Conte philosophique
+
+- Contre l'église mais croît en dieu
+- Esprit "rebelle", se fait expulser plusieurs fois de plusieurs pays pour ses pensées
+
+
 ### Edmond Rostand
-### Philippe Delerme
+Période
+    : XIXe
+
+Mouvement
+    : Surréalisme, néoromantisme
+
+Genres
+    : Théâtre, essai, roman, 
+
+- Né à marseille
+- Écrit un essai sur Émile Zola
+- Surtout connu pour son œuvre <u>Cyrano de Bergerac</u>, pas du tout pour le reste
+
+### Philippe Delerm
+Genres
+    : Roman, poésie, nouvelles
+
+Période
+    : XXIe
+
+Mouvement
+    : ?
+
+Oeuvres principales
+    : Autumn &mdash; Roman
+    : Sundborn ou les Jours de Lumières &mdash; Roman
+    : La Première Gorgée de bière et autres plaisirs minuscules &mdash; Recueil de poèmes
+
+- Surtout connu pour son recueil de poèmes <u>La Première Gorgée de bière et autres plaisirs minuscules</u>
 
 ______
 # OIs & LAs
