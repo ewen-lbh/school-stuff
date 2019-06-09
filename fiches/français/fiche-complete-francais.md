@@ -298,13 +298,14 @@ ______
 
 ______
 # Méthodologies
+## Commentaire / Corpus
 <u>Souligné</u> $=$ commentaire littéraire seulement
-## Trouver un plan
+### Trouver un plan
 4-6 Centres d'intérêt
     ↳­ <u>Sous-parties</u>
         ↳ Parties
             ↳ Problématique
-## Plan
+### Plan
 - Introduction
   - Phrase d'accroche: défintion courte du genre/sous-genre
   - Présentation(s) de(s) l'oeuvre(s)
@@ -324,6 +325,44 @@ ______
   - Réponse à la problématique
   - Ouverture
 
+## Dissertation
+### Préparation
+Repérer:
+- Opinion de l'auteur
+- Thème
+- Verbe de la consigne
+
+### Types de plans
+Dialectique *discussion de point de vue*
+- Thèse 
+- Antithèse *ne pas se contredire*
+- Synthèse *donner son propre avis*
+
+Analytique *étude de citations longue*
+- Constant
+- Causes
+- Conséquences
+
+Thématique
+- Aspect 1
+- Aspect 2
+- (Aspect 3)
+
+### Plan
+- Intro *situer dans le contexte*
+- Reprise du sujet 
+  - citation → «citation»
+  - question → reformuler
+- Problématique *poser <u>sa</u> problématique*
+- Annonce du plan *simple*
+
+*Pour chaque partie*
+alinéa Annonce de la partie
+alinéa connecteur argument exemple exemple
+alinéa connecteur argument exemple exemple
+alinéa Conclusion partielle
+
+## Par objet d'étude
 ### Roman
 #### Quoi étudier
 #### Phrases d'accroche
