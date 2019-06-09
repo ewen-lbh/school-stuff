@@ -1,4 +1,3 @@
-______
 # Ce qu'il faut connaître
 ## Cours
 - [Procédés](#proc%C3%A9d%C3%A9s)
@@ -26,7 +25,7 @@ ______
 $$\int_{-\infty}^{+\infty} E\omega \varepsilon \eta \; \Gamma e \; \beta ih\alpha n \;\;$$
 ______
 # Cours
-ewen.lebihan7@gmail.com## Procédés
+## Procédés
 ### Figures de style
 | Nom                          | Description                                                                      | Exemple                                                     | Interprétation                                           |
 | :--------------------------- | :------------------------------------------------------------------------------- | :---------------------------------------------------------- | :------------------------------------------------------- |
