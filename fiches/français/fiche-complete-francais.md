@@ -85,6 +85,7 @@ Le roman est un genre caractérisé par la diversité de ses formes et la profon
 | Lettre   |                                                                                     |                  |
 #### Genres indirects
 Tous sont des sous-genres de l'*apologue* (Court récit allégorique à visée didactique)
+
 | Nom                 | Définition                                                                                              | Exemple d'oeuvre                 |
 | :------------------ | :------------------------------------------------------------------------------------------------------ | :------------------------------- |
 | Conte               |                                                                                                         |                                  |
