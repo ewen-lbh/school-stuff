@@ -7,7 +7,7 @@
 - [Valeurs des modes](#valeurs-des-modes)
 
 ## Histoire littéraire
-- [Mouvements historiques & culturels](#mouvements)
+- [Mouvements historiques & culturels](#%C3%A9volution-des-genres)
 - [Auteurs](#auteurs)
 
 ## OIs & LAs
@@ -23,27 +23,27 @@
 - [Question de l'oral](#oral)
 
 $$\int_{-\infty}^{+\infty} E\omega \varepsilon \eta \; \Gamma e \; \beta ih\alpha n \;\;$$
-______
+**********
 # Cours
 ## Procédés
 ### Figures de style
-| Nom                          | Description                                                                      | Exemple                                                     | Interprétation                                           |
-| :--------------------------- | :------------------------------------------------------------------------------- | :---------------------------------------------------------- | :------------------------------------------------------- |
-| Accumulation                 | **Enumeration** non-ordonnée qui ne semble pas se terminer                       |                                                             |                                                          |
-| Allégorie                    | Représenter un concept abstrait par une personne                                 |                                                             |                                                          |
-| Anaphore                     | **Répétition** d'un ou plusieurs mots au début de qqch                           | _Je suis_ con, _Je suis_ pas connu, _Je suis_ prêt à mourir |                                                          |
-| Antithèse                    | Rapprochement de motd de sens opposés dans un même phrase, strophe ou paragraphe |                                                             |                                                          |
-| Chiasme                      | Structure ABBA                                                                   |                                                             | Structure fermée → représente très souvent l'enfermement |
-| Comparaison                  | Comparaison entre 2 identités avec mot-outil                                     | *Tel* un oiseau, il s'écrasa sur le sol                     |                                                          |
-| Enumération                  | Liste de plusieurs mots similaire                                                |                                                             |                                                          |
-| Gradation                    | **Enumeration** de termes croissants ou décroissants                             |                                                             |                                                          |
-| Hyperbole                    | Exagération                                                                      |                                                             |                                                          |
-| Métaphore                    | **Comparaison** sans mot de comparaison                                          |                                                             |                                                          |
-| Métonymie                    | Remplacer un mot par un autre qui est proche (mais pas un synonyme)              |                                                             |                                                          |
-| Oxymore                      | Juxtaposition de 2 mots opposés                                                  |                                                             |                                                          |
-| Parallélisme de construction | Structure ABAB                                                                   |                                                             |                                                          |
-| Personnification             | Donner à un objet ou être vivant des caractéristiques humaines                   |                                                             |                                                          |
-| Périphrase                   | Groupe de mots utilisé pour désigner indirectement quelque chose                 |                                                             | Toujours regarder si elle est méliorative ou péjorative  |
+| Nom                          | Description                                                                      | Exemple                                 | Interprétation                                           |
+| :--------------------------- | :------------------------------------------------------------------------------- | :-------------------------------------- | :------------------------------------------------------- |
+| Accumulation                 | **Enumeration** non-ordonnée qui ne semble pas se terminer                       |                                         |                                                          |
+| Allégorie                    | Représenter un concept abstrait par une personne                                 |                                         |                                                          |
+| Anaphore                     | **Répétition** d'un ou plusieurs mots au début de qqch                           |                                         |                                                          |
+| Antithèse                    | Rapprochement de motd de sens opposés dans un même phrase, strophe ou paragraphe |                                         |                                                          |
+| Chiasme                      | Structure ABBA                                                                   |                                         | Structure fermée → représente très souvent l'enfermement |
+| Comparaison                  | Comparaison entre 2 identités avec mot-outil                                     | *Tel* un oiseau, il s'écrasa sur le sol |                                                          |
+| Enumération                  | Liste de plusieurs mots similaire                                                |                                         |                                                          |
+| Gradation                    | **Enumeration** de termes croissants ou décroissants                             |                                         |                                                          |
+| Hyperbole                    | Exagération                                                                      |                                         |                                                          |
+| Métaphore                    | **Comparaison** sans mot de comparaison                                          |                                         |                                                          |
+| Métonymie                    | Remplacer un mot par un autre qui est proche (mais pas un synonyme)              |                                         |                                                          |
+| Oxymore                      | Juxtaposition de 2 mots opposés                                                  |                                         |                                                          |
+| Parallélisme de construction | Structure ABAB                                                                   |                                         |                                                          |
+| Personnification             | Donner à un objet ou être vivant des caractéristiques humaines                   |                                         |                                                          |
+| Périphrase                   | Groupe de mots utilisé pour désigner indirectement quelque chose                 |                                         | Toujours regarder si elle est méliorative ou péjorative  |
 
 ### Autres
 | Nom               | Description / Valeurs                                       | Exemple | Interprétation     |
@@ -133,11 +133,42 @@ Gérondif & participe
 
 
 
-______
+********
+
 # Histoire littéraire
-## Mouvements
+## Évolution des genres
+### Antiquité
+#### Roman: mythologie & héroïsme
+ 
+Oeuvres
+    : Homère: __L'Odyssée__
+    : Virgile: __L'Énéide__
+### Moyen-Âge
+#### Roman: chevalerie
+
+- Guerriers
+- Amoureux
+- Fantastique
+
+Oeuvres
+    : __Lancelot du Lac__
+    : __La quête du Graal__
+
 ### XVI: Renaissance
-#### Humanisme
+#### Roman: satyre
+- Utilise la parodie
+
+Oeuvres
+    : François Rabelais: __Gargantua__
+    : François Rabelais: __Pantagruel__
+
+
+#### Argumentation
+##### Humanisme
+
+Domaines d'application
+    : Littérature
+    : ?
 
 Met la fin à l'obscurantisme médiéval
 Pour la 1ère fois l'homme est au centre. 
@@ -151,15 +182,67 @@ Causé par:
 Se termine à cause de:
 - Guerre protestants $\harr$ catholiques (perte de foi en l'humanité)
 - Pouvoir absolu de Louis 14 (censure)
+#### Théâtre
+#### Poésie
+
+
+##### Pléiade
+
 
 ### XVII: Classicisme
-#### Théâtre classique
+#### Roman: profondeur du pers. & réalisme
+- narr externe → narr interne
+- psychologie
+- merveilleux → vraisemblable
+- nouvelles tech (récits enchâssés,...)
+
+Oeuvres
+    : Madame de la Fayette: __?__
+
+
+#### Argumentation
+#### Théâtre
+##### Théâtre classique
+Domaines d'application
+    : Théâtre
+
 Durant le règne de Louis XIV. 
 Règles de Nicolas Boileau: 3 unités, bienséance, vraisemblance 
 Pas de mélanges de genre, comique *ou* tragique 
+#### Poésie
+##### Baroque
+Domaines d'application
+    : Peinture
+    : Poésie
+
+barocco = pierre précieuse mal taillée
+- richesse, langue recherchée
+- montre la fragilité de l'homme
+
+*Dans les tableaux baroques*
+- objets & matières riches
+- homme partagé entre mal (diable) & bien (anges)
+
 
 ### XVIII: Siècle des Lumières
-#### Les Lumières
+#### Roman: Diversification des formes
+- Roman épistolaire
+    - ?: __Liaison dangereuses__
+    - Montesqieu: __Lettres Persannes__
+- Récits mémoriaux
+    - (Chrétien de Troye)?: __Paul & Virginie__
+    - (Chrétien de Troye)?: __Manon Lescault__
+- Entretien & dialogue
+    - ?: Jacques le Fataliste
+    - ?: Entretien d'un père avec ses enfants
+
+#### Argumentation
+##### Les Lumières
+
+Domaines d'application
+    : Théâtre
+    : Littérature
+    : ?
 
 Met fin à l'obscurantisme religieux
 Reprend les idées de l'humanisme 
@@ -180,16 +263,102 @@ Ils sont pour:
 - monarchie consitutionnelle (et non d'ordre divin)
 
 **Au théâtre:** Dimension sociale, théâtre ⇒ moyen de dénoncer
+#### Théâtre
+##### Les Lumières
+Voir [Les Lumières](#les-lumi%C3%A8res)
+#### Poésie
 
 ### XIX: Romantisme
-#### Drame romantique
+#### Roman: Âge d'or
+- ↗️ populaire
+  - Imprimerie
+  - Journaux 
+  - ↘️ prix
+  - Épisodes de roman
+  - Alphabétisation
+- Illusion du vrai
+  - eg. ?: __Ceci n'est pas une pipe__
+- Créer l'archive du roman
+
+Oeuvres
+    : Balzac: __La comédie humaine__
+    : Zola: __Rougon-Macquart__
+Citations
+    : Stendhal: «Un roman est un miroir que l'on promène le long du chemin»
+    : Balzac: «Je suis un historien des moeurs»
+
+#### Argumentation
+#### Théâtre
+##### Drame romantique
+
+Domaines d'application
+    : Théâtre
 
 ~~Règles de Boileau~~
 Mélange des genres → création du drame
+#### Poésie
+##### Romantisme
+Domaines d'application
+    : Poésie
+    : Littérature ?
+    : ?
 
-### XX:
-#### Théâtre de l'absurde
+~~Contraintes de la poésie classique~~
+- Disharmonie mètre/syntaxe (enjambements, rejets, contre-rejets)
+- Lyrisme du "je" 
+  - Sentiments personnels & intimes
+  - Épreuves amoureuses
+
+##### Parnasse
+Domaines d'application
+    : Poésie
+
+- réaction aux excès de lyrisme du romantisme
+- «l'art pour l'art» : pas d'utilité
+
+##### Symbolisme
+
+Domaines d'application
+    : Poésie
+
+- réaction au mouvement parnassien
+- mélange idée abstraite & concrète
+- mystère et intuition du poète
+  - lecteur invité à déchiffrer le sens du poème
+
+
+### XX: ?
+#### Roman: Eclatement du genre
+- Refus de:
+  - Contrôle imposé par construction narr
+  - Formes traditionnelles 
+- Innovation
+    - Construction non linéaire
+    - narr → polyphonie
+    - Langage proche de l'oral
+
+Oeuvres
+    : Michel Butor: __La modification__
+    : Albert Camu: __La perte__
+
+##### Nouveau roman
+Domaines d'application
+    : Littérature (roman)
+#### Argumentation
+#### Théâtre
+##### Théâtre de l'absurde
 Absence d'histoire, manque de continuité dans les actions
+#### Poésie
+
+##### Surréalisme
+Domaines d'application
+    : Poésie
+    : ?
+
+- Nouveau regard sur les objets & les mots
+- (libération de l'esprit)?
+- désirs profonds sublimés
+
 
 ## Auteurs
 *&Delta; GENRE = Chef de file ou inventeur de GENRE*
@@ -260,7 +429,7 @@ Oeuvres principales
 
 - Surtout connu pour son recueil de poèmes <u>La Première Gorgée de bière et autres plaisirs minuscules</u>
 
-______
+**********
 # OIs & LAs
 ## Tableaux synoptiques
 ### Roman
@@ -285,18 +454,18 @@ ______
 |     **Genre** | Roman                                                                                                            | Les 2                                                                                                                                         | Les 2                                                                 | Convaincre                                                                                                                                                                                                                                                                       |
 |  **Registre** | Familier                                                                                                         | Soutenu                                                                                                                                       | Courant                                                               | Courant, soutenu                                                                                                                                                                                                                                                                 |
 |  **Procédés** | Imparfait d'habitude, CCT ⇒ vie tj la m̂                                                                         | Vers hétérométriques ⇒ vivacité                                                                                                               | ?                                                                     | Alterne 1<sup>ère</sup> pers du singulier / pluriel <br> "on" indéfini ⇒ S'addresse à tout le monde <br> Impératifs <br> Verbes pronominaux <br> Opposition "bonheur"/"malheur" <br> Connecteurs logiques ⇒ réflexion structurée <br> présent d'énonciation "je dis" ⇒ certitude |
-| **Questions** | En quoi le système proposé est-il une utopie ? <br> Pourquoi cette abbaye représente-t-elle l'esprit humaniste ? | Dans quelle mesure l'opposition entre les personnages illustre-t-elle 2 philosophies ? <br> Qu'est-ce qui fait l'efficacité de cet apologue ? | En quoi le bonheur de Candide représente-t-il l'esprit des Lumières ? | Qu'est-ce qui fait l'efficacité de ce discours ? <br> En quoi la démarche de Mme du Châtelet représente-t-elle l'esprit des Lumières ?
+| **Questions** | En quoi le système proposé est-il une utopie ? <br> Pourquoi cette abbaye représente-t-elle l'esprit humaniste ? | Dans quelle mesure l'opposition entre les personnages illustre-t-elle 2 philosophies ? <br> Qu'est-ce qui fait l'efficacité de cet apologue ? | En quoi le bonheur de Candide représente-t-il l'esprit des Lumières ? | Qu'est-ce qui fait l'efficacité de ce discours ? <br> En quoi la démarche de Mme du Châtelet représente-t-elle l'esprit des Lumières ?                                                                                                                                           |
 #### Zadig ou la destinée
 
 ### Théâtre
 ### Poésie
 
-______
+**********
 # Complémentaires
 ## Activités
 ## Textes
 
-______
+**********
 # Méthodologies
 ## Commentaire / Corpus
 <u>Souligné</u> $=$ commentaire littéraire seulement
@@ -366,7 +535,7 @@ alinéa Conclusion partielle
 ### Roman
 #### Quoi étudier
 #### Phrases d'accroche
-Le roman se caractérise par la diversité de ses formes et la profondeur de son imaginaire
+Le roman se caractérise par la diversité des formes, de ses sujets abordés et par la profondeur de son imaginaire
 
 ### Argumentation
 #### Quoi étudier
