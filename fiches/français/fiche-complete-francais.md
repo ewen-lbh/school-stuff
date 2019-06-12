@@ -1,65 +1,66 @@
-# Ce qu'il faut connaître
-## Cours
-- [Procédés](#proc%C3%A9d%C3%A9s)
-- [Narrateur](#narrateur)
-- [Types & fonctions de la description](#)
-- [Genres & sous-genres](#genres--sous-genres)
-- [Valeurs des modes](#valeurs-des-modes)
+---
+author: Ewen Le Bihan
+title: Fiche complète pour le bac de français
+numbersections: True
+---
 
-## Histoire littéraire
-- [Mouvements historiques & culturels](#%C3%A9volution-des-genres)
-- [Auteurs](#auteurs)
+<center><h1 style='margin-bottom:-5px;'>Fiche complète pour le bac de français</h1>Ewen Le Bihan</center>
 
-## OIs & LAs
-- [Tableaux synoptiques](#tableaux-synoptiques)
 
-## Complémentaires
-- [Prise de notes des activités](#activit%C3%A9s)
-- [Concl de LAs des textes complémentaires](#compl%C3%A9mentaires)
+****************************************
 
-## Méthodologies
-- [Corpus](#corpus)
-- [Commentaire litéraire](#commentaire)
-- [Question de l'oral](#oral)
 
-$$\int_{-\infty}^{+\infty} E\omega \varepsilon \eta \; \Gamma e \; \beta ih\alpha n \;\;$$
-**********
 # Cours
 ## Procédés
 ### Figures de style
-| Nom                          | Description                                                                      | Exemple                                 | Interprétation                                           |
-| :--------------------------- | :------------------------------------------------------------------------------- | :-------------------------------------- | :------------------------------------------------------- |
-| Accumulation                 | **Enumeration** non-ordonnée qui ne semble pas se terminer                       |                                         |                                                          |
-| Allégorie                    | Représenter un concept abstrait par une personne                                 |                                         |                                                          |
-| Anaphore                     | **Répétition** d'un ou plusieurs mots au début de qqch                           |                                         |                                                          |
-| Antithèse                    | Rapprochement de motd de sens opposés dans un même phrase, strophe ou paragraphe |                                         |                                                          |
-| Chiasme                      | Structure ABBA                                                                   |                                         | Structure fermée → représente très souvent l'enfermement |
-| Comparaison                  | Comparaison entre 2 identités avec mot-outil                                     | *Tel* un oiseau, il s'écrasa sur le sol |                                                          |
-| Enumération                  | Liste de plusieurs mots similaire                                                |                                         |                                                          |
-| Gradation                    | **Enumeration** de termes croissants ou décroissants                             |                                         |                                                          |
-| Hyperbole                    | Exagération                                                                      |                                         |                                                          |
-| Métaphore                    | **Comparaison** sans mot de comparaison                                          |                                         |                                                          |
-| Métonymie                    | Remplacer un mot par un autre qui est proche (mais pas un synonyme)              |                                         |                                                          |
-| Oxymore                      | Juxtaposition de 2 mots opposés                                                  |                                         |                                                          |
-| Parallélisme de construction | Structure ABAB                                                                   |                                         |                                                          |
-| Personnification             | Donner à un objet ou être vivant des caractéristiques humaines                   |                                         |                                                          |
-| Périphrase                   | Groupe de mots utilisé pour désigner indirectement quelque chose                 |                                         | Toujours regarder si elle est méliorative ou péjorative  |
+|                          Nom | Description                                                                      | Notes                                                    |
+|-----------------------------:|----------------------------------------------------------------------------------|----------------------------------------------------------|
+|                 Accumulation | **Enumeration** non-ordonnée qui ne semble pas se terminer                       |                                                          |
+|                    Allégorie | Représenter un concept abstrait par une personne                                 |                                                          |
+|                     Anaphore | **Répétition** d'un ou plusieurs mots au début de qqch                           |                                                          |
+|                    Antithèse | Rapprochement de motd de sens opposés dans un même phrase, strophe ou paragraphe |                                                          |
+|                      Chiasme | Structure ABBA                                                                   | Structure fermée -> représente très souvent l'enfermement |
+|                  Comparaison | Comparaison entre 2 identités avec mot-outil                                     |                                                          |
+|                  Enumération | Liste de plusieurs mots similaire                                                |                                                          |
+|                    Gradation | **Enumeration** de termes croissants ou décroissants                             |                                                          |
+|                    Hyperbole | Exagération                                                                      |                                                          |
+|                    Métaphore | **Comparaison** sans mot de comparaison                                          |                                                          |
+|                    Métonymie | Remplacer un mot par un autre qui est proche (mais pas un synonyme)              |                                                          |
+|                      Oxymore | Juxtaposition de 2 mots opposés                                                  |                                                          |
+| Parallélisme de construction | Structure ABAB                                                                   |                                                          |
+|             Personnification | Donner à un objet ou être vivant des caractéristiques humaines                   |                                                          |
+|                   Périphrase | Groupe de mots utilisé pour désigner indirectement quelque chose                 | Toujours regarder si elle est méliorative ou péjorative  |
 
 ### Autres
-| Nom               | Description / Valeurs                                       | Exemple | Interprétation     |
-| :---------------- | :---------------------------------------------------------- | :------ | :----------------- |
-| Analepse/Prolepse | Passage dans le passé ou dans le futur                      |         |                    |
-| Champ lexical     | Ensemble de mots que l'on peut regrouper sous un même thème |         | Trouver les thèmes |
-| Niveau de langue  | Soutenu, courant ou familier                                |         |                    |
-| Registre          | Lyrique, ...                                                |         |                    |
-| Rythme            |                                                             |         |                    |
+| Nom               | Description / Valeurs                                       | Notes                     |
+|-------------------|-------------------------------------------------------------|---------------------------|
+| Analepse/Prolepse | Passage dans le passé ou dans le futur                      |                           |
+| Champ lexical     | Ensemble de mots que l'on peut regrouper sous un même thème | Sert à trouver les thèmes |
+| Niveau de langue  | Soutenu, courant ou familier                                |                           |
+| Registre          | Lyrique, ...                                                |                           |
+| Rythme            |                                                             |                           |
+| Temps des verbes  |                                                             |                           |
+| Énonciation       |                                                             |                           |
 
 ## Narrateur
-Point de vue        
-    : Extradiégétique: "il" ou intradiégétique: "je"
+**Point de vue** qui voit
+- Interne
+  - sensations
+  - sentiments
+  - vocabulaire appréciatif
+  - DIL
+- Externe
+  - témoin
+- Omniscient
+  - En sait plus que le personnage
+  - Connait le passé (=analepses), le futur (=prolepses) et le présent
 
-Statut
-    : Interne, externe, omniscient
+**Statut** qui raconte, ne change jamais (sauf dans un récit enchasssé)
+- Extradiégétique
+  - "Il"
+- Intradiégétique
+  - "Je"
+
 
 **ATTENTION** Dans les genres d'argumentation directs, on parle d'élocuteur et *pas* de narrateur
 
@@ -69,7 +70,7 @@ Dans les définition: en **gras** ce qui sert pour faire un plan à partir de la
 Le roman est un genre caractérisé par la diversité de ses formes et la profondeur de son imaginaire.
 
 | Nom                   | Définition                                                        | Exemple d'oeuvre                   |
-| :-------------------- | :---------------------------------------------------------------- | :--------------------------------- |
+|-----------------------|-------------------------------------------------------------------|------------------------------------|
 | Nouvelle              | Récit court se limitant sur le nombre de personnages et d'épopées |                                    |
 | Roman d'apprentissage | Roman au cours duquel le héros apprend et progresse               | Voltaire: _Candide ou l'optimisme_ |
 | Roman épistolaire     | Roman écrit sous forme de dialogues par lettres                   | Montesquieu: _Lettres Persannes_   |
@@ -77,7 +78,7 @@ Le roman est un genre caractérisé par la diversité de ses formes et la profon
 ### Argumentation
 #### Genres directs
 | Nom      | Définition                                                                          | Exemple d'oeuvre |
-| :------- | :---------------------------------------------------------------------------------- | :--------------- |
+|----------|-------------------------------------------------------------------------------------|------------------|
 | Article  |                                                                                     |                  |
 | Dialogue |                                                                                     |                  |
 | Discours | Texte argumentatif subjectif prononcé à l'oral                                      |                  |
@@ -87,7 +88,7 @@ Le roman est un genre caractérisé par la diversité de ses formes et la profon
 Tous sont des sous-genres de l'*apologue* (Court récit allégorique à visée didactique)
 
 | Nom                 | Définition                                                                                              | Exemple d'oeuvre                 |
-| :------------------ | :------------------------------------------------------------------------------------------------------ | :------------------------------- |
+|---------------------|---------------------------------------------------------------------------------------------------------|----------------------------------|
 | Conte               |                                                                                                         |                                  |
 | Conte philosophique | Nom composé de termes antithétiques, côté imaginaire pour distraire le lecteur & réflexion sur soi-même | Voltaire: _Zadig ou la destinée_ |
 | Utopie              | Idéal, vue politique ou sociale qui ne tient pas compte de la réalité                                   | François Rabelais: *Gargantua*   |
@@ -95,7 +96,7 @@ Tous sont des sous-genres de l'*apologue* (Court récit allégorique à visée d
 
 ### Théâtre
 | Nom      | Caractéristiques                                                                                 | Exemple d'oeuvre |
-| :------- | :----------------------------------------------------------------------------------------------- | :--------------- |
+|----------|--------------------------------------------------------------------------------------------------|------------------|
 | Comédie  |                                                                                                  |                  |
 | Drame    | Pas forcément triste, mais comporte de l'action                                                  |                  |
 | Trajédie | Vocabulaire de la souffrance physique & morale <br>  Conflit passion / ? <br> Fatalité du destin |                  |
@@ -103,7 +104,7 @@ Tous sont des sous-genres de l'*apologue* (Court récit allégorique à visée d
 ### Poésie
 
 | Nom            | Définition                                                          | Exemple d'oeuvre |
-| :------------- | :------------------------------------------------------------------ | :--------------- |
+|----------------|---------------------------------------------------------------------|------------------|
 | Poème en prose | Poème qui n'est pas découpé en vers                                 |                  |
 | Sonnet         | Poème en vers, composé de 2 quatrains suivis de 2 tercets (4/4/3/3) |                  |
 
@@ -126,11 +127,31 @@ Subjonctif
 Gérondif & participe
     : Circonstance
 
+## Valeurs des temps
+### Présent
+- Énonciation
+- Vérité générale
+- Habitude
+- Description
+- Narration
+
+## Imparfait
+- Action de 2^nd^ plan
+- Durée
+- Description
+- Habitude
+
+## Passé simple / Passé composé
+- Action de 1^er^ plan
+- ponctuelle: courte, rapide
+
 
 ## Misc
 *carpe diem*
     : « cueille le jour »
 
+Les temps composés sont
+    : antérieurs aux temps simples
 
 
 ********
@@ -142,7 +163,6 @@ Gérondif & participe
  
 Oeuvres
     : Homère: __L'Odyssée__
-    : Virgile: __L'Énéide__
 ### Moyen-Âge
 #### Roman: chevalerie
 
@@ -151,8 +171,7 @@ Oeuvres
 - Fantastique
 
 Oeuvres
-    : __Lancelot du Lac__
-    : __La quête du Graal__
+    : ?: __Lancelot du Lac__
 
 ### XVI: Renaissance
 #### Roman: satyre
@@ -166,10 +185,6 @@ Oeuvres
 #### Argumentation
 ##### Humanisme
 
-Domaines d'application
-    : Littérature
-    : ?
-
 Met la fin à l'obscurantisme médiéval
 Pour la 1ère fois l'homme est au centre. 
 
@@ -177,7 +192,7 @@ Causé par:
 - Invention de l'imprimmerie (favorise le partage des idées)
 - Découverte de l'amérique (les européens ne sont pas seuls, questionnements sur l'homme)
 - Découverte de l'héliocentrisme: la Terre n'est pas au centre de la galaxie, mais une planète comme les autres
-- ????
+- ?
 
 Se termine à cause de:
 - Guerre protestants $\harr$ catholiques (perte de foi en l'humanité)
@@ -188,12 +203,15 @@ Se termine à cause de:
 
 ##### Pléiade
 
+Auteurs
+    : Joachim du Bellay
+
 
 ### XVII: Classicisme
 #### Roman: profondeur du pers. & réalisme
-- narr externe → narr interne
+- narr externe -> narr interne
 - psychologie
-- merveilleux → vraisemblable
+- merveilleux -> vraisemblable
 - nouvelles tech (récits enchâssés,...)
 
 Oeuvres
@@ -203,18 +221,13 @@ Oeuvres
 #### Argumentation
 #### Théâtre
 ##### Théâtre classique
-Domaines d'application
-    : Théâtre
+
 
 Durant le règne de Louis XIV. 
 Règles de Nicolas Boileau: 3 unités, bienséance, vraisemblance 
 Pas de mélanges de genre, comique *ou* tragique 
 #### Poésie
 ##### Baroque
-Domaines d'application
-    : Peinture
-    : Poésie
-
 barocco = pierre précieuse mal taillée
 - richesse, langue recherchée
 - montre la fragilité de l'homme
@@ -239,11 +252,6 @@ barocco = pierre précieuse mal taillée
 #### Argumentation
 ##### Les Lumières
 
-Domaines d'application
-    : Théâtre
-    : Littérature
-    : ?
-
 Met fin à l'obscurantisme religieux
 Reprend les idées de l'humanisme 
 Agit au lieu de constater. 
@@ -262,7 +270,7 @@ Ils sont pour:
 - éducation (le savoir pour tous)
 - monarchie consitutionnelle (et non d'ordre divin)
 
-**Au théâtre:** Dimension sociale, théâtre ⇒ moyen de dénoncer
+**Au théâtre:** Dimension sociale, théâtre => moyen de dénoncer
 #### Théâtre
 ##### Les Lumières
 Voir [Les Lumières](#les-lumi%C3%A8res)
@@ -291,17 +299,11 @@ Citations
 #### Théâtre
 ##### Drame romantique
 
-Domaines d'application
-    : Théâtre
 
 ~~Règles de Boileau~~
-Mélange des genres → création du drame
+Mélange des genres -> création du drame
 #### Poésie
 ##### Romantisme
-Domaines d'application
-    : Poésie
-    : Littérature ?
-    : ?
 
 ~~Contraintes de la poésie classique~~
 - Disharmonie mètre/syntaxe (enjambements, rejets, contre-rejets)
@@ -310,21 +312,20 @@ Domaines d'application
   - Épreuves amoureuses
 
 ##### Parnasse
-Domaines d'application
-    : Poésie
 
 - réaction aux excès de lyrisme du romantisme
 - «l'art pour l'art» : pas d'utilité
 
 ##### Symbolisme
 
-Domaines d'application
-    : Poésie
-
 - réaction au mouvement parnassien
 - mélange idée abstraite & concrète
 - mystère et intuition du poète
   - lecteur invité à déchiffrer le sens du poème
+
+Auteurs
+    : Rainbeau
+    : Verlaine
 
 
 ### XX: ?
@@ -334,7 +335,7 @@ Domaines d'application
   - Formes traditionnelles 
 - Innovation
     - Construction non linéaire
-    - narr → polyphonie
+    - narr -> polyphonie
     - Langage proche de l'oral
 
 Oeuvres
@@ -342,8 +343,7 @@ Oeuvres
     : Albert Camu: __La perte__
 
 ##### Nouveau roman
-Domaines d'application
-    : Littérature (roman)
+- ?
 #### Argumentation
 #### Théâtre
 ##### Théâtre de l'absurde
@@ -351,9 +351,6 @@ Absence d'histoire, manque de continuité dans les actions
 #### Poésie
 
 ##### Surréalisme
-Domaines d'application
-    : Poésie
-    : ?
 
 - Nouveau regard sur les objets & les mots
 - (libération de l'esprit)?
@@ -382,7 +379,7 @@ Oeuvres principales
 ### Voltaire
 
 Période
-    : XVIII e
+    : XVIII^e^
 
 Mouvement
     : Lumières
@@ -410,7 +407,7 @@ Genres
 
 - Né à marseille
 - Écrit un essai sur Émile Zola
-- Surtout connu pour son œuvre <u>Cyrano de Bergerac</u>, pas du tout pour le reste
+- Surtout connu pour son œuvre __Cyrano de Bergerac__, pas du tout pour le reste
 
 ### Philippe Delerm
 Genres
@@ -427,34 +424,33 @@ Oeuvres principales
     : Sundborn ou les Jours de Lumières &mdash; Roman
     : La Première Gorgée de bière et autres plaisirs minuscules &mdash; Recueil de poèmes
 
-- Surtout connu pour son recueil de poèmes <u>La Première Gorgée de bière et autres plaisirs minuscules</u>
+- Surtout connu pour son recueil de poèmes __La Première Gorgée de bière et autres plaisirs minuscules__
 
 **********
-# OIs & LAs
-## Tableaux synoptiques
+# Tableaux synoptiques
 ### Roman
 #### Les scènes de repas
 #### Le Soleil des Scorta
-|                   | Incipit                                                                                                                                             | Arrivée de Don Salvatore                                                                                                                       | Double aveu                                                                                                     |
-| :---------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
+|      Incipit      | Arrivée de Don Salvatore                                                                                                                            | Double aveu                                                                                                                                    |                                                                                                                 |
+|:-----------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 |     **Thème**     | Famine, pauvreté, engagement                                                                                                                        | Religion                                                                                                                                       | Aveu, amour                                                                                                     |
 | **Mise en scène** | ?                                                                                                                                                   | Opposition & courage                                                                                                                           | Mise en abîme, confession enchassée, soliloque                                                                  |
 |  **Personnages**  | Luciano, (l'âne)                                                                                                                                    | Don Salvatore                                                                                                                                  | Carmela, Don Salvatore, Raffaele                                                                                |
 |   **Narrateur**   | Omniscient $\rarr$ interne                                                                                                                          | Omniscient, externe                                                                                                                            | Omniscient, externe $\rarr$ interne                                                                             |
-|   **Procédés**    | CL chaleur, CL eau, CL voyage, VB(perception), 5 sens, <br> vx passive "la mer (...) vue" ⇒ mirage, ph courtes, prog thématique éclatée, fx de zoom | fx de zoom, CCT "vous", indicatif, impératif, ACC, <br> REG(dramatique): bcp d'action, REG(didactique): discours, REG(polémique): "torgneculs" | CL souffrance, ph courtes, rythme irrégulier, RPT, passé, OPP, NÉG, paroles rapportées, CL fierté               |
+|   **Procédés**    | CL chaleur, CL eau, CL voyage, VB(perception), 5 sens, <br> vx passive "la mer (...) vue" => mirage, ph courtes, prog thématique éclatée, fx de zoom | fx de zoom, CCT "vous", indicatif, impératif, ACC, <br> REG(dramatique): bcp d'action, REG(didactique): discours, REG(polémique): "torgneculs" | CL souffrance, ph courtes, rythme irrégulier, RPT, passé, OPP, NÉG, paroles rapportées, CL fierté               |
 |   **Questions**   | En quoi cet incipit nous introduit-il dans l'univers du roman ?                                                                                     | S'agit-il d'un héros ? <br> De quelles qualités D.S. fait-il preuve ? <br> Par quels atouts D.S. conquiert-il le village ?                     | Qu'est-ce qui unit ces deux personnages ? <br> Analysez le fonctionnement de la communication dans cette scène. |
 ### Argumentation
 #### Recherche du bonheur
-|               | François Rabelais: L'Abbaye de Thélème                                                                           | Jean de le Fontaine: *Le Philosophe Scythe*                                                                                                   | Voltaire: *Candide ou l'optimisme*                                    | Émilie du Châtelet: *Discours sur le bonheur*                                                                                                                                                                                                                                    |
-| ------------: | :--------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|    **Époque** | XVI<sup>e</sup>: Renaissance                                                                                     | XVII<sup>e</sup>: Classicisme                                                                                                                 | XVIII<sup>e</sup>: Lumières                                           | XVIII<sup>e</sup>: Lumières                                                                                                                                                                                                                                                      |
-|     **Thème** | Mode de vie                                                                                                      | Stoïcisme vs Épicurisme                                                                                                                       | Voyages                                                               | Bonheur                                                                                                                                                                                                                                                                          |
-|     **Thèse** | Fait ce qu'il te plaît                                                                                           | Épicurisme > Stoïcisme                                                                                                                        | Il faut cultiver son propre jardin                                    | Il faut renforcer ses illusions, avoir des goûts et des passions, se débarasser des préjugés                                                                                                                                                                                     |
-| **Stratégie** | Persuader                                                                                                        | Fable                                                                                                                                         | Conte philosophique                                                   | Discours                                                                                                                                                                                                                                                                         |
-|     **Genre** | Roman                                                                                                            | Les 2                                                                                                                                         | Les 2                                                                 | Convaincre                                                                                                                                                                                                                                                                       |
-|  **Registre** | Familier                                                                                                         | Soutenu                                                                                                                                       | Courant                                                               | Courant, soutenu                                                                                                                                                                                                                                                                 |
-|  **Procédés** | Imparfait d'habitude, CCT ⇒ vie tj la m̂                                                                         | Vers hétérométriques ⇒ vivacité                                                                                                               | ?                                                                     | Alterne 1<sup>ère</sup> pers du singulier / pluriel <br> "on" indéfini ⇒ S'addresse à tout le monde <br> Impératifs <br> Verbes pronominaux <br> Opposition "bonheur"/"malheur" <br> Connecteurs logiques ⇒ réflexion structurée <br> présent d'énonciation "je dis" ⇒ certitude |
-| **Questions** | En quoi le système proposé est-il une utopie ? <br> Pourquoi cette abbaye représente-t-elle l'esprit humaniste ? | Dans quelle mesure l'opposition entre les personnages illustre-t-elle 2 philosophies ? <br> Qu'est-ce qui fait l'efficacité de cet apologue ? | En quoi le bonheur de Candide représente-t-il l'esprit des Lumières ? | Qu'est-ce qui fait l'efficacité de ce discours ? <br> En quoi la démarche de Mme du Châtelet représente-t-elle l'esprit des Lumières ?                                                                                                                                           |
+| François Rabelais: L'Abbaye de Thélème | Jean de le Fontaine: *Le Philosophe Scythe*                                                                      | Voltaire: *Candide ou l'optimisme*                                                                                                            | Émilie du Châtelet: *Discours sur le bonheur*                         |                                                                                                                                                                                                                                                                         |
+|---------------------------------------:|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                             **Époque** | XVI^e^: Renaissance                                                                                              | XVII^e^: Classicisme                                                                                                                          | XVIII^e^: Lumières                                                    | XVIII^e^: Lumières                                                                                                                                                                                                                                                      |
+|                              **Thème** | Mode de vie                                                                                                      | Stoïcisme vs Épicurisme                                                                                                                       | Voyages                                                               | Bonheur                                                                                                                                                                                                                                                                 |
+|                              **Thèse** | Fait ce qu'il te plaît                                                                                           | Épicurisme > Stoïcisme                                                                                                                        | Il faut cultiver son propre jardin                                    | Il faut renforcer ses illusions, avoir des goûts et des passions, se débarasser des préjugés                                                                                                                                                                            |
+|                          **Stratégie** | Persuader                                                                                                        | Fable                                                                                                                                         | Conte philosophique                                                   | Discours                                                                                                                                                                                                                                                                |
+|                              **Genre** | Roman                                                                                                            | Les 2                                                                                                                                         | Les 2                                                                 | Convaincre                                                                                                                                                                                                                                                              |
+|                           **Registre** | Familier                                                                                                         | Soutenu                                                                                                                                       | Courant                                                               | Courant, soutenu                                                                                                                                                                                                                                                        |
+|                           **Procédés** | Imparfait d'habitude, CCT => vie tj la m̂                                                                          | Vers hétérométriques => vivacité                                                                                                               | ?                                                                     | Alterne 1^ère^ pers du singulier / pluriel <br> "on" indéfini => S'addresse à tout le monde <br> Impératifs <br> Verbes pronominaux <br> Opposition "bonheur"/"malheur" <br> Connecteurs logiques => réflexion structurée <br> présent d'énonciation "je dis" => certitude |
+|                          **Questions** | En quoi le système proposé est-il une utopie ? <br> Pourquoi cette abbaye représente-t-elle l'esprit humaniste ? | Dans quelle mesure l'opposition entre les personnages illustre-t-elle 2 philosophies ? <br> Qu'est-ce qui fait l'efficacité de cet apologue ? | En quoi le bonheur de Candide représente-t-il l'esprit des Lumières ? | Qu'est-ce qui fait l'efficacité de ce discours ? <br> En quoi la démarche de Mme du Châtelet représente-t-elle l'esprit des Lumières ?                                                                                                                                  |
 #### Zadig ou la destinée
 
 ### Théâtre
@@ -494,6 +490,10 @@ Oeuvres principales
   - Réponse à la problématique
   - Ouverture
 
+**Ouverture**
+- Opposer ou rapprocher d'une autre oeuvre (du corpus)
+- Ouvrir sur l'évolution du genre dans le futur
+
 ## Dissertation
 ### Préparation
 Repérer:
@@ -520,9 +520,9 @@ Thématique
 ### Plan
 - Intro *situer dans le contexte*
 - Reprise du sujet 
-  - citation → «citation»
-  - question → reformuler
-- Problématique *poser <u>sa</u> problématique*
+  - citation -> «citation»
+  - question -> reformuler
+- Problématique *poser __sa__ problématique*
 - Annonce du plan *simple*
 
 *Pour chaque partie*
@@ -534,42 +534,156 @@ alinéa Conclusion partielle
 ## Par objet d'étude
 ### Roman
 #### Quoi étudier
+**Type de discours**
+  - ?
+    - verbes d'action ?
+    - Temps des verbes
+  - Descriptif
+    - expansions nominales
+    - verbes de perception
+    - verbes d'état
+
+**Type de héros**
+- **P$\oplus$sitif** *bon*
+  - Superlatif s
+  - Comparaisons de supériorité
+  - \<tt ce qui est positif\>
+- **Nég$\ominus$tif** *mauvais & méchant*
+  - Vocabulaire péjoratif
+- **Collectif** *?*
+  - ?
+- **Antihéros** *héros banal dans ses actions & son portrait*
+  - ?
+
+**DI/DIL** *?*
+
+**Verbes**
+- ... de ...
+  - pensée
+  - perception
+  - action
+  - sentiments
+- Mode
+  - voir [Modes des verbes](#valeurs-des-modes)
+
+**Mise en scène**
+- Comment le personnage apparaît
+- où 
+- quand
+- vu par qui ?
+
+**Choix de narration**
+- Narrateur (pt de vue + statut)
+- Chronologie
+  - Respectée ? => on veut que le lecteur suive la chronologie
+- Rythme
+  - $t_n = t_a$ Temps réel ou scène
+  - $t_n > t_a$ Sommaire
+  - $t_n < t_a$ Pause
+  - $t_n = 0\:\,$ Ellipse
+- Paroles rapportées
+  - Vocabulaire
+  - Modalités de phrases
+  - Silences
+  
 #### Phrases d'accroche
 Le roman se caractérise par la diversité des formes, de ses sujets abordés et par la profondeur de son imaginaire
 
 ### Argumentation
 #### Quoi étudier
-- **énonciation** qui, à qui, où, quand, comment
-- **schéma argumentatif** 
-- **démarche argumentative** délibérer, convaincre, persuader
-- **visée argumentative** but
-- **modalisation** degré de certitude
-  - modalités de phrase
-  - adverbes de (in)certitude
-  - verbe d'opinion
-- **registre argumentatif**
-  - polémique: apostrophe, provocation
-  - didactique
-  - ironique
-  - oratoire
+**Forme d'argumentation** *Présenter le texte*
+- Directe
+- Indirecte
+
+**Genres d'argumentation**
+- Voir [Genres de l'argumentation](#argumentation)
+
+**Démarche(s) argumentative(s)**
+- Convaincre *raison*
+- Persuader *sentiments*
+- Délibérer *peser le pour & le contre*
+
+**Énonciation**
+- Pronoms
+- Temps des verbes
+- Modes des verbes
+
+**Schéma argumentatif**
+- Arguments
+- Exemples
+  - Domaine de l'exemple: personnel, abstrait ou concret
+- ?
+- ?
+- (?)?
+
+CL -> **Thème**
+
+**Marques du jugement**
+- Adverbe
+- Modalisateur *montre le degré de doute, ex. "peut être"*
+- Phrases négatives
+- Vocabulaire péjoratif/mélioratif
+
+**Phrases**
+- Types de phrases *?*
+- Formes de phrases *?*
+
+**Syntaxe**
+- Énumérations
+- Connecteur logiques
+- Conjonctions de coordinations, de subordination
+- [Figures de style](#figures-de-style)
+
+**Registre argumentatif**
+- polémique: apostrophe, provocation
+- didactique
+- ironique
+- oratoire
 
 #### Phrases d'accroche
 
 ### Théâtre
 #### Quoi étudier
-- **mise en scène**
-  - lieu
-  - didascalies
-  - didascalies internes: ponctuation
-  - décor
-- **personnages**
-  - personnages
-  - caractères
-  - relations
-- **double énonciation du théâtre**
-  - ?
+**Contexte**
+
+**Types de répliques**
+- Stychomities *répliques courtes \*en écho\**
+- Répliques courtes
+- Tirades
+
+**Personnages**
+- Nom => catégorie sociale
+  - ex. nom en -ette => servante
+- Costume
+- Niveau de langue
+- Modalités de phrase
+- Longueur des répliques du personnage
+- Présenté in absentia ? *On parle du perso alors qu'il n'est pas sur scène*
+
+**Décor** 
+- Réaliste / symbolique / ?...
+- Rôle
+
+**Rapport entre personnages**
+
+**Ce que les personnages représentent**
+
+**Effet sur le public recherché** => Genre de la pièce
+
+**Visée d'un monologue**
+- Lyrique
+- Argumentatif
+- Informatif
+- Délibératif
+
+**Intrigue**
+- ?
+
+**double énonciation du théâtre**
+- ?
+
 #### Phrases d'accroche
-Michek Achard disait: "Au cinéma, on joue. Au théâtre, c'est joué". Tel est la spécificité du théâtre. On peut alors, tantôt être un spectateur qui admire, tantôt un lecteur qui imagine.
+Michel Achard disait: "Au cinéma, on joue. Au théâtre, c'est joué". Tel est la spécificité du théâtre. On peut alors, tantôt être un spectateur qui admire, tantôt un lecteur qui imagine.
 
 ### Poésie
 **ATTENTION** Ne pas séparer le fond de la forme dans le plan
@@ -595,10 +709,112 @@ Michek Achard disait: "Au cinéma, on joue. Au théâtre, c'est joué". Tel est 
   - 5 sens
   - synesthésies[^1]
 
-[^1]: Attention à l'anachronisme: avant XIX<sup>e</sup> on parlera de *correspondance des sens*
+[^1]: Attention à l'anachronisme: avant XIX^e^ on parlera de *correspondance des sens*
 #### Phrases d'accroche
 
 
 
 
 ## Oral
+
+- [Cours](#cours)
+  - [Procédés](#proc%C3%A9d%C3%A9s)
+    - [Figures de style](#figures-de-style)
+    - [Autres](#autres)
+  - [Narrateur](#narrateur)
+  - [Genres & sous-genres](#genres--sous-genres)
+    - [Roman](#roman)
+    - [Argumentation](#argumentation)
+      - [Genres directs](#genres-directs)
+      - [Genres indirects](#genres-indirects)
+    - [Théâtre](#th%C3%A9%C3%A2tre)
+    - [Poésie](#po%C3%A9sie)
+  - [Valeurs des modes](#valeurs-des-modes)
+  - [Valeurs des temps](#valeurs-des-temps)
+    - [Présent](#pr%C3%A9sent)
+  - [Imparfait](#imparfait)
+  - [Passé simple / Passé composé](#pass%C3%A9-simple--pass%C3%A9-compos%C3%A9)
+  - [Misc](#misc)
+- [Histoire littéraire](#histoire-litt%C3%A9raire)
+  - [Évolution des genres](#%C3%A9volution-des-genres)
+    - [Antiquité](#antiquit%C3%A9)
+      - [Roman: mythologie & héroïsme](#roman-mythologie--h%C3%A9ro%C3%AFsme)
+    - [Moyen-Âge](#moyen-%C3%A2ge)
+      - [Roman: chevalerie](#roman-chevalerie)
+    - [XVI: Renaissance](#xvi-renaissance)
+      - [Roman: satyre](#roman-satyre)
+      - [Argumentation](#argumentation-1)
+        - [Humanisme](#humanisme)
+      - [Théâtre](#th%C3%A9%C3%A2tre-1)
+      - [Poésie](#po%C3%A9sie-1)
+        - [Pléiade](#pl%C3%A9iade)
+    - [XVII: Classicisme](#xvii-classicisme)
+      - [Roman: profondeur du pers. & réalisme](#roman-profondeur-du-pers--r%C3%A9alisme)
+      - [Argumentation](#argumentation-2)
+      - [Théâtre](#th%C3%A9%C3%A2tre-2)
+        - [Théâtre classique](#th%C3%A9%C3%A2tre-classique)
+      - [Poésie](#po%C3%A9sie-2)
+        - [Baroque](#baroque)
+    - [XVIII: Siècle des Lumières](#xviii-si%C3%A8cle-des-lumi%C3%A8res)
+      - [Roman: Diversification des formes](#roman-diversification-des-formes)
+      - [Argumentation](#argumentation-3)
+        - [Les Lumières](#les-lumi%C3%A8res)
+      - [Théâtre](#th%C3%A9%C3%A2tre-3)
+        - [Les Lumières](#les-lumi%C3%A8res-1)
+      - [Poésie](#po%C3%A9sie-3)
+    - [XIX: Romantisme](#xix-romantisme)
+      - [Roman: Âge d'or](#roman-%C3%A2ge-dor)
+      - [Argumentation](#argumentation-4)
+      - [Théâtre](#th%C3%A9%C3%A2tre-4)
+        - [Drame romantique](#drame-romantique)
+      - [Poésie](#po%C3%A9sie-4)
+        - [Romantisme](#romantisme)
+        - [Parnasse](#parnasse)
+        - [Symbolisme](#symbolisme)
+    - [XX: ?](#xx)
+      - [Roman: Eclatement du genre](#roman-eclatement-du-genre)
+        - [Nouveau roman](#nouveau-roman)
+      - [Argumentation](#argumentation-5)
+      - [Théâtre](#th%C3%A9%C3%A2tre-5)
+        - [Théâtre de l'absurde](#th%C3%A9%C3%A2tre-de-labsurde)
+      - [Poésie](#po%C3%A9sie-5)
+        - [Surréalisme](#surr%C3%A9alisme)
+  - [Auteurs](#auteurs)
+    - [Albert Camus](#albert-camus)
+    - [Voltaire](#voltaire)
+    - [Edmond Rostand](#edmond-rostand)
+    - [Philippe Delerm](#philippe-delerm)
+- [Tableaux synoptiques](#tableaux-synoptiques)
+    - [Roman](#roman-1)
+      - [Les scènes de repas](#les-sc%C3%A8nes-de-repas)
+      - [Le Soleil des Scorta](#le-soleil-des-scorta)
+    - [Argumentation](#argumentation-6)
+      - [Recherche du bonheur](#recherche-du-bonheur)
+      - [Zadig ou la destinée](#zadig-ou-la-destin%C3%A9e)
+    - [Théâtre](#th%C3%A9%C3%A2tre-6)
+    - [Poésie](#po%C3%A9sie-6)
+- [Complémentaires](#compl%C3%A9mentaires)
+  - [Activités](#activit%C3%A9s)
+  - [Textes](#textes)
+- [Méthodologies](#m%C3%A9thodologies)
+  - [Commentaire / Corpus](#commentaire--corpus)
+    - [Trouver un plan](#trouver-un-plan)
+    - [Plan](#plan)
+  - [Dissertation](#dissertation)
+    - [Préparation](#pr%C3%A9paration)
+    - [Types de plans](#types-de-plans)
+    - [Plan](#plan-1)
+  - [Par objet d'étude](#par-objet-d%C3%A9tude)
+    - [Roman](#roman-2)
+      - [Quoi étudier](#quoi-%C3%A9tudier)
+      - [Phrases d'accroche](#phrases-daccroche)
+    - [Argumentation](#argumentation-7)
+      - [Quoi étudier](#quoi-%C3%A9tudier-1)
+      - [Phrases d'accroche](#phrases-daccroche-1)
+    - [Théâtre](#th%C3%A9%C3%A2tre-7)
+      - [Quoi étudier](#quoi-%C3%A9tudier-2)
+      - [Phrases d'accroche](#phrases-daccroche-2)
+    - [Poésie](#po%C3%A9sie-7)
+      - [Quoi étudier](#quoi-%C3%A9tudier-3)
+      - [Phrases d'accroche](#phrases-daccroche-3)
+  - [Oral](#oral)
