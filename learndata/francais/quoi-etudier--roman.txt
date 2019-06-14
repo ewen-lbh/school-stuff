@@ -1,0 +1,17 @@
+type de discours
+type de héros
+DI/DIL
+verbes de...
+mode des verbes
+mise en sc
+mesc: comment il apparaît
+msec: où
+msec: quand
+msec: vu par qui
+choix de narration
+cdn: narrateur
+cdn: rythme
+cdn: paroles rapportées
+cdn:pr:vocab
+cdn:pr:modalités de phrase
+cdn:pr:silences

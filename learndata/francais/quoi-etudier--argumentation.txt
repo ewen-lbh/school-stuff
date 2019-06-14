@@ -1,0 +1,20 @@
+forme d'arg
+genres d'arg
+démarches arg
+énonc:pronoms
+énonc:tps des vb
+énonc:modes des vb
+schéma arg:domaine d'ex
+thème:CL
+marques du jugement
+mdj:adv
+mdj:modalisateur
+mdj:phrases -+
+mdj:vocab péjmél
+type de phrase
+formes de phrase
+synt:énum
+synt:fig
+synt:conn
+synt:conj de coord, de sub
+registre arg

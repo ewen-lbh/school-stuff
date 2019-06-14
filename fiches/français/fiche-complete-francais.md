@@ -99,7 +99,7 @@ Tous sont des sous-genres de l'*apologue* (Court récit allégorique à visée d
 |----------|--------------------------------------------------------------------------------------------------|------------------|
 | Comédie  |                                                                                                  |                  |
 | Drame    | Pas forcément triste, mais comporte de l'action                                                  |                  |
-| Trajédie | Vocabulaire de la souffrance physique & morale <br>  Conflit passion / ? <br> Fatalité du destin |                  |
+| Trajédie | Vocabulaire de la souffrance physique & morale <br> Conflits <br> Fatalité du destin |                  |
 
 ### Poésie
 
@@ -128,20 +128,20 @@ Gérondif & participe
     : Circonstance
 
 ## Valeurs des temps
-### Présent
+#### Présent
 - Énonciation
 - Vérité générale
 - Habitude
 - Description
 - Narration
 
-## Imparfait
+#### Imparfait
 - Action de 2^nd^ plan
 - Durée
 - Description
 - Habitude
 
-## Passé simple / Passé composé
+#### Passé simple / Passé composé
 - Action de 1^er^ plan
 - ponctuelle: courte, rapide
 
@@ -171,7 +171,7 @@ Oeuvres
 - Fantastique
 
 Oeuvres
-    : ?: __Lancelot du Lac__
+    : Chrétien de Troyes: __Lancelot du Lac__
 
 ### XVI: Renaissance
 #### Roman: satyre
@@ -192,7 +192,7 @@ Causé par:
 - Invention de l'imprimmerie (favorise le partage des idées)
 - Découverte de l'amérique (les européens ne sont pas seuls, questionnements sur l'homme)
 - Découverte de l'héliocentrisme: la Terre n'est pas au centre de la galaxie, mais une planète comme les autres
-- ?
+- Alphabétisation
 
 Se termine à cause de:
 - Guerre protestants $\harr$ catholiques (perte de foi en l'humanité)
@@ -215,7 +215,7 @@ Auteurs
 - nouvelles tech (récits enchâssés,...)
 
 Oeuvres
-    : Madame de la Fayette: __?__
+    : Madame de la Fayette: __La Princesse de Clèves__
 
 
 #### Argumentation
@@ -240,14 +240,11 @@ barocco = pierre précieuse mal taillée
 ### XVIII: Siècle des Lumières
 #### Roman: Diversification des formes
 - Roman épistolaire
-    - ?: __Liaison dangereuses__
     - Montesqieu: __Lettres Persannes__
 - Récits mémoriaux
-    - (Chrétien de Troye)?: __Paul & Virginie__
-    - (Chrétien de Troye)?: __Manon Lescault__
+    - François Prévost: __Manon Lescault__
 - Entretien & dialogue
-    - ?: Jacques le Fataliste
-    - ?: Entretien d'un père avec ses enfants
+    - Diderot: __Jacques le Fataliste__
 
 #### Argumentation
 ##### Les Lumières
@@ -285,7 +282,7 @@ Voir [Les Lumières](#les-lumi%C3%A8res)
   - Épisodes de roman
   - Alphabétisation
 - Illusion du vrai
-  - eg. ?: __Ceci n'est pas une pipe__
+  - eg. René Magritte: __Ceci n'est pas une pipe__
 - Créer l'archive du roman
 
 Oeuvres
@@ -307,7 +304,7 @@ Mélange des genres -> création du drame
 
 ~~Contraintes de la poésie classique~~
 - Disharmonie mètre/syntaxe (enjambements, rejets, contre-rejets)
-- Lyrisme du "je" 
+- Lyrisme du "je"
   - Sentiments personnels & intimes
   - Épreuves amoureuses
 
@@ -330,6 +327,7 @@ Auteurs
 
 ### XX: ?
 #### Roman: Eclatement du genre
+###### Nouveau roman
 - Refus de:
   - Contrôle imposé par construction narr
   - Formes traditionnelles 
@@ -342,8 +340,6 @@ Oeuvres
     : Michel Butor: __La modification__
     : Albert Camu: __La perte__
 
-##### Nouveau roman
-- ?
 #### Argumentation
 #### Théâtre
 ##### Théâtre de l'absurde
@@ -359,22 +355,11 @@ Absence d'histoire, manque de continuité dans les actions
 
 ## Auteurs
 *&Delta; GENRE = Chef de file ou inventeur de GENRE*
-### Albert Camus
+### Laurent Gaudé
 Période
-    : XXIe ?
+    : XXIe 
 
-Mouvement(s)
-    : Surréalisme
-
-Genres
-    : Roman, nouvelle, essai, théâtre
-
-Oeuvres principales
-    : L'Étranger — Roman
-    : La Peste — Roman
-    : Les Justes — Pièce de théâtre
-
-- Fortement marqué par les deux guerres mondiales (il a vécu les 2)
+??
 
 ### Voltaire
 
@@ -388,7 +373,7 @@ Genres
     : &Delta; Conte philosophique, théâtre, poésie
 
 Oeuvres principales
-    : Candide ou l'optimisme &mdash; Roman ?
+    : Candide ou l'optimisme &mdash; Conte philosophique
     : Zadig ou la destinée &mdash; Conte philosophique
 
 - Contre l'église mais croît en dieu
@@ -409,22 +394,6 @@ Genres
 - Écrit un essai sur Émile Zola
 - Surtout connu pour son œuvre __Cyrano de Bergerac__, pas du tout pour le reste
 
-### Philippe Delerm
-Genres
-    : Roman, poésie, nouvelles
-
-Période
-    : XXIe
-
-Mouvement
-    : ?
-
-Oeuvres principales
-    : Autumn &mdash; Roman
-    : Sundborn ou les Jours de Lumières &mdash; Roman
-    : La Première Gorgée de bière et autres plaisirs minuscules &mdash; Recueil de poèmes
-
-- Surtout connu pour son recueil de poèmes __La Première Gorgée de bière et autres plaisirs minuscules__
 
 **********
 # Tableaux synoptiques
@@ -463,6 +432,16 @@ Oeuvres principales
 
 **********
 # Méthodologies
+## Timing
+###### Corpus: 1h
+- 00:20 Comprendre
+- 01:20 Rédaction
+
+###### Commentaire: 3h
+- 02:20 Recherche
+- 03:50 Rédiger
+- 04:00 Relecture
+
 ## Commentaire / Corpus
 <u>Souligné</u> $=$ commentaire littéraire seulement
 ### Trouver un plan
@@ -483,6 +462,9 @@ Oeuvres principales
 - Partie I
   - <u>Sous-partie A</u>
   - <u>Sous-partie B</u>
+- Transition
+  - Conclusion Partie I
+  - Annonce Partie II
 - Partie II
   - <u>Sous-partie A</u>
   - <u>Sous-partie B</u>
@@ -502,17 +484,19 @@ Repérer:
 - Verbe de la consigne
 
 ### Types de plans
-Dialectique *discussion de point de vue*
+###### Dialectique
+*discussion de point de vue*
 - Thèse 
 - Antithèse *ne pas se contredire*
 - Synthèse *donner son propre avis*
 
-Analytique *étude de citations longue*
-- Constant
+###### Analytique
+*étude de citations longue*
+- Constat
 - Causes
 - Conséquences
 
-Thématique
+###### Thématique
 - Aspect 1
 - Aspect 2
 - (Aspect 3)
@@ -534,30 +518,34 @@ alinéa Conclusion partielle
 ## Par objet d'étude
 ### Roman
 #### Quoi étudier
-**Type de discours**
-  - ?
-    - verbes d'action ?
+###### Type de discours
+  - Narratif
+    - verbes d'action
     - Temps des verbes
   - Descriptif
     - expansions nominales
     - verbes de perception
     - verbes d'état
+  - Explicatif
+  - Argumentatif
+  - Injonctif
+    - Verbes à l'impératif / infinitif
 
-**Type de héros**
+###### Type de héros
 - **P$\oplus$sitif** *bon*
-  - Superlatif s
+  - Superlatifs
   - Comparaisons de supériorité
   - \<tt ce qui est positif\>
 - **Nég$\ominus$tif** *mauvais & méchant*
   - Vocabulaire péjoratif
-- **Collectif** *?*
+- **Collectif** *Plusieurs personnages qui agissent ensemble*
   - ?
 - **Antihéros** *héros banal dans ses actions & son portrait*
   - ?
 
-**DI/DIL** *?*
+###### DI/DIL
 
-**Verbes**
+###### Verbes
 - ... de ...
   - pensée
   - perception
@@ -566,16 +554,16 @@ alinéa Conclusion partielle
 - Mode
   - voir [Modes des verbes](#valeurs-des-modes)
 
-**Mise en scène**
+###### Mise en scène
 - Comment le personnage apparaît
 - où 
 - quand
-- vu par qui ?
+- vu par qui
 
-**Choix de narration**
+###### Choix de narration
 - Narrateur (pt de vue + statut)
 - Chronologie
-  - Respectée ? => on veut que le lecteur suive la chronologie
+  - si respectée (linéaire) => on veut que le lecteur suive la chronologie
 - Rythme
   - $t_n = t_a$ Temps réel ou scène
   - $t_n > t_a$ Sommaire
@@ -591,131 +579,149 @@ Le roman se caractérise par la diversité des formes, de ses sujets abordés et
 
 ### Argumentation
 #### Quoi étudier
-**Forme d'argumentation** *Présenter le texte*
+
+###### Titre
+- => 
+
+###### Forme d'argumentation *Présenter le texte*
 - Directe
 - Indirecte
 
-**Genres d'argumentation**
+###### Genres d'argumentation
 - Voir [Genres de l'argumentation](#argumentation)
 
-**Démarche(s) argumentative(s)**
+###### Démarche(s) argumentative(s)
 - Convaincre *raison*
 - Persuader *sentiments*
 - Délibérer *peser le pour & le contre*
 
-**Énonciation**
+###### Énonciation
 - Pronoms
 - Temps des verbes
 - Modes des verbes
 
-**Schéma argumentatif**
+###### Schéma argumentatif
 - Arguments
 - Exemples
   - Domaine de l'exemple: personnel, abstrait ou concret
-- ?
-- ?
-- (?)?
+- Thèse
+- ??
 
-CL -> **Thème**
+###### Thème
+- CL
 
-**Marques du jugement**
+###### Marques du jugement
 - Adverbe
 - Modalisateur *montre le degré de doute, ex. "peut être"*
 - Phrases négatives
 - Vocabulaire péjoratif/mélioratif
 
-**Phrases**
-- Types de phrases *?*
-- Formes de phrases *?*
+###### Phrases
+- Types de phrases
+  - interrogative
+  - déclarative
+  - impérative
+  - exclamative
+- Formes de phrases
+  - négative
+  - affirmative
+  - passive
+  - active
+  - impersonnelle
 
-**Syntaxe**
+###### Syntaxe
 - Énumérations
 - Connecteur logiques
 - Conjonctions de coordinations, de subordination
 - [Figures de style](#figures-de-style)
 
-**Registre argumentatif**
+###### Registre argumentatif
 - polémique: apostrophe, provocation
 - didactique
 - ironique
 - oratoire
 
 #### Phrases d'accroche
-
+?
 ### Théâtre
 #### Quoi étudier
-**Contexte**
+###### Contexte
 
-**Types de répliques**
+###### Types de répliques
 - Stychomities *répliques courtes \*en écho\**
 - Répliques courtes
 - Tirades
 
-**Personnages**
+###### Personnages
 - Nom => catégorie sociale
   - ex. nom en -ette => servante
 - Costume
 - Niveau de langue
 - Modalités de phrase
 - Longueur des répliques du personnage
-- Présenté in absentia ? *On parle du perso alors qu'il n'est pas sur scène*
+- Présenté in absentia *On parle du perso alors qu'il n'est pas sur scène*
+  - *Est-ce que on parle qd mm du perso mm si il apparait pas une seule fois ?*
 
-**Décor** 
+###### Décor
 - Réaliste / symbolique / ?...
 - Rôle
 
-**Rapport entre personnages**
+###### Rapport entre personnages
 
-**Ce que les personnages représentent**
+###### Ce que les personnages représentent
 
-**Effet sur le public recherché** => Genre de la pièce
+###### Effet sur le public recherché
+- |_> Genre de la pièce
 
-**Visée d'un monologue**
+###### Visée d'un monologue
 - Lyrique
 - Argumentatif
 - Informatif
 - Délibératif
 
-**Intrigue**
+
+###### Intrigue
 - ?
 
-**double énonciation du théâtre**
+###### Double énonciation du théâtre
 - ?
 
 #### Phrases d'accroche
-Michel Achard disait: "Au cinéma, on joue. Au théâtre, c'est joué". Tel est la spécificité du théâtre. On peut alors, tantôt être un spectateur qui admire, tantôt un lecteur qui imagine.
+Michel Achard disait: "Au cinéma, on joue. Au théâtre, c'est joué". Tel est la spécificité du théâtre.
 
 ### Poésie
 **ATTENTION** Ne pas séparer le fond de la forme dans le plan
 #### Quoi étudier
 - replacer dans le [mouvement poétique](#mouvements)
-- **forme**
+###### Forme
   - prose / vers
   - métrique: vers, strophe
   - rimes: genre, forme, richesse
-- **structure** évolution
+###### Structure, évolution
   - champs lexicaux
   - ponctuation
   - pronoms personnels
   - temps des verbes
   - à qui il s'addresse
-- **thèmes**
+###### Thèmes
   - poétique: amour, fuite du temps, nature, ?
   - transfiguré: *thème non-poétique rendu poétique*
-- **images**
+###### Images
   - comparaison, métaphore, personnification
   - *ce qui fait que le poème est pictural*: couleurs, formes, matières
-- **sens**
+###### Sens
   - 5 sens
   - synesthésies[^1]
 
 [^1]: Attention à l'anachronisme: avant XIX^e^ on parlera de *correspondance des sens*
 #### Phrases d'accroche
-
+La poésie est un travail sur les mots, un jeu sur les sonorités, le rythme, la musicalité
 
 
 
 ## Oral
+
+<h1>Sommaire</h1>
 
 - [Cours](#cours)
   - [Procédés](#proc%C3%A9d%C3%A9s)
@@ -731,9 +737,9 @@ Michel Achard disait: "Au cinéma, on joue. Au théâtre, c'est joué". Tel est 
     - [Poésie](#po%C3%A9sie)
   - [Valeurs des modes](#valeurs-des-modes)
   - [Valeurs des temps](#valeurs-des-temps)
-    - [Présent](#pr%C3%A9sent)
-  - [Imparfait](#imparfait)
-  - [Passé simple / Passé composé](#pass%C3%A9-simple--pass%C3%A9-compos%C3%A9)
+      - [Présent](#pr%C3%A9sent)
+      - [Imparfait](#imparfait)
+      - [Passé simple / Passé composé](#pass%C3%A9-simple--pass%C3%A9-compos%C3%A9)
   - [Misc](#misc)
 - [Histoire littéraire](#histoire-litt%C3%A9raire)
   - [Évolution des genres](#%C3%A9volution-des-genres)
@@ -773,17 +779,16 @@ Michel Achard disait: "Au cinéma, on joue. Au théâtre, c'est joué". Tel est 
         - [Symbolisme](#symbolisme)
     - [XX: ?](#xx)
       - [Roman: Eclatement du genre](#roman-eclatement-du-genre)
-        - [Nouveau roman](#nouveau-roman)
+          - [Nouveau roman](#nouveau-roman)
       - [Argumentation](#argumentation-5)
       - [Théâtre](#th%C3%A9%C3%A2tre-5)
         - [Théâtre de l'absurde](#th%C3%A9%C3%A2tre-de-labsurde)
       - [Poésie](#po%C3%A9sie-5)
         - [Surréalisme](#surr%C3%A9alisme)
   - [Auteurs](#auteurs)
-    - [Albert Camus](#albert-camus)
+    - [Laurent Gaudé](#laurent-gaud%C3%A9)
     - [Voltaire](#voltaire)
     - [Edmond Rostand](#edmond-rostand)
-    - [Philippe Delerm](#philippe-delerm)
 - [Tableaux synoptiques](#tableaux-synoptiques)
     - [Roman](#roman-1)
       - [Les scènes de repas](#les-sc%C3%A8nes-de-repas)
@@ -797,24 +802,62 @@ Michel Achard disait: "Au cinéma, on joue. Au théâtre, c'est joué". Tel est 
   - [Activités](#activit%C3%A9s)
   - [Textes](#textes)
 - [Méthodologies](#m%C3%A9thodologies)
+  - [Timing](#timing)
+          - [Corpus: 1h](#corpus-1h)
+          - [Commentaire: 3h](#commentaire-3h)
   - [Commentaire / Corpus](#commentaire--corpus)
     - [Trouver un plan](#trouver-un-plan)
     - [Plan](#plan)
   - [Dissertation](#dissertation)
     - [Préparation](#pr%C3%A9paration)
     - [Types de plans](#types-de-plans)
+          - [Dialectique](#dialectique)
+          - [Analytique](#analytique)
+          - [Thématique](#th%C3%A9matique)
     - [Plan](#plan-1)
   - [Par objet d'étude](#par-objet-d%C3%A9tude)
     - [Roman](#roman-2)
       - [Quoi étudier](#quoi-%C3%A9tudier)
+          - [Type de discours](#type-de-discours)
+          - [Type de héros](#type-de-h%C3%A9ros)
+          - [DI/DIL](#didil)
+          - [Verbes](#verbes)
+          - [Mise en scène](#mise-en-sc%C3%A8ne)
+          - [Choix de narration](#choix-de-narration)
       - [Phrases d'accroche](#phrases-daccroche)
     - [Argumentation](#argumentation-7)
       - [Quoi étudier](#quoi-%C3%A9tudier-1)
+          - [Titre](#titre)
+          - [Forme d'argumentation *Présenter le texte*](#forme-dargumentation-pr%C3%A9senter-le-texte)
+          - [Genres d'argumentation](#genres-dargumentation)
+          - [Démarche(s) argumentative(s)](#d%C3%A9marches-argumentatives)
+          - [Énonciation](#%C3%A9nonciation)
+          - [Schéma argumentatif](#sch%C3%A9ma-argumentatif)
+          - [Thème](#th%C3%A8me)
+          - [Marques du jugement](#marques-du-jugement)
+          - [Phrases](#phrases)
+          - [Syntaxe](#syntaxe)
+          - [Registre argumentatif](#registre-argumentatif)
       - [Phrases d'accroche](#phrases-daccroche-1)
     - [Théâtre](#th%C3%A9%C3%A2tre-7)
       - [Quoi étudier](#quoi-%C3%A9tudier-2)
+          - [Contexte](#contexte)
+          - [Types de répliques](#types-de-r%C3%A9pliques)
+          - [Personnages](#personnages)
+          - [Décor](#d%C3%A9cor)
+          - [Rapport entre personnages](#rapport-entre-personnages)
+          - [Ce que les personnages représentent](#ce-que-les-personnages-repr%C3%A9sentent)
+          - [Effet sur le public recherché](#effet-sur-le-public-recherch%C3%A9)
+          - [Visée d'un monologue](#vis%C3%A9e-dun-monologue)
+          - [Intrigue](#intrigue)
+          - [Double énonciation du théâtre](#double-%C3%A9nonciation-du-th%C3%A9%C3%A2tre)
       - [Phrases d'accroche](#phrases-daccroche-2)
     - [Poésie](#po%C3%A9sie-7)
       - [Quoi étudier](#quoi-%C3%A9tudier-3)
+          - [Forme](#forme)
+          - [Structure, évolution](#structure-%C3%A9volution)
+          - [Thèmes](#th%C3%A8mes)
+          - [Images](#images)
+          - [Sens](#sens)
       - [Phrases d'accroche](#phrases-daccroche-3)
   - [Oral](#oral)

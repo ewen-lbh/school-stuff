@@ -9,6 +9,8 @@ title: "Fiche complète pour le bac de français: à faire"
 ### Organisation
 - [ ] Mettre toutes les notions des trucs à étudier dans `Cours/procédés/autres`
 ### Misc
+- [ ] Analyser les corrigés
+- [ ] Revoir copies de l'année
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=3 orderedList=false} -->
 <h1>Sommaire</h1>

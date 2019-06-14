@@ -1,0 +1,11 @@
+# LaTeX compiler stuff
+*.log
+*.out
+*.toc
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Manual hide
+*.hidden.*

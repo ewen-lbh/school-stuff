@@ -1,0 +1,12 @@
+mv poétique
+forme:prose/vers
+forme:métrique
+forme:rimes
+CL
+ponct
+pp
+tps des vb
+à qui il s'addr
+thèmes poétique/transfiguré
+sens
+syn
