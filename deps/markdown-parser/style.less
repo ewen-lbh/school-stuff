@@ -1,0 +1,161 @@
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+.markdown-preview.markdown-preview {
+
+  p, li, center, dl, dd, h6, th, td {
+    font-family: 'Fantasque Sans Mono','Roboto', sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5{
+    font-family: 'Google Sans', sans-serif;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  s {
+    opacity: 0.5;
+  }
+
+  h2,h3,h4,h5 {
+    &::before {
+      content: '';
+      background: #268cce;
+      display: inline-block;
+      margin-right: 10px;
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  //sections indentation
+  /*
+  h2 {
+    margin-left: 5px;
+  }
+  h3 {
+    margin-left: 10px;
+  }
+  h4 {
+    margin-left: 15px;
+  }
+  h5 {
+    margin-left: 20px;
+  }
+  h6 {
+    margin-left: 25px;
+  }
+  */
+  h1 {
+    @h1-size: 50px;
+    font-size: @h1-size;
+    &::before {
+      height: calc(@h1-size - 20px);
+      width: calc(@h1-size - 20px);
+    }
+  }
+  h2 {
+    @h2-size: 45px;
+    font-size: @h2-size;
+    &::before {
+      height: calc(@h2-size - 10px);
+      width: calc(@h2-size - 10px);
+    }
+  }
+  h3 {
+    @h3-size: 40px;
+    font-size: @h3-size;
+    &::before {
+      height: calc(@h3-size - 10px);
+      width: calc(@h3-size - 10px);
+    }
+  }
+  h4 {
+    @h4-size: 35px;
+    font-size: @h4-size;
+    &::before {
+      height: calc(@h4-size - 10px);
+      width: calc(@h4-size - 10px);
+    }
+  }
+  h5 {
+    @h5-size: 30px;
+    font-size: @h5-size;
+    &::before {
+      height: calc(@h5-size - 10px);
+      width: calc(@h5-size - 10px);
+    }
+  }
+  h6 {
+    @h6-size: 20px;
+    font-size: @h6-size;
+    &::before {
+      height: calc(@h6-size - 10px);
+      width: calc(@h6-size - 10px);
+    }
+  }
+
+  h1,
+  h2, h3,h4 {
+    font-weight: normal;
+  }
+
+  h6 {
+    color: black;
+    &::before {
+      content: '> ';
+    }
+  }
+
+  center:first-child {
+    font-size: 20px;
+  }
+
+  code, pre[data-role=codeBlock] {
+    * {
+      font-family: 'Fira Code','Roboto Mono', 'Courier New', Courier, monospace;
+    }
+  }
+
+  //Automatic sections numbering
+  /*
+  body {
+    counter-reset: h1
+  }
+
+  h1:not(:first-child) {
+      counter-reset: h2
+  }
+
+  h2 {
+      counter-reset: h3
+  }
+
+  h3 {
+      counter-reset: h4
+  }
+
+  h1:not(:first-child):before {
+      counter-increment: h1;
+      content: counter(h1) " "
+  }
+
+  h2:before {
+      counter-increment: h2;
+      content: counter(h1) "." counter(h2) " "
+  }
+
+  h3:before {
+      counter-increment: h3;
+      content: counter(h1) "." counter(h2) "." counter(h3) " "
+  }
+
+  h4:before {
+      counter-increment: h4;
+      content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " "
+  }
+  */
+}
