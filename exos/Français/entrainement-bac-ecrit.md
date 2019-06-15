@@ -210,7 +210,7 @@ Par quels moyens Voltaire parvient-il à rallier le récepteur à sa cause ?
 - 
 
 ### Laurent Gaudé: Le Tigre bleu de l'Euphracte
-
+@annabac:157
 
 ###### Étude du texte
 
@@ -240,16 +240,14 @@ victorieux <== {
 - Faire ressentir au lecteur l'amertume de la victoire perdue
 
 ###### Plan
-
-*Sous parties*:
-A. Faire voyager le lecteur dans le temps et l'espace
-B. Faire ressentir au lecteur l'amertume de la victoire perdue
-A. Personnifier la mort
-B. Exprimer la brutalité de la mort
-
 *Parties*:
 I. Exprimer l'amertume de la victoire du passé
+A. Faire voyager le lecteur dans le temps et l'espace
+B. Faire ressentir au lecteur l'amertume de la victoire perdue
+
 II. Peindre un portrait ambigu de la mort
+A. Personnifier la mort
+B. Exprimer la brutalité de la mort
 
 *Problématique*: 
 Comment Laurent Gaudé parvient-il à transmettre au lecteur le sentiment de la victoire perdue, tout en représentant la mort avec ambiguité ?

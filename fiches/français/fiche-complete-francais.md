@@ -99,7 +99,7 @@ Tous sont des sous-genres de l'*apologue* (Court récit allégorique à visée d
 |----------|--------------------------------------------------------------------------------------------------|------------------|
 | Comédie  |                                                                                                  |                  |
 | Drame    | Pas forcément triste, mais comporte de l'action                                                  |                  |
-| Trajédie | Vocabulaire de la souffrance physique & morale <br> Conflits <br> Fatalité du destin |                  |
+| Trajédie | Vocabulaire de la souffrance physique & morale (pathos) <br> Conflit devoir / désir personnel <br> Fatalité du destin |                  |
 
 ### Poésie
 
@@ -296,7 +296,6 @@ Citations
 #### Théâtre
 ##### Drame romantique
 
-
 ~~Règles de Boileau~~
 Mélange des genres -> création du drame
 #### Poésie
@@ -325,7 +324,7 @@ Auteurs
     : Verlaine
 
 
-### XX: ?
+### XX: Epoque moderne
 #### Roman: Eclatement du genre
 ###### Nouveau roman
 - Refus de:
@@ -541,7 +540,7 @@ alinéa Conclusion partielle
 - **Collectif** *Plusieurs personnages qui agissent ensemble*
   - ?
 - **Antihéros** *héros banal dans ses actions & son portrait*
-  - ?
+  - Remise en question
 
 ###### DI/DIL
 
@@ -647,6 +646,8 @@ Le roman se caractérise par la diversité des formes, de ses sujets abordés et
 #### Quoi étudier
 ###### Contexte
 
+###### Registre
+
 ###### Types de répliques
 - Stychomities *répliques courtes \*en écho\**
 - Répliques courtes
@@ -704,7 +705,7 @@ Michel Achard disait: "Au cinéma, on joue. Au théâtre, c'est joué". Tel est 
   - temps des verbes
   - à qui il s'addresse
 ###### Thèmes
-  - poétique: amour, fuite du temps, nature, ?
+  - poétique: amour, fuite du temps, nature, mort, (la guerre & la paix, Dieu)?
   - transfiguré: *thème non-poétique rendu poétique*
 ###### Images
   - comparaison, métaphore, personnification
@@ -777,7 +778,7 @@ La poésie est un travail sur les mots, un jeu sur les sonorités, le rythme, la
         - [Romantisme](#romantisme)
         - [Parnasse](#parnasse)
         - [Symbolisme](#symbolisme)
-    - [XX: ?](#xx)
+    - [XX: Epoque moderne](#xx-epoque-moderne)
       - [Roman: Eclatement du genre](#roman-eclatement-du-genre)
           - [Nouveau roman](#nouveau-roman)
       - [Argumentation](#argumentation-5)
@@ -842,6 +843,7 @@ La poésie est un travail sur les mots, un jeu sur les sonorités, le rythme, la
     - [Théâtre](#th%C3%A9%C3%A2tre-7)
       - [Quoi étudier](#quoi-%C3%A9tudier-2)
           - [Contexte](#contexte)
+          - [Registre](#registre)
           - [Types de répliques](#types-de-r%C3%A9pliques)
           - [Personnages](#personnages)
           - [Décor](#d%C3%A9cor)
