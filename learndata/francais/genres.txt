@@ -1,0 +1,52 @@
+--ask-for keys
+--clear-screen on
+--ask-sentence Donnez la définition de <>
+--show-remaining-items-count
+
+fable
+court récit imaginaire et didactique, possédant souvent une morale explicite
+
+apologue
+récit anecdotique à visée didactique
+
+nouvelle
+récit court se limitant sur le nombre de personnages et d'épopées
+
+roman d'apprentissage
+roman au cours duquel le héros apprend et progresse
+
+roman épistolaire
+roman écrit sous forme de dialogues par lettre
+
+article
+?
+
+dialogue
+mise en scène d'un affrontement d'idées, au style direct
+
+discours
+texte argumentatif subjectif prononcé à l'oral
+
+essai
+réflexion personnelle sur un sujet contemporain dont l'auteur n'est pas spécialiste
+
+lettre
+?
+
+conte
+?
+
+conte philosophique
+nom composé de termes antithétiques, côté imaginaire pour distraire le lecteur et réflexion sur soi-même
+
+utopie
+idéal, vue politique ou sociale qui ne tient pas compte de la réalité
+
+drame
+?
+
+trajédie
+vocabulaire de la souffrance (pathos), conflit devoir / désir personnel, fatalité du destin
+
+sonnet
+poème en vers composé de 2 quatrains suivis de 2 tercets

@@ -1,0 +1,19 @@
+--ask-sentence Fonction ou but du registre <> ? (argumentation)
+
+polémique
+controverser, attaquer agressivement la thèse adverse
+
+pathétique
+émouvoir fortement, provoquer la pitié
+
+lyrique
+susciter une émotion poétique, communiquer des sentiments personnels
+
+comique
+amuser, susciter l'intérêt
+
+laudatif
+faire une éloge
+
+didactique
+délivrer un enseignement

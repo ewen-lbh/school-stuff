@@ -5,7 +5,7 @@ module.exports = {
       /* ----------------
             MARKDOWN
       --------------- */
-    
+
       // Underlined text: __text__ => <u>text</u>
       markdown = markdown.replace(/__(.+)__/gm, ($0, $1) => '<u>' + $1 + '</u>')
       // Newline (might remove): \n => <br>
@@ -18,7 +18,7 @@ module.exports = {
       // Special arrows
       markdown = markdown.replace('|_>', '↳')
 
-      
+
       // Named headers: #4 => ####
       // WARNING: These won't appear in VSCode's default TOC generator
       // because it parses markdown *before* MPE parses it
@@ -54,7 +54,7 @@ module.exports = {
         // |->           ····> \mapsto
         //ret = ret.replace('|->', '\\mapsto ')
 
-        // Function conversion! 
+        // Function conversion!
         // - set funcMapStyle to true to use map-style functions: f:x↦y
         // - set to false to use parenthesis-style functions: f(x)=y
         funcMapStyle = true
@@ -96,13 +96,18 @@ module.exports = {
       \\aleph \\;\\lang \\text{E\\u{w}en } \\Gamma \\text{e B} \\mathring{\\imath}\\text{h}\\alpha\\text{n} \\rang\\; \\nabla
       $$`
 
+      /* - - - - - -
+      TOC IDENTATION FIX
+      - - - - - - -*/
+      markdown = markdown.replace()
+
       return resolve(markdown)
     })
   },
   onDidParseMarkdown: function (html) {
     return new Promise((resolve, reject) => {
       html = html.replace('<head>','<head><link rel="stylesheet" href="https://github.com/ewen-lbh/school-stuff/deps/fonts/fonts.css">')
-      
+
       return resolve(html)
     })
   }
