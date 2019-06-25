@@ -1,0 +1,920 @@
+<!DOCTYPE html><html><head>
+      <title>EAF: Fiche par textes</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  /*
+  h2 {
+    margin-left: 5px;
+  }
+  h3 {
+    margin-left: 10px;
+  }
+  h4 {
+    margin-left: 15px;
+  }
+  h5 {
+    margin-left: 20px;
+  }
+  h6 {
+    margin-left: 25px;
+  }
+  */
+  /*
+  body {
+    counter-reset: h1
+  }
+
+  h1:not(:first-child) {
+      counter-reset: h2
+  }
+
+  h2 {
+      counter-reset: h3
+  }
+
+  h3 {
+      counter-reset: h4
+  }
+
+  h1:not(:first-child):before {
+      counter-increment: h1;
+      content: counter(h1) " "
+  }
+
+  h2:before {
+      counter-increment: h2;
+      content: counter(h1) "." counter(h2) " "
+  }
+
+  h3:before {
+      counter-increment: h3;
+      content: counter(h1) "." counter(h2) "." counter(h3) " "
+  }
+
+  h4:before {
+      counter-increment: h4;
+      content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " "
+  }
+  */
+}
+.markdown-preview.markdown-preview p,
+.markdown-preview.markdown-preview li,
+.markdown-preview.markdown-preview center,
+.markdown-preview.markdown-preview dl,
+.markdown-preview.markdown-preview dd,
+.markdown-preview.markdown-preview h6,
+.markdown-preview.markdown-preview th,
+.markdown-preview.markdown-preview td {
+  font-family: 'Fantasque Sans Mono', 'Roboto', sans-serif;
+}
+.markdown-preview.markdown-preview h1,
+.markdown-preview.markdown-preview h2,
+.markdown-preview.markdown-preview h3,
+.markdown-preview.markdown-preview h4,
+.markdown-preview.markdown-preview h5 {
+  font-family: 'Google Sans', sans-serif;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+.markdown-preview.markdown-preview p {
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+.markdown-preview.markdown-preview s {
+  opacity: 0.5;
+}
+.markdown-preview.markdown-preview h2 {
+  padding: 2.5px 10px;
+  background: #268cce;
+  color: #ffffff;
+}
+.markdown-preview.markdown-preview center:first-child {
+  margin-top: 0;
+  margin-bottom: 75px;
+  background: #ffffff;
+}
+.markdown-preview.markdown-preview h3::before,
+.markdown-preview.markdown-preview h4::before {
+  content: '';
+  background: #268cce;
+  display: inline-block;
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+}
+.markdown-preview.markdown-preview h4::before {
+  border-radius: 50%;
+}
+.markdown-preview.markdown-preview h1 {
+  font-size: 50px;
+}
+.markdown-preview.markdown-preview h1::before {
+  height: calc(50px - 20px);
+  width: calc(50px - 20px);
+}
+.markdown-preview.markdown-preview h2 {
+  font-size: 40px;
+}
+.markdown-preview.markdown-preview h2::before {
+  height: calc(40px - 10px);
+  width: calc(40px - 10px);
+}
+.markdown-preview.markdown-preview h3 {
+  font-size: 35px;
+}
+.markdown-preview.markdown-preview h3::before {
+  height: calc(35px - 10px);
+  width: calc(35px - 10px);
+}
+.markdown-preview.markdown-preview h4 {
+  font-size: 30px;
+}
+.markdown-preview.markdown-preview h4::before {
+  height: calc(30px - 10px);
+  width: calc(30px - 10px);
+}
+.markdown-preview.markdown-preview h5 {
+  font-size: 25px;
+}
+.markdown-preview.markdown-preview h5::before {
+  height: calc(25px - 10px);
+  width: calc(25px - 10px);
+}
+.markdown-preview.markdown-preview h6 {
+  font-size: 17px;
+}
+.markdown-preview.markdown-preview h6::before {
+  height: calc(17px - 10px);
+  width: calc(17px - 10px);
+}
+.markdown-preview.markdown-preview h1,
+.markdown-preview.markdown-preview h2,
+.markdown-preview.markdown-preview h3,
+.markdown-preview.markdown-preview h4,
+.markdown-preview.markdown-preview h5 {
+  font-weight: normal;
+}
+.markdown-preview.markdown-preview h6 {
+  color: black;
+}
+.markdown-preview.markdown-preview h6::before {
+  content: '> ';
+}
+.markdown-preview.markdown-preview center:first-child {
+  font-size: 20px;
+}
+.markdown-preview.markdown-preview code *,
+.markdown-preview.markdown-preview pre[data-role=codeBlock] * {
+  font-family: 'Fira Code', 'Roboto Mono', 'Courier New', Courier, monospace;
+}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <center><h1 style="margin-bottom:-5px;">EAF: Fiche par textes</h1>Ewen Le Bihan</center>
+<h1 class="mume-header" id="xvie-si%C3%A8cle">XVI<sup>e</sup> si&#xE8;cle</h1>
+
+<h2 class="mume-header" id="fran%C3%A7ois-rabelais-gargantua-sc%C3%A8ne-de-repas">Fran&#xE7;ois Rabelais: Gargantua, &quot;sc&#xE8;ne de repas&quot;</h2>
+
+<h3 class="mume-header" id="infos-g%C3%A9n%C3%A9rales">Infos g&#xE9;n&#xE9;rales</h3>
+
+<dl>
+<dt>Mouvement litt&#xE9;raire</dt>
+<dd>Humanisme</dd>
+</dl>
+<h3 class="mume-header" id="auteur">Auteur</h3>
+
+<ul>
+<li>&#xC9;lev&#xE9; dans une abbaye</li>
+<li>Devient pr&#xEA;tre, m&#xE9;decin et professeur &#xE0; l&apos;univ de Mtp</li>
+<li>Fait une satyre de la religion dans ses &#x153;uvres</li>
+</ul>
+<h3 class="mume-header" id="%C5%93uvre">&#x152;uvre</h3>
+
+<ul>
+<li>&#xC9;ponyme</li>
+<li>2<sup>nd</sup> roman de Rabelais</li>
+<li>Raconte ann&#xE9;es d&apos;apprentissage &amp; exploit guerriers du g&#xE9;ant</li>
+<li>Pantagruel: p&#xE8;re de Gargantua</li>
+<li>Plaidoyer pour la culture humaniste &#x2013; contre la religion</li>
+</ul>
+<h3 class="mume-header" id="contexte-de-lextrait">Contexte de l&apos;extrait</h3>
+
+<ul>
+<li>D&#xE9;but du roman</li>
+</ul>
+<h3 class="mume-header" id="%C3%A9tude-de-lextrait">&#xC9;tude de l&apos;extrait</h3>
+
+<dl>
+<dt>Narrateur</dt>
+<dd>Omniscient, extradi&#xE9;g&#xE9;tique</dd>
+<dt>Th&#xE8;mes</dt>
+<dd>Nourriture, quantit&#xE9; &gt; qualit&#xE9;, corps</dd>
+<dt>Sens du texte</dt>
+<dd>Critique de la religion</dd>
+</dl>
+<h2 class="mume-header" id="francois-rabelais-gargantua-labbaye-de-th%C3%A9l%C3%A8me">Francois Rabelais: Gargantua, &quot;l&apos;Abbaye de Th&#xE9;l&#xE8;me&quot;</h2>
+
+<h3 class="mume-header" id="auteur-1">Auteur</h3>
+
+<p><em>Voir <a href="#Auteur">ici</a></em></p>
+<h3 class="mume-header" id="%C5%93uvre-1">&#x152;uvre</h3>
+
+<p><em>Voir <a href="#%C5%92uvre">ici</a></em></p>
+<h3 class="mume-header" id="extrait">Extrait</h3>
+
+<ul>
+<li>Th&#xE9;l&#xE8;me dans la bible: &quot;volont&#xE9; de Dieu&quot;</li>
+<li>1<sup>&#xE8;re</sup> utopie de la litt fran&#xE7;aise</li>
+<li>Abbaye au r&#xE8;gles</li>
+</ul>
+<dl>
+<dt>Contexte</dt>
+<dd>?, Abbaye</dd>
+<dt>Th&#xE8;mes</dt>
+<dd>Bonheur, religion</dd>
+<dt>Sens du texte</dt>
+<dd>Th&#xE8;se: Fait ce que tu voudras</dd>
+</dl>
+<h2 class="mume-header" id="pierre-ronsard-mignonne-allons-voir-si-la-rose">Pierre Ronsard: Mignonne, allons voir si la rose</h2>
+
+<h3 class="mume-header" id="auteur-2">Auteur</h3>
+
+<ul>
+<li>Prince des po&#xE8;tes &amp; po&#xE8;te des princes
+<ul>
+<li>&#xE9;ducation noble &amp; humaniste</li>
+<li>po&#xE8;te officiel du roi</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%C5%93uvreextrait">&#x152;uvre/Extrait</h3>
+
+<ul>
+<li>&#xD4;de &#xE0; Cassandre</li>
+<li><em>carpe diem</em> (devise d&apos;&#xC9;picure)</li>
+<li>Fuite du temps</li>
+</ul>
+<h2 class="mume-header" id="jean-de-la-fontaine-le-philosophe-scythe">Jean de la Fontaine: Le Philosophe Scythe</h2>
+
+<h3 class="mume-header" id="auteur-3">Auteur</h3>
+
+<ul>
+<li>go&#xFB;t pour la nature
+<ul>
+<li>fils d&apos;un ma&#xEE;tre des eaux &amp; des for&#xEA;ts</li>
+</ul>
+</li>
+<li>Fouquet:
+<ul>
+<li>son m&#xE9;c&#xE8;ne</li>
+<li>reste fid&#xE8;le &#xE0; lui</li>
+</ul>
+</li>
+<li>est arr&#xEA;t&#xE9; -&gt; exil -&gt; rappel&#xE9; par Louis XIV</li>
+<li>Gustave Dor&#xE9;:
+<ul>
+<li>illustre presque tt ses fables</li>
+</ul>
+</li>
+<li>querelle Ancien vs Moderne
+<ul>
+<li>Ancien: on ne peut pas faire mieux (J Fontaine)</li>
+<li>Moderne: on fait mieux (C Perrault)</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%C5%93uvre-2">&#x152;uvre</h3>
+
+<ul>
+<li>&#xC9;picurisme</li>
+<li>Sto&#xEF;cisme</li>
+<li>Th&#xE8;se: &#xC9;picurisme &gt; Sto&#xEF;cisme</li>
+<li>2 philosophies au but commun:
+<ul>
+<li>bonheur</li>
+<li>s&#xE9;r&#xE9;nit&#xE9;</li>
+<li>tranquilit&#xE9; de l&apos;&#xE2;me</li>
+</ul>
+</li>
+</ul>
+<h1 class="mume-header" id="xviie-si%C3%A8cle">XVII<sup>e</sup> si&#xE8;cle</h1>
+
+<h2 class="mume-header" id="voltaire-zadig-le-borgne">Voltaire: Zadig, &quot;Le Borgne&quot;</h2>
+
+<h3 class="mume-header" id="auteur-4">Auteur</h3>
+
+<h4 class="mume-header" id="contexte">Contexte</h4>
+
+<ul>
+<li>Monarchie fragilis&#xE9;e</li>
+<li>&#x2197; d&#xE9;mographie</li>
+<li>commerce <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x394;</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">&#x394;</span></span></span></span><sup>aire</sup></li>
+<li>&#x2197; &#xE9;ducation des sciences
+<ul>
+<li>&#x21B3; on s&apos;aper&#xE7;oit que l&apos;&#xE9;glise freine le progr&#xE8;s</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="auteur-5">Auteur</h4>
+
+<p>&#xE9;picurien, humaniste, tr&#xE8;s engag&#xE9;</p>
+<ul>
+<li>a bcp voyag&#xE9; de mani&#xE8;re forc&#xE9;e:
+<ul>
+<li>-&gt; arrive dans un pays</li>
+<li>-&gt; s&apos;exprime trop</li>
+<li>-&gt; doit s&apos;exiler</li>
+</ul>
+</li>
+<li>tr&#xE8;s dou&#xE9; en discours</li>
+<li>&#xE9;l&#xE8;ve populaire et brillant</li>
+<li>conflit p&#xE8;re != fils:
+<ul>
+<li>p&#xE8;re: droit, fils: h&#x14D; de lettre</li>
+</ul>
+</li>
+<li>impression&#xE9; par Angleterre:
+<ul>
+<li>mod&#xE8;le de mnarchie</li>
+<li>libert&#xE9; politique &amp; religieuse</li>
+</ul>
+</li>
+<li>s&apos;installe en Suisse
+<ul>
+<li>fait une entreprise+village &quot;Ferney&quot;</li>
+<li>emploie beaucoup de gens</li>
+<li>&#x21B3; &#x2197; c&#xE9;l&#xE9;brit&#xE9;</li>
+</ul>
+</li>
+<li>Relation avec M<sup>me</sup> du Ch&#xE2;telet
+<ul>
+<li>se termine car elle tombe amoureuse de Leibniz</li>
+</ul>
+</li>
+<li>Principes de Voltaire, inspir&#xE9;s du lib&#xE9;ralisme anglais
+<ul>
+<li>seule l&apos;exp&#xE9;rience nous instruit</li>
+<li>il faut prendre en main sa destin&#xE9;e</li>
+<li>il faut am&#xE9;liorer sa condition de vie (dans tout les domaines), et cela par:
+<ul>
+<li>la science, l&apos;industrie, les arts</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inventeur du conte <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3D5;</mi></mrow><annotation encoding="application/x-tex">\phi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">&#x3D5;</span></span></span></span><sup>ique</sup></li>
+</ul>
+<h4 class="mume-header" id="citation">Citation</h4>
+
+<p>&#xAB;Je ne suis pas d&apos;accord avec ce que vous d&#xEE;tes, mais je me batterai toute ma vie pour que vous ayez le droit de le dire&#xBB;<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#x2014;&#x2014; Voltaire<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<h3 class="mume-header" id="%C5%93uvre-3">&#x152;uvre</h3>
+
+<ul>
+<li>inspir&#xE9; d&apos;un conte Persan</li>
+<li>personnage principal parfait:
+<ul>
+<li>riche</li>
+<li>jeune</li>
+<li>en pleine sant&#xE9;</li>
+<li>h&#x14D; id&#xE9;al</li>
+<li>raisonne &#xE0; chaque confrontation au malheur</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="extrait-1">Extrait</h3>
+
+<ul>
+<li>plonge dans l&apos;univers du conte oriental</li>
+<li>mais &lt;choix du narr&gt;? annonce c&#xF4;t&#xE9; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3D5;</mi></mrow><annotation encoding="application/x-tex">\phi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">&#x3D5;</span></span></span></span><sup>ique</sup> (am&#xE8;ne &#xE0; la r&#xE9;flexion)</li>
+<li>invite &#xE0; la r&#xE9;flexion sur la condition humaine</li>
+</ul>
+<h2 class="mume-header" id="voltaire-zadig-lenvieux">Voltaire: Zadig, &quot;L&apos;Envieux&quot;</h2>
+
+<h3 class="mume-header" id="auteur-6">Auteur</h3>
+
+<p><em>Voir <a href="#auteur-4">Voltaire</a></em></p>
+<h3 class="mume-header" id="%C5%93uvre-4">&#x152;uvre</h3>
+
+<p><em>Voir <a href="#%C5%93uvre-3">Zadig</a></em></p>
+<h3 class="mume-header" id="extrait-2">Extrait</h3>
+
+<ul>
+<li>d&#xE9;&#xE7;u par les f&#x113;, cherche le bonheur par la politique (-&gt; la cour)</li>
+<li>mise en sc&#xE8;ne &#xE9;norme
+<ul>
+<li>sch&#xE9;ma narr bien marqu&#xE9;
+<ul>
+<li>EP: &quot;il brisa en deux&quot; =&gt; connotation forte, perturbe l&apos;harmonie</li>
+<li>ER: intervention du merveilleux</li>
+</ul>
+</li>
+<li>fait appel au merveilleux</li>
+<li>cadre symbolique:
+<ul>
+<li>perroquet sur <u>arbre</u> =&gt; espoir</li>
+<li><u>ses</u> jardins =&gt; sagesse</li>
+<li>buisson de <u>roses</u> =&gt; amour: beau et piquant</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>vers &#xE0; moiti&#xE9; lu: l&apos;auteur fait passer le msg &quot;lisez mes livres jusqu&apos;au bout&quot;</li>
+<li>humaniste:
+<ul>
+<li>tout est contre Zadig, mais l&apos;h&#x14D; a des ressources</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="voltaire-zadig-lhermite">Voltaire: Zadig, &quot;L&apos;Hermite&quot;</h2>
+
+<h3 class="mume-header" id="auteur-7">Auteur</h3>
+
+<p><em>Voir <a href="#auteur-4">Voltaire</a></em></p>
+<h3 class="mume-header" id="%C5%93uvre-5">&#x152;uvre</h3>
+
+<p><em>Voir <a href="#%C5%93uvre-3">Zadig</a></em></p>
+<h3 class="mume-header" id="extrait-3">Extrait</h3>
+
+<ul>
+<li>l&apos;Hermite
+<ul>
+<li>personnage symbolique</li>
+<li>conception divine</li>
+</ul>
+</li>
+<li>dialogue argumentatif</li>
+<li>vis&#xE9;e didactique</li>
+<li>th&#xE8;se de l&apos;hermite: il faut se soumettre aux ordres de l&apos;&#xC9;ternel
+<ul>
+<li>raisonne par analogie, absurde et hyopth&#xE8;se</li>
+<li>aura tj r&#xE9;ponse &#xE0; tout</li>
+</ul>
+</li>
+<li>Attitude de Zadig:
+<ul>
+<li>h&#xE9;site: objections (CONJCOORD&quot;mais&quot;)</li>
+<li>n&apos;ose pas s&apos;opposer: &quot;mais&quot;+question</li>
+<li>est sage: renonce, sait que c&apos;est inutile: &quot;il se soumit&quot;</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="madame-du-ch%C3%A2telet-discours-sur-le-bonheur">Madame du Ch&#xE2;telet: Discours sur le bonheur</h2>
+
+<h3 class="mume-header" id="auteur-8">Auteur</h3>
+
+<ul>
+<li>tr&#xE8;s brillante, surtout en maths &amp; physique</li>
+<li>se d&#xE9;guse en h&#x14D; pour &#xEA;tre accept&#xE9;e dans...
+<ul>
+<li>une r&#xE9;union scientifique au Louvre</li>
+<li>les caf&#xE9;s pour parler avec des scientifiques</li>
+</ul>
+</li>
+<li>on finit par l&apos;accepter, alors que c&apos;est une f&#x113;</li>
+<li>embl&#xE8;me du f&#xE9;minisme avec Olympe de Gouges</li>
+<li>deux amants:
+<ul>
+<li>Voltaire</li>
+<li>S<sup>t</sup> Lambert</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%C5%93uvreextrait-1">&#x152;uvre/Extrait</h3>
+
+<p><em>Pour &#xEA;tre heureux, on doit...</em></p>
+<ul>
+<li>r&#xE9;fl&#xE9;chir avant d&apos;agir</li>
+<li>ne pas avoir peur du temps qui passe</li>
+<li>ne pas avoir d&apos;id&#xE9;es toutes faites</li>
+<li>ne pas faire de mal &#xE0; autrui</li>
+<li>avoir des go&#xFB;ts et des passions, et les satisfaire</li>
+<li>garder ses illusions, les renforcer</li>
+</ul>
+<h2 class="mume-header" id="voltaire-candide">Voltaire: Candide</h2>
+
+<h3 class="mume-header" id="auteur-9">Auteur</h3>
+
+<p><em>Voir <a href="#auteur-4">Voltaire</a></em></p>
+<h3 class="mume-header" id="%C5%93uvre-6">&#x152;uvre</h3>
+
+<ul>
+<li>conte <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3D5;</mi></mrow><annotation encoding="application/x-tex">\phi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">&#x3D5;</span></span></span></span><sup>ique</sup></li>
+<li>critique la th&#xE9;orie de l&apos;optimisme, d&#xE9;fendue par Leibniz via la satyre
+<ul>
+<li>(Pangloss: &quot;Tout va pour le mieux dans le meilleur des mondes&quot;)</li>
+</ul>
+</li>
+<li>Morales
+<ul>
+<li>Candide: &quot;Il faut cultiver notre jardin&quot;</li>
+<li>Martin?: &quot;Le travail &#xE9;loigne de nous trois grand maux: l&apos;ennui, le vice et le besoin&quot;</li>
+</ul>
+</li>
+<li>&lt;h&#xE9;ros didactique&gt;?</li>
+</ul>
+<h3 class="mume-header" id="extrait-4">Extrait</h3>
+
+<ul>
+<li>fin de l&apos;aventure, bilan</li>
+<li>candide a bien &#xE9;volu&#xE9; et n&apos;est plus d&apos;accord avec Pangloss</li>
+<li>vision du bonheur != pour chaque perso</li>
+</ul>
+<h1 class="mume-header" id="xixe-si%C3%A8cle">XIX<sup>e</sup> si&#xE8;cle</h1>
+
+<h2 class="mume-header" id="g%C3%A9rard-de-nerval-fantaisie">G&#xE9;rard de Nerval: Fantaisie</h2>
+
+<h3 class="mume-header" id="auteur-10">Auteur</h3>
+
+<ul>
+<li>centr&#xE9; sur soi, souffrance, sentiments profonds</li>
+<li>commence par traduire des textes allemands et devient c&#xE9;l&#xE8;bre</li>
+<li>go&#xFB;t pour le pass&#xE9; et les l&#xE9;gendes</li>
+</ul>
+<h3 class="mume-header" id="%C5%93uvre-7">&#x152;uvre</h3>
+
+<ul>
+<li>&#xE9;tymologie: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3D5;</mi><mi>&#x3B1;</mi><mi>&#x3BD;</mi><mi>&#x3C4;</mi><mi>&#x3B1;</mi><mi>&#x3C3;</mi><mi>&#x3B9;</mi><mi>&#x3B1;</mi></mrow><annotation encoding="application/x-tex">\phi\alpha\nu\tau\alpha\sigma\iota\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">&#x3D5;</span><span class="mord mathdefault" style="margin-right:0.0037em;">&#x3B1;</span><span class="mord mathdefault" style="margin-right:0.06366em;">&#x3BD;</span><span class="mord mathdefault" style="margin-right:0.1132em;">&#x3C4;</span><span class="mord mathdefault" style="margin-right:0.0037em;">&#x3B1;</span><span class="mord mathdefault" style="margin-right:0.03588em;">&#x3C3;</span><span class="mord mathdefault">&#x3B9;</span><span class="mord mathdefault" style="margin-right:0.0037em;">&#x3B1;</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">&#x27E8;</mo></mrow><annotation encoding="application/x-tex">\lang</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">&#x27E8;</span></span></span></span>fantasia<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">&#x27E9;</mo></mrow><annotation encoding="application/x-tex">\rang</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">&#x27E9;</span></span></span></span> =&gt; vision
+<ul>
+<li>joue sur la polyc&#xE9;mie de &quot;fantaisie&quot;: vision + qqch d&apos;original</li>
+</ul>
+</li>
+<li>image de la f&#x113; id&#xE9;ale</li>
+<li>fait r&#xE9;f&#xE9;rence &#xE0; 3 compositeurs d&apos;op&#xE9;ra:
+<ul>
+<li>Rossini: italien, XIX<sup>e</sup></li>
+<li>Weber: invente le grand op&#xE9;ra</li>
+<li>Mozart: XVI<sup>e</sup>, op&#xE9;ra fl&#xFB;te enchant&#xE9;e</li>
+</ul>
+</li>
+<li>=&gt; montre l&apos;importance de la musique</li>
+</ul>
+<h2 class="mume-header" id="victor-hugo-elle-%C3%A9tait-d%C3%A9chauss%C3%A9e">Victor Hugo: Elle &#xE9;tait d&#xE9;chauss&#xE9;e...</h2>
+
+<h3 class="mume-header" id="auteur-11">Auteur</h3>
+
+<ul>
+<li>personnalit&#xE9; politique, intellectuel engag&#xE9;</li>
+<li>chef de file du drame romantique, qu&apos;il d&#xE9;finit dans la pr&#xE9;face de Cromwell</li>
+<li>po&#xE8;te lyrique mais aussi engag&#xE9; contre Napol&#xE9;on III (dans Les Ch&#xE2;timents)</li>
+<li>romans &#xE0; grand succ&#xE8;s: Les Mis&#xE9;rables, Notre Dame de Paris (RIP mdr)</li>
+<li>discours politique</li>
+</ul>
+<h3 class="mume-header" id="%C5%93uvre-8">&#x152;uvre</h3>
+
+<ul>
+<li>dans recueil &quot;pauca meae&quot;, mort de sa fille</li>
+<li>rencontre r&#xE9;v&#xE9;e
+<ul>
+<li>la tutoie directement</li>
+<li>pas d&apos;identit&#xE9; &lt;- &quot;Elle&quot;</li>
+</ul>
+</li>
+<li>topos: nature comme cachette de l&apos;amour</li>
+<li>portrait id&#xE9;alis&#xE9; de la femme</li>
+</ul>
+<h2 class="mume-header" id="gustave-flaubert-mme-bovary">Gustave Flaubert: Mme Bovary</h2>
+
+<h3 class="mume-header" id="auteur-12">Auteur</h3>
+
+<ul>
+<li>Auteur r&#xE9;aliste, analyses psychologiques</li>
+<li>gagne proc&#xE8;s, il est accus&#xE9; d&apos;outrage &#xE0; la morale publique et religieuse et aux bonne m&#x153;urs (Madame Bovary)</li>
+<li>Voyage pour se documenter et &#xE9;crire le roman historique Salammb&#xF4;</li>
+</ul>
+<h3 class="mume-header" id="%C5%93uvre-9">&#x152;uvre</h3>
+
+<ul>
+<li>roman r&#xE9;aliste
+<ul>
+<li>description minutieuse</li>
+<li>d&#xE9;cors vraisemblables</li>
+</ul>
+</li>
+<li>Emma: jeune f&#x113; vivant &#xE0; la campagne
+<ul>
+<li>r&#xEA;ve d&apos;&#xE9;mancipation, d&apos;une vie comme dans les romans qu&apos;elle lit</li>
+<li>son r&#xEA;ve ne se r&#xE9;alisera jamais, bcp de d&#xE9;ceptions</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="extrait-5">Extrait</h3>
+
+<ul>
+<li>d&#xEE;ner avant le bal
+<ul>
+<li>Emma: &#xE9;merveill&#xE9;e, puis rappel de la vie qu&apos;elle a</li>
+<li>Charles: ennuy&#xE9;, fait honte &#xE0; Emma</li>
+</ul>
+</li>
+<li>critique de l&apos;aristocratie par la satyre</li>
+<li>description subjective, &#xE0; travers le regard d&apos;Emma</li>
+</ul>
+<h1 class="mume-header undefined" id="sommaire">Sommaire</h1>
+
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#xvie-si%C3%A8cle">XVI<sup>e</sup> si&#xE8;cle</a>
+<ul>
+<li><a href="#fran%C3%A7ois-rabelais-gargantua-sc%C3%A8ne-de-repas">Fran&#xE7;ois Rabelais: Gargantua, &quot;sc&#xE8;ne de repas&quot;</a></li>
+<li><a href="#francois-rabelais-gargantua-labbaye-de-th%C3%A9l%C3%A8me">Francois Rabelais: Gargantua, &quot;l&apos;Abbaye de Th&#xE9;l&#xE8;me&quot;</a></li>
+<li><a href="#pierre-ronsard-mignonne-allons-voir-si-la-rose">Pierre Ronsard: Mignonne, allons voir si la rose</a></li>
+<li><a href="#jean-de-la-fontaine-le-philosophe-scythe">Jean de la Fontaine: Le Philosophe Scythe</a></li>
+</ul>
+</li>
+<li><a href="#xviie-si%C3%A8cle">XVII<sup>e</sup> si&#xE8;cle</a>
+<ul>
+<li><a href="#voltaire-zadig-le-borgne">Voltaire: Zadig, &quot;Le Borgne&quot;</a></li>
+<li><a href="#voltaire-zadig-lenvieux">Voltaire: Zadig, &quot;L&apos;Envieux&quot;</a></li>
+<li><a href="#voltaire-zadig-lhermite">Voltaire: Zadig, &quot;L&apos;Hermite&quot;</a></li>
+<li><a href="#madame-du-ch%C3%A2telet-discours-sur-le-bonheur">Madame du Ch&#xE2;telet: Discours sur le bonheur</a></li>
+<li><a href="#voltaire-candide">Voltaire: Candide</a></li>
+</ul>
+</li>
+<li><a href="#xixe-si%C3%A8cle">XIX<sup>e</sup> si&#xE8;cle</a>
+<ul>
+<li><a href="#g%C3%A9rard-de-nerval-fantaisie">G&#xE9;rard de Nerval: Fantaisie</a></li>
+<li><a href="#victor-hugo-elle-%C3%A9tait-d%C3%A9chauss%C3%A9e">Victor Hugo: Elle &#xE9;tait d&#xE9;chauss&#xE9;e...</a></li>
+<li><a href="#gustave-flaubert-mme-bovary">Gustave Flaubert: Mme Bovary</a></li>
+</ul>
+</li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>En fait, <a href="https://www.projet-voltaire.fr/culture-generale/voltaire-citation-apocryphe-je-ne-suis-pas-d-accord-avec-vous/">la citation ne vient pas de Voltaire</a> <a href="#fnref1" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

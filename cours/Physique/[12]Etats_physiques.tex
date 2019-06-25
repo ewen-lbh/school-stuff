@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx ,caption}
+\usepackage{newunicodechar}
+\newunicodechar{°}{\degree}
+\usepackage[a4paper, total={7in,10in}]{geometry}
+\def\arraystretch{2}
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\textit{\today}
+\vfill
+\textbf{\LARGE{Aspect énergétique \& transformation de la matière}\\\Large{Physique --- Chapitre 12}}\\
+\vfill
+\large{Ewen Le Bihan\\1eS3}
+\end{center}
+\end{titlepage}
+
+\section{Changements d'états}
+\subsection{Les différents changements d'états}
+Dû à une agitation des molécules (et donc à une chaleur) plus élevée\\\\
+Changements d'états\\
+\begin{tabular}{r||c|c|c}
+	Départ $\downarrow$ Arrivée $\rightarrow$  &  Solide & Liquide & Gazeux\\
+	\hline \hline
+	Solide & / & Fusion & Sublimation\\
+	\hline
+	Liquide & Solidification & / & Vaporisation\\
+	\hline
+	Gazeux & Condensation & Liquéfaction & /
+\end{tabular}
+\\\\
+Ce qui rend le changement d'état "positif" plus couteux:
+\begin{itemize}
+	\item Nb de C $\to$ Nb d'interactions de Van der Waals
+	\item Présence de liaisons hydrogènes
+\end{itemize}
+Les alcools demandent plus d'énergie que les alcanes car ils possèdent les liaisons hydrogène
+\subsection{Énergies requises}
+
+%\begin{tabular}{l|l|l|l}
+%	Nom & Symbole & Unité & Description\\
+%	\hline \hline
+%	Capacité thermique & $C$ & $J \cdot K^{-1}$ & Énergie nécéssaire pour augmenter la température de 1 $K$\\
+%	\hline
+%	Énergie thermique massique & $L_{etat}$ & $J \cdot g^{-1}$ & Énergie requise pour faire passer 1 $g$ à $etat$\\
+%	\hline
+%	Capacité thermique massique & $c_{objet}$ & $J \cdot K^{-1} \cdot g^{-1}$ & Énergie require pour augmenter la température 1 $g$ de $objet$ de 1 $K$
+%\end{tabular}
+\subsubsection{Énergie massique de changement d'état $L$}
+\begin{flalign*}
+\underbrace{E}_{J} &= \underbrace{m}_{g}\cdot \underbrace{L_{\acute{e}tat}}_{g\cdot J^{-1}}\\\\
+E &= m \underbrace{c}_{\text{\makebox[0pt]{$J\cdot ^\circ C^{-1}\cdot g^{-1}$}}} (\theta_{i} - \theta_{f})\\\\
+E &= \underbrace{C}_{J\cdot ^\circ C^{-1}} \cdot \underbrace{(\theta_f - \theta_i)}_{^\circ C}
+\end{flalign*}
+Une $L$ de changement d'état "inverse" est égal à l'opposé de l'autre:
+\begin{flalign*}
+\underbrace{L_{sol}}_{\text{\makebox[0pt]{solidification}}} &= - \underbrace{L_{fus}}_{\text{fusion}}
+\end{flalign*}
+$E$ et $L$ sont du même signe
+
+\subsection{Chaleur}
+La chaleur n'augmente pas pendant un changement d'état
+
+\section{Miscibilité dans l'eau}
+\subsection{Hydrophilie/phobie}
+Un alcool est hydrophile s'il présente ce schéma:
+\begin{equation*}
+R - OH
+\end{equation*}
+(avec $R$ une chaine carbonnée)
+\\\\
+Sinon, il est hydrophobe.
+\subsubsection{Endothermie \& Exothermie}
+\begin{tabular}{lll}
+	Quand on passe à un état plus désordonné, &il faut \textbf{apporter} de l'énergie: &c'est endothermique\\
+Quand on passe à un état moins désordonné, &ça \textbf{dégage} de l'énergie: &c'est exothermique
+\end{tabular}
+\subsection{Miscibilité}
+Un alcool \textbf{hydrophile} est miscible dans l'eau. \\ Un alcool \textbf{hydrophobe} ne l'est pas.
+\newpage
+\section{Distillation fractionnée}
+\subsection{But}
+Séparer un mélange de liquides en espèces pures.
+\subsection{Matériel}
+\begin{itemize}
+	\item Colonne de Vigreux
+	\item Ballon
+	\item Chauffe-ballon
+	\item[(] Support élévateur
+	\item Réfrigérant droit
+	\item Erlenmeyer
+\end{itemize}
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, mathrsfs, xfrac, txfonts}
+\usepackage{graphicx ,caption}
+\usepackage[a4paper, total={7in,10in}]{geometry}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{array}
+\def\arraystretch{2}
+\newcolumntype{C}{>{$}c<{$}}
+\newcolumntype{L}{>{$}l<{$}}
+\newcolumntype{R}{>{$}r<{$}}
+\DeclareSymbolFont{matha}{OML}{txmi}{m}{it}% txfonts
+\DeclareMathSymbol{v}{\mathord}{matha}{118}
+% Use titlepage<Tab> for a title page
+\begin{document}
+\section{Notations \& Unités}
+\begin{center}
+\begin{tabular}{c|ccc}
+	Mouvement & Position & Vitesse & Accélération\\\hline
+	Translation & $x,y,z$ (m) & $v$ (m$\cdot$s$^{-1}$)& $a$ (m$\cdot$s$^{-2}$)\\
+	Circulaire & $\theta$ (rad) & $\omega$ (rad$\cdot$s$^{-1}$) & $\alpha$ (rad$\cdot$s$^{-2}$)\\
+	
+\end{tabular}
+\end{center}
+\section{Uniforme}
+$\alpha = 0$
+\begin{flalign*}
+\alpha(t) &= 0\\
+\omega(t) &= \omega_0\\
+\theta(t) &= \omega_0 \cdot (t-t_0) + \theta_0
+\end{flalign*}
+
+\section{Uniformément varié}
+$\alpha =  \text{constante}$
+\begin{flalign*}
+\alpha(t) &= \alpha_0\\
+\omega(t) &= \alpha_0(t-t_0) + \omega_0\\
+\theta(t) &= \frac{1}{2}\alpha_0(t-t_0)^2+\omega_0(t-t_0)+ \theta_0
+\end{flalign*}
+
+\section{Rapport de réduction $r$}
+$Z_i$ : Nombre de dents (entrée, menante)\\
+$Z_o$ : Nombre de dents (sortie, menée)
+\begin{flalign*}
+r = \frac{Z_{i}}{Z_{o}}=\frac{\omega_{o}}{\omega_{i}}
+\end{flalign*}
+\end{document}
