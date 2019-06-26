@@ -28,7 +28,7 @@ Mouvement littéraire
 
 ### Étude de l'extrait
 Narrateur
-    : Omniscient, extradiégétique   
+    : Omniscient, extradiégétique
 
 Thèmes
     : Nourriture, quantité > qualité, corps
@@ -96,7 +96,7 @@ Sens du texte
 #### Contexte
   - [ ] Monarchie fragilisée
   - [ ] /^ démographie
-  - [ ] commerce $\Delta$^aire^  
+  - [ ] commerce $\Delta$^aire^
   - [ ] /^ éducation des sciences
     - [ ] |_> on s'aperçoit que l'église freine le progrès
 #### Auteur
@@ -326,7 +326,81 @@ Sens du texte
 ### Auteur
 - [ ] né à Marseille
 - [ ] succèes énorme avec sa pièce Cyrano de Bergerac, très peu connu pour le reste
+    - [ ] il reçoit un légion d'honneur pour la pièce
 - [ ] Écrit un essai sur Émile Zola
+
+### Œuvre
+- [ ] Inspirée de la vie de Savinien de Cyrano de Bergerac
+    - [ ] écrivain libertain
+- [ ] pièce difficile à jouer beaucoup de...
+     - [ ] personnages mis en scène
+     - [ ] vers en alexandrins pour le rôle-titre (Cyrano)
+     - [ ] décors très != d'un acte à l'autre
+     - [ ] pièce la plus jouée en France
+     - [ ] continue à être célèbre
+ - [ ] drame romantique alors que le \<vaudeville\>? revient à la mode à cette époque
+    - [ ] |_> Succès très peu assuré
+- [ ] cyrano:
+    - [ ] cache ses émotions et sa tristesse derrière l'autodérision
+    - [ ] il pense son amour avec Roxane interdit par la taille et la disgrâce de son nez
+### Extrait
+- [ ] But de cette joute verbale pour Cyrano:
+    - [ ] il sait qu'il est regardé par Roxane => montre son talent d'éloquence
+- [ ] S'addresse à...
+    - [ ] ( direct ) vicompte de Valvert
+    - [ ] (indirect) Roxane
+    - [ ] (indirect) spectateur
+- [ ] montre son éloquence avec:
+    - [ ] la longeur de la tirade, qui de plus est improvisée
+    - [ ] la variété des formes, registres et personnalités démontrées
+
+## Edmond Rostand: Cyrano, "L'aveu à Le Bret"
+### Auteur
+*Voir [Edmond Rostand](#auteur-16)*
+
+### Œuvre
+*Voir [Cyrano de Bergerac](#%C5%93uvre-13)*
+
+### Extrait
+- [ ] Cette scène d'aveu évite le monologue, qui ne correspond pas à Cyrano
+- [ ] Elle permet également d'introduire un personnage: Le Bret
+- [ ] Le Bret...
+    - [ ] répliques courtes: est là pour supporter Cyrano, le mettre en avant
+    - [ ] modalités fortes (?!): comprend Cyrano
+- [ ] Cyrano utilise là aussi l'autodérision, mais tt le monde le sait: Le Bret & le spectateur
+- [ ] écho sonore /asse/: rien de poétique, dégoût
+
+## Edmond Rostand: Cyrano, "La scène du Balcon"
+### Auteur
+*Voir [Edmond Rostand](#auteur-16)*
+
+### Œuvre
+*Voir [Cyrano de Bergerac](#%C5%93uvre-13)*
+
+### Extrait
+- [ ] Au cœur de l'acte III
+- [ ] Roxane reste sans voix: vers interrompus et cours
+- [ ] Contrairement à d'habitude, il n'utilise pas de périphrases => il est sincère
+- [ ] Registre lyrique
+- [ ] Exaltation amoureuse, trouble:
+    - [ ] bcp de phrases exclamatives
+- [ ] Sensualité
+- [ ] Registre pathétique
+
+## Edmond Rostand: Cyrano, "La mort de Cyrano"
+### Auteur
+*Voir [Edmond Rostand](#auteur-16)*
+
+### Œuvre
+*Voir [Cyrano de Bergerac](#%C5%93uvre-13)*
+
+### Extrait
+- [ ] lecture révélatrice:
+    - [ ] lit à voix haute alors qu'il fait nuit
+- [ ] mise en scène: la nuit
+    - [ ] rappelle la sc du balcon & le baiser
+- [ ] Cyrano fait tomber les masques mais cherche encore à passer par Christian
+- [ ] Roxane interrompt ses activités et la lettre
 
 
 [^1]: En fait, [la citation ne vient pas de Voltaire](https://www.projet-voltaire.fr/culture-generale/voltaire-citation-apocryphe-je-ne-suis-pas-d-accord-avec-vous/)
@@ -356,5 +430,8 @@ Sens du texte
   - [ François Coppée: La cueilette des cerises](#françois-coppée-la-cueilette-des-cerises)
   - [ Émile Zola: L'Assomoir](#émile-zola-lassomoir)
   - [ Edmond Rostand: Cyrano, "Tirade des nez"](#edmond-rostand-cyrano-tirade-des-nez)
+  - [ Edmond Rostand: Cyrano, "L'aveu à Le Bret"](#edmond-rostand-cyrano-laveu-à-le-bret)
+  - [ Edmond Rostand: Cyrano, "La scène du Balcon"](#edmond-rostand-cyrano-la-scène-du-balcon)
+  - [ Edmond Rostand: Cyrano, "La mort de Cyrano"](#edmond-rostand-cyrano-la-mort-de-cyrano)
 
 <!-- /code_chunk_output -->
