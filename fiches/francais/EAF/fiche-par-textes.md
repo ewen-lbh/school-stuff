@@ -400,7 +400,17 @@ Sens du texte
 - [ ] mise en scène: la nuit
     - [ ] rappelle la sc du balcon & le baiser
 - [ ] Cyrano fait tomber les masques mais cherche encore à passer par Christian
-- [ ] Roxane interrompt ses activités et la lettre
+- [ ] Une scène pathétique:
+    - [ ] douleur persistante, la souffrance n'a jamais cessé
+    - [ ] "blessure" morale + physique
+- [ ] Roxane éprouve son amour pour Cyrano indirectement
+    - [ ] compliments
+    - [ ] admiration
+    - [ ] didascalies
+    - [ ] rapprochement physique
+    - [ ] émotions /^ fortes
+- [ ] Aveu implicite
+
 
 
 [^1]: En fait, [la citation ne vient pas de Voltaire](https://www.projet-voltaire.fr/culture-generale/voltaire-citation-apocryphe-je-ne-suis-pas-d-accord-avec-vous/)
