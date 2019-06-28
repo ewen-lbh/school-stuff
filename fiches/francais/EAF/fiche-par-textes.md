@@ -411,7 +411,39 @@ Sens du texte
     - [ ] émotions /^ fortes
 - [ ] Aveu implicite
 
+# XX^e^ siècle
+## Marguerite Duras: Moderato Cantabile
+### Auteur
+- [ ] bouscule les conventions de beaucoup de genres littéraires
+    - [ ] roman
+    - [ ] théâtre
+    - [ ] (~~litt~~) cinéma
+- [ ] née en Indochine
+### Œuvre
+- [ ]
+### Extrait
 
+# XXI^e^ siècle
+## Laurent Gaudé: Le Soleil des Scorta, "Incipit"
+### Auteur
+### Œuvre
+### Extrait
+
+# Textes complémentaires
+## But du poète
+### Victor Hugo
+- [ ] pense, fait avancer l'hō même si il n'est pas compris des autres
+### Alfred de Musset
+- [ ] provoquer des émotions chez le lecteur
+### Paul Valéry
+- [ ] poésie: provoque des émotions
+- [ ] poète : restituer ces émotions à volonté
+### Chales Baudelaire
+- [ ] la poésie n'a aucun autre but qu'elle même
+- [ ] la poésie est meilleure si elle est écrite uniquement pour le plaisir d'écire un poème
+### Charles Dantzig
+- [ ] poésie = forme supérieure de l'imagination
+- [ ] poète : '*transfigurateur*' du réél
 
 [^1]: En fait, [la citation ne vient pas de Voltaire](https://www.projet-voltaire.fr/culture-generale/voltaire-citation-apocryphe-je-ne-suis-pas-d-accord-avec-vous/)
 
@@ -443,5 +475,11 @@ Sens du texte
   - [ Edmond Rostand: Cyrano, "L'aveu à Le Bret"](#edmond-rostand-cyrano-laveu-à-le-bret)
   - [ Edmond Rostand: Cyrano, "La scène du Balcon"](#edmond-rostand-cyrano-la-scène-du-balcon)
   - [ Edmond Rostand: Cyrano, "La mort de Cyrano"](#edmond-rostand-cyrano-la-mort-de-cyrano)
+- [ XX^e^ siècle](#xxe-siècle)
+  - [ Marguerite Duras: Moderato Cantabile](#marguerite-duras-moderato-cantabile)
+- [ XXI^e^ siècle](#xxie-siècle)
+  - [ Laurent Gaudé: Le Soleil des Scorta, "Incipit"](#laurent-gaudé-le-soleil-des-scorta-incipit)
+- [ Textes complémentaires](#textes-complémentaires)
+  - [ But du poète](#but-du-poète)
 
 <!-- /code_chunk_output -->
