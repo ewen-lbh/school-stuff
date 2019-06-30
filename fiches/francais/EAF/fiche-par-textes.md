@@ -426,9 +426,27 @@ Sens du texte
 # XXI^e^ siècle
 ## Laurent Gaudé: Le Soleil des Scorta, "Incipit"
 ### Auteur
+- [ ] roman, **théâtre**, nouvelles\<-un peu
+- [ ] Auteur contemporain (= toujours en vie)
+- [ ] très productif surtout en théâtre (a écrit bcp de pièces, 3 en 2003)
+- [ ] récemment engagé (essai sur l'europe en 2019)
+- [ ] débute aussi dans la poésie
 ### Œuvre
+- [ ] Histoire d'une famille née du viol d'une femme et d'un hors-la-loi
+- [ ] Famille:
+    - [ ] Luciano Mascalzone + Immacolata Biscotti
+    - [ ] Rocco Scorta-Mascalzone + "La Muette"
+    - [ ] Domenico, Guiseppe Carmela ~ Raffaele
+- [ ] Sud de l'Italie, pauvres (les Pouilles), village: Montepuccio
+- [ ] Fresque romanesque familiale
+- [ ] Titre annonce implicitement
 ### Extrait
-
+- [ ] Inscrit l'œuvre dans le registre tragique
+- [ ] effet de zoom: environnement ··> personnage ··> pensée du personnage
+    - [ ] statut du narrateur
+    - [ ] objet de la description
+- [ ] nature douloureuse: chaleur, sèche, arride
+- [ ] lenteur, condamnation, doute, impossibilité, négations
 # Textes complémentaires
 ## But du poète
 ### Victor Hugo
@@ -450,8 +468,8 @@ Sens du texte
 *****
 # Sommaire {ignore=true}
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=2 orderedList=false} -->
-<!-- code_chunk_output -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=2 orderedList=false} ->
+<!-- code_chunk_output ->
 
 - [ XVI^e^ siècle](#xvie-siècle)
   - [ François Rabelais: Gargantua, "scène de repas"](#françois-rabelais-gargantua-scène-de-repas)
@@ -482,4 +500,4 @@ Sens du texte
 - [ Textes complémentaires](#textes-complémentaires)
   - [ But du poète](#but-du-poète)
 
-<!-- /code_chunk_output -->
+<!-- /code_chunk_output ->
