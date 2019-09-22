@@ -1,7 +1,7 @@
 ## Évolution des genres
 ### Antiquité
 #### Roman: mythologie & héroïsme
- 
+
 Oeuvres
     : Homère: __L'Odyssée__
 ### Moyen-Âge
@@ -27,7 +27,7 @@ Oeuvres
 ##### Humanisme
 
 Met la fin à l'obscurantisme médiéval
-Pour la 1ère fois l'homme est au centre. 
+Pour la 1ère fois l'homme est au centre.
 
 Causé par:
 - Invention de l'imprimmerie (favorise le partage des idées)
@@ -52,7 +52,7 @@ Auteurs
 #### Roman: profondeur du pers. & réalisme
 - narr externe -> narr interne
 - psychologie
-- merveilleux -> vraisemblable
+- merveilleux  -> vraisemblable
 - nouvelles tech (récits enchâssés,...)
 
 Oeuvres
@@ -64,9 +64,9 @@ Oeuvres
 ##### Théâtre classique
 
 
-Durant le règne de Louis XIV. 
-Règles de Nicolas Boileau: 3 unités, bienséance, vraisemblance 
-Pas de mélanges de genre, comique *ou* tragique 
+Durant le règne de Louis XIV.
+Règles de Nicolas Boileau: 3 unités, bienséance, vraisemblance
+Pas de mélanges de genre, comique *ou* tragique
 #### Poésie
 ##### Baroque
 barocco = pierre précieuse mal taillée
@@ -91,9 +91,9 @@ barocco = pierre précieuse mal taillée
 ##### Les Lumières
 
 Met fin à l'obscurantisme religieux
-Reprend les idées de l'humanisme 
-Agit au lieu de constater. 
-Raison $+$ science $>$ religion. 
+Reprend les idées de l'humanisme
+Agit au lieu de constater.
+Raison $+$ science $>$ religion.
 
 Ils sont contre:
 - préjugés
@@ -118,7 +118,7 @@ Voir [Les Lumières](#les-lumi%C3%A8res)
 #### Roman: Âge d'or
 - ↗️ populaire
   - Imprimerie
-  - Journaux 
+  - Journaux
   - ↘️ prix
   - Épisodes de roman
   - Alphabétisation
@@ -170,7 +170,7 @@ Auteurs
 ###### Nouveau roman
 - Refus de:
   - Contrôle imposé par construction narr
-  - Formes traditionnelles 
+  - Formes traditionnelles
 - Innovation
     - Construction non linéaire
     - narr -> polyphonie

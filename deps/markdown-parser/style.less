@@ -3,8 +3,14 @@
 
 .markdown-preview.markdown-preview {
 
+  &.prince {
+     @page {
+         size: A4
+     }
+  }
+
   p, li, center, dl, dd, h6, th, td {
-    font-family: 'Fantasque Sans Mono','Roboto', sans-serif;
+    font-family: sans-serif;
   }
   h1,
   h2,
@@ -17,9 +23,34 @@
     margin-top: 0;
   }
 
+  titlepage {
+      margin-bottom: 100px;
+      padding-top: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      * {
+          margin: 0;
+      }
+      h1, h2 {
+          text-align: center;
+          color: #000;
+          background: transparent;
+      }
+      hr {
+          width: 25%;
+          background-color: #000;
+          margin-bottom: 10px;
+      }
+      h2 {
+          font-size: 25px;
+      }
+  }
+
   p {
-    margin-top: -5px;
-    margin-bottom: 10px;
+    margin-top: -2px;
+    margin-bottom: 20px;
   }
 
   s {
@@ -44,8 +75,8 @@
       background: #268cce;
       display: inline-block;
       margin-right: 10px;
-      height: 50px;
-      width: 50px;
+      height: 0.75em;
+      width: 0.75em;
     }
   }
 
@@ -167,17 +198,17 @@
 
   h2:before {
       counter-increment: h2;
-      content: counter(h1) "." counter(h2) " "
+      content: counter(h1) "/" counter(h2) " "
   }
 
   h3:before {
       counter-increment: h3;
-      content: counter(h1) "." counter(h2) "." counter(h3) " "
+      content: counter(h1) "/" counter(h2) "/" counter(h3) " "
   }
 
   h4:before {
       counter-increment: h4;
-      content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " "
+      content: counter(h1) "/" counter(h2) "/" counter(h3) "/" counter(h4) " "
   }
   */
 }

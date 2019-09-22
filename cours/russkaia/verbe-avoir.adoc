@@ -1,0 +1,23 @@
+= Verbe avoir =
+:hardbreaks:
+
+En russe, le verbe avoir est "`есть`"
+
+== Construction ==
+У _(partie conjugée)_ есть
+
+== Conjugaison ==
+
+[cols="1>, 2<", frame="none", border="cols"]
+|===
+| Я   | меня
+| Ты  | тебя
+| Он  | нево
+| Она | неë
+| Ты  | нас
+| Мы  | вас
+| Они | них
+|===
+
+"Je suis con"
+-- Victor Hugo, L'Assomoir

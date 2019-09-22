@@ -1,0 +1,10 @@
+_options:
+  ask-sentence: Quel est l'ordre de grandeur des rayons <> ?
+  ask-order: random
+gamma: 10-11
+x: 10-9
+uv: 10-7
+visible: 10-6
+ir: 10-5
+micro-ondes: 10-3
+radios: 10+1 10+3

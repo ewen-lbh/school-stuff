@@ -440,6 +440,9 @@ Sens du texte
 - [ ] Sud de l'Italie, pauvres (les Pouilles), village: Montepuccio
 - [ ] Fresque romanesque familiale
 - [ ] Titre annonce implicitement
+- [ ] humaniste: il y a toujours de l'espoir, !=Zola
+- [ ] microcosme: Montepuccio <-> société
+- [ ] Raffaele = homme de parole et d'honneur
 ### Extrait
 - [ ] Inscrit l'œuvre dans le registre tragique
 - [ ] effet de zoom: environnement ··> personnage ··> pensée du personnage
@@ -447,6 +450,33 @@ Sens du texte
     - [ ] objet de la description
 - [ ] nature douloureuse: chaleur, sèche, arride
 - [ ] lenteur, condamnation, doute, impossibilité, négations
+
+## Laurent Gaudé: Le Soleil des Scorta, "L'arrivée de Don Salvatore"
+### Auteur
+*Voir [Laurent Gaudé](#auteur-21)*
+### Œuvre
+*Voir [Le Soleil des Scorta](#%C5%93uvre-18)*
+### Extrait
+- [ ] personnage rude
+    - [ ] physiquemment: visage sévère
+    - [ ] regard noir
+    - [ ] n'a pas peur de s'addresser à eux
+    - [ ] les menace directement
+    - [ ] se désigne lui-même "je" -> assoit son autorité
+- [ ] curé + important que maire / police
+- [ ] Montepucciens vs lui, mais il est plus fort.
+- [ ] s'adapte au décor, au contexte: nv de langue + expressions
+
+## Laurent Gaudé: Le Soleil des Scorta, "Double aveu"
+### Auteur
+*Voir [Laurent Gaudé](#auteur-21)*
+### Œuvre
+*Voir [Le Soleil des Scorta](#%C5%93uvre-18)*
+### Extrait
+- [ ] Elle n'avait pas parlé depuis longtemps, (~ sa mère)
+- [ ] chapitre précédent: elle essaie de reconstruire le tabac
+- [ ] aveu Carmela->Don Salvatore; \<enchassé Raffaele->Carmela\>
+- [ ] bcp d'antithèses
 # Textes complémentaires
 ## But du poète
 ### Victor Hugo
@@ -458,7 +488,7 @@ Sens du texte
 - [ ] poète : restituer ces émotions à volonté
 ### Chales Baudelaire
 - [ ] la poésie n'a aucun autre but qu'elle même
-- [ ] la poésie est meilleure si elle est écrite uniquement pour le plaisir d'écire un poème
+- [ ] la poésie est meilleure si elle est écrite uniquement pour le plaisir d'écrire un poème
 ### Charles Dantzig
 - [ ] poésie = forme supérieure de l'imagination
 - [ ] poète : '*transfigurateur*' du réél
@@ -468,8 +498,8 @@ Sens du texte
 *****
 # Sommaire {ignore=true}
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=2 orderedList=false} ->
-<!-- code_chunk_output ->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=2 orderedList=false} -->
+<!-- code_chunk_output -->
 
 - [ XVI^e^ siècle](#xvie-siècle)
   - [ François Rabelais: Gargantua, "scène de repas"](#françois-rabelais-gargantua-scène-de-repas)
@@ -497,7 +527,9 @@ Sens du texte
   - [ Marguerite Duras: Moderato Cantabile](#marguerite-duras-moderato-cantabile)
 - [ XXI^e^ siècle](#xxie-siècle)
   - [ Laurent Gaudé: Le Soleil des Scorta, "Incipit"](#laurent-gaudé-le-soleil-des-scorta-incipit)
+  - [ Laurent Gaudé: Le Soleil des Scorta, "L'arrivée de Don Salvatore"](#laurent-gaudé-le-soleil-des-scorta-larrivée-de-don-salvatore)
+  - [ Laurent Gaudé: Le Soleil des Scorta, "Double aveu"](#laurent-gaudé-le-soleil-des-scorta-double-aveu)
 - [ Textes complémentaires](#textes-complémentaires)
   - [ But du poète](#but-du-poète)
 
-<!-- /code_chunk_output ->
+<!-- /code_chunk_output -->

@@ -1,0 +1,6 @@
+= Present perfect =
+:hardbreaks:
+
+== Construction ==
+Un polynôme du second degré stem:[ax^2+bx+c] 
+feffefe
