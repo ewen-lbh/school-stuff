@@ -1,0 +1,18 @@
+options:
+  title: Opérations sur les limites
+  description: |
+    ∞  ⟺ +∞ ou -∞
+    FI ⟺ Forme indéterminée
+    ℝ  ⟺ Un nombre ∈ ℝ
+    (pareil pour ℝ+, ℝ-, ℝ*, ℝ*+ et ℝ*-)
+    ∞ opposé ⟺ +∞ ↦ -∞ et -∞ ↦ +∞
+
+∞ + ∞: ∞
+∞ + ℝ: ∞
+∞ × ℝ*+: ∞
+∞ × ℝ*-: ∞ opposé
+∞ × 0: FI
+ℝ / ∞: 0
+∞ / ∞: FI
+0 / 0: FI
+∞ / ℝ*: ∞
