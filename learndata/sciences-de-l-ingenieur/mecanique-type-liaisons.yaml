@@ -1,0 +1,12 @@
+options:
+  title: "Mécanique: Type de liaisons <-> degrés de liberté"
+0t 1r: pivot
+1t 0t: glissière
+1t 1r: pivot glissant
+1t⌒1r: hélicoidale
+0t 2r: rotule à doigt
+0t 3r: rotule
+1t 2r: linéaire annulaire
+2t 2r: linéaire rectangulaire
+2t 1r: appui plan
+2t 3r: ponctuelle
