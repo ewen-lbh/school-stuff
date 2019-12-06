@@ -1,0 +1,29 @@
+options:
+  title: Philosophe—Repères
+  ask-if-correct: yes
+  blacklist:
+    - singulier
+    - immédiat
+    - en acte
+    - analyse
+    - en droit
+    - en fait
+    - subjectif
+    - objectif
+
+universel: qui vaut dans tout les cas, quelque soit l'époque ou le lieu
+général: qui vaut dans de très nombreux cas, mais qui supporte quelques exceptions
+particulier: qui vaut selon certaines conditions ou pour certains cas
+singulier: qui est rare ou unique
+analyse: aller de l'un au multiple
+synthèse: déterminer ce qu'il y a de commun entre des éléments divers
+subjectif: du pdv du sujet qui regarde l'objet
+objectif: du pdv de l'objet indépendamment des sujets qui le regarde
+médiat: avec l'intermédiaire de
+immédiat: sans intermédiaire
+en droit: du pdv de ce qui devrait être
+en fait: du pdv de ce qui est
+immanant: à l'intérieur de
+transcendant: d'une nature absolument supérieure
+en puissance: qui est contenu dans l'objet ou dans l'être et dont le développement est possible
+en acte: quand on a réalisé ce qu'on était en puissance

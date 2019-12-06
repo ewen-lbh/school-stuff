@@ -1,0 +1,36 @@
+options:
+        title: Philosophie—Méthodologie, Explication de texte
+        ask-if-correct: yes
+
+1ere lecture: 
+        - découverte, themes
+        - découverte, notions
+2eme lecture: connecteurs logiques
+3eme lecture: différentes parties du texte
+parties du texte: 3 à 5
+4eme lecture: souligner les mots à définir
+5eme lecture: trouver fonction argumentative de chaque partie
+6eme lecture: idée principale de chaque partie → contenu philosophique 
+intro/1: amorce
+amorce: annonce de la notion la + originale/importante sans la dire
+intro/2: titre a été écrit par auteur en date
+intro/3: thèmes abordés
+intro/4: thèse
+intro/5: problématique
+intro/6: (§) annonce du nombre de parties
+intro/7: la partie numéro va de début à fin, c'est une fonction argumentative qui contenu philosophique
+intro/8: objectif de l'auteur
+objectifs auteur: défendre une thèse, réfuter une thèse, donner une définition
+partie/1: expliquer sans citer
+partie/2: pourquoi l'auteur dit cela
+partie/3: ce qu'il développe
+partie/4: définition termes utilisés
+partie/5: ce que ça implique
+partie/6: (*) example
+partie/utilise example: pourquoi + pertinance
+transition: idée d'avant + question de la partie d'après
+conclusion/1: thèse
+conclusion/2: différentes étapes
+conclusion/3: (*) limites
+conclusion/4: enjeux
+
