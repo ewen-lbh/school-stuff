@@ -1,0 +1,566 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{chemfig}
+\usepackage{chemformula}
+\usepackage{float}
+\usepackage{dsfont}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{dsfont}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{calc}  
+\usepackage{enumitem}  
+\usepackage{graphicx}
+\graphicspath{ {./} }
+\usetikzlibrary{shapes.arrows}
+\let\ce\ch
+\newcommand{\im}{\text{Im}}
+\newcommand{\re}{\text{Re}}
+\newcommand{\R}{\mathds{R}}
+\newcommand{\C}{\mathds{C}}
+\newcommand{\N}{\mathds{N}}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\Aff}{\text{Aff}}
+\newcommand{\oo}{\infty}
+\newcommand{\twoRows}[1]{\multirow{2}{*}{#1}}
+\newcommand{\threeRows}[1]{\multirow{3}{*}{#1}}
+\newcommand{\twoCols}[1]{\multicolumn{2}{c|}{#1}}
+\newcommand{\threeCols}[1]{\multicolumn{3}{|c|}{#1}}
+\newcommand{\twoColsNB}[1]{\multicolumn{2}{c}{#1}}
+\newcommand{\goesto}[2]{\xrightarrow[#1\:\to\:#2]{}}
+\newcommand{\liminfty}{\lim_{x\to+\oo}}
+\newcommand{\limminfty}{\lim_{x\to-\oo}}
+\newcommand{\limzero}{\lim_{x\to0}}
+\newcommand{ \const}{\text{cste}}
+\newcommand{\et}{\:\text{et}\:}
+\newcommand{\ou}{\:\text{ou}\:}
+\newenvironment{descriptiona}{\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries The longest label}]}{\end{description}}
+\renewcommand{\arraystretch}{1.4}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\textit{\today}
+\vfill
+\textbf{\LARGE{Condensé de la terminale}\\\Large{Mathématiques}}\\
+\vfill
+\large{Ewen Le Bihan\\TS3}
+\end{center}
+\end{titlepage}
+\section*{Notations non vues en cours}
+\begin{tabular}{c|l}
+	$:=$ & Égal par définition\\
+	$\lceil x \rceil$ & Arrondir $x$ à l'entier supérieur. ($\lceil 5.1 \rceil = 6$)\\
+	$1.5$ & Séparateur ,\\
+	$x\cdot y$ & Multiplication $\times$\\
+	$\nearrow$ & Croissant\\
+	$\searrow$ & Décroissant \\
+	$a \gtreqless b$ & Revient à écrire $a > b$, $a = b$ et $a > b$
+\end{tabular}
+\pagestyle{empty}
+\newpage
+\tableofcontents
+\pagestyle{empty}
+\newpage
+
+\setcounter{section}{-1}
+
+\section{Outils}
+\subsection{Composition de fonction $f \circ g$}
+Soit $f$ et $g$ des fonctions respectivement définies sur $I$ et $J$
+$$(f \circ g)(x) \iff f(g(x))$$
+Attention: il faut que $x$ soit défini dans $I$ et que $g(x)$ soit défini dans $J$\\\\
+
+Plus généralement, soit $\Theta$ un ensemble de fonctions
+$$\left(\bigcirc_{i=0}^{j} \Theta_i\right)(x) = \Theta_0 ( \Theta_1 ( \Theta_2 ( \Theta_3 \dots ( x \dots )$$
+
+\subsection{Équations de cercle $(x - a)^2 + (y - b)^2 = R^2$}
+
+Soit $a, b, R$ des réels, $R$ étant le rayon du cercle.\\
+Un cercle dans le plan peut être décrit par l'équation suivante:
+$$(x - a)^2 + (y - b)^2 = R^2\quad$$
+
+\subsection{Opérations avec des puissances}
+
+\begin{equation*}
+    \begin{split}
+        (x^a)^b &= x^{ab} \\
+        x^a x^b &= x^{a+b} \\
+        x^{-a} &= \frac{1}{x^a} \\
+        x^{\frac{1}{a}} &= \sqrt[a]{x} \\
+        x^0 &= 1
+    \end{split}
+\end{equation*}
+
+\subsection{Diverses théorèmes}
+
+\subsubsection{Application de fonctions aux inéquations}
+
+Soit $I$ une intervalle, $f$ une fonction définie et croissante sur $I$, $x$ et $y$ deux nombres dans $I$
+
+\begin{equation*}
+    \begin{split}
+        x &\gtreqless y \\
+\iff    f(x) &\gtreqless f(y)
+    \end{split}
+\end{equation*}
+
+\newpage\section{Suites numériques}
+
+\subsection{Définition fonctionnelle}
+
+Soit $f$ une fonction:
+$$u_n = f(n)$$
+
+\subsection{Définition par récurrence}
+Soit $f$ une fonction
+
+$$u_n = \begin{cases}
+u_0 = \const\\
+u_{n+1} = f(u_n)
+\end{cases}$$
+
+\subsection{Suite arithmétique}
+
+Avec $r$ la raison de la suite
+
+\begin{descriptiona}
+\item[Définition fonctionnelle] $u_n = u_0 + r\cdot n$
+\item[Définition par récurrence] $u_n = \begin{cases}
+u_0 = \const\\
+u_{n+1} = u_n + r
+\end{cases}$
+\item[Somme des termes de $i$ à $f$]$\displaystyle \sum_{i=i}^{j} u_i = (j-i+1)\cdot\frac{u_j + u_i}{2}$
+\end{descriptiona}
+
+\subsection{Suite géométrique}
+
+Avec $q$ la raison de la suite
+
+\begin{descriptiona}
+\item[Définition fonctionnelle] $u_n = u_0 \cdot q^n$
+\item[Définition par récurrence] $u_n = \begin{cases}
+u_0 = \const \\
+u_{n+1} = u_n \cdot q
+\end{cases}$
+\item[Somme des termes de $i$ à $f$] $\displaystyle \sum_{i=i}^{j} u_i = u_j\cdot\frac{1 - q^{j-i+1}}{1 - q}$
+\end{descriptiona}
+
+\subsection{Limites}
+\begin{descriptiona}
+\item[Suite convergeante vers $L$] $\displaystyle \lim_{n\to+\oo} u_n = L$
+\item[Suite divergeante] $\displaystyle \lim_{n\to+\oo} u_n \not= L$
+\end{descriptiona}
+
+\begin{minipage}{\textwidth}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r||l|c|c|c|l}
+         $p \in \{0.5\}\cup\N$            & $-\infty$ & -1 & 0 & 1 & $+\infty$  \\
+         $q \in \R\quad\quad\quad\;\:$ & & & & \\\hline\hline
+        $\displaystyle\lim_{n\to+\infty} q^n$ & ? & \threeCols{0} & $+\infty$ \\\hline
+        $\displaystyle\lim_{n\to+\infty} n^p$ & \twoCols{0} & 1 & \twoColsNB{$+\infty$}
+    \end{tabular}
+    \caption*{Limites de type $\const^n$ ou $n^\const$}
+    \label{tab:my_label}
+\end{table}
+
+
+\end{minipage}
+
+\subsection{Majoration et minoration}
+
+Soit ($u_n$) une suite définie sur les rangs dans $I$ et $L$ un réel
+\begin{descriptiona}
+\item[Suite majorée] $\forall n \in I \:\:\: \exists M \quad u_n \leq M$
+\item[Suite minorée] $\forall n \in I \:\:\: \exists m \quad u_n \geq m$
+\item[Suite bornée] Suite majorée \textit{et} minorée
+\end{descriptiona}
+
+$$\lim_{n\to+\oo} u_n \dots$$
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|cccc}
+                & \multicolumn{2}{c}{Majorée (par $L$)}   & \multicolumn{2}{c}{Minorée (par $L$)}    \\
+                & Oui               & Non                 & Oui                 & Non                \\
+                \hline
+    $\nearrow$  & $\leq L$          & $= +\oo$            &                     &                    \\
+    $\searrow$  &                   &                     & $\geq L$            & $=-\oo$
+    \end{tabular}
+\end{table}
+
+\subsection{Opérations sur les limites}
+
+\textit{Voir en }\ref{ops_limites}
+
+\subsection{Comparaisons et limites}
+
+Soit $L \in \R$, ($u_n$), ($v_n$) et ($w_n$) trois suites
+et $l_A$ la limite quand $n \to +\oo$ de la suite $A_n$
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l|lll|l}
+        Nom du théorème & \twoColsNB{Conditions} & Résultat & Explication graphique \\
+        \hline
+        \twoRows{Par comparaison} & $u_n \leq v_n$           & $l_u = +\oo$     & $\implies l_v = +\oo$ & ($u_n$) emporte ($v_n$) vers $+\oo$\\
+                                  & $u_n \geq v_n$           & $l_u = -\oo$     & $\implies l_v = -\oo$ & ($u_n$) emporte ($v_n$) vers $-\oo$\\
+        Théorème des gendarmes    & $w_n \geq v_n \geq u_n$  & $l_u = l_w = 0$  & $\implies l_v = L$    & ($u_n$) et ($w_n$) forcent ($v_n$) à tendre vers $L$\\
+    \end{tabular}
+\end{table}
+\newpage
+
+\section{Probabilités}
+
+\subsection{Probabilité conditionnelle $P(A|B)$}
+Probabilité que $A$ soit réalisé \textbf{sachant que} $B$ a déjà été réalisé.
+
+\begin{equation*}
+    \begin{split}
+        P(A|B)\ou P_B(A) &= \frac{P(P \cap Q)}{P(B)}\quad\text{si}\:P(B)\ne 0\\
+    \end{split}
+\end{equation*}
+
+
+\subsection{Probabilités d'intersections $P(P \cap Q)$}
+Probabilité que $A$ \textbf{et} $B$ soit réalisées.
+
+\begin{equation*}
+    \begin{split}
+        P(P \cap Q) &= P(B)\cdot P(A|B)\\
+                    &= P(A)\cdot P(B|A)
+    \end{split}
+\end{equation*}
+
+\subsection{Probabilités d'union $P(A \cup B)$}
+L'union $\cup$ c'est un "ou exclusif":
+
+$$P(A \cup B) = P(A) + P(B) + P(P \cup Q)$$
+
+
+\subsection{Partitions}
+
+Si on a deux évenements ou plus tel que...
+\begin{itemize}
+    \item Aucun évenement n'est vide \\$\iff B_i  \ne \emptyset \quad \forall i$
+    \item Aucun évenement ne recouvre un autre \\$\iff B_i \cap B_j = \emptyset \quad \forall i, j$
+    \item L'union de chaque partition couvre l'univers entier \\$\iff \bigcap_{i=1}^j B_i = \Omega$
+\end{itemize}
+
+\subsection{Formule des probabilités totales}
+
+Soit $B_1$, $B_2$, ..., $B_n$ des évenements formant une partition de $\Omega$
+
+$$P(A) = \sum_{i=1}^n P(P \cap Q_i)$$
+
+\subsection{Indépendance d'évenements}
+
+\begin{equation*}
+    \begin{split}
+        A\text{ et }B\text{ sont indépendants} &\iff \overline{B} \et B  \:\text{forment une partition de}\: \Omega\\
+                                               &\iff \overline{A} \et A  \:\text{forment une partition de}\: \Omega\\
+                                               &\iff \overline{A} \et \overline{B}, A \et \overline{B} \et B \et \overline{A} \:\text{sont indépendants}
+    \end{split}
+\end{equation*}
+
+\subsection{Loi de Bernouilli}
+
+\begin{descriptiona}
+\item[Épreuve de Bernouilli]
+\end{descriptiona}
+
+\subsection{Autre vocabulaire}
+\begin{descriptiona}
+\item[Évenements incompatibles]
+$P(P \cap Q) = 0$ 
+\end{descriptiona}
+
+
+\newpage\section{Limites $\lim$}
+
+\subsection{Notation}
+
+Soit $x$, $C$ et $D$ des nombres et $\Psi$ un nombre ou symbole
+
+\begin{equation*}
+    \begin{split}
+        \lim_{x \to \Psi} C = D &\iff C \goesto{x}{\Psi} D \\
+        &\iff \text{$C = D$ quand $x = \Psi$}
+    \end{split}
+\end{equation*}
+
+\begin{equation*}
+    \begin{split}
+        \lim_{\substack{x\to\Psi \\ >}} C = D &\iff C \goesto{x}{\Psi^+} D \\
+        &\iff \text{Limite de $C$ en $\Psi$ par valeurs supérieures} \\
+        &\iff \text{Limite de $C$ à droite de $\Psi$} \\
+    \end{split}
+\end{equation*}
+
+\begin{equation*}
+    \begin{split}
+         \lim_{\substack{x\to\Psi \\ <}} C = D &\iff C \goesto{x}{\Psi^-} D\\
+        &\iff \text{Limite de $C$ en $\Psi$ par valeurs inférieures} \\
+        &\iff \text{Limite de $C$ à gauche de $\Psi$} \\
+    \end{split}
+\end{equation*}
+
+\subsection{Opérations sur les limites}\label{ops_limites}
+
+Les opérations entre deux limites réelles sont comparables aux opérations sur des nombres
+\begin{description}
+\item[FI] Forme Indéterminée
+\end{description}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c||ll|ll|ll}
+
+$x,\:\:\: y$                             & \multicolumn{2}{c}{$x+y$}     & \multicolumn{2}{c}{$x\cdot y$}           & \multicolumn{2}{c}{$x/y$}              \\
+\hline\hline
+\twoRows{$\pm\oo$}                       & Signes $=$     & $\pm\oo$     & \twoCols{\twoRows{(règle des signes)}}   & \twoColsNB{\twoRows{FI}}               \\
+                                         & Signes $\not=$ & FI           &                                          &                                   \\
+\hline
+\twoRows{\threeRows{$\R$ ou $\pm\oo$}}   & \twoCols{\threeRows{$\pm\oo$}}& $x = 0$          & FI                    & $y = 0$       & FI                     \\
+                                         &                               && $x > 0$          & $\pm\oo$              & $y= \pm\oo$   & 0                      \\
+                                         &                               && $x < 0$          & $\mp\oo$              & $x = \pm\oo \et y \in \R^\ast$  & $\pm\oo$               \\
+
+\end{tabular}
+\end{table}
+
+\subsection{Asymptotes}
+
+Soit $L \in \R$, $f$ une fonction, $\Gamma$ la courbe d'équation $y = f(x)$ et $\Psi$ un nombre ou symbole
+
+\begin{equation*}
+    \begin{split}
+        f(x) \goesto{x}{\Psi} L &\iff \text{$\Gamma$ admet en $\Psi$ une asymptote (horizontale) d'équation $y = L$}\\
+        \begin{cases}
+            f(x) \goesto{x}{L^+} \pm\oo\\
+            f(x) \goesto{x}{L^-} \pm\oo
+        \end{cases} &\iff \text{$\Gamma$ admet en $L$ une asymptote (verticale) d'équation $x = L$}
+    \end{split}
+\end{equation*}
+
+\subsection{Simplifications de limites}
+
+\subsubsection{Polynômes}
+
+Pour les limites en $+\oo$ ou en $-\oo$, on peut simplifier la limite d'un polynôme à la limite du terme de plus haut degré:
+$$\liminfty 2x^3 - 4x + 1 = \liminfty 2x^3$$
+
+Ça marche aussi avec les fractions:
+$$\liminfty \frac{4x^9 + x^3 - 2}{5x^3 - 8x^{18} + 420} = \liminfty \frac{4x^9}{-8x^{18}}$$
+
+\subsection{Fonctions composées}
+
+Soit $a,\:b\:\etc\:\in \R \cup \{ -\oo; +\oo \}$, $f$ et $g$ des fonctions
+
+$$\begin{cases}
+f(x) \goesto{x}{a} b\\
+g(x) \goesto{x}{b} c
+\end{cases} \implies (f \circ g)(x) \goesto{x}{a} c$$
+
+\newpage
+
+\section{Continuité des fonctions}
+
+\subsection{Définition}
+
+Une fonction est continue quand "on peut tracer sa courbe sans lever le stylo". Plus rigoureusement, la fonction $f$ est continue sur l'intervalle $I$ si, pour tout $a \in I$, $f(a) \goesto{x}{a} a$.
+
+\subsection{Continuité de fonctions usuelles}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ll}
+         Polynôme & $\R$ \\
+         $\sqrt{x}$ & $\R^+$ \\
+         Rationnelle & Ensemble de définition \\
+    \end{tabular}
+\end{table}
+
+De plus, n'importe quelle fonction créée par $+$, $\times$, $\circ$ ou $\div$ à partir de fonctions continues sont continues
+
+\subsection{Théorèmes utilisant la continuité}
+\subsubsection{Théorème des valeurs intermédiaires}
+
+Soit $a$ et $b$ des réels, $f$ une fonction continue sur $[a; b]$.
+$$\forall k \in [f(a); f(b)],\quad f(x) = k\:\:\:\text{admet au moins une solution dans $[a;b]$}$$
+
+\subsubsection{Théorème de la bijection}
+
+Soit $I$ une intervalle, $a$ et $b$ des réels dans $I$ et $f$ une fonction définie sur $I$ ou plus grand
+
+$$
+\begin{cases}
+\text{$f$ est continue sur $I$}\\
+\text{$f$ est strictement monotone sur $I$}\\
+k \in [f(a); f(b)]\quad(1)
+\end{cases}$$
+$$
+\implies f(x) = k\:\:\:\text{admet une unique solution dans $[a; b]$}
+$$
+
+\noindent(1) si $a$ ou $b = \pm\oo$, on calcule la limite pour l'intervalle image:\\
+\textit{Montrer que $f(x) = k$ n'admet qu'une seule solution dans $\R$}
+$$k \in \left]\limminfty f(x); \liminfty f(x)\right[$$
+
+\vspace{20pt}
+
+\noindent\textit{Attention}: pour dire que $f(x) = k$ on n'utilise pas la bijection mais le tableau de variations
+
+\newpage\section{Nombres complexes $\mathds{C}$}
+\subsection{Définition}
+$$i^2 := -1,\quad a, b \in \R,\quad z\in\mathds{C}$$
+$$z = a + ib$$
+
+Ensemble des imaginaires purs: $i\R := \C \setminus \R$
+
+\subsection{Partie imaginaire $\im$ et réelle $\re$}
+\subsubsection{Définition}
+\begin{itemize}
+    \item $\re(a + ib) := a$
+    \item $\im(a + ib) := b$
+\end{itemize}
+\subsubsection{Propriétés}
+\begin{itemize}
+    \item $\re\;z = 0 \iff z \in \R$
+    \item $\im\;z = 0 \iff z \in i\R$
+\end{itemize}
+
+\subsection{Conjugé $\conj{z}$}
+
+\subsubsection{Définition}
+$$\conj{a + ib} := a-ib$$
+
+
+
+\subsubsection{Identités}
+
+$\square$ représente les opérations $+$, $\times$ et $\div$
+
+\begin{itemize}
+    \item $z\cdot\conj{z} &= (\im\; z)^2 + (\re\; z)^2$
+    \item $\conj{z \:\square\: w} &= \conj{z} \:\square\: \conj{w}$
+    \item $\conj{z^n} &= (\conj{z})^n$
+    \item $\conj{\conj{z}} &= z $
+    \item $\conj{z} = z &\iff z \in \R$
+\end{itemize}
+
+\subsection{Affixe $\Aff$}
+
+L'affixe est un point représentant un nombre complexe dans le plan:
+
+$$\Aff(a+ib) = \begin{pmatrix} a\\b \end{pmatrix}$$
+
+\subsection{Racines des polynômes de second degré $az^2+bz+c$}
+
+$$az^2+bz+c = 0\quad a, b, c \in \R,\quad\Delta := b^2-4ac$$\\
+$$S = 
+\begin{cases}
+\Delta < 0 &\iff \left\{ \frac{-b+i\sqrt{-\Delta}}{2a}; \conj{S_1}  \right\} \\
+\Delta = 0 &\iff \left\{ \frac{-b}{2a} \right\} \\
+\Delta > 0 &\iff \left\{ \frac{-b+\sqrt{\Delta}}{2a}; \frac{-b-\sqrt{\Delta}}{2a}\right\}
+\end{cases}
+$$
+
+\newpage\section{Dérivées}
+
+\subsection{Opération sur des fonctions}
+
+Soit $u$ et $v$ des fonctions dérivables
+
+\begin{equation*}
+    \begin{split}
+        (u^n)' &= nu'u^{n-1}\quad n\in\Z\cup\{0.5\}
+    \end{split}
+\end{equation*}
+
+\newpage\section{Fonction exponentielle $\exp$}
+
+\subsection{Notation}
+
+$$e^x := \exp{x}$$
+
+\subsection{Caractéristiques}
+
+Soit $x \in \R$ et $u$ une fonction définie sur $\R$
+
+\begin{descriptiona}
+\item[Dérivée] $(e^x)' = e^x$\\$(e^u)' = u'e^u$
+\item[Réciproque] $\ln(e^x) = x$
+\item[Signe] $e^x > 0$
+\item[Variations] strictement croissante sur $\R$
+\item[Limites] $e^x \goesto{x}{+\oo} +\oo $\\$ e^x \goesto{x}{-\oo} 0$
+\end{descriptiona}
+
+\subsection{Propriétés}
+
+$$e^a \gtreqless e^b \iff a \gtreqless b$$
+
+\subsection{Limites remarquables}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{cc|l}
+        $\lim$ & $x\to$ & $=$ \\\hline\hline
+        $\sfrac{e^x-1}{x}$ & 0 & 1 \\\hline
+        \twoColsNB{Par croissance comparée $\downarrow$} & \\\hline
+        $xe^x$ & $-\oo$ & 0 (1)\\\hline
+        $\sfrac{e^x}{x}$ & $+\oo$ & $+\oo$ (1)
+    \end{tabular}
+\end{table}
+
+(1) par croissance comparée
+
+\newpage
+\section{Géométrie dans l'espace}
+
+\subsection{Intersections}
+\subsubsection{Droite-droite, plan-plan}
+
+\begin{center}
+    Soit $a$ et $b$ des droites et $P$ et $Q$ des plans
+\end{center}
+
+\begin{table}[h]
+    \centering
+\begin{tabular}{r|c|c|c|c}
+           & \multicolumn{3}{c|}{Coplanaires}                                   & \multirow{3}{*}{Non-coplanaires} \\ \cline{2-4}
+           & \multicolumn{2}{c|}{Parallèles}        & \multirow{2}{*}{Sécantes} &                                  \\ \cline{2-3}
+           & Strictement  & Confondues    &                           &                                  \\ \hline
+$a \cap b$ & $\emptyset$  & $a$ et $b$    & $ \{ \text{point} \}$     & $ \emptyset$                     \\
+$P \cap Q$ & $\emptyset$  & $P$ et $Q$    & $  \text{droite} $        & $  \emptyset$                   
+\end{tabular}
+\end{table}
+
+\subsubsection{Droite-plan}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r|c|c|c}
+           & \multicolumn{2}{c|}{Parallèles}                & \multirow{2}{*}{Sécants} \\ \cline{2-3}
+           & Strictement & $a \subset P$ &                          \\ \hline
+$a \cap P$ & $\emptyset$            & droite                & $\{ \text{point} \}$                   
+\end{tabular}
+\end{table}
+
+\subsection{Section d'un cube}
+
+\textit{2 points dans la même face}\\
+Relier directement\\\\
+\textit{$[AB]$ sur une face, $C$ sur face opposée} \\
+Tracer la parallèle à $[AB]$ passant par $C$\\\\
+\textit{$[AB]$ sur une face, $C$ sur face adjaçente}\\
+Prolonger une arrête et $(AB)$ jusqu'à intersection en $D$\\
+Tracer $(DC)$
+
+
+\end{document}
