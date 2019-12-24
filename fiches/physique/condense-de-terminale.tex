@@ -32,11 +32,8 @@ color(50.00000000000000bp)=(red)
 \usepackage{multirow}
 \usepackage{caption}
 \usepackage[load-configurations = abbreviations]{siunitx}
-\sisetup{
-    detect-all,
-    expproduct=cdot,
-    locale=FR
-}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}, exponent-product=\ensuremath{{}\cdot{}}}
 \usepackage{graphicx}
 \graphicspath{ {./} }
 \usetikzlibrary{shapes.arrows}
@@ -113,6 +110,12 @@ $$\cancel{89,79 \pm \SI{4,5}{\micro\meter}} \quad\to\quad 90 \pm \SI{5}{\micro\m
 
 \newpage
 \section{Ondes}
+
+\subsection{Divers infos}
+
+\begin{itemize}
+    \item Sur Terre, l'atmosphère \textit{absorbe} certains rayons et il faut utiliser des satellites pour pouvoir les capter (qui sont en dehors de l'atmosphère)
+\end{itemize}
 
 \subsection{Définitions}
 
@@ -193,7 +196,7 @@ Matériau limitant les transferts par conduction
 \subsection{Flux thermique $\Phi$}
 
 \begin{center}
-    \formulaPyramid{Q}{$\Phi$}{$\tau$}
+    \formulaPyramid{Q}{$\Phi$}{$t$}
 \end{center}
 
 \begin{definitions}
@@ -201,7 +204,7 @@ Matériau limitant les transferts par conduction
 [W] Flux
 \item[$Q$]
 [J] Transfert thermique
-\item[$\tau$]
+\item[$t$]
 [s] Durée du transfert
 \end{definitions}
 
@@ -336,7 +339,7 @@ Fil 1 〉 Séq 3 〉 Part. B
 \subsection{Propriétés d'un laser}
 \begin{definitions}
 \item[Monochromatique] Une seule couleur
-\item[Directif] Faisceau lumineux dans une seule direction
+\item[Faisceau lumineux directif] Faisceau dans une seule direction
 \end{definitions}
 
 \subsection{Au niveau atomique}
@@ -393,7 +396,7 @@ decorate, decoration={
 \begin{definitions}
 \item[h] [$\approx \:  \SI{6E-34}{\joule\per\second}$] Constante de planck
 \item[c] [$\approx  \: \SI{3E8}{\meter\per\second}$] Célérité de la lumière dans le vide
-\item[$\lambda$] [$\si{\meter}$] Longueur d'onde
+\item[\lambda] [\si{\meter}] Longueur d'onde
 \end{definitions}
 \end{samepage}
 
@@ -473,6 +476,9 @@ Qui absorbe de la chaleur (Endotre thermes (haha), qui "dégage du froid")
 
 \subsection{Le potentiel hydrogène $\text{pH}$}
 
+\subsubsection{Contrôle du pH}
+Important pour le sang
+
 \subsubsection{Papier pH}
 Déposer une goutte du produit sur la papier pH (ne pas tremper le papier dans la solution)
 \begin{definitions}
@@ -534,9 +540,15 @@ Mélange avec de l'eau:
 \begin{center}
     \equilibrium{HA_{(aq)} + H2O_{(l)}}{A^{-}_{(aq)} + H3O^{+}_{(aq)}}
 \end{center}
-
+\\
 Avec un acide fort, la réaction est complète:
 $$\ce{HA -> A^- + H^+}$$
+
+\subsection{Réactions base forte ou acide fort}
+\begin{itemize}
+    \item Besoin de hotte aspirante
+    \item Exothermique
+\end{itemize}
 
 \subsection{Produit ionique de l'eau $K_e$}
 Pour toutes les solutions:
