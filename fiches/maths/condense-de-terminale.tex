@@ -14,11 +14,24 @@
 \usepackage{calc}  
 \usepackage{enumitem}  
 \usepackage{graphicx}
+\usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}% 
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
+\parskip 1ex
 \graphicspath{ {./} }
 \usetikzlibrary{shapes.arrows}
 \let\ce\ch
-\newcommand{\im}{\text{Im}}
-\newcommand{\re}{\text{Re}}
+\newcommand{\im}{\text{Im}\,}
+\newcommand{\re}{\text{Re}\,}
+\newcommand{\img}{\text{Img}\,}
 \newcommand{\R}{\mathds{R}}
 \newcommand{\C}{\mathds{C}}
 \newcommand{\N}{\mathds{N}}
@@ -38,11 +51,13 @@
 \newcommand{ \const}{\text{cste}}
 \newcommand{\et}{\:\text{et}\:}
 \newcommand{\ou}{\:\text{ou}\:}
+\newcommand{\placeholder}{\diamond}
 \newcommand{\mediateur}{\:\text{med}\:}
 \newcommand{\milieu}{\:\text{mil}\:}
 \newcommand{\vect}[1]{\overrightarrow{#1}}
 \newenvironment{descriptiona}{\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries The longest label}]}{\end{description}}
 \renewcommand{\arraystretch}{1.4}
+\newcommand{\point}[2]{(#1;\;#2)}
 
 \begin{document}
 
@@ -64,7 +79,9 @@
 	$\nearrow$ & Croissant\\
 	$\searrow$ & Décroissant \\
 	$a \gtreqless b$ & Revient à écrire $a > b$, $a = b$ et $a > b$ \\
-	$\land$ & "et"
+	$\land$ & "et"\\
+	$\img z$ & Point d'affixe $z$\\
+	$\placeholder$ & Caractère utilisé pour représenter plusieurs opérations\\
 \end{tabular}
 \pagestyle{empty}
 \newpage
@@ -456,24 +473,24 @@ Ensemble des imaginaires purs: $i\R := \C \setminus \R$
 \end{itemize}
 \subsubsection{Propriétés}
 \begin{itemize}
-    \item $\re\;z = 0 \iff z \in \R$
-    \item $\im\;z = 0 \iff z \in i\R$
+    \item $\re z = 0 \iff z \in \R$
+    \item $\im z = 0 \iff z \in i\R$
 \end{itemize}
 
 \subsection{Conjugé $\conj{z}$}
 
 \subsubsection{Définition}
-$$\conj{a + ib} := a-ib$$
+$$\conj{z} := \re z - i\im z$$
 
 
 
 \subsubsection{Identités}
 
-$\square$ représente les opérations $+$, $\times$ et $\div$
+$\placeholder$ représente les opérations $+$, $\times$ et $\div$
 
 \begin{itemize}
     \item $z\cdot\conj{z} &= (\im\; z)^2 + (\re\; z)^2$
-    \item $\conj{z \:\square\: w} &= \conj{z} \:\square\: \conj{w}$
+    \item $\conj{z \:\placeholder\: w} &= \conj{z} \:\placeholder\: \conj{w}$
     \item $\conj{z^n} &= (\conj{z})^n$
     \item $\conj{\conj{z}} &= z $
     \item $\conj{z} = z &\iff z \in \R$
@@ -502,6 +519,82 @@ $$
 \Delta > 0 &\implies \dfrac{-b\pm\sqrt{\Delta}}{2a}
 \end{cases}
 $$
+
+\subsection{Coordonnées polaires avec $z$}
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+% Axes
+\draw[->] (0,0) -- (0,4) node[left] {$\vec y$};
+\draw[->] (0,0) -- (4,0) node[below] {$\vec x$};
+\draw (0,0) node[below] {$O$};
+% Aff(z)
+\draw[fill=black] (2,2) circle(0.0225) node[above] {$\Aff z$};
+% Re z
+\draw (0,0) -- (0,2);
+\draw (0, 2) -- (0.25, 2) node[left] {$\re z$};
+% Im z
+\draw (0,0) -- (2,0) node[below] {$\im z$};
+\draw (2,0) -- (2,0.25);
+% |z|
+\draw (0,0) -- (2,2) node[above, midway] {$|z|$};
+% arg z
+\draw[->] (2,0) arc (0:45:2);
+\draw (2,1) node[right] {$\arg z$};
+\draw 
+    \end{tikzpicture}
+    \caption{Représentation géométrique de l'affixe de $z$ et de ses propriétés}
+    \label{fig:my_label}
+\end{figure}
+
+\subsubsection{Module $|z|$}
+
+$$|z| = \sqrt{\re^2z + \im^2z}$$
+
+\subsubsubsection{Propriétés}
+
+$\placeholder$ représente les opérations $\times$ et $\div$
+$$ |z^n| = |z|^n $$
+$$ | z \placeholder z' | = |z|\placeholder|z'|$$
+
+
+\subsubsection{Argument $\arg$}
+
+$$\forall z \in \C^\ast$$
+
+\begin{equation*}
+    \begin{split}
+        \arg z &:= \left( \vect{O \img(\re z)} ;\; \vect{O \img z} \right) \\
+            &= \begin{cases}
+            \cos(\arg z) &= \dfrac{\re z}{|z|} \\
+            \sin(\arg z) &= \dfrac{\im z}{|z|} \\
+            \end{cases}
+    \end{split}
+\end{equation*}
+
+\subsubsubsection{Propriétés}
+
+\textit{Similaire à $\ln$, voir \ref{proprietes_ln}}
+
+
+\subsection{Formes}
+
+\begin{equation*}
+    \begin{split}
+        \re z + i\,\im z&\quad\text{(algébrique)} \\
+          |z|\,(cos(\arg z) + i \sin(\arg z) )&\quad\text{(trigonométrique)} \\
+          |z|e^{i\arg z}&\quad\text{(exponentielle)}
+    \end{split}
+\end{equation*}
+
+Notations usuelles: $r := |z|$, $\theta := \arg z$, $x := \re z$, $y := \im z$
+
+\subsubsection{Propriétés de la forme exponentielle}
+
+$$e^{-i\theta} = \conj{e^{i\theta}}$$
+
+\textit{Les autres propriétés découlent de celles de l'exponentielle, voir \ref{proprietes_exp}}
+
 
 \newpage\section{Dérivées}
 
@@ -538,10 +631,6 @@ Soit $x \in \R$ et $u$ une fonction définie sur $\R$
 \item[Limites] $e^x \goesto{x}{+\oo} +\oo $\\$ e^x \goesto{x}{-\oo} 0$
 \end{descriptiona}
 
-\subsection{Propriétés}
-
-$$e^a \gtreqless e^b \iff a \gtreqless b$$
-
 \subsection{Limites remarquables}
 \begin{table}[h]
     \centering
@@ -551,6 +640,21 @@ $$e^a \gtreqless e^b \iff a \gtreqless b$$
         \twoColsNB{Par croissance comparée $\downarrow$} & \\\hline
         $xe^x$ & $-\oo$ & 0 \\\hline
         $\sfrac{e^x}{x}$ & $+\oo$ & $+\oo$
+    \end{tabular}
+\end{table}
+
+\label{properietes_exp}
+\subsection{Propriétés}
+
+$$e^a \gtreqless e^b \iff a \gtreqless b$$
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|c}
+        $e^{a\placeholder b}$ & $e^ a \placeholder e^ b $ \\
+        $+$ & $\times$ \\
+        $-$ & $\div$ \\\hline
+        $(e^a)^n$ &  $e^{an}$ \\
     \end{tabular}
 \end{table}
 
@@ -635,5 +739,45 @@ $$d \underset{\text{orth.}}{\bot} d' \iff \gamma \underset{\text{perp.}}{\bot} \
     \end{split}
 \end{equation*}
 
+\newpage
+\section{Le logarithme népérien $\ln$}
+
+Aussi appelé "logarithme naturel" ou "logarithme base $e$"
+
+\subsection{Caractéristiques}
+\begin{descriptiona}
+\item[Notation] $\ln{x}$
+\item[Réciproque] $\exp$
+\item[Ensemble] $\R_+^\ast \to \R$
+\item[Limites]
+    $\displaystyle \lim_{x\to0^+} \ln{x} = -\oo$ \\
+    $\displaystyle \lim_{x\to+\oo} \ln{x} = +\oo$
+\item[Dérivée] $\dfrac{1}{x}$
+\item[Variations] Croissante sur $\R_+^\ast$
+\item[Continuité] Continue sur $\R_+^\ast$
+\item[Valeurs remarquables] $\ln{1} = 0$
+\end{descriptiona}
+
+\subsection{Limites remarquables}
+
+\begin{equation*}
+    \begin{split}
+        \lim_{x\to+\oo} \frac{\ln x}{x} &= 0 \\
+        \lim_{x\to0^+} x\ln x &= 0
+    \end{split}
+\end{equation*}
+
+\label{proprietes_ln}
+\subsection{Propriétés}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|c}
+        $\ln (a\placeholder b)$ & $\ln a \placeholder \ln b $ \\
+        $\times$ & $+$ \\
+        $\div$ & $-$ \\\hline
+        $a^n$ &  $n\ln a$ \\
+    \end{tabular}
+\end{table}
 
 \end{document}
