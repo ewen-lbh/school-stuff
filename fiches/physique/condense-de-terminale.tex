@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
 \usepackage{hyperref}
-\usepackage{amsmath, amssymb}
+\usepackage{amsmath, amssymb, dsfont}
 \usepackage{mathtools}
 \usepackage{chemfig}
 \usepackage{chemformula}
@@ -32,13 +32,15 @@ color(50.00000000000000bp)=(red)
 \usepackage{multirow}
 \usepackage{caption}
 \usepackage[load-configurations = abbreviations]{siunitx}
-\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
-\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}, exponent-product=\ensuremath{{}\cdot{}}}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}, exponent-product=\ensuremath{{}\cdot{}}, group-minimum-digits=3, range-phrase=-, range-units=single}
 \usepackage{graphicx}
 \graphicspath{ {./} }
 \usetikzlibrary{shapes.arrows}
 \let\ce\ch
+\newcommand{\bit}{\text{bit}}
 \newcommand{\equilibrium}[2]{$\ce{#1}\rightleftharpoons\ce{#2}$}
+\newcommand{\soom}{\stackrel{10}{=}}
+\newcommand{\vect}{\overrightarrow}
 \newcommand{\formulaPyramidFactory}[4]{
     \begin{tikzpicture}[scale=1.25]
 \draw (0,0) -- (-0.5, -0.75) node  [align=center, fill=white, midway] {\footnotesize \---};
@@ -55,6 +57,23 @@ color(50.00000000000000bp)=(red)
 \newcommand{\formulaPyramid}[3]{\formulaPyramidFactory{#1}{#2}{#3}{$\times$}}
 \newcommand{\formulaPyramidAdditive}[3]{\formulaPyramidFactory{#1}{#2}{#3}{$+$}}
 \newenvironment{definitions}{\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Lorem ipsum dolor}]}{\end{description}}
+\newcommand{\deftable}[2]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{100mm}}%
+        %& unité/type & Explication \\ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \\
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \\
+}
 
 \begin{document}
 
@@ -73,7 +92,8 @@ color(50.00000000000000bp)=(red)
 	$\lceil x \rceil$ & Arrondir $x$ à l'entier supérieur. ($\lceil 5.1 \rceil = 6$)\\
 	$1.5$ & Séparateur ,\\
 	$x\cdot y$ & Multiplication $\times$\\
-	$a \propto b$ & $a$ proportionnel à $b$
+	$a \propto b$ & $a$ proportionnel à $b$\\
+	$a \soom b$ & $a$ même ordre de grandeur que $b$
 \end{tabular}
 \subsection*{Notations inventées}
 \subsubsection*{Pyramides de formules}
@@ -145,7 +165,8 @@ Onde qui avance
 
 \subsection{Les ondes sonores}
 \begin{definitions}
-\item[Type d'onde] mécanique
+\item[Nature] mécanique
+\item[Propagation] horizontale
 \end{definitions}
 \subsubsection{Unité de mesure: Le décibel dB}
 $$L = 10 \log \left (\frac{I}{I_0} \right )$$
@@ -169,6 +190,60 @@ $$2I = L + 3$$
     \end{tabular}
 \end{table}
 
+\subsection{Propagation des ondes mécaniques}
+
+\begin{description}
+\item[Trajectoire] toutes les directions qui sont offertes
+\item[Vitesse de propagation] $\propto$ densité du milieu
+\end{description}
+
+\subsection{Le retard $\tau$}
+\begin{center}
+    \formulaPyramid{$SM$}{$\tau$}{$v$}
+\end{center}
+\deftable{
+    \deftablevar{SM}{\meter}{Distance source (S)-point étudié (M)}
+    \deftablevar{v}{\meter\per\second}{Célérité}
+    \deftablevar{\tau}{\second}{Retard de l'onde}
+}{ondes_retard}
+
+\subsection{Le son}
+
+\begin{definitions}
+\item[Type d'onde] Mécanique
+\item[Hauteur] Dépend de la fréquence fondamentale. Caractère grave ($f$ faible) / aigu ($f$ élevé)
+\item[Timbre] Dépend de la forme du signal (amplitude, nombre et positions des fréquences harmoniques)
+\item[Analyse de Fourier] Représentation de l'amplitude de chaque fréquence du signal
+\item[Domaine audible] $\SIrange{20}{20 000}{\hertz}$
+\end{definitions}
+
+\subsection{L'effet Doppler}
+
+$$f_r = f_e \frac{v_r}{v_r \pm v_e}$$
+
+\deftable{
+    \deftablevar{f_r}{\hertz}{Fréquence à la réception}
+    \deftablevar{f_e}{\hertz}{Fréquence à l'émission}
+    \deftablevar{v_e}{\meter\per\second}{Vitesse de l'émetteur par rapport au récepteur}
+    \deftablevar{v_r}{\meter\per\second}{Vitesse de l'onde dans le milieu}
+    \deftableobj{\pm}{opérateur}{
+        $+$ quand l'émetteur s'éloigne, $-$ quand il se rapproche
+    }
+}{doppler}
+
+\subsection{Dualité onde-particule}
+
+Chaque objet dans l'univers est à la fois corpusculaire (particule) et une longueur d'onde.
+
+$$\lambda = \frac{h}{p} = \frac{h}{mv}$$
+
+\deftable{
+    \deftablevar{\lambda}{\meter}{Longueur d'onde}
+    \deftablevar{h}{\SI{6.63E-34}{\joule\per\second}}{Constance de Planck}
+    \deftablevar{p}{\kilo\gram\meter\per\second}{Quantité de mouvement}
+    \deftablevar{m}{\kilo\gram}{Masse}
+    \deftablevar{v}{\meter\per\second}{Vitesse}
+}{broglie}
 
 \newpage
 
@@ -199,14 +274,11 @@ Matériau limitant les transferts par conduction
     \formulaPyramid{Q}{$\Phi$}{$t$}
 \end{center}
 
-\begin{definitions}
-\item[$\Phi$]
-[W] Flux
-\item[$Q$]
-[J] Transfert thermique
-\item[$t$]
-[s] Durée du transfert
-\end{definitions}
+\deftable{
+    \deftablevar{\Phi}{\watt}{Flux}
+    \deftablevar{Q}{\joule}{Transfert thermique}
+    \deftablevar{t}{\second}{Durée du transfert}
+}{flux_thermique}
 
 \subsection{Résistance thermique $R_\text{th}$}
 
@@ -215,25 +287,14 @@ Matériau limitant les transferts par conduction
     \formulaPyramid{$e$}{$R_\text{th}$}{$\lambda s$}
 \end{center}
 
-\begin{definitions}
-\item[$R_\text{th}$]
-[\si{\kelvin\per\watt}] Résistance thermique
-
-\item[$\Delta T$]
-[K ou °C] Écart de température entre les deux faces de la paroi
-
-\item[$\Phi$]
-[W] Flux
-
-\item[$e$]
-[m] épaisseur
-
-\item[$s$]
-[\si{\square\meter}] surface
-
-\item[$\lambda$] 
-[\si{\watt\per\meter\per\kelvin}] Conductivité thermique
-\end{definitions}
+\deftable{
+    \deftablevar{R_{\text{th}}}{\kelvin\per\watt}{Résistance thermique}
+    \deftableobj{\Delta T}{\si{\kelvin} ou \si{\celsius}}{Écart de temp. entre les deux matériaux}
+    \deftablevar{\Phi}{\watt}{Flux thermique}
+    \deftablevar{e}{\meter}{Épaisseur}
+    \deftablevar{s}{\meter\squared}{Surface}
+    \deftablevar{\lambda}{\watt\per\meter\per\kelvin}{Conductivité thermique}
+}{resistance_thermique}
 
 \subsection{Énergie interne $U$}
 
@@ -241,19 +302,12 @@ Somme des énergies microscopiques de toutes les particules
 
 $$\Delta U = m \cdot c \cdot \Delta T$$
 
-\begin{definitions}
-\item[$\Delta U$]
-[J] Variation d'énergie interne
-
-\item[$m$]
-[kg] Masse
-
-\item[$c$]
-[\si{\joule\per\kilo\gram\per\kelvin}] Capacité thermique massique du solide
-
-\item[$\Delta T$]
-[K ou °C] Variation de température
-\end{definitions}
+\deftable{
+    \deftablevar{\Delta U}{\joule}{Variation d'énergie interne}
+    \deftablevar{m}{\kilo\gram}{Masse}
+    \deftablevar{c}{\joule\per\kilo\gram\per\kelvin}{Capacité thermique massique du solide}
+    \deftableobj{\Delta T}{\si{\kelvin} ou \si{\celsius}}{Écart de temp. entre les deux matériaux}
+}{energie_interne}
 
 \subsection{Bilan énergétique}
 \subsubsection{Méthode}
@@ -586,9 +640,9 @@ $$\text{p}K_a \in [0 ; 14]\quad\text{pour les couples acide faible/base faible}$
     \end{split}
 \end{equation*}
 
-\newpage
+%\newpage
 
-\section{Vérification de concentrations}
+%\section{Vérification de concentrations}
 
 \subsection{Loi de Kohlrausch: la conductivité $\sigma$}
 
@@ -597,15 +651,15 @@ $$\text{p}K_a \in [0 ; 14]\quad\text{pour les couples acide faible/base faible}$
 \begin{center}
     \formulaPyramid{$\sigma$}{$c$}{$\lambda$}
 \end{center}
-\begin{definitions}
-\item[$\sigma$] [\si{\siemens\per\meter}] Conductivité
-\item[$c$] \textcolor{red}{[\si{\mol\per\meter\cubed}]} Concentration molaire
-\item[$\lambda$] [\si{\siemens\per\square\meter\per\mol}] Conductivité électrique molaire
-\end{definitions}
+\deftable{
+    \deftablevar{\sigma}{\siemens\per\meter}{Conductivité}
+    \deftableobj{c}{$\text{mol}\cdot\text{m}\textcolor{red}{^{-3}}$}{Concentration molaire}
+    \deftablevar{\lambda}{\siemens\per\square\meter\per\mol}{Conductivité électrique molaire}
+}{conductivite}
 \subsubsection{Pour une molécule}
 Calcul pour une molécule composés des ions $X$
 
-$$\sigma_{X_1 X_2 X_3 \dots X_j} = \sum_{i=1}^{j} [X_i]\lambda_X_i$$
+$$\sigma_{X_1 X_2 X_3 \dots X_j} = \sum_{i=1}^{j} [X_i]\lambda_{X_i}$$
 
 \subsubsection{Example: conductivité de \ce{HO^-Na^+}}
 
@@ -618,5 +672,313 @@ $$\sigma_{X_1 X_2 X_3 \dots X_j} = \sum_{i=1}^{j} [X_i]\lambda_X_i$$
 \end{equation*}
 
 
+\newpage\section{Optique}
+
+\subsection{Diffraction}
+
+\texttt{TODO: Schéma w/ TikZ}
+
+\begin{center}
+    Si $\lambda \soom a$\\
+    \formulaPyramid{$\lambda$}{$\theta$}{$a$}
+\end{center}
+
+\deftable{
+    \deftablevar{\lambda}{\meter}{Longueur d'onde}
+    \deftablevar{\theta}{\radian}{Demi-angle de diffraction}
+    \deftablevar{a}{\meter}{Largeur de la fente}
+}{diffraction}
+
+\subsection{Interférences}
+
+\texttt{TODO: Schéma w/ TikZ}
+
+\begin{center}
+    \formulaPyramid{$\lambda D$}{$i$}{$l$}
+\end{center}
+
+\deftable{
+    \deftablevar{\lambda}{\meter}{Longueur d'onde}
+    \deftablevar{D}{\meter}{Distance fente-écran}
+    \deftablevar{i}{\meter}{Distance interfrange}
+    \deftablevar{l}{\meter}{Distance inter-fentes}
+}{interfrange}
+
+$$\delta = d_1 - d_2$$
+
+\deftable{
+    \deftablevar{\delta}{\meter}{Différence de marche}
+    \deftablevar{d_1}{\meter}{Distance parcourue par le rayon 1}
+    \deftablevar{d_2}{\meter}{Distance parcourue par le rayon 2}
+}{difference_de_marche}
+
+\begin{definitions}
+\item[Constructive] $\exists k \in \mathds{Z}\quad \delta = k \lambda$
+\item[Destructives] $\exists k \in \mathds{Z}\quad \delta = \left(k + \frac{1}{2}\right) \lambda$
+\end{definitions}
+
+\newpage
+\section{Signaux}
+
+\subsection{Types de signaux}
+
+\begin{definitions}
+\item[Analogique] Précision infinie. Issues de mesures de phénomènes
+\item[Numérique] Précision limitée par le nombre de bits utilisés pour coder l'information.
+\end{definitions}
+
+\subsection{Numérisation $A \to D$}
+
+\begin{definitions}
+\item[Échantillonage] Prélevage de valeurs à intervalles de temps régulières.
+\item[Quantification] Approximation de chaque valeur à sa valeur binaire la plus proche.
+\end{definitions}
+
+\deftable{
+    \deftablevar{f_e}{\hertz}{Fréquence d'échantillonage}
+    \deftablevar{T_e}{\second}{Période d'échantillonage}
+    \deftablevar{N}{}{Nombre de mesures}
+    \deftablevar{T}{\second}{Période du signal}
+    \deftablevar{n}{\bit}{Bits de quantification}
+    \deftablevar{q}{}{Plus petite valeur échantillonable}
+}{echantillonage_quantification}
+
+\subsection{Transmission}
+\subsubsection{Débit binaire $D$}
+
+$$D = \frac{1}{T_B} = Nkf_e$$
+
+\deftable{
+    \deftablevar{N}{}{Nombre de signaux}
+    \deftablevar{k}{}{Nombre de bits utilisés}
+    \deftablevar{D}{\bit\per\second}{Débit binaire}
+    \deftablevar{T_B}{\second}{Durée d'un bit}
+}{debit_binaire}
+
+\subsubsection{Atténuation}
+
+$$P_\text{reçu} = P_\text{émis} \cdot e^{-\alpha d}$$
+\begin{equation*}
+    \begin{split}
+        A_\text{dB} &= -10 \log \frac{P_\text{reçu}}{P_\text{émis}} \\
+        &= \alpha_\text{dB} d
+        &> 0
+    \end{split}
+\end{equation*}
+
+\deftable{
+    \deftablevar{\alpha}{}{Coefficient d'atténuation}
+    \deftablevar{d}{\meter}{Distance}
+    \deftablevar{P_\text{reçu}}{\watt}{Puissance reçue}
+    \deftablevar{P_\text{émis}}{\watt}{Puissance émise}
+    \deftablevar{A_\text{dB}}{\decibel}{Coefficient d'atténuation}
+    \deftablevar{\alpha_\text{dB}}{\decibel}{Atténuation}
+}{attenuation}
+
+\subsubsection{Types de câbles}
+
+\begin{center}
+    \begin{tikzpicture}[scale=0.75]
+\draw (0,0) -- (-6, -6);
+\draw (0,0) -- (6, -6);
+
+\draw (-6,-6) -- (-6, -12);
+\draw (6,-6) -- (9, -12);
+\draw (6,-6) -- (3, -12);
+
+\draw (0,0) node [align=center, fill=white] {Moyens de transmission du signal};
+
+\draw (-6, -6) node [align=center, fill=white] {Transmission guidée};
+\draw (6, -6) node [align=center, fill=white] {Transmission non-guidée};
+
+\draw (-6, -12) node [align=center, fill=white] {Ondes électromagnétiques};
+\draw (3, -12) node [align=center, fill=white] {Câbles};
+\draw (9, -12) node [align=center, fill=white] {Fibre optique};
+\end{tikzpicture}
+\end{center}
+
+\section{Stockage optique et d'images}
+\subsection{Stockage d'une image}
+Stockage d'une image en couleur:
+
+\begin{tikzpicture}
+\draw[->] (0,0) -- (0,-1) node[midway, right] { 3/4 Couches: rouge, vert, bleu, (transparence) };
+\draw[->] (0,-1) -- (0,-2) node[midway, right] { $n$ pixels: largeur $\times$ hauteur de la photo };
+\draw[->] (0,-2) -- (0,-3) node[midway, right] { 3 octets: information de luminosité };
+\draw[] (0,-3) node [below] { $\text{taille} = \text{couches}\times\text{largeur}\times\text{hauteur}\times3\;\text{octets}$ };
+\end{tikzpicture}
+
+\subsection{Stockage optique}
+\subsubsection{Stockage}
+\begin{tikzpicture}
+\draw[] (0,0.25) node { CD };
+\draw[->] (0,0) -- (0,-1) node[midway, right] { Pistes: enroulées };
+\draw[->] (0,-1) -- (0,-2) node[midway, right] { Bits: tronçons de longueur fixe };
+\draw[->] (0,-2) -- (0,-3) node[midway, right] { Land et/ou pit };
+\end{tikzpicture}
+
+\begin{equation*}
+    \begin{split}
+        \text{largeur de piste} &\propto \text{nombre de pistes que l'on peut mettre} \\
+        &\propto \text{capacité de stockage} \\
+        &\propto \lambda \;\text{du laser lecteur} \\
+        &\propto \text{NA du laser lecteur}
+    \end{split}
+\end{equation*}
+\subsubsection{Lecture}
+\begin{tikzpicture}
+\draw[<->, color=red] (0,0) -- (0,-2.5);
+\draw[->, color=red] (3,-2.5) -- (0,-2.5) node [above, midway] { $\lambda = 780\;\text{nm}$ };
+\draw[->, dotted, color=red] (0,-2.5) -- (0,-4);
+
+\draw (-1,0) -- (1,0) node [right] { CD };
+\draw (-0.5,-1) -- (0.5,-1) node [right] { Lentille de focalisation };
+\draw (-0.5,-2) -- (0.5,-3) node [left, midway] { (1) };
+\draw (-0.5,-4) -- (0.5,-4) node [right] { Photodiode };
+\end{tikzpicture}
+\begin{description}
+\item[(1)] Mirror semi-transparent
+\end{description}
+
+\paragraph{Pour un bit 1}
+\begin{enumerate}
+    \item Profondeur d'un pit: $\dfrac{\lambda}{4}$
+    \item Décalage land/pit: $\dfrac{\lambda}{2}$ (aller\textbf{+}retour)
+    \item $\dfrac{\lambda}{2} \implies \text{Interférence destructive}$
+    \item Pour la photodiode: Signal $\approx 0$
+    \item Transition land/pit $\implies$ 1
+\end{enumerate}
+
+\paragraph{Pour un bit 0}
+\begin{enumerate}
+    \item Signaux initial/après rebond indentiques $\implies \text{Interférence constructive}$
+    \item Pour la photodiode: Signal fort
+    \item Pas de transition $\implies$ 0
+\end{enumerate}
+
+\paragraph{Ouverture numérique $NA$}
+.\\
+
+\begin{equation*}
+\begin{tabular}{
+  @{}
+  m{.5\textwidth}
+  @{}
+  m{.5\textwidth}
+  @{}
+}
+\centering
+$\displaystyle
+\begin{split}
+    NA &= \sin \alpha \\
+    &= \frac{0.5D}{\sqrt{(0.5D)^2 + f^2}} \\
+    d &= 1.22 \frac{\lambda}{NA}
+\end{split}
+$
+&
+\centering
+\begin{tikzpicture}
+
+\draw[fill=red!50, color=red!50] (-0.25,0) -- (-1,-2) -- (0,-2) -- (0,0) -- cycle;
+\draw[fill=red!50, color=red!50] (0.25,0) -- (1,-2) -- (0,-2) -- (0,0) -- cycle;
+\draw[fill=red!50, color=red!50]  (-1,-2) -- (-1,-4) -- (1,-4) -- (1,-2) -- cycle;
+\draw[very thick] (-1.5,-2) -- (1.5,-2) node[right] { Lentille };
+\draw[thick, dotted] (0,0) -- (0,-2);
+
+\draw (0,-1.5) arc (-90:-70:2) node[below] { $\alpha$ };
+\draw[<->] (-0.25,0.5) -- (0.25,0.5) node[midway, above] { $d$ };
+\draw[<->] (-1,-4.5) -- (1,-4.5) node[midway, below] { $D$ };
+\draw[<->] (-2,-2) -- (-2,0) node[midway, left] { $f$ };
+
+\end{tikzpicture}
+\end{tabular}
+\end{equation*}
+
+\newpage
+\section{Mécanique}
+\subsection{Vecteurs du mouvement}
+\begin{equation*}
+    \begin{split}
+        \vec a = \frac{d\vec v}{dt} = \frac{d\frac{d\vect{OM}}{dt}}{dt}
+    \end{split}
+\end{equation*}
+
+\subsection{Principe d'intertie}
+
+$$
+\vec{v} = \vect{\text{cte}} \iff \Sigma \vect{F_{\text{ext}}} = \vec{0} \\
+$$
+
+\subsection{Isolation d'un système}
+\begin{definitions}
+\item[Isolé] $\vec p = m \vec v$
+\item[Pseudo-isolé] Les forces se compensent
+\end{definitions}
+
+\subsection{Principe fondamental de la dynamique}
+\begin{equation*}
+    \begin{split}
+        \Sigma \vect{F_\text{ext}} &= \frac{d\vec p}{dt} \\
+                                   &= m \vec a \quad \text{(si la masse est constante)}
+    \end{split}
+\end{equation*}
+
+\subsection{Application}
+
+On utilise les conditions initiales:
+On nous donne $\alpha$ l'angle de lancement initial.
+Pour avoir $v_{_0x}$ et $v_{_0y}$ on calcule les sinus et cosinus de $\alpha$.
+
+Quand la seule force s'appliquant à l'objet en chute est le poids $\vec{P}$, on a:
+
+\begin{equation*}
+    \begin{split}
+        \Sigma \vect{F_\text{ext}} &= m \vec a \\
+        \iff \vec P &= m \vec a\\
+        \iff m \vec g &= m \vec a \\
+        \iff \vec g &= \vec a
+    \end{split}
+\end{equation*}
+
+$$
+\begin{pmatrix}
+a_x \\ a_y
+\end{pmatrix} = \begin{pmatrix}
+0 \\ -g
+\end{pmatrix}
+$$
+
+On primitive pour trouver la vitesse puis la position:
+
+$$
+\vec v = \begin{cases}
+v_x &= C_1 \\
+v_y &= -gt + C_2
+\end{cases}
+$$
+
+On détermine $C_1$ et $C_2$ avec les conditions initiales:
+
+à $t=0$:
+
+$$
+\begin{cases}
+v_x = C_1 &= v_{_0x} = v_0 \cos \alpha \\
+v_y = -gt + C_2 &= 0 + v_{_0y} = v_0 \sin \alpha \\
+\end{cases}
+$$
+
+Donc: 
+
+$$
+\vec v = \begin{cases}
+v_x &= v_0 \cos \alpha \\
+v_y &= -gt + v_0\sin\alpha
+\end{cases}
+$$
+
+et:
+
+$$||\vec v|| = \sqrt{v_x^2 + v_y^2}$$
 
 \end{document}

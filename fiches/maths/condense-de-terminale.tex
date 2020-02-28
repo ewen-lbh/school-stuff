@@ -14,11 +14,24 @@
 \usepackage{calc}  
 \usepackage{enumitem}  
 \usepackage{graphicx}
+\usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}% 
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
+\parskip 1ex
 \graphicspath{ {./} }
 \usetikzlibrary{shapes.arrows}
 \let\ce\ch
-\newcommand{\im}{\text{Im}}
-\newcommand{\re}{\text{Re}}
+\newcommand{\im}{\text{Im}\,}
+\newcommand{\re}{\text{Re}\,}
+\newcommand{\img}{\text{Img}\,}
 \newcommand{\R}{\mathds{R}}
 \newcommand{\C}{\mathds{C}}
 \newcommand{\N}{\mathds{N}}
@@ -38,8 +51,13 @@
 \newcommand{ \const}{\text{cste}}
 \newcommand{\et}{\:\text{et}\:}
 \newcommand{\ou}{\:\text{ou}\:}
+\newcommand{\placeholder}{\diamond}
+\newcommand{\mediateur}{\:\text{med}\:}
+\newcommand{\milieu}{\:\text{mil}\:}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
 \newenvironment{descriptiona}{\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries The longest label}]}{\end{description}}
 \renewcommand{\arraystretch}{1.4}
+\newcommand{\point}[2]{(#1;\;#2)}
 
 \begin{document}
 
@@ -60,7 +78,10 @@
 	$x\cdot y$ & Multiplication $\times$\\
 	$\nearrow$ & Croissant\\
 	$\searrow$ & Décroissant \\
-	$a \gtreqless b$ & Revient à écrire $a > b$, $a = b$ et $a > b$
+	$a \gtreqless b$ & Revient à écrire $a > b$, $a = b$ et $a > b$ \\
+	$\land$ & "et"\\
+	$\img z$ & Point d'affixe $z$\\
+	$\placeholder$ & Caractère utilisé pour représenter plusieurs opérations\\
 \end{tabular}
 \pagestyle{empty}
 \newpage
@@ -79,11 +100,11 @@ Attention: il faut que $x$ soit défini dans $I$ et que $g(x)$ soit défini dans
 Plus généralement, soit $\Theta$ un ensemble de fonctions
 $$\left(\bigcirc_{i=0}^{j} \Theta_i\right)(x) = \Theta_0 ( \Theta_1 ( \Theta_2 ( \Theta_3 \dots ( x \dots )$$
 
-\subsection{Équations de cercle $(x - a)^2 + (y - b)^2 = R^2$}
+\subsection{Équations de cercle $(x - x_0)^2 + (y - y_0)^2 = R^2$}
 
-Soit $a, b, R$ des réels, $R$ étant le rayon du cercle.\\
+Soit $R$ le rayon du cercle, et $O(x_0; y_0)$ le centre du cercle\\
 Un cercle dans le plan peut être décrit par l'équation suivante:
-$$(x - a)^2 + (y - b)^2 = R^2\quad$$
+$$(x - x_0)^2 + (y - y_0)^2 = R^2$$
 
 \subsection{Opérations avec des puissances}
 
@@ -164,7 +185,7 @@ u_{n+1} = u_n \cdot q
     \begin{tabular}{r||l|c|c|c|l}
          $p \in \{0.5\}\cup\N$            & $-\infty$ & -1 & 0 & 1 & $+\infty$  \\
          $q \in \R\quad\quad\quad\;\:$ & & & & \\\hline\hline
-        $\displaystyle\lim_{n\to+\infty} q^n$ & ? & \threeCols{0} & $+\infty$ \\\hline
+        $\displaystyle\lim_{n\to+\infty} q^n$ & \twoCols{?} & 0 & 1 & $+\infty$ \\\hline
         $\displaystyle\lim_{n\to+\infty} n^p$ & \twoCols{0} & 1 & \twoColsNB{$+\infty$}
     \end{tabular}
     \caption*{Limites de type $\const^n$ ou $n^\const$}
@@ -196,6 +217,9 @@ $$\lim_{n\to+\oo} u_n \dots$$
     \end{tabular}
 \end{table}
 
+Soit $f$ la fonction associée à $u_n$
+$$\lim_{n\to+\oo} u_n = L \implies \lim_{n\to+\oo} u_{n+1} = f(L)$$
+
 \subsection{Opérations sur les limites}
 
 \textit{Voir en }\ref{ops_limites}
@@ -212,7 +236,7 @@ et $l_A$ la limite quand $n \to +\oo$ de la suite $A_n$
         \hline
         \twoRows{Par comparaison} & $u_n \leq v_n$           & $l_u = +\oo$     & $\implies l_v = +\oo$ & ($u_n$) emporte ($v_n$) vers $+\oo$\\
                                   & $u_n \geq v_n$           & $l_u = -\oo$     & $\implies l_v = -\oo$ & ($u_n$) emporte ($v_n$) vers $-\oo$\\
-        Théorème des gendarmes    & $w_n \geq v_n \geq u_n$  & $l_u = l_w = 0$  & $\implies l_v = L$    & ($u_n$) et ($w_n$) forcent ($v_n$) à tendre vers $L$\\
+        Théorème des gendarmes    & $w_n \geq v_n \geq u_n$  & $l_u = l_w = L$  & $\implies l_v = L$    & ($u_n$) et ($w_n$) forcent ($v_n$) à tendre vers $L$\\
     \end{tabular}
 \end{table}
 \newpage
@@ -224,25 +248,23 @@ Probabilité que $A$ soit réalisé \textbf{sachant que} $B$ a déjà été réa
 
 \begin{equation*}
     \begin{split}
-        P(A|B)\ou P_B(A) &= \frac{P(P \cap Q)}{P(B)}\quad\text{si}\:P(B)\ne 0\\
+        P(A|B)\ou P_B(A) &= \frac{P(A \cap B)}{P(B)}\quad\text{si}\:P(B)\ne 0\\
     \end{split}
 \end{equation*}
 
 
-\subsection{Probabilités d'intersections $P(P \cap Q)$}
+\subsection{Probabilités d'intersections $P(A \cap B)$}
 Probabilité que $A$ \textbf{et} $B$ soit réalisées.
 
 \begin{equation*}
     \begin{split}
-        P(P \cap Q) &= P(B)\cdot P(A|B)\\
+        P(A \cap B) &= P(B)\cdot P(A|B)\\
                     &= P(A)\cdot P(B|A)
     \end{split}
 \end{equation*}
 
 \subsection{Probabilités d'union $P(A \cup B)$}
-L'union $\cup$ c'est un "ou exclusif":
-
-$$P(A \cup B) = P(A) + P(B) + P(P \cup Q)$$
+$$P(A \cup B) = P(A) + P(B)$$
 
 
 \subsection{Partitions}
@@ -251,14 +273,14 @@ Si on a deux évenements ou plus tel que...
 \begin{itemize}
     \item Aucun évenement n'est vide \\$\iff B_i  \ne \emptyset \quad \forall i$
     \item Aucun évenement ne recouvre un autre \\$\iff B_i \cap B_j = \emptyset \quad \forall i, j$
-    \item L'union de chaque partition couvre l'univers entier \\$\iff \bigcap_{i=1}^j B_i = \Omega$
+    \item L'union de chaque partition couvre l'univers entier \\$\iff \bigcup_{i=1}^j B_i = \Omega$
 \end{itemize}
 
 \subsection{Formule des probabilités totales}
 
 Soit $B_1$, $B_2$, ..., $B_n$ des évenements formant une partition de $\Omega$
 
-$$P(A) = \sum_{i=1}^n P(P \cap Q_i)$$
+$$P(A) = \sum_{i=1}^n P(A \cap B_i)$$
 
 \subsection{Indépendance d'évenements}
 
@@ -279,7 +301,7 @@ $$P(A) = \sum_{i=1}^n P(P \cap Q_i)$$
 \subsection{Autre vocabulaire}
 \begin{descriptiona}
 \item[Évenements incompatibles]
-$P(P \cap Q) = 0$ 
+$P(A \cap B) = 0$ 
 \end{descriptiona}
 
 
@@ -287,12 +309,12 @@ $P(P \cap Q) = 0$
 
 \subsection{Notation}
 
-Soit $x$, $C$ et $D$ des nombres et $\Psi$ un nombre ou symbole
+Soit $x$, $C$ et $D$ des nombres et $\Psi$ un réel, $+\oo$ ou $-\oo$
 
 \begin{equation*}
     \begin{split}
         \lim_{x \to \Psi} C = D &\iff C \goesto{x}{\Psi} D \\
-        &\iff \text{$C = D$ quand $x = \Psi$}
+        &\iff \text{Limite de $C$ quand $x$ tends vers $\Psi$}
     \end{split}
 \end{equation*}
 
@@ -311,6 +333,23 @@ Soit $x$, $C$ et $D$ des nombres et $\Psi$ un nombre ou symbole
         &\iff \text{Limite de $C$ à gauche de $\Psi$} \\
     \end{split}
 \end{equation*}
+
+\subsection{Limites d'un quotient à la valeur indéfinie}
+
+Soit $f:x\mapsto\frac{p(x)}{q(x)}$ et $r \in \R$ tq. $q(r) = 0$
+
+\begin{enumerate}
+    \item Calculer $\displaystyle \lim_{x\to r} p(x)$
+    \item
+        \begin{description}
+        
+            \item[Par valeurs supérieures] Calculer $\displaystyle\lim_{x\to r^+} q(x)$: $0^+$ ou $0^-$
+            \item[Par valeurs inférieures] Calculer $\displaystyle\lim_{x\to r^-} q(x)$: $0^+$ ou $0^-$
+        \end{description}
+    \item Conclure par quotient: $0^+ \to +$ et $0^- \to -$
+\end{enumerate}
+
+
 
 \subsection{Opérations sur les limites}\label{ops_limites}
 
@@ -374,7 +413,7 @@ g(x) \goesto{x}{b} c
 
 \subsection{Définition}
 
-Une fonction est continue quand "on peut tracer sa courbe sans lever le stylo". Plus rigoureusement, la fonction $f$ est continue sur l'intervalle $I$ si, pour tout $a \in I$, $f(a) \goesto{x}{a} a$.
+Une fonction est continue quand "on peut tracer sa courbe sans lever le stylo". Plus rigoureusement, la fonction $f$ est continue sur l'intervalle $I$ si, pour tout $a \in I$, $f(a) \goesto{x}{a} f(a)$.
 
 \subsection{Continuité de fonctions usuelles}
 
@@ -390,32 +429,34 @@ Une fonction est continue quand "on peut tracer sa courbe sans lever le stylo". 
 De plus, n'importe quelle fonction créée par $+$, $\times$, $\circ$ ou $\div$ à partir de fonctions continues sont continues
 
 \subsection{Théorèmes utilisant la continuité}
-\subsubsection{Théorème des valeurs intermédiaires}
+\subsubsection{Valeurs intermédiaires}
 
 Soit $a$ et $b$ des réels, $f$ une fonction continue sur $[a; b]$.
 $$\forall k \in [f(a); f(b)],\quad f(x) = k\:\:\:\text{admet au moins une solution dans $[a;b]$}$$
 
-\subsubsection{Théorème de la bijection}
+\subsubsection{Bijection}
 
 Soit $I$ une intervalle, $a$ et $b$ des réels dans $I$ et $f$ une fonction définie sur $I$ ou plus grand
 
 $$
 \begin{cases}
 \text{$f$ est continue sur $I$}\\
-\text{$f$ est strictement monotone sur $I$}\\
-k \in [f(a); f(b)]\quad(1)
+\text{$f$ est strictement monotone sur $I$}\quad(1)\\
+k \in [f(a); f(b)]\quad(2)
 \end{cases}$$
 $$
 \implies f(x) = k\:\:\:\text{admet une unique solution dans $[a; b]$}
 $$
 
-\noindent(1) si $a$ ou $b = \pm\oo$, on calcule la limite pour l'intervalle image:\\
+\noindent(1) quand elle ne l'est pas, on étudie séparémment chaque intervalle où la fonction est strictement monotone
+\vspace{2pt}
+\noindent(2) si $a$ ou $b = \pm\oo$, on calcule la limite pour l'intervalle image:\\
 \textit{Montrer que $f(x) = k$ n'admet qu'une seule solution dans $\R$}
 $$k \in \left]\limminfty f(x); \liminfty f(x)\right[$$
 
 \vspace{20pt}
 
-\noindent\textit{Attention}: pour dire que $f(x) = k$ on n'utilise pas la bijection mais le tableau de variations
+\noindent\textit{Attention}: pour montrer que $f(x) = k$ n'a pas de solutions on n'utilise pas la bijection mais le tableau de variations
 
 \newpage\section{Nombres complexes $\mathds{C}$}
 \subsection{Définition}
@@ -432,24 +473,24 @@ Ensemble des imaginaires purs: $i\R := \C \setminus \R$
 \end{itemize}
 \subsubsection{Propriétés}
 \begin{itemize}
-    \item $\re\;z = 0 \iff z \in \R$
-    \item $\im\;z = 0 \iff z \in i\R$
+    \item $\re z = 0 \iff z \in \R$
+    \item $\im z = 0 \iff z \in i\R$
 \end{itemize}
 
 \subsection{Conjugé $\conj{z}$}
 
 \subsubsection{Définition}
-$$\conj{a + ib} := a-ib$$
+$$\conj{z} := \re z - i\im z$$
 
 
 
 \subsubsection{Identités}
 
-$\square$ représente les opérations $+$, $\times$ et $\div$
+$\placeholder$ représente les opérations $+$, $\times$ et $\div$
 
 \begin{itemize}
     \item $z\cdot\conj{z} &= (\im\; z)^2 + (\re\; z)^2$
-    \item $\conj{z \:\square\: w} &= \conj{z} \:\square\: \conj{w}$
+    \item $\conj{z \:\placeholder\: w} &= \conj{z} \:\placeholder\: \conj{w}$
     \item $\conj{z^n} &= (\conj{z})^n$
     \item $\conj{\conj{z}} &= z $
     \item $\conj{z} = z &\iff z \in \R$
@@ -457,30 +498,118 @@ $\square$ représente les opérations $+$, $\times$ et $\div$
 
 \subsection{Affixe $\Aff$}
 
-L'affixe est un point représentant un nombre complexe dans le plan:
+L'affixe est un nombre complexe représenté par un point ou un vecteur dans le plan:
 
-$$\Aff(a+ib) = \begin{pmatrix} a\\b \end{pmatrix}$$
+$$\Aff \begin{pmatrix} a \\ b \end{pmatrix} = a + ib$$
+
+Réciproquement, l'image de $a+ib$ est $(a; b)$
+
+\subsubsection{Propriétés}
+\begin{itemize}
+    \item $\Aff(\vect{AB}) = \Aff(B) - \Aff(A)$
+\end{itemize}
 
 \subsection{Racines des polynômes de second degré $az^2+bz+c$}
 
 $$az^2+bz+c = 0\quad a, b, c \in \R,\quad\Delta := b^2-4ac$$\\
-$$S = 
+$$
 \begin{cases}
-\Delta < 0 &\iff \left\{ \frac{-b+i\sqrt{-\Delta}}{2a}; \conj{S_1}  \right\} \\
-\Delta = 0 &\iff \left\{ \frac{-b}{2a} \right\} \\
-\Delta > 0 &\iff \left\{ \frac{-b+\sqrt{\Delta}}{2a}; \frac{-b-\sqrt{\Delta}}{2a}\right\}
+\Delta < 0 &\implies \dfrac{-b\pm i\sqrt{-\Delta}}{2a}  \\
+\Delta = 0 &\implies \dfrac{-b}{2a} \\
+\Delta > 0 &\implies \dfrac{-b\pm\sqrt{\Delta}}{2a}
 \end{cases}
 $$
+
+\subsection{Coordonnées polaires avec $z$}
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+% Axes
+\draw[->] (0,0) -- (0,4) node[left] {$\vec y$};
+\draw[->] (0,0) -- (4,0) node[below] {$\vec x$};
+\draw (0,0) node[below] {$O$};
+% Aff(z)
+\draw[fill=black] (2,2) circle(0.0225) node[above] {$\Aff z$};
+% Re z
+\draw (0,0) -- (0,2);
+\draw (0, 2) -- (0.25, 2) node[left] {$\re z$};
+% Im z
+\draw (0,0) -- (2,0) node[below] {$\im z$};
+\draw (2,0) -- (2,0.25);
+% |z|
+\draw (0,0) -- (2,2) node[above, midway] {$|z|$};
+% arg z
+\draw[->] (2,0) arc (0:45:2);
+\draw (2,1) node[right] {$\arg z$};
+\draw 
+    \end{tikzpicture}
+    \caption{Représentation géométrique de l'affixe de $z$ et de ses propriétés}
+    \label{fig:my_label}
+\end{figure}
+
+\subsubsection{Module $|z|$}
+
+$$|z| = \sqrt{\re^2z + \im^2z}$$
+
+\subsubsubsection{Propriétés}
+
+$\placeholder$ représente les opérations $\times$ et $\div$
+$$ |z^n| = |z|^n $$
+$$ | z \placeholder z' | = |z|\placeholder|z'|$$
+
+
+\subsubsection{Argument $\arg$}
+
+$$\forall z \in \C^\ast$$
+
+\begin{equation*}
+    \begin{split}
+        \arg z &:= \left( \vect{O \img(\re z)} ;\; \vect{O \img z} \right) \\
+            &= \begin{cases}
+            \cos(\arg z) &= \dfrac{\re z}{|z|} \\
+            \sin(\arg z) &= \dfrac{\im z}{|z|} \\
+            \end{cases}
+    \end{split}
+\end{equation*}
+
+\subsubsubsection{Propriétés}
+
+\textit{Similaire à $\ln$, voir \ref{proprietes_ln}}
+
+
+\subsection{Formes}
+
+\begin{equation*}
+    \begin{split}
+        \re z + i\,\im z&\quad\text{(algébrique)} \\
+          |z|\,(cos(\arg z) + i \sin(\arg z) )&\quad\text{(trigonométrique)} \\
+          |z|e^{i\arg z}&\quad\text{(exponentielle)}
+    \end{split}
+\end{equation*}
+
+Notations usuelles: $r := |z|$, $\theta := \arg z$, $x := \re z$, $y := \im z$
+
+\subsubsection{Propriétés de la forme exponentielle}
+
+$$e^{-i\theta} = \conj{e^{i\theta}}$$
+
+\textit{Les autres propriétés découlent de celles de l'exponentielle, voir \ref{proprietes_exp}}
+
 
 \newpage\section{Dérivées}
 
 \subsection{Opération sur des fonctions}
 
-Soit $u$ et $v$ des fonctions dérivables
+Soit $u$ et $v$ des fonctions.
 
 \begin{equation*}
     \begin{split}
-        (u^n)' &= nu'u^{n-1}\quad n\in\Z\cup\{0.5\}
+        (uv)' &= u'v+v'u\\
+        \left(\frac{u}{v}\right)' &= \frac{u'v-v'u}{v^2}\\
+        (u^n)' &= nu'u^{n-1}\quad\forall n\in\N\cup\{0.5; -1\}\\
+        (u \circ v)' &= u'(v' \circ u)\\
+        \sin' &= \cos \\
+        \cos' &= -\sin
     \end{split}
 \end{equation*}
 
@@ -502,10 +631,6 @@ Soit $x \in \R$ et $u$ une fonction définie sur $\R$
 \item[Limites] $e^x \goesto{x}{+\oo} +\oo $\\$ e^x \goesto{x}{-\oo} 0$
 \end{descriptiona}
 
-\subsection{Propriétés}
-
-$$e^a \gtreqless e^b \iff a \gtreqless b$$
-
 \subsection{Limites remarquables}
 \begin{table}[h]
     \centering
@@ -513,12 +638,25 @@ $$e^a \gtreqless e^b \iff a \gtreqless b$$
         $\lim$ & $x\to$ & $=$ \\\hline\hline
         $\sfrac{e^x-1}{x}$ & 0 & 1 \\\hline
         \twoColsNB{Par croissance comparée $\downarrow$} & \\\hline
-        $xe^x$ & $-\oo$ & 0 (1)\\\hline
-        $\sfrac{e^x}{x}$ & $+\oo$ & $+\oo$ (1)
+        $xe^x$ & $-\oo$ & 0 \\\hline
+        $\sfrac{e^x}{x}$ & $+\oo$ & $+\oo$
     \end{tabular}
 \end{table}
 
-(1) par croissance comparée
+\label{properietes_exp}
+\subsection{Propriétés}
+
+$$e^a \gtreqless e^b \iff a \gtreqless b$$
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|c}
+        $e^{a\placeholder b}$ & $e^ a \placeholder e^ b $ \\
+        $+$ & $\times$ \\
+        $-$ & $\div$ \\\hline
+        $(e^a)^n$ &  $e^{an}$ \\
+    \end{tabular}
+\end{table}
 
 \newpage
 \section{Géométrie dans l'espace}
@@ -535,7 +673,7 @@ $$e^a \gtreqless e^b \iff a \gtreqless b$$
 \begin{tabular}{r|c|c|c|c}
            & \multicolumn{3}{c|}{Coplanaires}                                   & \multirow{3}{*}{Non-coplanaires} \\ \cline{2-4}
            & \multicolumn{2}{c|}{Parallèles}        & \multirow{2}{*}{Sécantes} &                                  \\ \cline{2-3}
-           & Strictement  & Confondues    &                           &                                  \\ \hline
+           & Strictement  & Confondues    &                           &                                  \\ \hline\hline
 $a \cap b$ & $\emptyset$  & $a$ et $b$    & $ \{ \text{point} \}$     & $ \emptyset$                     \\
 $P \cap Q$ & $\emptyset$  & $P$ et $Q$    & $  \text{droite} $        & $  \emptyset$                   
 \end{tabular}
@@ -547,7 +685,7 @@ $P \cap Q$ & $\emptyset$  & $P$ et $Q$    & $  \text{droite} $        & $  \empt
     \centering
     \begin{tabular}{r|c|c|c}
            & \multicolumn{2}{c|}{Parallèles}                & \multirow{2}{*}{Sécants} \\ \cline{2-3}
-           & Strictement & $a \subset P$ &                          \\ \hline
+           & Strictement & $a \subset P$ &                          \\ \hline\hline
 $a \cap P$ & $\emptyset$            & droite                & $\{ \text{point} \}$                   
 \end{tabular}
 \end{table}
@@ -558,9 +696,88 @@ $a \cap P$ & $\emptyset$            & droite                & $\{ \text{point} \
 Relier directement\\\\
 \textit{$[AB]$ sur une face, $C$ sur face opposée} \\
 Tracer la parallèle à $[AB]$ passant par $C$\\\\
-\textit{$[AB]$ sur une face, $C$ sur face adjaçente}\\
+\textit{$[AB]$ sur une face $E$, $C$ sur face adjaçente}\\
 Prolonger une arrête et $(AB)$ jusqu'à intersection en $D$\\
-Tracer $(DC)$
+Tracer $(DC)$. La partie du segment qui est sur la face $E$ est la section.
 
+\subsection{Orthogonalité $\bot$}
+
+$$d \underset{\text{orth.}}{\bot} d' \iff \gamma \underset{\text{perp.}}{\bot} \gamma' \quad\exists \gamma \parallel d, \gamma' \parallel d'$$
+
+\subsection{Plan $\bot$ droite}
+
+\begin{equation*}
+    \begin{split}
+        d \bot P &\iff d \bot \gamma \land d \bot \gamma' \quad \forall \gamma \cap \gamma' = \text{point} \\
+                 &\implies \gamma \bot d \quad\forall \gamma \subset P
+    \end{split}
+\end{equation*}
+
+\subsection{Plan médiateur}
+
+\begin{equation*}
+    \begin{split}
+        P \mediateur [AB] &\iff P \bot (AB) \land I \in P \quad\forall I \milieu [AB]\\
+                          &\iff P = \{ C \;|\; CA = CB \}
+    \end{split}
+\end{equation*}
+
+\subsection{Propriétés}
+
+\begin{equation*}
+    \begin{split}
+        d \parallel d' &\implies P \bot d \quad\forall P \bot d' \\
+                       &\impliedby d \parallel \gamma \land d' \parallel \gamma \\
+                       &\impliedby P \cap P' = d' \land d \parallel P \land d \parallel P' \\\\
+        P \parallel P' &\iff P\bot d \land P' \bot d \\
+                       &\iff P \parallel \Delta \land P' \parallel \Delta \\
+                       &\iff d_1 \parallel d_1' \land d \parallel d' \quad\forall d \cap d' = \text{point}, d_1 \cap d_1' = \text{point} \\
+                       &\implies \Gamma \cap P' = \gamma \land \Gamma \cap P = \gamma' \land \gamma \parallel \gamma' \quad\forall \Gamma \cap P = \text{droite} \\\\
+        \Delta \parallel d \land \Delta \parallel d' &\impliedby d \parallel d' \land d \subset P \land d' \subset P' \land P \cap P' = \Delta \\\\
+        \Delta \parallel P &\iff \Delta \parallel d \quad\forall d \subset P \\\\
+        P \parallel Q \land \Gamma \cap P = \gamma &\implies \Gamma \cap Q = \gamma' \land \gamma \parallel \gamma'
+    \end{split}
+\end{equation*}
+
+\newpage
+\section{Le logarithme népérien $\ln$}
+
+Aussi appelé "logarithme naturel" ou "logarithme base $e$"
+
+\subsection{Caractéristiques}
+\begin{descriptiona}
+\item[Notation] $\ln{x}$
+\item[Réciproque] $\exp$
+\item[Ensemble] $\R_+^\ast \to \R$
+\item[Limites]
+    $\displaystyle \lim_{x\to0^+} \ln{x} = -\oo$ \\
+    $\displaystyle \lim_{x\to+\oo} \ln{x} = +\oo$
+\item[Dérivée] $\dfrac{1}{x}$
+\item[Variations] Croissante sur $\R_+^\ast$
+\item[Continuité] Continue sur $\R_+^\ast$
+\item[Valeurs remarquables] $\ln{1} = 0$
+\end{descriptiona}
+
+\subsection{Limites remarquables}
+
+\begin{equation*}
+    \begin{split}
+        \lim_{x\to+\oo} \frac{\ln x}{x} &= 0 \\
+        \lim_{x\to0^+} x\ln x &= 0
+    \end{split}
+\end{equation*}
+
+\label{proprietes_ln}
+\subsection{Propriétés}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|c}
+        $\ln (a\placeholder b)$ & $\ln a \placeholder \ln b $ \\
+        $\times$ & $+$ \\
+        $\div$ & $-$ \\\hline
+        $a^n$ &  $n\ln a$ \\
+    \end{tabular}
+\end{table}
 
 \end{document}
