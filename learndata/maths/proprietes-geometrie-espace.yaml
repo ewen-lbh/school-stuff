@@ -1,0 +1,24 @@
+options:
+  title: "Mathématiques: Géométrie dans l'espace — propriétés"
+  help: |
+          // => parallèle
+          intersec => intersection
+          ortho => orthogonal
+          x, y => réel
+          (lettres majuscules à part. de P) => plans
+          (lettres majuscules jusqu'à P) => points
+          (lettres minuscules) => droites
+          in => appartient à
+          vec(...) => le vecteur ...
+  ask-for: both
+
+d // P: <=> d // d' && d' in P
+d ortho P: <=> d ortho à 2 droites sécantes de P
+d // d': toute droite ortho à d est ortho à d'
+P // P': tout plan sécant à P est sécant à P' et les droites d'intersec sont //
+d // d', d in P, d' in P', intersec P, P' = e: e // d et e // d'
+intersec P, P' = d, P ortho d, P' ortho d': P // P'
+vec(AB) = vec(CD): <=> ABCD est un parallélogramme
+D in (ABC): vec(AD) = x vec(AB) + y vec(AC)
+A, B, C non alignés, D in (ABC): vec(AB) copl vec(AC) copl vec(AD)
+
