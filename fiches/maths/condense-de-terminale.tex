@@ -58,6 +58,7 @@
 \newenvironment{descriptiona}{\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries The longest label}]}{\end{description}}
 \renewcommand{\arraystretch}{1.4}
 \newcommand{\point}[2]{(#1;\;#2)}
+\newcommand{\spacepoint}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
 
 \begin{document}
 
@@ -564,7 +565,7 @@ $$\forall z \in \C^\ast$$
 
 \begin{equation*}
     \begin{split}
-        \arg z &:= \left( \vect{O \img(\re z)} ;\; \vect{O \img z} \right) \\
+        \arg z &:= \left( \vec x ;\; \vect{O \img z} \right) \\
             &= \begin{cases}
             \cos(\arg z) &= \dfrac{\re z}{|z|} \\
             \sin(\arg z) &= \dfrac{\im z}{|z|} \\
@@ -574,7 +575,14 @@ $$\forall z \in \C^\ast$$
 
 \subsubsubsection{Propriétés}
 
-\textit{Similaire à $\ln$, voir \ref{proprietes_ln}}
+On note $z_\placeholder$ l'affixe du point ou vecteur $\placeholder$
+
+\begin{itemize}
+    \item $(\vec w, \vect w') = \arg{\dfrac{z_{w'}}{z_w}}$
+    \item $(\vect{AB}, \vect{CD}) = \arg{\frac{D-C}{B-A}}$
+\end{itemize}
+
+\textit{Propriétés de produit, puissance, quotient et inverse identiques à $\ln$, voir \ref{proprietes_ln}}
 
 
 \subsection{Formes}
@@ -595,6 +603,9 @@ $$e^{-i\theta} = \conj{e^{i\theta}}$$
 
 \textit{Les autres propriétés découlent de celles de l'exponentielle, voir \ref{proprietes_exp}}
 
+\subsection{Inégalité triangulaire}
+
+$$| z + z' | \leq |z| + |z'|$$
 
 \newpage\section{Dérivées}
 
@@ -643,7 +654,7 @@ Soit $x \in \R$ et $u$ une fonction définie sur $\R$
     \end{tabular}
 \end{table}
 
-\label{properietes_exp}
+\label{proprietes_exp}
 \subsection{Propriétés}
 
 $$e^a \gtreqless e^b \iff a \gtreqless b$$
@@ -738,6 +749,66 @@ $$d \underset{\text{orth.}}{\bot} d' \iff \gamma \underset{\text{perp.}}{\bot} \
         P \parallel Q \land \Gamma \cap P = \gamma &\implies \Gamma \cap Q = \gamma' \land \gamma \parallel \gamma'
     \end{split}
 \end{equation*}
+
+\subsection{Coordonnées}
+
+Un triplet $(x; y; z)$.
+
+Les propriétés de la géométrie planaire (milieu, colinéarité et vecteurs) se traduisent trivialement
+
+
+\subsection{Équations paramétriques}
+
+\subsubsection{D'une droite}
+
+Soit...
+\begin{equation*}
+    \begin{split}
+        A &:= (x_A; y_A; z_A) \\
+        \vec u &:= (x_u; y_u; z_u) \\
+        M &:= (x; y; z) \\
+        D &:= \text{droite passant par $A$ de vecteur directeur $\vec u$}
+    \end{split}
+\end{equation*}
+
+On a:
+\begin{equation*}
+    \begin{split}
+        M \in D &\iff
+        \begin{cases}
+            x = x_ut + x_A \\
+            y = y_ut + y_A \\
+            z = z_ut + z_A \\
+        \end{cases}
+    \end{split}
+\end{equation*}
+
+\subsubsection{D'un plan}
+
+Soit...
+\begin{equation*}
+    \begin{split}
+        A &:= (x_A; y_A; z_A) \\
+        \vec u &:= (x_u; y_u; z_u) \\
+        \vec w &:= (x_w; y_w; z_w) \\
+        M &:= (x; y; z) \\
+        P &:= \text{plan passant par $A$ de vecteur directeurs $\vec u$ et $\vec w$}
+    \end{split}
+\end{equation*}
+
+On a:
+\begin{equation*}
+    \begin{split}
+        M \in D &\iff
+        \begin{cases}
+            x = x_ut + x_wt' + x_A \\
+            y = y_ut + y_wt' + y_A \\
+            z = z_ut + z_wt' + z_A \\
+        \end{cases}
+    \end{split}
+\end{equation*}
+
+
 
 \newpage
 \section{Le logarithme népérien $\ln$}
