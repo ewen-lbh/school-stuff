@@ -450,7 +450,7 @@ decorate, decoration={
 \begin{definitions}
 \item[h] [$\approx \:  \SI{6E-34}{\joule\per\second}$] Constante de planck
 \item[c] [$\approx  \: \SI{3E8}{\meter\per\second}$] Célérité de la lumière dans le vide
-\item[\lambda] [\si{\meter}] Longueur d'onde
+\item[$\lambda$] [$\si{\meter}$] Longueur d'onde
 \end{definitions}
 \end{samepage}
 
@@ -594,7 +594,7 @@ Mélange avec de l'eau:
 \begin{center}
     \equilibrium{HA_{(aq)} + H2O_{(l)}}{A^{-}_{(aq)} + H3O^{+}_{(aq)}}
 \end{center}
-\\
+
 Avec un acide fort, la réaction est complète:
 $$\ce{HA -> A^- + H^+}$$
 
@@ -761,7 +761,7 @@ $$P_\text{reçu} = P_\text{émis} \cdot e^{-\alpha d}$$
 \begin{equation*}
     \begin{split}
         A_\text{dB} &= -10 \log \frac{P_\text{reçu}}{P_\text{émis}} \\
-        &= \alpha_\text{dB} d
+        &= \alpha_\text{dB} d \\
         &> 0
     \end{split}
 \end{equation*}
@@ -981,6 +981,74 @@ et:
 
 $$||\vec v|| = \sqrt{v_x^2 + v_y^2}$$
 
+\subsection{Travail d'une force}
+
+Travail du point $A$ au point $B$ de la force $\vec F$:
+\begin{equation*}
+    \begin{split}
+        \underset{A\to B}{W\vec F} &= \vect{AB} \cdot \vec F
+    \end{split}
+\end{equation*}
+
+Pour le travail du poids: $\underset{A\to B}{W\vec P} = mg\Delta z$\\
+Travail de la force électrostatique: $\underset{A\to B}{W\vec E} = qE$
+
+\subsection{Poussée d'archimède $\vec \Pi$}
+\begin{equation*}
+    \begin{split}
+        \vec \Pi &= -\rho V \vec g
+    \end{split}
+\end{equation*}
+\deftable{
+    \deftablevar{\rho}{\gram\per\liter}{Masse volumique du liquide}
+    \deftablevar{V}{\liter}{Volume du liquide}
+    \deftableobj{\vec g}{vecteur}{Champ de pesanteur}
+}{}
+
+\subsection{Forces conservatives}
+
+Dépendent que du point de départ et d'arrivée, et $\Delta E_m = 0$.
+Si $\Delta E_m \not= 0$,  $\Delta E_m = W\vec f$ (forces de frottement)
+
+\begin{itemize}
+    \item Poids
+    \item Champ électromagnétique
+\end{itemize}
+
+\subsection{Transferts énergétiques}
+
+\begin{description}
+    \item[Cinétique] $E_c = \frac{1}{2}mv^2$
+    \item[Potentielle de pesanteur] $E_{pp} = mgz$
+    \item[Potentielle électrique] $E_{pe} = qU$
+    \item[Potentielle élastique]  $E_{p\acute e} = \frac{1}{2}kx^2$
+    \item[Potentielle]  $E_p = E_{pp} + E_{pe} + E_{p\acute e}$
+    \item[Mécanique] $E_m = E_c + E_p$
+\end{description}
+
+\deftable{
+    \deftablevar{k}{\newton\per\meter}{Constante de raideur}
+    \deftablevar{x}{\meter}{Allongement ou racourcissement}
+}{}
+
+\subsection{Oscillateurs mécaniques}
+
+Alternance entre $E_p$ et $E_c$
+
+\begin{description}
+    \item[Pendule simple] $$T_0 = 2\pi \sqrt{\frac{l}{g}}$$
+    \item[Ressort] $$T_0 = 2\pi \sqrt{\frac{m}{k}}$$
+\end{description}
+
+\subsubsection{Périodicité}
+
+Trois cas:
+
+\begin{itemize}
+    \item Périodique $\iff$ frottement nul
+    \item Pseudo-périodique $\iff$ frotement faible
+    \item Apériodique $\iff$ frottement fort
+\end{itemize}
 \subsection{Lois de Kepler}
 
 \subsubsection{Première loi}
