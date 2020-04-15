@@ -981,4 +981,35 @@ et:
 
 $$||\vec v|| = \sqrt{v_x^2 + v_y^2}$$
 
+\subsection{Lois de Kepler}
+
+\subsubsection{Première loi}
+Dans le référentiel héliocentrique, 
+\begin{itemize}
+    \item la trajectoire d'une planète est une ellipse 
+    \item le Soleil est un des deux foyers
+\end{itemize}
+
+\subsubsection{Deuxième loi}
+Le segment Soleil--planète balaye des aires égales pendant des durées égales (conséquence: la vitesse d'une planète n'est pas constante)
+
+\subsubsection{Troisième loi}
+
+\begin{equation*}
+    \begin{split}
+        \frac{T^2}{a^3} &= k \\
+        \text{Trajectoire = cercle} \iff \frac{T^2}{a^3} &= \frac{T^2}{r^3} \\
+        &= \frac{4\pi^2}{G\cdot M} \\
+        \iff T &= \sqrt{\frac{r^3}{G\cdot M}}
+    \end{split}
+\end{equation*}
+
+\deftable{
+    \deftablevar{T}{\second}{Période}
+    \deftablevar{a}{\meter}{Demi-grand axe}
+    \deftablevar{r}{\meter}{Rayon de l'orbite circulaire}
+    \deftablevar{G}{6.61\cdot10^{-11}\;\meter\cubed\per\kilo\gram\per\second\squared}{Constante gravitationnelle}
+    \deftablevar{M}{\kilo\gram}{Masse de l'astre atracteur}
+}{troisieme_loi_kepler}
+
 \end{document}
