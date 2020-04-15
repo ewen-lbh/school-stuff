@@ -895,6 +895,52 @@ $
 \end{equation*}
 
 \newpage
+\section{Spectrophotométrie}
+Permet d'identifier une molécule par des spectres de référence.
+
+\subsection{Visible}
+
+\emph{On a une solution inconnue et plusieurs solutions connues candidates}
+\subsubsection{Protocole}
+\begin{enumerate}
+    \item Mesurer l'absorbance avec un spectrophotomètre
+    \item Pour chaque solution:
+    \begin{enumerate}
+        \item Déterminer la longueur d'onde $\lambda_\text{max}$ à laquelle l'absorption $A$ est maximale
+    \end{enumerate}
+    \item On détermine que la solution inconnue est la candidate avec un $\lambda_\text{max}$ le plus proche.
+\end{enumerate}
+
+\subsection{Infrarouge}
+\begin{description}
+    \item[Graphe étudié] $T$ en fonction de $\sigma$
+\end{description}
+\deftable{
+    \deftablevar{T}{\percent}{Transmittance. $T = A^{-1}$}
+    \deftablevar{\sigma}{\per\centi\meter}{Nombre d'ondes $\sigma = \lambda^{-1}$}
+}{Spectro IR}
+
+On repère des pics caractéristiques dans le graphe pour indentifier.
+Tout à droite du spectre, c'est \emph{l'empreinte digiale} de l'espèce, on ne l'étudie pas.
+
+\subsection{Par résonance magnétique nucléaire (RMN)}
+\begin{description}
+    \item[Graphe étudié] 
+\end{description}
+\begin{description}
+    \item[Protons équivalents] Atomes $\ce{H}$ liés au même $\ce{C}$
+    \item[Protons voisins] Atomes $\ce{H}$ séparés par trois liaisons simple
+    \item[$n$-uplet] Pic sur le graphe composé de $n$ sous-pics.
+\end{description}
+
+\begin{equation*}
+    \begin{split}
+        \text{Pic à $n$ uplets} &\iff \text{Le groupe a $n + 1$ protons équivalents}\\
+        \text{$n$ pics sur le graphique} &\iff \text{La molécule a $n$ groupes de protons équivalents}
+    \end{split}
+\end{equation*}
+
+\newpage
 \section{Mécanique}
 \subsection{Vecteurs du mouvement}
 \begin{equation*}
@@ -1049,6 +1095,7 @@ Trois cas:
     \item Pseudo-périodique $\iff$ frotement faible
     \item Apériodique $\iff$ frottement fort
 \end{itemize}
+
 \subsection{Lois de Kepler}
 
 \subsubsection{Première loi}
