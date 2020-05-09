@@ -1,0 +1,142 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{titlesec}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+    #2 & #5 \\
+    #3 & #6 \\
+    #4 & #7
+\end{array} \right\}}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{130mm}}%
+        %& unité/type & Explication \\ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \\
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \\
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llllp{130mm}}%
+        Nom & Vecteur & Direction & Sens & Norme \\hline
+        #1
+    \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\titleformat{\section}{}{Q\thesection}{0.5ex}{}
+
+\title{Sciences de l'ingénieur--TD 1: Maison dôme}
+\author{Ewen Le Bihan}
+\date{2020-03-26}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+\begin{equation*}
+    \begin{split}
+        \sum \vec M_\text{ext}(G) = J_G \cdot \vec \alpha
+    \end{split}
+\end{equation*}
+
+\section{}
+\textbf{B.A.M.E.}
+
+\begin{equation*}
+    \begin{split}
+        \{T_{2\to1}\} &= \torseur{G}{0}{0}{0}{0}{0}{8000}\\
+        \{T_{0\to1}\} &= \torseur{G}{X_{0\to1}}{Y_{0\to1}}{0}{0}{0}{N_{0\to1}}
+    \end{split}
+\end{equation*}
+
+\textbf{Calcul de l'accélération $\alpha$}
+
+Nous sommes à vitesse uniforme, donc $\alpha = 0$
+
+D'après Q1:
+
+\begin{equation*}
+    \begin{split}
+        \sum \vect{M_\text{ext}(G)} &= J_G \cdot \vec \alpha \\
+        \iff \vect{M_G(0\to1)} + \vect{M_G(2\to1)} &= J_G \cdot \vec 0 \\
+        \iff \vect{M_G(0\to1)} &= -\vect{M_G(2\to1)}
+    \end{split}
+\end{equation*}
+
+Projection sur $\vec z$:
+
+\begin{equation*}
+    \begin{split}
+        {M_G(0\to1)}_z &= -{M_G(2\to1)}_z \\
+                       &= \SI{-8E3}{\newton\meter}
+    \end{split}
+\end{equation*}
+
+Or $N_{0\to1} = {M_G(0\to1)}_z$, donc:
+
+$$M_G(0\to1) = \torseur{G}{X_{0\to1}}{Y_{0\to1}}{0}{0}{0}{-8000}$$
+
+\section{}
+
+\textbf{Calcul de l'accélération}
+
+Dans cette phase, par lecture graphique:
+
+$$\alpha = \frac{-30\times10^{-4}}{8} = \SI{-6e-4}{\radian\per\second\squared}$$
+
+D'après Q1:
+
+\begin{equation*}
+    \begin{split}
+        \sum \vect{M_\text{ext}(G)} &= J_G \cdot \vec \alpha \\
+    \end{split}
+\end{equation*}
+
+Or ici $\vect{M_G(2\to1)} = \vec 0$, donc:
+
+\begin{equation*}
+    \begin{split}
+        \sum \vect{M_\text{ext}(G)} &= J_G \cdot \vec \alpha \\
+        \iff \vect{M_G(0\to1)} &= J_G\cdot \vec\alpha \\
+        \iff J_G &= \frac{\vect{M_G(0\to1)}}{\vec\alpha} \\
+    \end{split}
+\end{equation*}
+
+Projection sur $\vec z$:
+
+\begin{equation*}
+    \begin{split}
+        J_G &= \frac{M_G(0\to1)}{\alpha} \\
+        &= \frac{-8000}{-6\times10^{-4}} \\
+        &= \SI{1.3e7}{\kilo\gram\meter\squared}
+    \end{split}
+\end{equation*}
+
+
+\end{document}

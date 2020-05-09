@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+    #2 & #5 \
+    #3 & #6 \
+    #4 & #7
+\end{array} \right\}}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{130mm}}%
+        %& unité/type & Explication \ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llllp{130mm}}%
+        Nom & Vecteur & Direction & Sens & Norme \hline
+        #1
+    \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{Tri'Ode: Sécurité à basse et haute vitesse}
+\author{Ewen Le Bihan}
+\date{2020-04-30}
+
+\begin{document}
+
+\maketitle
+
+\section{Q8}
+
+\paragraph{Détermination de la taille en octets de la partie "Data" de la trame}
+
+On a neuf champs pour tout les capteurs, chacun transmis sur 4 octets, donc la partie "Data" pèse $9 \times 4 = 36 \;\text{octets}$
+
+\paragraph{Détermination de la taille totale en octets de la trame}
+
+\begin{equation*}
+    \begin{split}
+        \text{Début de trame} + \text{Identification} + \text{Data} + \text{CS} &= 1 + 3 + 36 + 1 \\
+        &= 41\;\text{octets} \\
+    \end{split}
+\end{equation*}
+
+\paragraph{Détermination de la taille totale en bits du message}
+
+\begin{equation*}
+    \begin{split}
+        328 (\text{Bit de start} + \text{Data} + \text{Bit de parité} + \text{Bit de stop}) &= 328(1 + 8 + 1 + 1) \\
+        &= 41\times11 \\
+        &= 450 \;\text{bits}
+    \end{split}
+\end{equation*}
+
+\paragraph{Calcul de la vitesse}
+\begin{equation*}
+    \begin{split}
+        \frac{450}{19200} &= \SI{24}{\milli\second}
+    \end{split}
+\end{equation*}
+
+\section{Q9}
+
+$$45 + 24 = 69 \ll 300 \implies \text{Cahier des charges respecté}$$
+
+\end{document}

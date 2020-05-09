@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+  #2 & #5 \
+  #3 & #6 \
+  #4 & #7
+\end{array} \right\}}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{llp{130mm}}%
+    %& unité/type & Explication \\ \\hline
+    #1
+  \end{tabular}
+  \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+  $#1$ & $\si{#2}$ & #3 \\
+}
+\newcommand{\deftableobj}[3]{%
+  $#1$ & \textit{#2} & #3 \\
+}
+\newcommand{\rpm}{\text{tr}\per\minute}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+  \centering
+  \begin{tabular}{llllp{130mm}}%
+    Nom & Vecteur & Direction & Sens & Norme \hline
+    #1
+  \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{SI: Maison dome}
+\author{Ewen Le Bihan}
+\date{2020-04-19}
+
+\begin{document}
+
+\maketitle
+
+\section{Q1}
+
+Réseau Domestique 230 V – 50 Hz
+
+\section{Q8}
+
+\begin{equation*}
+  \begin{split}
+    R_2 &= \frac{Z_1}{Z_2} \frac{Z_3}{Z_4} \frac{Z_5}{Z_6} \\
+        &= \frac{51}{50} \frac{13}{41} \frac{13}{66} \\
+        &= \frac{1}{15.7}
+  \end{split}
+\end{equation*}
+
+\section{Q9}
+
+\begin{equation*}
+  \begin{split}
+    R_G &= R_1 R_2 \\
+        &= \frac{1}{141.8} \frac{1}{15.7} \\
+        &= \frac{1}{2226}
+  \end{split}
+\end{equation*}
+
+\section{Q10}
+
+\begin{equation*}
+  \begin{split}
+    N_2 &= N_m R_G \\
+        &= 1450 \frac{1}{2226} \\
+        &= \SI{65E-2}{\rpm}
+  \end{split}
+\end{equation*}
+
+\section{Q11}
+
+\begin{equation*}
+  \begin{split}
+    R_3 &= \frac{\diameter_p}{\diameter_c} \\
+        &= \frac{165\cdot10^{-3}}{3.30} \\
+        &= \frac{1}{20}
+  \end{split}
+\end{equation*}
+
+\begin{equation*}
+  \begin{split}
+    N_3 &= N_2 \cdot R_3 \\
+        &= 65\cdot10^{-2} \cdot \frac{1}{20} \\
+        &= \SI{32E-3}{\rpm}
+  \end{split}
+\end{equation*}
+
+\section{Q12}
+
+\begin{equation*}
+  \begin{split}
+    N_{\text{TH}} &= \frac{0.5}{60 \cdot 12} \\
+    &= \frac{0.5}{720} \\
+    &= \SI{6.9E-4}{\rpm}
+  \end{split}
+\end{equation*}
+
+\section{Q13}
+
+\begin{enumerate}
+  \item Rajouter un réducteur afin que $N_3$ soit égal à $N_{\text{TH}}$
+  \item Alimenter partiellement le moteur sur des intervalles régulières
+\end{enumerate}
+
+\section{Q14}
+
+Rapport entre $N_\text{TH}$ et $N_3$
+
+\begin{equation*}
+  \begin{split}
+    \frac{N_\text{TH}}{N_3} &= \frac{32\cdot10^{-3}}{6.9\cdot10^{-4}} \\
+                            &= 46
+  \end{split}
+\end{equation*}
+
+On veut que la vitesse soit $46$ fois plus lente, or la fréquence actuelle est de $\frac{1}{10}$
+
+\begin{equation*}
+  \begin{split}
+    f_s &= \frac{1}{10} \frac{N_\text{TH}}{N_3}10 \\
+        &= \frac{1}{10} \frac{6.9\cdot10^{-4}}{32\cdot10^{-3}}10 \\
+        &= \SI{0.02}{\hertz}
+  \end{split}
+\end{equation*}
+
+
+\section{Q15}
+
+
+
+
+\end{document}

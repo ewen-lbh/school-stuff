@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+    #2 & #5 \
+    #3 & #6 \
+    #4 & #7
+\end{array} \right}\}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{130mm}}%
+        %& unité/type & Explication \ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llllp{130mm}}%
+        Nom & Vecteur & Direction & Sens & Norme \hline
+        #1
+    \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{SI: Tramway alimentation par le sol}
+\author{Ewen Le Bihan}
+\date{2020-04-24}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+Mot en binaire: $01101110$\\
+Mot en hexadécimal: $6\text{E}$
+
+\section{}
+
+$$\frac{1}{208.3\cdot10{-6}} = 4800 \;\text{bits}\cdot\text{s}{-1}$$
+
+\section{}
+
+Il y a cinq $1_2$ dans le mot transmis, or $\text{mod}(5, 2) \not= 0$, donc le bit de parité doit prendre la valeur de $1_2$.
+
+\paragraph{Protocole complet}
+\begin{description}
+    \item[Vitesse] $4800 \;\text{bits}\cdot\text{s}{-1}$
+    \item[Nombre de bits de données] $8$
+    \item[Nombre de bits de start]  $1$
+    \item[Nombre de bits de stop]  $2$
+    \item[Parité] paire, validée par $1$ bit de parité
+\end{description}
+
+L'efficacité est de $\frac{8}{12} = 0.6$ soit $66.67\%$
+
+\section{}
+
+La vitesse de transmission est largement supérieure, l'immunité aux ondes électromagnétique parasites est meilleure.
+
+\end{document}

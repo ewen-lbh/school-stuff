@@ -95,17 +95,17 @@
 \section{Outils}
 \subsection{Composition de fonction $f \circ g$}
 Soit $f$ et $g$ des fonctions respectivement définies sur $I$ et $J$
-$$(f \circ g)(x) \iff f(g(x))$$
+\[(f \circ g)(x) \iff f(g(x))\]
 Attention: il faut que $x$ soit défini dans $I$ et que $g(x)$ soit défini dans $J$\\\\
 
 Plus généralement, soit $\Theta$ un ensemble de fonctions
-$$\left(\bigcirc_{i=0}^{j} \Theta_i\right)(x) = \Theta_0 ( \Theta_1 ( \Theta_2 ( \Theta_3 \dots ( x \dots )$$
+\[\left(\bigcirc_{i=0}^{j} \Theta_i\right)(x) = \Theta_0 ( \Theta_1 ( \Theta_2 ( \Theta_3 \dots ( x \dots )\]
 
 \subsection{Équations de cercle $(x - x_0)^2 + (y - y_0)^2 = R^2$}
 
 Soit $R$ le rayon du cercle, et $O(x_0; y_0)$ le centre du cercle\\
 Un cercle dans le plan peut être décrit par l'équation suivante:
-$$(x - x_0)^2 + (y - y_0)^2 = R^2$$
+\[(x - x_0)^2 + (y - y_0)^2 = R^2\]
 
 \subsection{Opérations avec des puissances}
 
@@ -137,7 +137,7 @@ Soit $I$ une intervalle, $f$ une fonction définie et croissante sur $I$, $x$ et
 \subsection{Définition fonctionnelle}
 
 Soit $f$ une fonction:
-$$u_n = f(n)$$
+\[u_n = f(n)\]
 
 \subsection{Définition par récurrence}
 Soit $f$ une fonction
@@ -205,7 +205,7 @@ Soit ($u_n$) une suite définie sur les rangs dans $I$ et $L$ un réel
 \item[Suite bornée] Suite majorée \textit{et} minorée
 \end{descriptiona}
 
-$$\lim_{n\to+\oo} u_n \dots$$
+\[\lim_{n\to+\oo} u_n \dots\]
 
 \begin{table}[H]
     \centering
@@ -219,7 +219,7 @@ $$\lim_{n\to+\oo} u_n \dots$$
 \end{table}
 
 Soit $f$ la fonction associée à $u_n$
-$$\lim_{n\to+\oo} u_n = L \implies \lim_{n\to+\oo} u_{n+1} = f(L)$$
+\[\lim_{n\to+\oo} u_n = L \implies \lim_{n\to+\oo} u_{n+1} = f(L)\]
 
 \subsection{Opérations sur les limites}
 
@@ -265,7 +265,7 @@ Probabilité que $A$ \textbf{et} $B$ soit réalisées.
 \end{equation*}
 
 \subsection{Probabilités d'union $P(A \cup B)$}
-$$P(A \cup B) = P(A) + P(B)$$
+\[P(A \cup B) = P(A) + P(B)\]
 
 
 \subsection{Partitions}
@@ -281,7 +281,7 @@ Si on a deux évenements ou plus tel que...
 
 Soit $B_1$, $B_2$, ..., $B_n$ des évenements formant une partition de $\Omega$
 
-$$P(A) = \sum_{i=1}^n P(A \cap B_i)$$
+\[P(A) = \sum_{i=1}^n P(A \cap B_i)\]
 
 \subsection{Indépendance d'évenements}
 
@@ -293,7 +293,7 @@ $$P(A) = \sum_{i=1}^n P(A \cap B_i)$$
     \end{split}
 \end{equation*}
 
-\subsection{Loi de Bernouilli}
+\subsection{Loi de Bernouilli $\mathcal{B}$}
 
 \begin{descriptiona}
 \item[Épreuve de Bernouilli]
@@ -303,8 +303,74 @@ $$P(A) = \sum_{i=1}^n P(A \cap B_i)$$
 \begin{descriptiona}
 \item[Évenements incompatibles]
 $P(A \cap B) = 0$ 
+\item[Variable aléatoire continue] La variable aléatoire peut prendre n'importe quel valeur dans $I := I \subset \R$
 \end{descriptiona}
 
+\textit{À partir d'ici, la connaissance des intégrales est requise (voir \ref{integrales})}
+\subsection{Probabilités à densité}
+
+$f$ est une densité de probabilité si:
+
+\begin{itemize}
+    \item $D_f \subset \R_+$
+    \item $f$ est continue
+    \item ${\displaystyle \int_{D_f} f(x)dx = 1}$
+\end{itemize}
+
+\begin{equation*}
+    \begin{split}
+        \text{La loi de $X$ admet $f$ comme densité de probabilité} &\iff P(X \in [a, b]) = \int_a^b f(t)dt \\
+        &\quad \land \quad [a, b] \subseteq D_f \subset \R \\
+        &\implies \forall n \in D_f \quad P(X = n) = 0 \\
+        &\implies \text{Dans les conditions,}\quad \geq \iff > \land \leq \iff <\\
+        &\implies P(X > k) = 1-P(X < k) \\
+        &\implies P(X \in [a, b]) = P(X < b) - P(X < a) \\
+        &\implies P(X \in [a, b] \:|\: X \in [c, d]) = \frac{P(X \in [a, b] \cap [c, d])}{P(X \in [c, d])} \\
+        &\implies E(X) = \int_{D_f} tf(t)dt
+    \end{split}
+\end{equation*}
+
+\subsection{Loi uniforme}
+
+\begin{equation*}
+    \begin{split}
+        \text{$X$ suit la loi uniforme sur $[a, b]$} \iff \text{La loi de $X$ admet $x\mapsto \frac{1}{b-a}$ comme densité de probabilité}
+    \end{split}
+\end{equation*}
+
+\[[c, d] \subseteq [a, b] \iff P(X \in [c, d]) = \frac{d-c}{b-a}\]
+
+\[E(X) = \frac{a+b}{2}\]
+
+\subsection{Loi exponentielle}
+
+\begin{equation*}
+    \begin{split}
+        \text{$X$ suit la loi exponentielle de paramètre $\lambda$} \iff \text{La loi de $X$ admet $x\mapsto \lambda e^{-\lambda x}$ comme densité de probabilité}
+    \end{split}
+\end{equation*}
+
+\subsection{Loi sans vieillissement}
+
+\[P(X \geq t+h | X \geq t) = P(X \geq h)\]                    
+
+\subsection{Lois normales}
+
+\subsubsection{Loi normale centrée réduite $\mathcal{N}(0, 1)$}
+
+\begin{equation*}
+    \begin{split}
+        \text{$X$ suit la loi $\mathcal{N}(0, 1)$} &\iff P(X \in [a, b]) = \int_a^b \frac{1}{\sqrt{2\pi}} \exp{-\frac{x^2}{2}} dx
+    \end{split}
+\end{equation*}
+
+\subsubsection{Probabilité d'intervalle centrée en 0}
+
+\begin{equation*}
+    \begin{split}
+        X \sim \mathcal{N}(0, 1) &\iff \forall \alpha \in ]0, 1[ \quad \exists_{=1} u_\alpha \in \R_+^\ast \quad P(X \in [-u_\alpha, u_\alpha]) = 1 - u_\alpha
+    \end{split}
+\end{equation*}
 
 \newpage\section{Limites $\lim$}
 
@@ -394,14 +460,14 @@ Soit $L \in \R$, $f$ une fonction, $\Gamma$ la courbe d'équation $y = f(x)$ et 
 \subsubsection{Polynômes}
 
 Pour les limites en $+\oo$ ou en $-\oo$, on peut simplifier la limite d'un polynôme à la limite du terme de plus haut degré:
-$$\liminfty 2x^3 - 4x + 1 = \liminfty 2x^3$$
+\[\liminfty 2x^3 - 4x + 1 = \liminfty 2x^3\]
 
 Ça marche aussi avec les fractions:
-$$\liminfty \frac{4x^9 + x^3 - 2}{5x^3 - 8x^{18} + 420} = \liminfty \frac{4x^9}{-8x^{18}}$$
+\[\liminfty \frac{4x^9 + x^3 - 2}{5x^3 - 8x^{18} + 420} = \liminfty \frac{4x^9}{-8x^{18}}\]
 
 \subsection{Fonctions composées}
 
-Soit $a,\:b\:\etc\:\in \R \cup \{ -\oo; +\oo \}$, $f$ et $g$ des fonctions
+Soit $a,\:b$ et $c\:\in \R \cup \{ -\oo; +\oo \}$, $f$ et $g$ des fonctions
 
 $$\begin{cases}
 f(x) \goesto{x}{a} b\\
@@ -433,7 +499,7 @@ De plus, n'importe quelle fonction créée par $+$, $\times$, $\circ$ ou $\div$ 
 \subsubsection{Valeurs intermédiaires}
 
 Soit $a$ et $b$ des réels, $f$ une fonction continue sur $[a; b]$.
-$$\forall k \in [f(a); f(b)],\quad f(x) = k\:\:\:\text{admet au moins une solution dans $[a;b]$}$$
+\[\forall k \in [f(a); f(b)],\quad f(x) = k\:\:\:\text{admet au moins une solution dans $[a;b]$}\]
 
 \subsubsection{Bijection}
 
@@ -453,7 +519,7 @@ $$
 \vspace{2pt}
 \noindent(2) si $a$ ou $b = \pm\oo$, on calcule la limite pour l'intervalle image:\\
 \textit{Montrer que $f(x) = k$ n'admet qu'une seule solution dans $\R$}
-$$k \in \left]\limminfty f(x); \liminfty f(x)\right[$$
+\[k \in \left]\limminfty f(x); \liminfty f(x)\right[\]
 
 \vspace{20pt}
 
@@ -461,8 +527,8 @@ $$k \in \left]\limminfty f(x); \liminfty f(x)\right[$$
 
 \newpage\section{Nombres complexes $\mathds{C}$}
 \subsection{Définition}
-$$i^2 := -1,\quad a, b \in \R,\quad z\in\mathds{C}$$
-$$z = a + ib$$
+\[i^2 := -1,\quad a, b \in \R,\quad z\in\mathds{C}\]
+\[z = a + ib\]
 
 Ensemble des imaginaires purs: $i\R := \C \setminus \R$
 
@@ -481,7 +547,7 @@ Ensemble des imaginaires purs: $i\R := \C \setminus \R$
 \subsection{Conjugé $\conj{z}$}
 
 \subsubsection{Définition}
-$$\conj{z} := \re z - i\im z$$
+\[\conj{z} := \re z - i\im z\]
 
 
 
@@ -490,18 +556,18 @@ $$\conj{z} := \re z - i\im z$$
 $\placeholder$ représente les opérations $+$, $\times$ et $\div$
 
 \begin{itemize}
-    \item $z\cdot\conj{z} &= (\im\; z)^2 + (\re\; z)^2$
-    \item $\conj{z \:\placeholder\: w} &= \conj{z} \:\placeholder\: \conj{w}$
-    \item $\conj{z^n} &= (\conj{z})^n$
-    \item $\conj{\conj{z}} &= z $
-    \item $\conj{z} = z &\iff z \in \R$
+    \item $z\cdot\conj{z} = (\im\; z)^2 + (\re\; z)^2$
+    \item $\conj{z \:\placeholder\: w} = \conj{z} \:\placeholder\: \conj{w}$
+    \item $\conj{z^n} = (\conj{z})^n$
+    \item $\conj{\conj{z}} = z $
+    \item $\conj{z} = z \iff z \in \R$
 \end{itemize}
 
 \subsection{Affixe $\Aff$}
 
 L'affixe est un nombre complexe représenté par un point ou un vecteur dans le plan:
 
-$$\Aff \begin{pmatrix} a \\ b \end{pmatrix} = a + ib$$
+\[\Aff \begin{pmatrix} a \\ b \end{pmatrix} = a + ib\]
 
 Réciproquement, l'image de $a+ib$ est $(a; b)$
 
@@ -512,7 +578,7 @@ Réciproquement, l'image de $a+ib$ est $(a; b)$
 
 \subsection{Racines des polynômes de second degré $az^2+bz+c$}
 
-$$az^2+bz+c = 0\quad a, b, c \in \R,\quad\Delta := b^2-4ac$$\\
+\[az^2+bz+c = 0\quad a, b, c \in \R,\quad\Delta := b^2-4ac\]\\
 $$
 \begin{cases}
 \Delta < 0 &\implies \dfrac{-b\pm i\sqrt{-\Delta}}{2a}  \\
@@ -542,26 +608,25 @@ $$
 % arg z
 \draw[->] (2,0) arc (0:45:2);
 \draw (2,1) node[right] {$\arg z$};
-\draw 
-    \end{tikzpicture}
+\end{tikzpicture}
     \caption{Représentation géométrique de l'affixe de $z$ et de ses propriétés}
     \label{fig:my_label}
 \end{figure}
 
 \subsubsection{Module $|z|$}
 
-$$|z| = \sqrt{\re^2z + \im^2z}$$
+\[|z| = \sqrt{\re^2z + \im^2z}\]
 
-\subsubsubsection{Propriétés}
+\textbf{Propriétés}
 
 $\placeholder$ représente les opérations $\times$ et $\div$
-$$ |z^n| = |z|^n $$
-$$ | z \placeholder z' | = |z|\placeholder|z'|$$
+\[ |z^n| = |z|^n \]
+\[ | z \placeholder z' | = |z|\placeholder|z'|\]
 
 
 \subsubsection{Argument $\arg$}
 
-$$\forall z \in \C^\ast$$
+\[\forall z \in \C^\ast\]
 
 \begin{equation*}
     \begin{split}
@@ -573,7 +638,7 @@ $$\forall z \in \C^\ast$$
     \end{split}
 \end{equation*}
 
-\subsubsubsection{Propriétés}
+\textbf{Propriétés}
 
 On note $z_\placeholder$ l'affixe du point ou vecteur $\placeholder$
 
@@ -599,13 +664,13 @@ Notations usuelles: $r := |z|$, $\theta := \arg z$, $x := \re z$, $y := \im z$
 
 \subsubsection{Propriétés de la forme exponentielle}
 
-$$e^{-i\theta} = \conj{e^{i\theta}}$$
+\[e^{-i\theta} = \conj{e^{i\theta}}\]
 
 \textit{Les autres propriétés découlent de celles de l'exponentielle, voir \ref{proprietes_exp}}
 
 \subsection{Inégalité triangulaire}
 
-$$| z + z' | \leq |z| + |z'|$$
+\[| z + z' | \leq |z| + |z'|\]
 
 \newpage\section{Dérivées}
 
@@ -628,7 +693,7 @@ Soit $u$ et $v$ des fonctions.
 
 \subsection{Notation}
 
-$$e^x := \exp{x}$$
+\[e^x := \exp{x}\]
 
 \subsection{Caractéristiques}
 
@@ -657,7 +722,7 @@ Soit $x \in \R$ et $u$ une fonction définie sur $\R$
 \label{proprietes_exp}
 \subsection{Propriétés}
 
-$$e^a \gtreqless e^b \iff a \gtreqless b$$
+\[e^a \gtreqless e^b \iff a \gtreqless b\]
 
 \begin{table}[h!]
     \centering
@@ -713,7 +778,7 @@ Tracer $(DC)$. La partie du segment qui est sur la face $E$ est la section.
 
 \subsection{Orthogonalité $\bot$}
 
-$$d \underset{\text{orth.}}{\bot} d' \iff \gamma \underset{\text{perp.}}{\bot} \gamma' \quad\exists \gamma \parallel d, \gamma' \parallel d'$$
+\[d \underset{\text{orth.}}{\bot} d' \iff \gamma \underset{\text{perp.}}{\bot} \gamma' \quad\exists \gamma \parallel d, \gamma' \parallel d'\]
 
 \subsection{Plan $\bot$ droite}
 
@@ -823,7 +888,8 @@ Aussi appelé "logarithme naturel" ou "logarithme base $e$"
 \item[Limites]
     $\displaystyle \lim_{x\to0^+} \ln{x} = -\oo$ \\
     $\displaystyle \lim_{x\to+\oo} \ln{x} = +\oo$
-\item[Dérivée] $\dfrac{1}{x}$
+\item[Dérivée d'une variable] $\dfrac{1}{x}$
+\item[Dérivée d'une fonction] $u'\ln u$
 \item[Variations] Croissante sur $\R_+^\ast$
 \item[Continuité] Continue sur $\R_+^\ast$
 \item[Valeurs remarquables] $\ln{1} = 0$
@@ -849,6 +915,85 @@ Aussi appelé "logarithme naturel" ou "logarithme base $e$"
         $\div$ & $-$ \\\hline
         $a^n$ &  $n\ln a$ \\
     \end{tabular}
+\end{table}
+
+\newpage
+\section{Primitives $F$}
+
+\subsection{Définition}
+
+$\forall x \in \R$
+
+\[F'(x) = f(x)\]
+
+\subsection{Propriétés}
+
+\begin{itemize}
+    \item $\forall C \in \mathds{U}\quad x \mapsto F(x) + C$ est une primitive de $f$
+    \item $F + G$ primitive de $f + g$
+    \item $\forall k \in \R \quad kF$ primitive de $kf$
+\end{itemize}
+
+\newpage
+\label{integrales}
+\section{Intégrales $\int$}
+
+\subsection{Notation}
+
+Soit $A_f \in \R$ l'aire sous la courbe de $f$ de $x = a$ à $x = b$ par rapport à l'axe des abcisses
+\[\int_a^b f(x) dx = A_f\]
+
+\[\int_\text{borne inf.}^\text{borne sup.} \text{expression}\quad d\text{var. d'intégration}\]
+
+\subsection{Unité d'aires $ua$}
+
+$\forall x \in [a; b] \: f(x) \geq 0 \land b \geq a \iff A_f$ est exprimée en $ua$.
+
+\subsubsection{Définition}
+
+$$
+1 ua = ||\vec i||\cdot ||\vec j||
+$$
+
+\subsection{Calcul}
+
+\begin{equation*}
+    \begin{split}
+        \int_a^b f(x) dx &= [F(x)]_a^b \\
+                         &= F(b) - F(a)
+    \end{split}
+\end{equation*}
+
+\subsection{Propriétés}
+
+Pour alléger les notations: $\Finv = f(x)dx$, $\Game = g(x)dx$ et $\int = \int_a^b$
+
+\begin{itemize}
+    \item $\int_a^a \Finv = 0$
+    \item $\int_a^b \Finv = -\int_b^a \Finv$
+    \item $\int_a^c \Finv = \int_a^b \Finv + \int_b^c \Finv$   (Relation de Chasles)
+    \item $\int k\Finv = k\int \Finv$
+    \item $\int (f(x) + g(x))dx = \int \Finv + \int \Game$
+    \item $\int \Finv \geq 0 \implies f(x) \geq 0$
+    \item $f(x) \geq g(x) \implies \int \Finv \geq \int \Game$
+\end{itemize}
+
+\subsection{Valeur moyenne de $f$ sur $[a; b]$}
+
+\[\frac{1}{b-a}\int_a^b f(x)dx\]
+
+\subsection{Primitives remarquables}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        $f$ & $F$ & $\in I$ ($\R$ par défaut) \\\hline
+        $k$ & $kx$ & \\
+        $x$ & $\frac{1}{2}x^2$ & \\
+        $x^n\quad n\not\in\{0, -1\}$ & $\frac{1}{n+1}x^{n+1}$
+    \end{tabular}
+    \caption{Formes remarquables de primitives}
+    \label{tab:primitives_remarquables}
 \end{table}
 
 \end{document}

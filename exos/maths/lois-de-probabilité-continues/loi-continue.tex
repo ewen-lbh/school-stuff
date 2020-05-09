@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+    #2 & #5 \
+    #3 & #6 \
+    #4 & #7
+\end{array} \right}\}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{130mm}}%
+        %& unité/type & Explication \ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llllp{130mm}}%
+        Nom & Vecteur & Direction & Sens & Norme \hline
+        #1
+    \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{Lois de probabilités continues: Séance 1}
+\author{Ewen Le Bihan}
+\date{2020-04-26}
+
+\begin{document}
+
+\maketitle
+
+\section{Exercice 1}
+
+\begin{equation*}
+    \begin{split}
+        P(C \in [0.5, 0.75]) &= \frac{0.75-0.5}{1-0} \\
+                             &= 0.25 \\
+        P(C > 0.7) &= P(C \in ]0.7, 1]) \\
+                   &= \frac{1-0.7}{1-0} \\
+                   &= 0.3
+    \end{split}
+\end{equation*}
+
+\section{Exercice 2}
+
+\subsection{}
+
+Soit $X$ la variable aléatoire suivant la loi uniforme sur $[9, 19]$.
+Si je me suis garé à $10.5$ heures, la probabilité que je reçoive un PV est de:
+
+\begin{equation*}
+    \begin{split}
+        P(X > 10.5) &= P(X \in ]10.5, 19]) \\
+                    &= \frac{19-10.5}{19-9} \\
+                    &= \frac{8.5}{10} \\
+                    &= 0.85
+    \end{split}
+\end{equation*}
+
+\subsection{}
+
+\begin{equation*}
+    \begin{split}
+        P(X > 11.5) &= P(X \in ]11.5, 19]) \\
+        &= \frac{19-11.5}{19-9} \\
+        &= \frac{7.5}{10} \\
+        &= 0.75
+    \end{split}
+\end{equation*}
+
+
+
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+    #2 & #5 \
+    #3 & #6 \
+    #4 & #7
+\end{array} \right\}}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{130mm}}%
+        %& unité/type & Explication \ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llllp{130mm}}%
+        Nom & Vecteur & Direction & Sens & Norme \hline
+        #1
+    \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{Ascenseur sans local de machine}
+\author{Ewen Le Bihan}
+\date{2020-04-30}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+\subsection{}
+
+\begin{itemize}
+    \item L'information est transmise à la carte centrale par un bus CAN de terrain
+    \item La carte électronique de commande à microprocesseur
+    \item transmet des ordres de type logique ou numérique, selon la version de l'ascenseur
+\end{itemize}
+
+\subsection{}
+
+\begin{description}
+    \item[2] Mécanique de rotation
+    \item[3] Mécanique de rotation
+\end{description}
+
+\section{}
+
+\begin{itemize}
+    \item premier mot de données: $\text{0001}_{16}$, identificateur: $\text{212}_{16}$
+    \item premier mot de données: $0000111100110001_2 = \text{F31}_{16}$, identificateur: $182_{16}$
+    % \item premier mot de données: $0000111100110001_2 = $, indentificateur: $210_{16} + 2_{16} = 212_{16}$
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left[ \begin{array}{cc}
+    #2 & #5 \\
+    #3 & #6 \\
+    #4 & #7
+\end{array} \right]}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{130mm}}%
+        %& unité/type & Explication \\ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \\
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \\
+}
+
+\title{4 p252}
+\author{Ewen Le Bihan}
+\date{2019-11-21}
+
+\begin{document}
+
+\section{}
+\subsection{}
+
+Le référentiel d'étude est géocentrique et est considéré Galiléen
+
+\subsection{}
+
+\begin{equation*}
+  \begin{split}
+    \vec a &= \frac{GM_T}{(R_T+h)^2} \vec n \\
+  \end{split}
+\end{equation*}
+
+\subsection{}
+D'après ce qui précède:
+
+\begin{equation*}
+  \begin{split}
+    \vec a &= \frac{GM_T}{(R_T+h)^2} \vec n \\
+           &= \frac{6.67\cdot10^{-11}\cdot5.98\cdot10^{24}}{(6380\cdot10^3+20180\cdot10^3)^2} \vec n \\
+           &\approx 0 \vec n
+  \end{split}
+\end{equation*}
+
+L'accélération $a$ est nulle, donc le mouvement circulaire d'un satellite est bien uniforme.
+
+\section{}
+
+\begin{equation*}
+  \begin{split}
+    v &= \sqrt{\frac{GM_T}{R_T+h}}
+  \end{split}
+\end{equation*}
+
+\section{}
+
+\begin{equation*}
+  \begin{split}
+    v &= \sqrt{\frac{GM_T}{R_T+h}} \\
+      &= \sqrt{\frac{6.67\cdot10^{-11}\cdot5.98\cdot10^{24}}{6380\cdot10^3+20180\cdot10^3}} \\
+      &\approx \SI{3875.96}{\meter\per\second} \\
+      &\approx \SI{13951}{\kilo\meter\per\hour} \\
+      &\approx \SI{14}{\mega\meter\per\hour}
+  \end{split}
+\end{equation*}
+
+La vitesse est vérifée. Vérifions maintenant la période $T = \SI{12}{\hour}$
+
+\begin{equation*}
+  \begin{split}
+    T &= \frac{\overbrace{2\pi (R_T+h)}^{\text{périmètre de l'orbite}}}{v} \\
+    &= \frac{2\pi (6380+20180)}{14000} \\
+    &\approx \SI{11.92}{\hour} \\
+    &\approx \SI{12}{\hour}
+  \end{split}
+\end{equation*}
+
+La période est également vérifée
+
+\section{}
+
+Une rotation de la Terre prend 24 heures, alors que le satellite parcours la même distance en seulement 12 heures. Du point de vue de la Terre, le satellite tourne $\frac{24}{12} = 2$ fois plus vite. Il n'est donc pas immobile d'un point de vue de la Terre, et n'est donc pas géostationnaire.
+
+\end{document}

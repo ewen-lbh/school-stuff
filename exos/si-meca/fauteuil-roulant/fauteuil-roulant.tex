@@ -1,0 +1,177 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newenvironment{eq}{\begin{equation*}\begin{split}}{\end{split}\end{equation*}}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+  #2 & #5 \
+  #3 & #6 \
+  #4 & #7
+\end{array} \right}\}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{llp{130mm}}%
+    %& unité/type & Explication \ \hline
+    #1
+  \end{tabular}
+  \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+  $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+  $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+  \centering
+  \begin{tabular}{lllll}%
+    Nom & Vecteur & Direction & Sens & Norme \hline
+    #1
+  \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{TD: Fauteuil Roulant}
+\author{Ewen Le Bihan}
+\date{2020-04-03}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+\begin{itemize}
+  \item Assistance à la force physique 
+\end{itemize}
+
+\section{}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lllll}
+    Nom & Vecteur & Direction & Sens & Norme \\\hline
+    Poids & $\vec P_S$ & $\vert$ & $\downarrow$ & $65g$ \\
+    Réaction de la grosse roue & $\vec R_A$ & ? & ? & ? \\
+    Réaction de la petite roue & $\vec R_B$ & $\vert$ & $\uparrow$ & ?
+  \end{tabular}
+  \caption{BAME}
+  \label{tab:bame}
+\end{table}
+
+\begin{equation*}
+  \begin{split}
+    \sum \vec F_\text{ext} &= m\vec a \\
+    \iff \vec P_S + \vec R_A + \vec R_B &= m\vec a
+  \end{split}
+\end{equation*}
+
+Projection selon $\vec x$
+
+\begin{equation*}
+  \begin{split}
+    0 + A_x + 0 &= m_S \cdot a \\
+    \iff A_x &= m_S \cdot a
+  \end{split}
+\end{equation*}
+
+Projection selon $\vec y$
+
+\begin{equation*}
+  \begin{split}
+    -m_S \cdot g + A_y + B_y &= m_S \cdot 0 \\
+    \iff -m_S \cdot \vec g + A_y + B_y &= 0 \\
+    \iff A_y - m_S \cdot \vec g + B_y &= 0
+  \end{split}
+\end{equation*}
+
+\begin{equation*}
+  \begin{split}
+    \sum M_G(\vec F_\text{ext}) &= \vec 0 \\
+    \iff M_G(\vec P_S) + M_G(\vec R_A) + M_G(\vec R_B) &= \vec 0 \\
+  \end{split}
+\end{equation*}
+
+Projection selon $\vec z$
+
+\begin{equation*}
+  \begin{split}
+    0 + M_G(\vec R_A)_z + M_G(\vec R_B)_z &= \vec 0 \\
+    \iff y_G \cdot A_x - x_G \cdot A_y - (AB - x_G) \cdot B_y &= 0 \\
+    \iff 0 + 
+  \end{split}
+\end{equation*}
+
+Lorsque la valeur de l'action en B est de $0$, le moment $M_G(\vec R_A)$ n'est plus compensé, et la somme des moments n'est plus nulle: le fauteuil bascule.
+
+\begin{equation*}
+  \begin{split}
+    y_G \cdot A_x - x_G \cdot A_y - (AB - x_G) \cdot B_y &= 0 \\
+    \iff A_x y_G &= x_G A_y + AB + x_G B_y \\
+    \iff A_x &= \frac{x_G A_y + AB + x_G B_y}{y_G} \\
+    &= \frac{194 A_y + 336 +  194 \cdot 0}{643} \\
+    &= \frac{194A_y + 336}{643} \\
+    &= \frac{194}{643}A_y + \frac{336}{643}
+  \end{split}
+\end{equation*}
+
+Or,
+\begin{equation*}
+  \begin{split}
+    A_y - m_S \cdot g + B_y &= 0 \\
+    \iff A_y &= m_S \cdot g - B_y \\
+    A_y &= 65 \cdot 9.81 - 0\\
+    &= \SI{638}{\newton}
+  \end{split}
+\end{equation*}
+
+Donc:
+\begin{equation*}
+  \begin{split}
+    A_x &= \frac{194}{643}638 + \frac{336}{643} \\
+    &= \SI{193}{\newton}
+  \end{split}
+\end{equation*}
+
+\section{}
+
+\begin{equation*}
+  \begin{split}
+    \sum M_O(F_\text{ext}) &= \vec 0 \\
+    \iff M_O(\vec R_A) + M_O(\vec \vec R_{\text{utilisateur}\to\text{RM}}) &= \vec 0
+  \end{split}
+\end{equation*}
+
+$A_x R_\text{roue}$ représente la somme des moments, à laquelle on enlève l'effort apporté par l'utilisateur, $F_\text{main} R_\text{main}$.
+
+\section{}
+
+\begin{equation*}
+  \begin{split}
+    C_\text{moteur} &= A_x R_\text{main} - F_\text{main} R_\text{main} \\
+    &= 193 \cdot 320 - 15 \cdot 250 \\
+    &= \SI{5.8e4}{\newton\meter}
+  \end{split}
+\end{equation*}
+
+\section{}
+
+Ces dispositifs sont utiles pour varier la vitesse de déplacement tout en réduisant les chances de basculement.
+
+\end{document}

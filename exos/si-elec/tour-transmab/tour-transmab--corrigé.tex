@@ -1,0 +1,124 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\rpm}{\text{tr}\cdot\text{min}^{-1}}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+  #2 & #5 \
+  #3 & #6 \
+  #4 & #7
+\end{array} \right\}}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{llp{130mm}}%
+    %& unité/type & Explication \ \hline
+    #1
+  \end{tabular}
+  \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+  $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+  $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+  \centering
+  \begin{tabular}{llllp{130mm}}%
+    Nom & Vecteur & Direction & Sens & Norme \hline
+    #1
+  \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{TD: Tour transmab (corrigé)}
+\author{Ewen Le Bihan}
+\date{2020-04-02}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+\begin{equation*}
+  \begin{split}
+    f &= p\cdot n_s \\
+    \iff p &= \frac{f}{n_s} \\
+    &= 50\frac{60}{1500} \\
+    &= 2
+  \end{split}
+\end{equation*}
+
+\section{}
+
+$$N = 1420\;\rpm \iff \omega = 1420\frac{2\pi}{}$$
+
+\begin{equation*}
+  \begin{split}
+    g_n &= \frac{n_s - n}{n_s} \\
+    &= \frac{1500 - 1420}{1500} \\
+    &= 0.0\bar 3\\
+    &\text{soit }  5.33\%
+  \end{split}
+\end{equation*}
+
+\begin{equation*}
+  \begin{split}
+    P_n &= C_n \omega \\
+    \iff C_n &= \frac{P_n}{\omega} \\
+    &= 3000 \cdot \frac{60}{2\pi\cdot1420} \\
+    &= \SI{20.17}{\newton\meter}
+  \end{split}
+\end{equation*}
+
+\begin{equation*}
+  \begin{split}
+    \eta &= \frac{P_\text{mécanique fournie}}{P_\text{électrique absorbée}}\\
+    &= \frac{3000}{\sqrt{3}\cdot230\cdot7.1\cdot0.79} \\
+    &= 77.1\%
+  \end{split}
+\end{equation*}
+
+\section{}
+
+\begin{equation*}
+  \begin{split}
+    N_0 &= \frac{V_c}{R_0} \\
+        &= \frac{4}{30\cdot10^{-3}} \\
+        &= \SI{133}{\radian\per\second} \\
+        &= 1270\;\rpm
+  \end{split}
+\end{equation*}
+
+\section{}
+
+\begin{equation*}
+  \begin{split}
+    \Omega &= \frac{4}{0.01} \\
+    &= \SI{400}{\radian\per\second} \\
+    \implies N &= \frac{\Omega 60}{2\pi} \\
+    &= 3820\;\rpm \\
+    &< 4000\;\rpm
+  \end{split}
+\end{equation*}
+
+Donc la vitesse pour $R_1$ n'atteint pas la vitesse maximale du moteur.
+
+\end{document}

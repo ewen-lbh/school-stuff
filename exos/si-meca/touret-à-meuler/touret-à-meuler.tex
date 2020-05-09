@@ -1,0 +1,173 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+  #2 & #5 \\
+  #3 & #6 \\
+  #4 & #7
+\end{array} \right\}}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{llp{130mm}}%
+    %& unité/type & Explication \ \hline
+    #1
+  \end{tabular}
+  \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+  $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+  $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+  \centering
+  \begin{tabular}{llllp{130mm}}%
+    Nom & Vecteur & Direction & Sens & Norme \hline
+    #1
+  \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{SI Mécanique--TD 2: Touret à meuler}
+\author{Ewen Le Bihan}
+\date{2020-03-27}
+
+\begin{document}
+
+\maketitle
+
+\section{Phase de démarrage}
+\subsection{}
+
+Calcul de la vitesse angulaire $\omega_1$ en $\si{\radian\per\second}$:
+
+\begin{equation*}
+  \begin{split}
+    \omega_1 &= N \cdot \frac{2\pi}{60}\\
+           &= 3000 \cdot \frac{2\pi}{60} \\
+           &= \SI{314.16}{\radian\per\second}
+  \end{split}
+\end{equation*}
+
+Le moteur atteint cette vitesse (en partant de $\omega_0 = 0$) après $\Delta T_1 = \SI{1.5}{\second}$, donc
+
+\begin{equation*}
+  \begin{split}
+    \alpha_1 &= \frac{\omega_1}{\Delta T_1}\\
+             &= \frac{314.16}{1.5} \\
+             &= \SI{209.44}{\radian\per\second\squared}
+  \end{split}
+\end{equation*}
+
+\subsection{}
+\emph{On déduit que l'échelle du schéma est en $\si{\milli\meter}$}
+
+\subsubsection{Détermination de la masse de la broche}
+
+Soit $V$ le volume, $r$ le rayon et $h$ la hauteur de la broche.
+\begin{equation*}
+  \begin{split}
+    m &= V\rho \\
+      &= 2\pi r h \rho_2 \\
+      &= 2\pi (\frac{46}{2} \cdot 700)\cdot10^{-3} \cdot 7800 \\
+      &= \SI{789.04}{\kilo\gram}
+  \end{split}
+\end{equation*}
+
+
+\subsubsection{Calcul de $I_{G,X}$}
+
+\begin{equation*}
+  \begin{split}
+    I_{G,X} &= \frac{1}{2}m r^2 \\
+            &= \frac{1}{2}789.04 \cdot (700\cdot10^{-3})^2 \\
+            &= \SI{193.31}{\kilo\gram\meter\squared}
+  \end{split}
+\end{equation*}
+
+\subsection{}
+
+D'après le principe fondamental de la dynamique:
+
+\begin{equation*}
+  \begin{split}
+    \vec M_{\text{ext}}(G) &= I_{G,x} \cdot \vec \alpha_1
+  \end{split}
+\end{equation*}
+
+Le touret effecue une rotation autour de l'axe $\vec x$, donc:
+
+\begin{equation*}
+  \begin{split}
+    \vec M_{\text{ext}}(G) &= I_{G,x} \cdot \vec \alpha_1 \\
+    \iff M_{\text{ext}}(G)_x &= I_{G,x} \cdot \alpha_1 \\
+    \iff C_m &= 193.31 \cdot 789.04\quad(1)\\
+    &= \SI{152.53}{\newton\meter}
+  \end{split}
+\end{equation*}
+
+\begin{tabular}{ll}
+  (1) & Les frottements sont négligés, donc le seul moment appliqué à la broche est le couple moteur $C_m$.
+\end{tabular}
+
+\section{Phase d'arrêt}
+\subsection{}
+
+Le moteur atteint une vitesse de $\SI{0}{\radian\per\second}$ en partant de la vitesse nominale $\omega_1 = \SI{314.16}{\radian\per\second}$ après $\Delta T_2 = \SI{40}{\second}$, donc
+
+\begin{equation*}
+  \begin{split}
+    \alpha_2 &= \frac{-\omega_1}{\Delta T_2}\\
+             &= \frac{-314.16}{40} \\
+             &= \SI{-7.85}{\radian\per\second\squared}
+  \end{split}
+\end{equation*}
+
+\subsection{}
+
+D'après le principe fondamental de la dynamique:
+
+\begin{equation*}
+  \begin{split}
+    \vec M_{\text{ext}}(G) &= I_{G,x} \cdot \vec \alpha_2
+  \end{split}
+\end{equation*}
+
+Le touret effecue une rotation autour de l'axe $\vec x$, donc:
+
+\begin{equation*}
+  \begin{split}
+    \vec M_{\text{ext}}(G) &= I_{G,x} \cdot \vec \alpha_2 \\
+    \iff M_{\text{ext}}(G)_x &= I_{G,x} \cdot \alpha_2 \\
+    \iff C_r &= 193.31 \cdot (-7.85)\\
+    &= \SI{-1.52}{\newton\meter}
+  \end{split}
+\end{equation*}
+
+\subsection{}
+
+Ce couple résistant est dû aux frottements engendrés par le contact physique des meules avec le suppport.
+
+\subsection{}
+
+$|-1.52| \ll |152.53| \implies |\alpha_2| \ll |\alpha_1|$, donc il était bien judicieux de négliger les frottements.
+
+\end{document}

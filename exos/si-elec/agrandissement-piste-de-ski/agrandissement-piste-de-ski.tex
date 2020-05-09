@@ -1,0 +1,143 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+  #2 & #5 \
+  #3 & #6 \
+  #4 & #7
+\end{array} \right\}}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{llp{130mm}}%
+    %& unité/type & Explication \ \hline
+    #1
+  \end{tabular}
+  \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+  $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+  $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+  \centering
+  \begin{tabular}{llllp{130mm}}%
+    Nom & Vecteur & Direction & Sens & Norme \hline
+    #1
+  \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{SI: Agrandissement piste de ski}
+\author{Ewen Le Bihan}
+\date{2020-04-18}
+
+\begin{document}
+
+\maketitle
+
+\section{Q9}
+
+\begin{equation*}
+  \begin{split}
+    P_{\text{in}} &= \frac{P_\text{out}}{\eta} \\
+                  &= \frac{25.2\cdot10^3}{0.9} \\
+                  &= \SI{28}{\kilo\watt}
+  \end{split}
+\end{equation*}
+
+\begin{equation*}
+  \begin{split}
+    \omega &= \frac{R_1}{V} \\
+           &= \frac{1}{2.8} \\
+           &= \SI{0.36}{\radian\per\second}
+  \end{split}
+\end{equation*}
+
+\begin{equation*}
+  \begin{split}
+    C &= \frac{P_\text{in}}{\omega} \\
+      &= \frac{28 000}{0.36} \\
+      &= \SI{77777}{\newton\meter}
+  \end{split}
+\end{equation*}
+
+\section{Q10}
+
+On choisi le moteur 2
+
+\section{Q12}
+
+\begin{equation*}
+  \begin{split}
+    \omega_s &= R \cdot \omega_e \\
+    C_s &= \eta \cdot C_e
+  \end{split}
+\end{equation*}
+
+\section{Q13}
+
+Le rayon
+
+\section{Q15}
+
+\begin{description}
+  \item[Surcouple] $\SI{220}{\newton\meter}$
+  \item[Couple] $\SI{180}{\newton\meter}$
+\end{description}
+
+\begin{equation*}
+  \begin{split}
+    C_M &= C_N \cdot 2.9 \\
+    &= 196 \cdot 2.9 \\
+    &= \SI{568.4}{\newton\meter} \\
+    &> \SI{220}{\newton\meter} \\
+    &\implies \text{Le surcouple est supporté par le moteur 2}
+  \end{split}
+\end{equation*}
+
+\begin{equation*}
+  \begin{split}
+    C_N &= \SI{196}{\newton\meter} \\
+    &> \SI{180}{\newton\meter} \\
+    &\implies \text{Le couple est supporté par le moteur 2}
+  \end{split}
+\end{equation*}
+
+Le moteur 2 est un choix acceptable
+
+\section{Q16}
+
+\begin{equation*}
+  \begin{split}
+    \frac{0.7C_n - 0.2C_n}{0.2C_n} &= \frac{0.7\cdot196 - 0.2\cdot196}{0.2\cdot196} \\
+    &= 2.5
+  \end{split}
+\end{equation*}
+
+\section{Q17}
+
+\begin{description}
+  \item[Vit. 2] $\SI{42.5}{\hertz}$
+  \item[Vit. 3] $\SI{33}{\hertz}$
+\end{description}
+
+\end{document}
