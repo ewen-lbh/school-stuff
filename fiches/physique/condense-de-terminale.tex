@@ -1157,7 +1157,51 @@ Le segment Soleil--planète balaye des aires égales pendant des durées égales
     \deftablevar{\Delta t_p}{\second}{Durée propre}
     \deftablevar{v}{\meter\per\second}{Vitesse de l'observateur}
     \deftableobj{c}{$\SI{3.00E8}{\meter\per\second}$}{Vitesse de la lumière}
-}
+}{coefficient_de_lorentz}
 
+\newpage\section{Cinétique chimique}
+
+\subsection{Réactions lentes et rapides}
+\begin{description}
+    \item[Réaction rapide] $\Delta t \leq \SI{0.1}{\second}$
+\end{description}
+\subsection{Temps de demi-réaction}
+\begin{equation*}
+    \begin{split}
+	x(t_{1/2}) &= \frac{x_f}{2}
+    \end{split}
+\end{equation*}
+\deftable{
+    \deftableobj{x}{fonction}{Avancement de la réaction en fonction du temps}
+    \deftablevar{t_{1/2}}{\second}{Temps de demi-réaction}
+    \deftablevar{x_f}{\mol}{Avancement final de la réaction}
+}{temps_de_demi_reaction}
+
+\subsection{Facteurs cinétiques}
+
+\begin{equation*}
+    \begin{split}
+	{\Delta t}^{-1} &\propto T \\
+	{\Delta t}^{-1} &\propto C_m \\
+	{\Delta t}^{-1} &\propto \text{état de division}
+    \end{split}
+\end{equation*}
+
+\deftable{
+	\deftablevar{\Delta t}{\second}{Durée de la réaction} \\
+	\deftablevar{C_m}{\mol\per\liter}{Concentration} \\
+	\deftablevar{T}{\kelvin}{Température} \\
+	\deftableobj{\text{état de division}}{(quantitatif)}{Relatif à la séparation des molécules (eg. l'état de divison du zinc en poudre est plus important que celui du zinc en fil)}
+}{feacteurs_cinetiques}
+
+\subsection{Catalyse}
+Un catalyseur est une espèce chimique qui peut accélérer une réaction sans modifier l'état final. Il est consommé et régénéré pendant la réaction.
+
+\subsubsection{Types de catalyseurs}
+\begin{description}
+    \item[Homogène] Une seule phase fluide
+    \item[Hétérogène] Catalyseurs et réactifs font deux phases distinctes
+    \item[Enzymatique] Le catalyseur est un enzyme (macromolécule d'origine biologique)
+\end{description}
 
 \end{document}
