@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+    #2 & #5 \
+    #3 & #6 \
+    #4 & #7
+\end{array} \right\}}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{130mm}}%
+        %& unité/type & Explication \ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llllp{130mm}}%
+        Nom & Vecteur & Direction & Sens & Norme \hline
+        #1
+    \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{SI: Les réseaux}
+\author{Ewen Le Bihan}
+\date{2020-05-12}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+Sachant que l'adresse IP la plus petite est 156.18.0.0, et qu'il y avait déjà $242+26=268$ machines connectées, l'adresse IP est 156.18.1.11.
+
+\section{}
+\paragraph{}
+Convertissons les dimensions en pouces: $\frac{42\cdot10^{-2}\cdot29.6\cdot10^{-2}}{0.0254^2} = \SI{193}{\text{in}\squared}$
+
+\paragraph{}
+Calculons ensuite le nombre de points nécéssaires: $600^2\cdot193=69480000\;\text{ppts}$
+
+\paragraph{}
+Calculons enfin le nombre de bits nécéssaires, un point étant codé sur un octet, l'imprimmante a besoin de $\SI{69.4}{\mega\text{B}}$ 
+
+\section{}
+
+\begin{equation*}
+    \frac{69.4\cdot10^6}{1.3} = \SI{53.4}{\mega\text{B}\per\second}
+\end{equation*}
+
+\section{}
+
+On prend la carte ethernet TCP/IP à 23 EUR (soit $14354.30$ Shilling somaliens)
+
+\end{document}
