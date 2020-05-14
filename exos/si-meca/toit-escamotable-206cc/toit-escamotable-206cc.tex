@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+    #2 & #5 \\
+    #3 & #6 \\
+    #4 & #7
+\end{array} \right\}}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{130mm}}%
+        %& unité/type & Explication \ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llllp{130mm}}%
+        Nom & Vecteur & Direction & Sens & Norme \hline
+        #1
+    \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{Toit Escamotable 206cc}
+\author{Ewen Le Bihan}
+\date{2020-05-14}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+Nous sommes dans un mouvement plan, donc $L = M = 0$
+
+\begin{equation*}
+\begin{split}
+    \vect{C_{\text{axe}\to 52}} &= \SI{1800}{\newton} \\
+    \vect{A_{10\to 52}} &= d\times F \\
+			&= 4 \cdot 1800 \\
+			&= \SI{7200}{\newton\meter} \\
+    \mathfrac{T} & \torseur{G}{1800}{0}{0}{0}{0}{7200}
+\end{split}
+\end{equation*}
+
+\section{}
+
+Il y a deux sollicitations existantes:
+\begin{itemize}
+    \item Traction
+    \item Flexion
+\end{itemize}
+
+\section{}
+
+Par lecture graphique du document technique, $\sigma_{\max} = \SI{67.34}{\mega\pascal}$.
+
+\begin{equation*}
+\begin{split}
+    S &= \frac{R_e}{\sigma_{\max}} \\
+      &= \frac{500}{67.34} \\
+      &= 7.42
+\end{split}
+\end{equation*}
+
+
+
+\end{document}
+
