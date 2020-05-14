@@ -29,6 +29,16 @@ color(50.00000000000000bp)=(red)
 }%
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathreplacing}
+% Flow chart tikzstyles
+\tikzstyle{decision} = [diamond, draw, fill=white, 
+    text width=10em, text centered, node distance=1.75cm, inner sep=0pt, minimum height=4em]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=8em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
+
+
 \usepackage{multirow}
 \usepackage{caption}
 \usepackage[load-configurations = abbreviations]{siunitx}
@@ -1239,10 +1249,70 @@ Un catalyseur est une espèce chimique qui peut accélérer une réaction sans m
     \label{tab:angles_conformations_eclipsees_decalees}
 \end{table}
 
-\subsection{Stabilité de l'éthane}
+\subsection{Stabilité des conformations}
+
 
 \begin{description}
-    \item[Conformation la plus stable] décalée
+    \item[Conformation la plus stable] Conformation pour laquelle la molécule consomme le moins d'énergies
+    \item[Pour l'éthane] décalée
+    \item[Pour le butane] décalée
 \end{description}
+
+\subsection{Chiralité}
+
+Objet non-superposable à son image mirroir $\iff$ Objet chiral
+
+\[\text{achiral} := \overline{\text{chiral}}\]
+
+\subsection{Carbone asymétrique}
+
+
+\begin{equation*}
+\begin{split}
+    \chemfig{C (-A) (-[2] A) (-[4] A) (-[6] A)} &\iff \text{C est symétrique}\\
+    \overline{\text{C est symétrique}} &\iff \text{C est asymétrique} \\
+				       &\iff \chemfig{^\ast C} \quad \text{(notation)}
+\end{split}
+\end{equation*}
+
+\subsection{Classification des stéréoisomères}
+
+\emph{Pour les questions, on se demande si $A$ et $B$, deux molécules isomères, peuvent être indentiques en faisant subir à l'une une transformation.}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[node distance = 4cm, auto]
+	\node [decision] (simples) {rotations autour de liaisons \emph{simples}?};
+	\node [block, below right of=simples] (confor) {de conformation};
+	\node [block, below of=confor] (ident) {indentiques};
+	\node [block, below left of=simples] (config) {de configuration};
+	\node [decision, below of=config] (mirroir) {image dans un mirroir plan?};
+	\node [block, below left of=mirroir] (dias) {diastéréoisomères};
+	\node [block, below right of=mirroir] (enan) {énantiomères};
+	\path [line] (simples) -- (config) node [near start] {non};
+	\path [line] (simples) -- (confor) node [near start] {oui};
+	\path [line] (confor) -- (ident);
+	\path [line] (config) -- (mirroir);
+	\path [line] (mirroir) -- (enan) node [near start] {oui};
+	\path [line] (mirroir) -- (dias) node [near start] {non};
+\end{tikzpicture}
+\label{fig:classification_stereoisomeres}
+\end{figure}
+
+\subsubsection{Différences de propriétés selon le type de stéréoisomère}
+
+{
+\begin{figure}[h]
+\renewcommand{\arraystretch}{1.5}
+\centering
+\begin{tabular}{l|l|l|l}
+	          & Physiques & Chimiques & Biologiques \\\hline
+Énantiomères      & $=$       & $=$       & $\not=$     \\
+Diastéréoisomères & $\not=$   & $\not=$   & $\not=$     \\
+\end{tabular}
+\label{tab:difference_proprietes_selon_type_stereoisomeres}
+\end{figure}
+}
+
 
 \end{document}
