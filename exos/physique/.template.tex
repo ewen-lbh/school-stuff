@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb, dsfont}
+\usepackage{mathtools}
+\usepackage{chemfig}
+\usepackage{chemformula}
+\usepackage{xcolor}
+\definecolor{gray07}{gray}{0.7}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepgfplotslibrary{units} % to add units easily to axis
+\usepgfplotslibrary{fillbetween} % to fill inbetween curves
+\usepgfplotslibrary{colormaps} % to create colormaps
+\pgfplotsset{width=12.2cm, height=7cm}
+\pgfplotsset{compat=newest} %(making it only compatalbe with
+%new releases of pgfplots)
+\pgfdeclarehorizontalshading{visiblelight}{50bp}{
+color(0.00000000000000bp)=(violet);
+color(8.33333333333333bp)=(blue);
+color(16.66666666666670bp)=(cyan);
+color(25.00000000000000bp)=(green);
+color(33.33333333333330bp)=(yellow);
+color(41.66666666666670bp)=(orange);
+color(50.00000000000000bp)=(red)
+}%
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage[load-configurations = abbreviations]{siunitx}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}, exponent-product=\ensuremath{{}\cdot{}}, group-minimum-digits=3, range-phrase=-, range-units=single}
+\usepackage{graphicx}
+\graphicspath{ {./} }
+\usetikzlibrary{shapes.arrows}
+\let\ce\ch
+\newcommand{\bit}{\text{bit}}
+\newcommand{\equilibrium}[2]{$\ce{#1}\rightleftharpoons\ce{#2}$}
+\newcommand{\soom}{\stackrel{10}{=}}
+\newcommand{\vect}{\overrightarrow}
+\newcommand{\formulaPyramidFactory}[4]{
+    \begin{tikzpicture}[scale=1.25]
+\draw (0,0) -- (-0.5, -0.75) node  [align=center, fill=white, midway] {\footnotesize \---};
+\draw (0,0) -- (0.5, -0.75) node [align=center, fill=white, midway] {\footnotesize \---};
+\draw (0.5, -0.75) -- (-0.5, -0.75) node [align=center, fill=white, midway] {\footnotesize #4};
+
+\draw (0,0) node [above, fill=white] {#1};
+\draw (-0.5, -0.75) node [left, fill=white] {#2};
+\draw (0.5, -0.75) node [right, fill=white] {#3};
+
+%\draw (0, -1) node [below, align=center] {\small (Pyramide de formule)};
+\end{tikzpicture}
+}
+\newcommand{\formulaPyramid}[3]{\formulaPyramidFactory{#1}{#2}{#3}{$\times$}}
+\newcommand{\formulaPyramidAdditive}[3]{\formulaPyramidFactory{#1}{#2}{#3}{$+$}}
+\newenvironment{definitions}{\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Lorem ipsum dolor}]}{\end{description}}
+\newcommand{\deftable}[2]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{100mm}}%
+        %& unité/type & Explication \\ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \\
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \\
+}
+
+\title{@@PROJECT@@}
+\date{@@DATE@@}
+\author{Ewen Le Bihan}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+\end{document}
