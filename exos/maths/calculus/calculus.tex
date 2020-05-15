@@ -1,0 +1,164 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{chemfig}
+\usepackage{chemformula}
+\usepackage{float}
+\usepackage{dsfont}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{dsfont}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{calc}
+\usepackage{hyperref}
+\usepackage{enumitem}  
+\usepackage{graphicx}
+\usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}% 
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
+\parskip 1ex
+\graphicspath{ {./} }
+\usetikzlibrary{shapes.arrows}
+\let\ce\ch
+\newcommand{\im}{\text{Im}\,}
+\newcommand{\re}{\text{Re}\,}
+\newcommand{\img}{\text{Img}\,}
+\newcommand{\R}{\mathds{R}}
+\newcommand{\C}{\mathds{C}}
+\newcommand{\N}{\mathds{N}}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\Aff}{\text{Aff}}
+\newcommand{\oo}{\infty}
+\newcommand{\twoRows}[1]{\multirow{2}{*}{#1}}
+\newcommand{\threeRows}[1]{\multirow{3}{*}{#1}}
+\newcommand{\twoCols}[1]{\multicolumn{2}{c|}{#1}}
+\newcommand{\threeCols}[1]{\multicolumn{3}{|c|}{#1}}
+\newcommand{\twoColsNB}[1]{\multicolumn{2}{c}{#1}}
+\newcommand{\goesto}[2]{\xrightarrow[#1\:\to\:#2]{}}
+\newcommand{\liminfty}{\lim_{x\to+\oo}}
+\newcommand{\limminfty}{\lim_{x\to-\oo}}
+\newcommand{\limzero}{\lim_{x\to0}}
+\newcommand{ \const}{\text{cste}}
+\newcommand{\et}{\:\text{et}\:}
+\newcommand{\ou}{\:\text{ou}\:}
+\newcommand{\qed}{\square}
+\newcommand{\placeholder}{\diamond}
+\newcommand{\mediateur}{\:\text{med}\:}
+\newcommand{\milieu}{\:\text{mil}\:}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newenvironment{descriptiona}{\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries The longest label}]}{\end{description}}
+\renewcommand{\arraystretch}{1.4}
+\newcommand{\point}[2]{(#1;\;#2)}
+\newcommand{\spacepoint}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
+\newcommand{\spliteq}[1]{\begin{equation*}\begin{split}#1\end{split}\end{equation*}}
+
+\title{Exercices: Calculus}
+\author{Ewen Le Bihan}
+\date{2020-05-15}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+	\emph{Tout les exercices ici proviennent du livre "Calculus" disponible 
+	\href{https://www.amazon.fr/Calculus-\%C3\%A9dition-approfondir-connaissances-math\%C3\%A9matiques/dp/2820807178/}{\underline{sur amazon}}}
+\end{center}
+\section{}
+
+Montrons par récurrence:
+
+\[
+	\forall n \in \N^\ast, \quad \sum_{i=1}^{n} i^3 = \left( \frac{n(n+1)}{2} \right)^2
+\]
+
+Pour $n$ dans $\N^\ast$, on note la propriété $\mathcal{P}_n$:
+
+\[
+	1^3 + 2^3 + \dots + n^3 = \left( \frac{n(n+1)}{2} \right)^2	
+\]
+
+\paragraph{Initialisation.} Montrons que, pour $n = 1$, $\mathcal{P}_n$ est vraie:
+
+\[
+	\left(\frac{1(1+1)}{2}\right)^2 = 1 = 1^2
+\]
+
+$\mathcal{P}_n$ est donc vraie.
+
+\paragraph{Hérédité.} Soit $n$ dans $\N^\ast$ tel que $\mathcal{P}_n$ est vraie. 
+On a donc:
+
+\spliteq{
+	1^3 + 2^3 + \dots + n^3 + (n+1)^3 &= \left( \frac{n(n+1)}{2} \right)^2 + (n+1)^3 \\
+					  &= \frac{(n(n+1))^2 + 4(n+1)^3}{4} \\
+					  &= \frac{n^2(n^2+2n+1) + 4(n^3+3n^2+3n+1)}{4} \\
+					  &= \frac{n^4+2n^3+n^2+4n^3+12n^2+12n+4}{4} \\
+					  &= \frac{n^4+6n^3+13n^2+12n+4}{4}
+}
+
+Or
+
+\spliteq{
+	\left( \frac{(n+1)(n+2)}{2} \right)^2 &= \frac{(n+1)^2(n+2)^2}{4} \\
+					      &= \frac{n^4+6n^3+3n^2+12n+4}{4}
+}
+
+\newpage
+En fin de compte, on obtient $\mathcal{P}_{n+1}$:
+
+\spliteq{
+	1^3 + 2^3 + \dots + n^3 + (n+1)^3 &= \frac{n^4+6n^3+3n^2+12n+4}{4} \\
+					  &= \left( \frac{(n+1)(n+2)}{2} \right)^2
+}
+
+$\mathcal{P}_n$ est donc initialisée et héréditaire, 
+donc $\mathcal{P}_n$ est vraie pour tout $n$ dans $\N^\ast$ \qed
+
+
+\section{}
+
+Montrons par récurrence
+
+\[
+	\forall x \in \R, \forall n \in \N, \quad |\sin{(nx)}| \leq n|\sin{x}|
+\]
+
+Soit, pour tout $n$ dans $\N$, $\mathcal{P}_n$ la propriété suivante:
+
+\[
+	|\sin(nx)| \leq n|\sin x|
+\]
+
+\paragraph{Initialisation.} Pour $n = 0$, montrons que $\mathcal{P}_n$ est vraie.
+On a, pour tout $x$ dans $\R$:
+
+\spliteq{
+	|\sin(0x)| = 0 &\land 0|\sin x| = 0 \\
+	\implies |\sin(0x)| &\leq 0|\sin x|
+}
+
+$\mathcal{P}_0$ est donc vraie.
+
+\paragraph{Hérédité.} Prouvons que, pour tout entier naturel $n$ et tout réel $x$, $\mathcal{P}_n$ est vraie. 
+
+
+\spliteq{
+
+}
+
+
+
+
+
+\end{document}
