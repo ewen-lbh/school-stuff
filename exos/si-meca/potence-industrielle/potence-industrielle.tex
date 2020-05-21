@@ -1,0 +1,118 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+    #2 & #5 \\
+    #3 & #6 \\
+    #4 & #7
+\end{array} \right\}}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{130mm}}%
+        %& unité/type & Explication \ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llllp{130mm}}%
+        Nom & Vecteur & Direction & Sens & Norme \hline
+        #1
+    \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{Potence industrielle}
+\author{Ewen Le Bihan}
+\date{2020-05-19}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+Soit $H$ un point sur $AC$ avec $AH = x$
+
+\[
+	T\{\text{coh}\} = \torseur{H}{0}{24670}{0}{0}{0}{0}
+\]
+
+\section{}
+
+\begin{equation*}
+	\begin{split}
+		\sigma &= \frac{N}{S} \\
+		       &= \frac{24670}{(20\cdot2)^2\pi} \\
+		       &\approx \SI{79}{\newton\per\milli\meter\squared} \\
+		R_{pe} &= \frac{R_e}{s} \\
+		       &= \frac{620}{2} \\
+		       &\approx \SI{310}{\newton\per\milli\meter\squared} \\
+		\sigma &\geq R_{pe} \\
+		       &\implies \text{C'est bon}
+	\end{split}
+\end{equation*}
+
+\section{}
+
+\begin{equation*}
+	\begin{split}
+		\varepsilon &= \frac{\sigma}{E} \\
+			 &= \frac{79}{210 000} \\
+			 &= \SI{376E-6}{}
+	\end{split}
+\end{equation*}
+
+\section{}
+
+\[
+	\sigma_{\text{sim}} = \SI{79E6}{\newton\per\meter\squared} \leq \SI{6.024E8}{\newton\per\meter\squared}
+\]
+
+\begin{equation*}
+	\begin{split}
+		R_e = \SI{620E8}{\newton\per\meter\squared} &\leq  \sigma_{\text{sim}} = \SI{1.039E8}{\newton\per\meter\squared}
+	\end{split}
+\end{equation*}
+
+La résistance est maximale au voisinage du changement de section.
+
+\section{}
+
+\[ 
+	\sigma_1 \approx \SI{7.8E7}{\pascal} \approx \SI{7.9E7}{\pascal}
+\]
+
+\section{}
+
+\begin{itemize}
+	\item Erreurs de mesure
+	\item Approximations dans la simulation
+	\item Approximations dans la simulation
+\end{itemize}
+
+\end{document}

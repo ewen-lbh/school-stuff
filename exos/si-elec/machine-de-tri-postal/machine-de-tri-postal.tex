@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+    #2 & #5 \
+    #3 & #6 \
+    #4 & #7
+\end{array} \right\}}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{130mm}}%
+        %& unité/type & Explication \ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llllp{130mm}}%
+        Nom & Vecteur & Direction & Sens & Norme \hline
+        #1
+    \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{Machine de tri postal}
+\author{Ewen Le Bihan}
+\date{2020-05-21}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+L'organisation choisie est celle en étoile de David. Ils ont choisi cette organisation car:
+
+\begin{itemize}
+	\item L'administration du réseau est facilitée
+	\item Les conflits sont évités
+\end{itemize}
+
+\section{}
+
+Classe B
+
+\section{}
+
+L'adresse IP est \texttt{172.17.30.4}
+
+\section{}
+
+Ordinateur SI $\to $ Ordinateur GP 
+
+\section{}
+
+Par paquets, de gauche à droite:
+
+\begin{enumerate}
+	\item L'information est à destination de l'ordinateur SI
+	\item L'information provient de l'ordinateur GP
+	\item Le protocole utilisé est TCP/IP
+	\item La liaison de supervision est \texttt{ETAT\_PO}
+	\item Le message significatif pèse 3 octets
+	\item Le message est du type "Exploitation, dépileur en marche"
+	\item Le code de défaut est TL (Défaut sur la tête de lecture)
+	\item Le défaut est au niveau des cellules de la tête de lecture
+	\item (Champ vide)
+\end{enumerate}
+
+\section{}
+
+Ethernet est un type de liaison du genre "Réseau local", et autorise une longueur
+de câble de plus de $\SI{15}{\meter}$ (l'ordinateur GP est à $\SI{50}{\meter}$, ce 
+qui est plus que la limite de la liaison \texttt{RS232}.
+
+\end{document}
