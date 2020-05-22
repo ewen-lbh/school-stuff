@@ -372,6 +372,21 @@ $f$ est une densité de probabilité si:
     \end{split}
 \end{equation*}
 
+\paragraph{Deux valeurs remarquables}
+
+\begin{align*}
+	u_{0.05} &= 1.96 \\
+	u_{0.01} &= 2.58 \\
+.\end{align*}
+
+\subsubsection{Propriétés}
+
+\begin{align*}
+	E(X) &= 0 \quad\iff\text{centrée}\\
+	\sigma &= 1 \quad\iff\text{réduite}\\
+	\iff V &= 1 \\
+.\end{align*}
+
 \newpage\section{Limites $\lim$}
 
 \subsection{Notation}
@@ -995,5 +1010,61 @@ Pour alléger les notations: $\Finv = f(x)dx$, $\Game = g(x)dx$ et $\int = \int_
     \caption{Formes remarquables de primitives}
     \label{tab:primitives_remarquables}
 \end{table}
+
+\newpage\section{Échantillonage}
+
+\subsection{Fréquence de caractère $X_{n}$}
+Soit le caractère $\mathcal{C}$ dont la proportion de présence dans une population est $p$.
+$X_{n}$ associe à la taille d'échantillon $n$ le nombre de caractères présents dans l'échantillon.
+
+\[
+	X_{n} \sim \mathcal{B}(n, p) 
+.\]
+
+\subsection{Fréquence de caractère dans échantillon $F_{n}$}
+
+\[
+	F_{n} = \frac{X_{n}}{n}
+.\]
+
+\subsection{Intervalle de fluctuation $I_n$}
+
+Soit \\ $Z$ la loi normale centrée réduite, \\
+$\alpha \in ]0, 1[$, \\
+$u_{\alpha} \in \R$ tq. $P(Z \in [-u_{\alpha}, u_{\alpha}]) = 1 - \alpha$ ,\\
+$q := 1-p$
+% De son nom complet \emph{Intervalle de fluctuation asymptotique de la fréquence $F_{n}$ au seuil de $1 - \alpha$}
+
+\begin{align*}
+	I_n &= \left[ p - u_{a} \frac{\sqrt{pq} }{\sqrt{n} }, p+u_{a} \frac{\sqrt{pq} }{\sqrt{n} } \right]  \\
+	\lim_{n \to \infty} P(F_{n} \in I_{n}) &= 1 - \alpha \\
+.\end{align*}
+
+
+\subsubsection{Interprétation}
+
+Pour un $n$ assez grand, $F_n \in I_n$ avec une probabilité d'approximativement $1 - \alpha$.
+On admet que \[
+	P(F_n \in I_n) \approx 1-\alpha
+.\] 
+
+Quand:
+\begin{itemize}
+	\item $n \ge 30$
+	\item $n p \ge 5$ 
+	\item $n q \ge 5$
+\end{itemize}
+
+Si au moins une des conditions n'est \emph{pas} remplie,
+il faudra utiliser une intervalle de fluctuation
+
+\subsection{Trouver $p$ avec $f$ et $n$}
+\[
+	\exists n_0 : n \ge n_0 
+	\implies P\left(p \in \left[ 
+		F_n- \frac{1}{\sqrt{n} }, 
+		F_n+\frac{1}{\sqrt{n} } 
+	\right] \right) \ge 0.95
+.\] 
 
 \end{document}
