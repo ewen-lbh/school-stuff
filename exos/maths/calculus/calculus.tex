@@ -202,4 +202,51 @@ $\mathcal{P}_0$ est donc validée.
 
 $\mathcal{P}_{n+1}$ est donc validée, $\mathcal{P}_{n}$ est initialisée et héréditaire donc vraie, ce qui valide également la conjecture, autrement dit: $u_n = u_n^{2^{n+1}}$ \qed
 
+
+\section{}
+
+\section{}
+
+\section{}
+
+À chaque transmission, la probabilité que le message soit correct est $p$. Autrement dit,
+pour le premier opérateur, il y a une transmission, pour le deuxième deux transmissions,
+et pour le $n$-ième $n$ transmissions.
+
+Soit $(u_n)_{n>0}$ une suite telle que $u_n$ représente la probabilité que le message
+soit reçu correctement par le $n$-ième opérateur. L'objectif est de trouver la définition
+de cette suite.
+
+Deux erreurs de transmissions font subir au bit deux inversions, ce qui est équivalent 
+au fait de n'avoir eu aucune erreur ($1 \to 0 \to 1 \iff 1 \to 1 \to 1$). 
+On peut facilement généraliser: il faut que le nombre d'erreurs de transmissions 
+subies soit \emph{pair}.
+
+Le nombre de transmissions correctes n'a pas d'importance: une transmission correcte 
+n'engendre pas de modification du signal ($1 \to 1 \to 1 \iff 1 \to 1$)
+
+Explorons les expressions de $u_n$ pour $n \in \{1, 2, 3, 4\}$
+
+On pose $q = 1 - p$
+
+\begin{align*}
+	u_1 &= p \\
+	u_2 &= p^2 + q^2 \\
+	u_3 &= p^3 + pqq + qqp + qpq = p^3 + 3q^2p \\
+	u_4 &= p^4 + qqpp + pqqp + ppqq + qpqp + pqpq + qppq + q^4 = p^4 + 6q^2p^2 + q^4 \\
+.\end{align*}
+
+\begin{align*}
+	i &= x\mapsto \begin{cases}
+		0 & \text{si} \mod(x, 2) \neq 0 \\
+		1 & \text{sinon}
+	\end{cases} \\
+	u_n &= n \mapsto p^n + (2^n-i(n))q^{\frac{2^n}{2}}p^{\frac{2^n}{2}} + i(n)q^n \\
+.\end{align*}
+
+\section{}
+\begin{align*}
+	f \circ f &= x \mapsto  \frac{\frac{x}{\sqrt{1+cx^2} }}{\sqrt{1+c\frac{x}{\sqrt{1+cx^2} }} } \\
+.\end{align*}
+
 \end{document}
