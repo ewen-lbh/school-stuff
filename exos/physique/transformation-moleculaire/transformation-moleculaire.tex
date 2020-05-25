@@ -115,16 +115,16 @@ color(50.00000000000000bp)=(red)
 \begin{enumerate}
 	\item \chemfig{
 		H_3C-C(=[6]\charge{-135=\|,-45=\|}{O})-\charge{90=\|,-90=\|}{O}-CH_2-CH_3
-			+\charge{90=\|,-90=\|,180=\|,45:1.5pt=$\scriptstyle\ominus$}{O}-H -> 
+			+\charge{90=\|,-90=\|,180=\|,45:1.5pt=$\scriptstyle\ominus$}{O}-H \to 
 			H_3C-C(-[6]\charge{45:1.5pt=$\ominus$,180=\|,-90=\|,0=\|}{O})(-[2]O(-[2]O))-\charge{90=\|,-90=\|}{O}-CH_2-CH_3
 	}
 	\item \chemfig{
-			H_3C-C(-[6]\charge{45:1.5pt=$\ominus$,180=\|,-90=\|,0=\|}{O})(-[2]O(-[2]H))-\charge{90=\|,-90=\|}{O}-CH_2-CH_3 -> 
+			H_3C-C(-[6]\charge{45:1.5pt=$\ominus$,180=\|,-90=\|,0=\|}{O})(-[2]O(-[2]H))-\charge{90=\|,-90=\|}{O}-CH_2-CH_3 \to
 			H_3C-C(=[6]\charge{-135=\|,-45=\|}{O})-\charge{-90=\|,90=\|}{O}-H + \chg{\ominus}{O}-CH_2-CH_3
 	}
 	\item \chemfig{
 		H_3C-C(=[6]\charge{-135=\|,-45=\|}{O})-\charge{-90=\|,90=\|}{O}-H +  
-			\charge{45:1.5pt=$\ominus$,90=\|,-90=\|,180=\|}{O}-CH_2-CH_3 -> 
+			\charge{45:1.5pt=$\ominus$,90=\|,-90=\|,180=\|}{O}-CH_2-CH_3 \to
 		H_3C-C(=[6]\charge{-135=\|,-45=\|}{O})-\charge{45:1.5pt=$\ominus$,0=\|,-90=\|,90=\|}{O}+H-\charge{90=\|,-90=\|}{O}
 			-CH_2-CH_3
 	}
@@ -147,21 +147,24 @@ color(50.00000000000000bp)=(red)
 
 \subsubsection{}
 
+
 \[
 	\chemfig{H_3C-C(-[6]\charge{0=\|,180=\|}{O}(-[6]H))(-[2]CH_3)-CH_3 + \chg{\oplus}{H}
-	->  H_3C-C(-[6]\charge{45:1.5pt=$\oplus$,180=\|}{O}(-[6]H)-H)(-[2]CH_3)-CH_3}
+	\to H_3C-C(-[6]\charge{45:1.5pt=$\oplus$,180=\|}{O}(-[6]H)-H)(-[2]CH_3)-CH_3}
 .\]
 
 \subsubsection{}
 \paragraph{Étape 1}
+On a $A = \chemfig{H_3C-C(-[2]CH_3)-CH_3}$
 \[
 	\chemfig{H_3C-C(-[6]\charge{45:1.5pt=$\oplus$,180=\|}{O}(-[6]H)-H)(-[2]CH_3)-CH_3 
-	\to \textbf{A} + H-[1]\charge{45=\|,135=\|}{O}-[7]H}
+	\to H_3C-C(-[2]CH_3)-CH_3 + H-[1]\charge{45=\|,135=\|}{O}-[7]H}
 .
 .\]
 
 \[
-	\chemfig{A} \to \chemfig{C(-[3]H)(-[5]H)=C(-[1]CH_3)(-[7]CH_3)} + \chemfig{\chg{\oplus}{H}}
+	\chemfig{H_3C-C(-[2]CH_3)-CH_3} \to 
+	\chemfig{C(-[3]H)(-[5]H)=C(-[1]CH_3)(-[7]CH_3)} + \chemfig{\chg{\oplus}{H}}
 \] 
 
 \end{document}
