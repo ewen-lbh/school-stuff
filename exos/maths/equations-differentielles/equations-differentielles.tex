@@ -70,9 +70,14 @@
 \abstract{}
 Exercices provenant de \texttt{./sujet.pdf}
 
-\[
-	y' + a(x)y = 0 \iff y = x \mapsto C \exp -A(x)
-\] 
+\subsection*{Résumé du cours}
+
+Soit $y, \alpha$ des fonctions de $\R$ dans $\R$ et $a, b, x, C \in \R$.
+Soit $A$ la primitive de $\alpha$.
+\begin{align*}
+	y' + \alpha(x)y = 0 \implies y = x \mapsto Ce^{-A(x)} \\
+	y' + ay = b \implies y = x \mapsto Ce^{-ax} + \frac{b}{a}
+\end{align*}
 
 
 \section{Montrer que $y$ est solution de l'équation}
@@ -141,24 +146,99 @@ $y'-2y=0$ avec  $y:x\mapsto e^{2x}$
 
 \begin{align*}
 	y'-3y&= 5 \\
-	% TODO
+\end{align*}
+
+\paragraph{Résolution de l'équation homogène}
+Commençons par résoudre l'équation homogène
+
+\[
+	y' - 3y = 0
+\] 
+
+\begin{align*}
+	y' - 3y &= 0 \\
+	\iff y &= x \mapsto Ce^{3x} \quad C \in \R\\
+\end{align*}
+
+Donc 
+
+\[
+	y_0 : x \mapsto Ce^{3x}\quad C \in \R
+\] 
+
+Cherchons une solution particulière $y_1$ à l'équation 
+
+\[
+	y' - 3y = 5
+\] 
+
+On remarque que cette équation est de la forme $y' + ay = b$, avec $a = -3$ et $b = 5$. \\
+On a donc:
+
+\begin{align*}
+	y' - 3y &= 5 \\
+	\iff y &= x \mapsto y_0(x) + \frac{-3}{5} \\
+            &= x \mapsto Ce^{3x} - \frac{3}{5} \quad C \in \R \\
 \end{align*}
 
 \subsection{}
 
+\begin{align}
+	2y'-4y&= 1 \\ \nonumber
+	\iff y' - 2y &= \frac{1}{2}
+\end{align}
+
+Soit $y_0: \R \to \R$ une solution à l'équation (1) homogénéisée
+
 \begin{align*}
-	2y'-4y&= 1 \\
-	% TODO
+	2y'-4y&= 0 \\
+	\iff y' - 2y &= 0 \\
+	\iff y &= x \mapsto Ce^{2x} \quad C \in \R \\
+	y_0 &= y
+\end{align*}
+
+On remarque que (1) est de la forme 
+\[
+	y' + ay = b
+\] 
+
+Avec $a = -4$ et $b = 1$.
+On a donc:
+
+\begin{align*}
+	y &= x \mapsto Ce^{2x} + \frac{\frac{1}{2}}{-2} \quad C\in \R \\
+	&= x \mapsto Ce^{2x} - \frac{1}{4} \quad C\in \R \\
 \end{align*}
 
 \subsection{}
 
+\begin{align}
+	10y' &= 2y - 3 \nonumber \\
+	10y' - 2y &= -3 \nonumber \\
+	y' - \frac{2}{10}y &= -\frac{3}{10}
+\end{align}
+
+Soit $y_0: \R \to \R$ une solution à l'équation (2) homogénéisée
+
 \begin{align*}
-	10y'&=2y -3 \\
-	% TODO
+	y' - \frac{2}{10}y &= 0 \\
+	\iff y &= x \mapsto C\exp\left( \frac{2}{10}x \right) \quad C\in \R \\
+	y_0 &= y \\
 \end{align*}
 
+On remarque que (2) est de la forme 
+\[
+	y' + ay = b
+\] 
 
+Avec $a = -\frac{2}{10}$ et $b = -3$.
+On a donc:
+
+\begin{align*}
+	y'-\frac{2}{10}y&= 0 \\
+	\iff y&= x\mapsto C\exp\left( \frac{2}{10}x \right) +\frac{-\frac{2}{10}}{-\frac{3}{10}} \quad C \in \R\\
+           &= x\mapsto C\exp\left( \frac{1}{5}x \right) + \frac{3}{2} \quad C \in \R\\
+\end{align*}
 
 
 \end{document}
