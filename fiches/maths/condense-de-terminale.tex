@@ -8,7 +8,6 @@
 \usepackage{dsfont}
 \usepackage{cancel}
 \usepackage{pgfplots}
-\usepackage{dsfont}
 \usepackage{multirow}
 \usepackage{caption}
 \usepackage{calc}  
@@ -83,6 +82,10 @@
 	$\land$ & "et"\\
 	$\img z$ & Point d'affixe $z$\\
 	$\placeholder$ & Caractère utilisé pour représenter plusieurs opérations\\
+	$\operatorname{sgn}(x)$ & $x \mapsto \begin{cases}
+		-1 &\text{si}\quad x < 0 \\
+		1 &\text{sinon}
+	\end{cases}$ \\
 \end{tabular}
 \pagestyle{empty}
 \newpage
@@ -836,7 +839,6 @@ Un triplet $(x; y; z)$.
 
 Les propriétés de la géométrie planaire (milieu, colinéarité et vecteurs) se traduisent trivialement
 
-
 \subsection{Équations paramétriques}
 
 \subsubsection{D'une droite}
@@ -949,6 +951,22 @@ $\forall x \in \R$
     \item $\forall k \in \R \quad kF$ primitive de $kf$
 \end{itemize}
 
+\subsection{Primitives remarquables}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        $f$ & $F$ & $\in I$ ($\R$ par défaut) \\\hline
+        $k$ & $kx$ & \\
+        $x$ & $\frac{1}{2}x^2$ & \\
+	$x^n$ & $\frac{1}{n+1}x^{n+1}$ & $\R -\{1\}  $\\
+	$\frac{u'(x)}{u(x)}$ & $\ln (\operatorname{sgn}(u(x)) u(x))$
+    \end{tabular}
+    %\caption{Formes remarquables de primitives}
+    \label{tab:primitives_remarquables}
+\end{table}
+
+
 \newpage
 \label{integrales}
 \section{Intégrales $\int$}
@@ -996,20 +1014,6 @@ Pour alléger les notations: $\Finv = f(x)dx$, $\Game = g(x)dx$ et $\int = \int_
 \subsection{Valeur moyenne de $f$ sur $[a; b]$}
 
 \[\frac{1}{b-a}\int_a^b f(x)dx\]
-
-\subsection{Primitives remarquables}
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{lll}
-        $f$ & $F$ & $\in I$ ($\R$ par défaut) \\\hline
-        $k$ & $kx$ & \\
-        $x$ & $\frac{1}{2}x^2$ & \\
-        $x^n\quad n\not\in\{0, -1\}$ & $\frac{1}{n+1}x^{n+1}$
-    \end{tabular}
-    \caption{Formes remarquables de primitives}
-    \label{tab:primitives_remarquables}
-\end{table}
 
 \newpage\section{Échantillonage}
 
@@ -1065,6 +1069,6 @@ il faudra utiliser une intervalle de fluctuation
 		F_n- \frac{1}{\sqrt{n} }, 
 		F_n+\frac{1}{\sqrt{n} } 
 	\right] \right) \ge 0.95
-.\] 
+\] 
 
 \end{document}
