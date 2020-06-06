@@ -77,6 +77,19 @@ color(50.00000000000000bp)=(red)
 }
 \newcommand{\chg}[2]{\charge{45:1.5pt=$\scriptstyle#1$}{#2}}
 
+% =======================
+% SECTIONS FORMATTING
+% =======================
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\alph{subsubsection})}
+\makeatletter
+\def\@seccntformat#1{\csname #1ignore\expandafter\endcsname\csname the#1\endcsname\quad}
+\let\sectionignore\@gobbletwo
+\let\latex@numberline\numberline
+\def\numberline#1{\if\relax#1\relax\else\latex@numberline{#1}\fi}
+\makeatother
+
 \title{Exercices: Transformation moléculaire}
 \date{2020-05-18}
 \author{Ewen Le Bihan}
@@ -110,30 +123,30 @@ color(50.00000000000000bp)=(red)
 
 \newpage
 \section{@320 20}
-\subsection{}
 
 \begin{enumerate}
-	\item \chemfig{
+	\item \chemfig{[0,.7]
 		H_3C-C(=[6]\charge{-135=\|,-45=\|}{O})-\charge{90=\|,-90=\|}{O}-CH_2-CH_3
-			+\charge{90=\|,-90=\|,180=\|,45:1.5pt=$\scriptstyle\ominus$}{O}-H \to 
-			H_3C-C(-[6]\charge{45:1.5pt=$\ominus$,180=\|,-90=\|,0=\|}{O})(-[2]O(-[2]O))-\charge{90=\|,-90=\|}{O}-CH_2-CH_3
+			+\charge{90=\|,-90=\|,180=\|,45:1.5pt=$\scriptstyle\ominus$}{O}-[0,1.8]H \quad\to\quad
+			H_3C-C(-[6]\charge{45:1.5pt=$\scriptstyle\ominus$,180=\|,-90=\|,0=\|}{O})(-[2]O(-[2]O))-\charge{90=\|,-90=\|}{O}-CH_2-CH_3
 	}
 	\item \chemfig{
-			H_3C-C(-[6]\charge{45:1.5pt=$\ominus$,180=\|,-90=\|,0=\|}{O})(-[2]O(-[2]H))-\charge{90=\|,-90=\|}{O}-CH_2-CH_3 \to
+			H_3C-C(-[6]\charge{45:1.5pt=$\scriptstyle\ominus$,180=\|,-90=\|,0=\|}{O})(-[2]O(-[2]H))-\charge{90=\|,-90=\|}{O}-CH_2-CH_3 \quad\to\quad
 			H_3C-C(=[6]\charge{-135=\|,-45=\|}{O})-\charge{-90=\|,90=\|}{O}-H + \chg{\ominus}{O}-CH_2-CH_3
 	}
 	\item \chemfig{
 		H_3C-C(=[6]\charge{-135=\|,-45=\|}{O})-\charge{-90=\|,90=\|}{O}-H +  
-			\charge{45:1.5pt=$\ominus$,90=\|,-90=\|,180=\|}{O}-CH_2-CH_3 \to
-		H_3C-C(=[6]\charge{-135=\|,-45=\|}{O})-\charge{45:1.5pt=$\ominus$,0=\|,-90=\|,90=\|}{O}+H-\charge{90=\|,-90=\|}{O}
+			\charge{45:1.5pt=$\scriptstyle\ominus$,90=\|,-90=\|,180=\|}{O}-CH_2-CH_3 \quad\to\quad
+		H_3C-C(=[6]\charge{-135=\|,-45=\|}{O})-\charge{45:1.5pt=$\scriptstyle\ominus$,0=\|,-90=\|,90=\|}{O}+H-\charge{90=\|,-90=\|}{O}
 			-CH_2-CH_3
 	}
 \end{enumerate}
 
+\section{@320 21}
 \subsection{}
 
 \begin{align*}
-	\chemfig{C_4H_{10}O} \overset{\text{acide}}{\to} \chemfig{C_4H_7Cl} + \chemfig{H_2O} 
+	\chemfig{C_4H_{10}O} \overset{\text{acide}}{\quad\to\quad} \chemfig{C_4H_7Cl} + \chemfig{H_2O} 
 \end{align*}
 
 \subsection{}
@@ -150,20 +163,19 @@ color(50.00000000000000bp)=(red)
 
 \[
 	\chemfig{H_3C-C(-[6]\charge{0=\|,180=\|}{O}(-[6]H))(-[2]CH_3)-CH_3 + \chg{\oplus}{H}
-	\to H_3C-C(-[6]\charge{45:1.5pt=$\oplus$,180=\|}{O}(-[6]H)-H)(-[2]CH_3)-CH_3}
-.\]
+	\quad\to\quad H_3C-C(-[6]\charge{45:1.5pt=$\scriptstyle\oplus$,180=\|}{O}(-[6]H)-H)(-[2]CH_3)-CH_3}
+\]
 
 \subsubsection{}
 \paragraph{Étape 1}
 On a $A = \chemfig{H_3C-C(-[2]CH_3)-CH_3}$
 \[
-	\chemfig{H_3C-C(-[6]\charge{45:1.5pt=$\oplus$,180=\|}{O}(-[6]H)-H)(-[2]CH_3)-CH_3 
-	\to H_3C-C(-[2]CH_3)-CH_3 + H-[1]\charge{45=\|,135=\|}{O}-[7]H}
-.
-.\]
+	\chemfig{H_3C-C(-[6]\charge{45:1.5pt=$\scriptstyle\oplus$,180=\|}{O}(-[6]H)-H)(-[2]CH_3)-CH_3 
+	\quad\to\quad H_3C-C(-[2]CH_3)-CH_3 + H-[1]\charge{45=\|,135=\|}{O}-[7]H}
+\]
 
 \[
-	\chemfig{H_3C-C(-[2]CH_3)-CH_3} \to 
+	\chemfig{H_3C-C(-[2]CH_3)-CH_3} \quad\to\quad 
 	\chemfig{C(-[3]H)(-[5]H)=C(-[1]CH_3)(-[7]CH_3)} + \chemfig{\chg{\oplus}{H}}
 \] 
 
