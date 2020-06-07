@@ -29,10 +29,13 @@ Dans
 > Vous ne voulez pas comprendre que les hommes prophétiques sont des hommes qui souffrent beaucoup
 > —aphor 316
 
+- aphor. 302: l'absence de souffrance nous prive de la tolérance en les malheurs et difficultés de la vie.
 - aphor. 316: la souffrance permet de prédire le danger (chez les animaux) (?)
+- aphor. 313: wtf
 - aphor. 318: la souffrance nous indique de "vivre avec une énergie réduite" et à certains, qu'il faut 
   considérer comme ceux qui font progresser notre espèce, de, au contraire, devenir plus belliqueux.
-- 
+- aphor. 338: on a parfois besoin de cette souffrance, qui apporte un équilibre à notre âme.
+- aphor. 283: Nietzsche conseille de _vivre dangereusement_, ce qui peut inclure vivre avec de la souffrance reçue parfois.
 
 ### 6
 

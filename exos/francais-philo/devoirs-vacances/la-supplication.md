@@ -85,10 +85,32 @@ la mémoire humaine devient de moins en moins fiable, et l'on oublie, ne gardant
 
 ### 8
 
+Les chœurs apparaissent trois fois:
 
+- Chœur des soldats, page 68
+- Chœur populaire, page 129
+- Chœur des enfants, page 204
+
+Chaque chœur apparaît dans une partie différente, il y a donc un chœur par partie. Chaque cœur est le dernier témoignage
+ de sa partie, et est — par le nombre de témoins regroupés — relativement long. Ils peuvent être considérés
+ comme des sortes de conclusions de chaque partie.
+
+ De plus, le nom du chœur s'associe avec le nom de la partie: le chœur des soldats correspond à la terre des morts,
+ celui du peuple à la couronne de la création, et celui des enfants à l'admiration de la tristesse.
+
+Dans les chœur, les personnes concernées parlent à tour de rôle, sans que leur nom soit connu.
+Le passage apparaît plus comme un enchaînement de témoignages sans que l'on sache qui prend la parole
+plutôt qu'une conversation. Certaines prises de paroles sont courtes, d'autres longues.
 
 ### 9
 
+- enterrement
+- p. 208: se lamenter, faire des prières
+- p. 213: continuer de vivre (pse re-marier)
+- p. 215: redéfinir la mort ("Parfois, je réfléchis et je cherche des consolations : peut-être que la mort
+n’est pas la fin de tout")
+- p. 223: garder des possesions de la personne (veste)
+-
 
 
 ### 10

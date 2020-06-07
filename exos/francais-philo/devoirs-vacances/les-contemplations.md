@@ -1,4 +1,4 @@
-# Devoirs de vancaces: Victor Hugo, Les Contemplations, 1856
+# Victor Hugo, Les Contemplations, 1856
 
 ## Contextualisation
 
