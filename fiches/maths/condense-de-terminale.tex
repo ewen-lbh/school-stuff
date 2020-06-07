@@ -36,6 +36,7 @@
 \newcommand{\C}{\mathds{C}}
 \newcommand{\N}{\mathds{N}}
 \newcommand{\Z}{\mathds{Z}}
+\newcommand{\cotan}{\operatorname{cotan}}
 \newcommand{\conj}[1]{\overline{#1}}
 \newcommand{\Aff}{\text{Aff}}
 \newcommand{\oo}{\infty}
@@ -248,6 +249,8 @@ et $l_A$ la limite quand $n \to +\oo$ de la suite $A_n$
 
 \section{Probabilités}
 
+%TODO: arbre pondéré?
+
 \subsection{Probabilité conditionnelle $P(A|B)$}
 Probabilité que $A$ soit réalisé \textbf{sachant que} $B$ a déjà été réalisé.
 
@@ -288,7 +291,7 @@ Soit $B_1$, $B_2$, ..., $B_n$ des évenements formant une partition de $\Omega$
 \[P(A) = \sum_{i=1}^n P(A \cap B_i)\]
 
 \subsection{Indépendance d'évenements}
-
+%TODO: démontrer que A indépdt B \implies \overline{A} indépdt B
 \begin{equation*}
     \begin{split}
         A\text{ et }B\text{ sont indépendants} &\iff \overline{B} \et B  \:\text{forment une partition de}\: \Omega\\
@@ -296,12 +299,6 @@ Soit $B_1$, $B_2$, ..., $B_n$ des évenements formant une partition de $\Omega$
                                                &\iff \overline{A} \et \overline{B}, A \et \overline{B} \et B \et \overline{A} \:\text{sont indépendants}
     \end{split}
 \end{equation*}
-
-\subsection{Loi de Bernouilli $\mathcal{B}$}
-
-\begin{descriptiona}
-\item[Épreuve de Bernouilli]
-\end{descriptiona}
 
 \subsection{Autre vocabulaire}
 \begin{descriptiona}
@@ -324,9 +321,9 @@ $f$ est une densité de probabilité si:
 \begin{equation*}
     \begin{split}
         \text{La loi de $X$ admet $f$ comme densité de probabilité} &\iff P(X \in [a, b]) = \int_a^b f(t)dt \\
-        &\quad \land \quad [a, b] \subseteq D_f \subset \R \\
+        &\quad \land \quad [a, b] \subseteq D_f \subset \R_+ \\
         &\implies \forall n \in D_f \quad P(X = n) = 0 \\
-        &\implies \text{Dans les conditions,}\quad \geq \iff > \land \leq \iff <\\
+		&\implies \text{Dans les conditions $P(\ldots)$,}\quad \geq \iff > \text{et} \leq \iff <\\
         &\implies P(X > k) = 1-P(X < k) \\
         &\implies P(X \in [a, b]) = P(X < b) - P(X < a) \\
         &\implies P(X \in [a, b] \:|\: X \in [c, d]) = \frac{P(X \in [a, b] \cap [c, d])}{P(X \in [c, d])} \\
@@ -346,7 +343,9 @@ $f$ est une densité de probabilité si:
 
 \[E(X) = \frac{a+b}{2}\]
 
-\subsection{Loi exponentielle}
+\subsection{Loi exponentielles}
+
+%TODO: démontrer que P(T\ge t+h | T\ge t) = P(T \ge h)
 
 \begin{equation*}
     \begin{split}
@@ -354,9 +353,19 @@ $f$ est une densité de probabilité si:
     \end{split}
 \end{equation*}
 
+\subsection{Espérance}
+
+Si la loi de $X$ admet $f$ comme densité de probabilité et que, pour tout $\lambda$ dans $\R^{+}$, $f = x\mapsto \lambda e^{-\lambda x}$
+
+\[
+	E(X) = \lim_{n \to +\infty} \int_0^{x} t f(t) \text{d}t
+\] 
+
 \subsection{Loi sans vieillissement}
 
 \[P(X \geq t+h | X \geq t) = P(X \geq h)\]                    
+
+%TODO: [démo] Si X ~ loi exp. de param \lambda alors E(X) = 1/\lambda
 
 \subsection{Lois normales}
 
@@ -384,12 +393,17 @@ $f$ est une densité de probabilité si:
 .\end{align*}
 
 \subsubsection{Propriétés}
-
+%TODO: les propriétés sont applicables seulement à N(0, 1) ou à toutes les lois normales? Si seulement à N(0, 1), il faut que ce soit dans la section 2.13.1.
 \begin{align*}
 	E(X) &= 0 \quad\iff\text{centrée}\\
 	\sigma &= 1 \quad\iff\text{réduite}\\
 	\iff V &= 1 \\
 .\end{align*}
+
+%TODO: théorème Moivre-Laplace (pas de demo)
+%TODO: N(\mu, \sigma^2)
+
+
 
 \newpage\section{Limites $\lim$}
 
@@ -575,7 +589,7 @@ Ensemble des imaginaires purs: $i\R := \C \setminus \R$
 $\placeholder$ représente les opérations $+$, $\times$ et $\div$
 
 \begin{itemize}
-    \item $z\cdot\conj{z} = (\im\; z)^2 + (\re\; z)^2$
+    \item $z\cdot\conj{z} = |z|^2 = (\im\; z)^2 + (\re\; z)^2$
     \item $\conj{z \:\placeholder\: w} = \conj{z} \:\placeholder\: \conj{w}$
     \item $\conj{z^n} = (\conj{z})^n$
     \item $\conj{\conj{z}} = z $
@@ -818,15 +832,15 @@ Tracer $(DC)$. La partie du segment qui est sur la face $E$ est la section.
 \end{equation*}
 
 \subsection{Propriétés}
-
+%TODO: définir les variables (P, d, d', etc)
 \begin{equation*}
     \begin{split}
         d \parallel d' &\implies P \bot d \quad\forall P \bot d' \\
                        &\impliedby d \parallel \gamma \land d' \parallel \gamma \\
-                       &\impliedby P \cap P' = d' \land d \parallel P \land d \parallel P' \\\\
+					   &\impliedby P \cap P' = d' \land d \parallel P \land d \parallel P' \quad\text{(doute)}\\\\
         P \parallel P' &\iff P\bot d \land P' \bot d \\
                        &\iff P \parallel \Delta \land P' \parallel \Delta \\
-                       &\iff d_1 \parallel d_1' \land d \parallel d' \quad\forall d \cap d' = \text{point}, d_1 \cap d_1' = \text{point} \\
+					   &\iff d_1 \parallel d_1' \land d \parallel d' \quad\forall d \cap d' = \text{point}, d_1 \cap d_1' = \text{point} \quad\text{(il faut que $P$ soit présent)}\\
                        &\implies \Gamma \cap P' = \gamma \land \Gamma \cap P = \gamma' \land \gamma \parallel \gamma' \quad\forall \Gamma \cap P = \text{droite} \\\\
         \Delta \parallel d \land \Delta \parallel d' &\impliedby d \parallel d' \land d \subset P \land d' \subset P' \land P \cap P' = \Delta \\\\
         \Delta \parallel P &\iff \Delta \parallel d \quad\forall d \subset P \\\\
@@ -839,6 +853,9 @@ Tracer $(DC)$. La partie du segment qui est sur la face $E$ est la section.
 Un triplet $(x; y; z)$.
 
 Les propriétés de la géométrie planaire (milieu, colinéarité et vecteurs) se traduisent trivialement
+
+%TODO: plan caractérisé par 2 vecteurs non colin. et un point
+%TODO: décomposition d'un vecteur en fonction de trois vecteurs non coplanaires
 
 \subsection{Équations paramétriques}
 
@@ -891,7 +908,16 @@ On a:
     \end{split}
 \end{equation*}
 
-
+%TODO: Le produit scalaire‽ (def, propriétés) (étendue de la def du prod. scalaire dans le plan)
+%TODO: revoir le cours pour la partie géométrie, il manque pleins de trucs:
+% - déterminer si un vecteur est normal a un plan (ok)
+% - [démo] caractériser les points d'un plan de l'espace par une relation $ax+by+cz+d=0\quad a, b, c \in \R^\ast$
+% - déterminéer une équation cartésienne d'un plan connaissant un point et un vecteur normal
+% - déterminer un vecteur normal à un plan défini par une équation cartésienne
+% - démontrer qu'une droite est orthogonale à toute droite d'un plan si et seulement si elle est orthogonale à deux droites sécantes de ce plan
+% - choisir la forme la plus adaptée entre équation cartésienne et représentation paramétrique pour:
+% 	- déterminer l'intersection d'une droite et d'un plan
+%	- étudier la position relative de deux plans
 
 \newpage
 \section{Le logarithme népérien $\ln$}
@@ -900,17 +926,17 @@ Aussi appelé "logarithme naturel" ou "logarithme base $e$"
 
 \subsection{Caractéristiques}
 \begin{descriptiona}
-\item[Notation] $\ln{x}$
-\item[Réciproque] $\exp$
-\item[Ensemble] $\R_+^\ast \to \R$
-\item[Limites]
-    $\displaystyle \lim_{x\to0^+} \ln{x} = -\oo$ \\
-    $\displaystyle \lim_{x\to+\oo} \ln{x} = +\oo$
-\item[Dérivée d'une variable] $\dfrac{1}{x}$
-\item[Dérivée d'une fonction] $u'\ln u$
-\item[Variations] Croissante sur $\R_+^\ast$
-\item[Continuité] Continue sur $\R_+^\ast$
-\item[Valeurs remarquables] $\ln{1} = 0$
+	\item[Notation] $\ln{x}$
+	\item[Réciproque] $\exp$
+	\item[Ensemble] $\R_+^\ast \to \R$
+	\item[Limites]
+	    $\displaystyle \lim_{x\to0^+} \ln{x} = -\oo$ \\
+	    $\displaystyle \lim_{x\to+\oo} \ln{x} = +\oo$
+	\item[Dérivée d'une variable] $\dfrac{1}{x}$
+	\item[Dérivée d'une fonction] $u'\ln u$
+	\item[Variations] Croissante sur $\R_+^\ast$
+	\item[Continuité] Continue sur $\R_+^\ast$
+	\item[Valeurs remarquables] $\ln{1} = 0$
 \end{descriptiona}
 
 \subsection{Limites remarquables}
@@ -1009,7 +1035,7 @@ Pour alléger les notations: $\Finv = f(x)dx$, $\Game = g(x)dx$ et $\int = \int_
     \item $\int k\Finv = k\int \Finv$
     \item $\int (f(x) + g(x))dx = \int \Finv + \int \Game$
     \item $\int \Finv \geq 0 \implies f(x) \geq 0$
-    \item $f(x) \geq g(x) \implies \int \Finv \geq \int \Game$
+    \item $f(x) \gtreqless g(x) \implies \int \Finv \gtreqless \int \Game$
 \end{itemize}
 
 \subsection{Valeur moyenne de $f$ sur $[a; b]$}
@@ -1077,7 +1103,7 @@ il faudra utiliser une intervalle de fluctuation
 \subsection{Valeurs remarquables}
 \begin{table}[h]
 	\centering
-	\caption{Valeurs remarquables de $\sin, \cos, \tan et \cotan$}
+	\caption{Valeurs remarquables de $\sin, \cos, \tan \et \cotan$}
 	\label{tab:valeurs-remarquables-sin-cos-tan-cotan}
 	\begin{tabular}{c | cccc}
 $x$ & $\sin x$ & $\cos x$  & $\tan x$ & $\cotan x$ \\\hline
@@ -1090,6 +1116,7 @@ $\frac{\pi}{2}$ & 1 & 0 & & 0 \\
 \end{table}
 
 \subsection{}
+
 
 
 \end{document}

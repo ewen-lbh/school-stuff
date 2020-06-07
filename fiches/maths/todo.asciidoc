@@ -1,0 +1,18 @@
+
+[horizontal]
+0.5 :: raisonnement par récurrence
+1.8 :: démo de la comparaison
+1.6 :: démo du tableau: ligne #1 colonne #1 ("Majorée (par $L$)"/"Oui")
+1.5 :: démo de ∀n ∈ ℕ, q > 1  lim n→+∞ q^n = +∞ (On démontre par récurrence que pour a réel strictement positif et tout entier naturel n : (1+a)^n ≥ 1+na)
+1.4 :: détermination d'une limite?
+6.1 :: dérivée de x |-> f(ax+b) avec f fonction, a, b ∈ ℝ
+6.2 :: Lien entre le nombre dérivé de la fonction sinus en 0 et la limite en 0 de sinx/x
+13.2 :: parité et périodicité de sin & cos
+7.2 :: démo unicité de exp
+7.2 :: démos limites
+7.3 :: lien entre le nombre dérivé de la fonction exponentielle en 0 et la limite en 0 de (e^x-1)/x
+9.3 :: ∀a, b ∈ ℝ  ln a = b ⇔ a = e^b
+9.2 :: lien entre le nombre dérivé de la fonction logarithme en 1 et la limite en 0 de ln(1+x)/x
+10.3 :: primitives de u'e^u u'u^n (n ∈ ℤ-{1}) et, pour u > 0, u'/√u et u'/u
+10.2 :: toute fonction continue sur un intervalle admet des primitives
+

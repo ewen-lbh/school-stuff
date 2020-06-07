@@ -1,9 +1,10 @@
 \documentclass{article}
-\usepackage{amsmath, amssymb, mathrsfs, xfrac, txfonts}
+\usepackage{amsmath, amssymb, mathrsfs, xfrac, txfonts, amsfonts}
+\usepackage{tkz-tab}
 \usepackage{graphicx ,caption}
 \usepackage[a4paper, total={7in,10in}]{geometry}
 \usepackage{lmodern}
-%\usepackage{hyperref}
+\usepackage[bookmarks, hidelinks]{hyperref}
 \usepackage{array}
 \def\arraystretch{2}
 \newcolumntype{C}{>{$}c<{$}}
@@ -11,6 +12,11 @@
 \newcolumntype{R}{>{$}r<{$}}
 \DeclareSymbolFont{matha}{OML}{txmi}{m}{it}% txfonts
 \DeclareMathSymbol{v}{\mathord}{matha}{118}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\rect}[1]{\square}
+\newcommand{\veci}{\vec\imath}
+\newcommand{\vecj}{\vec\jmath}
 \begin{document}
 \begin{titlepage}
 \begin{center}
@@ -94,12 +100,11 @@ Le polynôme atteint un extremum en $\alpha$ de valeur $\beta$
 \vec{v}\binom{1}{m}
 \end{flalign*}
 \subsubsection{Équation cartésienne $ax+by+c = 0$}
-\begin{center}
-\begin{tabular}{r|l}
-Vecteur directeur & $\vec{v}\binom{-b}{a}$\\
-Coefficient directeur & $m = -\frac{a}{b}$
-\end{tabular}
-\end{center}
+\begin{description}
+	\item[Vecteur directeur] $(-b; a)$
+	\item[Coefficient directeur] $m = -\frac{a}{b}$
+	\item[Vecteur normal] $(a; b)$
+\end{description}
 \subsection{Décomposer un vecteur}
 \begin{flalign*}
 (\forall \: \lambda, \lambda' \in \mathbb{R}) \;\;\; \vec{w} = \lambda \vec{v} + \lambda' \vec{u}\\
@@ -109,10 +114,8 @@ Coefficient directeur & $m = -\frac{a}{b}$
 \begin{flalign*}
 \overrightarrow{AC} = \overrightarrow{AB} + \overrightarrow{BC}
 \end{flalign*}
-\newpage
 
-
-\section{Statistiques}
+\newpage\section{Statistiques}
 \subsection{Caractéristiques}
 \begin{center}
 \begin{tabular}{c|c|rl}
@@ -140,10 +143,29 @@ $\end{cases}$\\
 V_y&=m^2V_x\\
 \sigma_y &= |m|\sigma_x
 \end{flalign*}
-\newpage
+
+\subsubsection{Démonstrations}
+\begin{align*}
+	\overline{y}&= \frac{1}{N}\sum_{n=1}^{p} n_i mx_i+p \\
+				&= m\frac{1}{N}\sum_{n=1}^{p} (n_ix_i) + p \\
+				&= m \overline{x}+p \\
+\end{align*}
+
+% TODO: finir ça ↓
+% \begin{align*}
+% 	V_y &= \frac{1}{N}\sum_{n=1}^{p} (n_i(mx_i+p)^2) - \overline{y}\\
+% 	&=  \\
+% \end{align*}
+
+\begin{align*}
+	\sigma_y &= \sqrt{V_y}  \\
+		 &= \sqrt{m^2V_x}  \\
+		 &= \sqrt{m^2} \sqrt{V_y}  \\
+		 &= |m|\sigma_x \\
+\end{align*}
 
 
-\section{Probabilités}
+\newpage\section{Probabilités}
 \subsection{Notions}
 \begin{center}
 \begin{tabular}{c|c|l}
@@ -221,7 +243,10 @@ Si $X \sim \mathscr{B}(n;p)$
 \begin{center}
 \begin{tabular}{c||c|c|c|c|c}
 	$k$ & 0 & 2 & 3 & ... & $n$\\\hline
-	$p(X=k)$ & $\binom{n}{k}p^kq^{n-k}$
+	$p(X=k)$ & $\binom{n}{k}p^kq^{n-k}$ & $\binom{n}{k}p^kq^{n-k}$ & $\binom{n}{k}p^kq^{n-k}$
+ & \ldots & $\binom{n}{k}p^kq^{n-k}$
+
+
 \end{tabular}
 \end{center}
 \subsubsection{Caractéristiques}
@@ -338,9 +363,29 @@ $$\vec{u} \cdot \vec{v} > 0 \iff (\vec{u}; \vec{v}) \text{ aigu}\\$$
 	\sfrac{1}{x} & \searrow & || & \searrow\\
 	\sqrt{x} & ///// & 0 & \nearrow\\
 	|x| & \searrow & 0 & \nearrow
-	
 \end{tabular}
 \end{center}
+
+\subsubsection{Démonstration: $\sqrt{}$ est croissante sur sont intervalle de définition}
+
+Soit $a, b \in \mathbb{R}_+$ tels que $a < b$.
+
+\begin{align*}
+	\sqrt{a} - \sqrt{b} &= \frac{(\sqrt{a} - \sqrt{b} ) \cdot (\sqrt{a} +\sqrt{b} )}{\sqrt{a} +\sqrt{b} } \\
+	&= \frac{a-b}{\sqrt{a} +\sqrt{b} } \\
+\end{align*}
+
+Or $ \sqrt{a} $ et $ \sqrt{b} $ sont positifs ou nuls, donc, comme $a < b \implies a \neq b$, $ \sqrt{a} +\sqrt{b} $ est strictement positif.
+
+De plus, $a < b \iff a - b < 0$, donc $\frac{a-b}{\sqrt{a} +\sqrt{b} }$.
+
+Finalement:
+
+\begin{align*}
+	\sqrt{a} - \sqrt{b} &< 0 \iff \sqrt{a} < \sqrt{b} \\
+\end{align*}
+
+L'ordre est conservé, $ \sqrt{}  $ est croissante sur $\mathbb{R}_+$
 
 \subsection{Opérations sur fonctions}
 $\leftrightarrows$ : Changement de variation\\
@@ -407,11 +452,62 @@ Extrema (\textit{et pas <<extremums>> bordel de merde})\\
 \text{Trouver le(s) $x$ pour } f'(x) = 0
 \end{flalign*}
 
+\subsection{Positions relatives}
+
+Soit $f$ et $g$ deux fonctions avec pour coubres représentatives $C_f$ et $C_g$
+
+\begin{enumerate}
+	\item Etudier le signe de $f(x) - g(x)$ pour tout $x$ dans $D_f \cap D_g$
+	\item $\displaystyle \begin{cases}
+			f(x) - g(x) > 0 & C_f \;\text{est au dessus de } C_g \;\text{à }x \\
+			f(x) - g(x) > 0 & C_f \;\text{est au dessous de } C_g \;\text{à }x \\
+			f(x) - g(x) = 0 & C_f\;\text{et}\;C_g\;\text{sont confondues} \;\text{en }x \\
+	\end{cases}$
+\end{enumerate}
+
+\subsubsection{Justifier les positions relatives des courbes représentatives des fonctions identité, carré et racine carrée}
+
+Soit, pour toute fonction $f$, $C_f$ sa courbe représentative.
+Soit, pour $x$ dans $D_i = \R$, $i = x\mapsto x$, pour tout $x$ dans $D_c = \R$, $c = x\mapsto x^2$ et, pour tout $x$ dans $D_r = \R_+$, $r = x\mapsto \sqrt{x} $.\\
+
+Soit $x \in C_i \cup C_c \cup C_r = \R_+$
+
+Etudions d'abord la position relative de $C_i$ et $C_c$. On étudie le signe de $i(x) - c(x)$.
+
+\begin{align*}
+	i(x) - c(x) &= x - x^2 \\
+				&= x(1-x) \\
+\end{align*}
+
+Or $x > 0$  et $1 - x$ est strictement positif pour $x > 1$. Pour $x = 1$, $x(1-x) = 0$ et, pour $x < 1$, $x(1-x) < 0$. On en conclu que, pour $x < 1$, $C_i$ est au dessus de $C_c$, puis que les courbes ont un point d'intersection à $x = 1$, puis que $C_i$ est en dessous de $C_c$ pour $x > 1$.\\
+
+Etudions ensuite la position relative de $C_i$ et de $C_r$: on étudie le signe de $i(x) - r(x)$.
+
+\begin{align*}
+	i(x) - r(x)&= x - \sqrt{x}  \\
+	&= x - x^{0.5} \\
+	&= x(1 - x^{-0.5}) \\
+	&= x\left(1 - \frac{1}{\sqrt{x} }\right) \\
+\end{align*}
+
+\begin{center}
+\begin{tikzpicture}
+	\tkzTabInit{$x$/1, $x$/1, $1-\frac{1}{\sqrt{x}}$/1, $i(x)-r(x)$/1}{0, 1, $+\infty$}
+	\tkzTabLine{z, +, z, +, , }
+	\tkzTabLine{d, -, z, +, , }
+	\tkzTabLine{d, -, z, +, , }
+\end{tikzpicture}
+\end{center}
+
+%TODO: finish
+
 \newpage\section{Trigonométrie}
 \subsection{Notions}
 \begin{description}	
-	\item[Radians] Mesure d'angle $\in [0;2\pi]$ (principalement)\\
+	\item[Radians] unité d'angle, 1 radian équivaut à 180 degrés
+	\item[Mesure principale] mesure dans $[0; 2\pi[$ d'un angle. Par ex. la mesure principale de $4\pi$ est $0$.
 	\item[Cercle trigonométrique] cercle de rayon 1 ($2\pi r \to 2\pi$)
+	\item[Angle orienté] les angles ont un signe selon le sens avec lequel ils sont mesurés
 \end{description}
 \subsection{Valeurs remarquables}
 \begin{figure}[htp]
@@ -423,8 +519,86 @@ Extrema (\textit{et pas <<extremums>> bordel de merde})\\
 
 \subsection{Formules de trigonométrie}
 
-\begin{equation*}
-\end{equation*}
+%TODO demo: https://stileex.xyz/formules-trigonometrie/
 
+\begin{align*}
+	\cos(a \pm b) &= \cos a \cos b \mp \sin a \sin b \\
+	\sin(a \pm b) &= \sin a \cos b \pm \cos a \sin b \\
+	\tan(a \pm b) &= \frac{\tan a \pm \tan b}{1 \mp \tan a \tan b} \\
+	\cos 2a &= \cos^2a-\sin^2a \\
+			&= 2\cos^2a-1 \\
+			&= 1-2\sin^2a \\
+	\sin 2a &= 2\sin a \cos a \\
+	\cos^2a&= \frac{1+\cos 2a}{2} \\
+	\sin^2a&= \frac{1-\cos2a}{2} \\
+\end{align*}
+
+\subsubsection{Démonstration}
+Soient $a, b \in \R$. Soit $(O, \vec i, \vec j)$ un repère orthonormé.
+
+On note $A$ le point tel que $OA = 1$ et tel que l'angle $(\vec i, \vect{OA}) = a$. 
+
+On note $B$ le point tel que $OB = 1$ et tel que l'angle $(\vec i, \vect{OB}) = a+b$. 
+
+On note $A'$ le point tel que $OA' = 1$ et tel que l'angle $(\vec i, \vect{OA'}) = a + \frac{\pi}{2}$.
+
+%TODO: Représentation graphique
+
+On a donc
+\begin{align*}
+	\vect{OA} &= \cos a \veci + \sin a \vecj \\
+	\vect{OB} &= \cos (a+b) \veci + \sin (a+b) \vecj \\
+	\vect{OA'} &= \cos (a+\frac{\pi}{2}) \veci + \sin (a+\frac{\pi}{2}) \vecj \\
+			   &= -\sin a \veci + \cos a \vecj
+\end{align*}
+
+Or, dans $(O, \vect{OA}, \vect{OA'})$:
+\begin{align*}
+	\vect{OB} &= \cos (b) \vect{OA} + \sin (b) \vect{OA'} \\
+\end{align*}
+
+Donc:
+
+\begin{align*}
+	\vect{OB} &= \cos a \cos b \veci + \sin a \cos b \vecj - \sin a \sin b \veci + \cos a \sin b \vecj \\
+			  &= (\cos a \cos b - \sin a \sin b)\veci + (\sin a \cos b + \cos a \sin b)\vecj \\
+\end{align*}
+
+Par unicité des coordonnées dans $(O, \veci, \vecj)$, on a:
+
+\begin{align*}
+	\cos(a+b)&= \cos a \cos b - \sin a \sin b \\
+	\sin(a+b)&= \sin a \cos b + \cos a \sin b \\
+\end{align*}
+
+\newpage\section{Géométrie}
+
+\subsection{Médiane}
+Médiane issue d'un sommet $A$ $\iff$ Droite passant par $A$ et par le milieu du côté opposé à $A$
+
+\subsection{Centre de gravité d'un triangle}
+Centre de gravité de $ABC$ $\iff$ Unique point $G$ tel que $\vect{GA}+\vect{GB}+\vect{GC}=\vec 0$
+
+\subsection{Théorèmé de la médiane}
+\begin{itemize}
+	\item Les médianes d'un triangle se coupent au centre de gravité
+	\item Soit $G$ le centre de gravité de $\mathrm \Delta ABC$ et $M \in {A, B, C}$. Pour chaque médiane du triangle issue du sommet $M$ $[M M']$, $\vect{M'G} = \frac{1}{3}\vect{M'M}$
+\end{itemize}
+
+\subsection{Équation de cercle}
+Soit $(x_0,y_0)$ le centre du cercle et $r$ sont rayon.
+
+\[
+	r^2 = (x_0-x)^2 + (y_0-y)^2
+\] 
+
+Si l'on connait un point $A$ sur le cercle ainsi que son centre $O$, il faut trouver $r$:
+
+\begin{align*}
+	r &= \operatorname{distance}(A, O) \\
+	  &= \sqrt{(A_x - O_x)^2+(A_y - O_y)^2}  \\
+\end{align*}
+
+ 
 
 \end{document}
