@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage[bookmarks,hidelinks]{hyperref}
+\usepackage{amsmath, amssymb}
+\usepackage{chemformula}
+\usepackage{float}
+\usepackage{cancel}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{calc}  
+\usepackage{enumitem}  
+\usepackage{graphicx}
+\usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}% 
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
+\parskip 1ex
+\graphicspath{ {./} }
+\usetikzlibrary{shapes.arrows}
+\let\ce\ch
+\newcommand{\im}{\text{Im}\,}
+\newcommand{\re}{\text{Re}\,}
+\newcommand{\img}{\text{Img}\,}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\Aff}{\text{Aff}}
+\newcommand{\oo}{\infty}
+\newcommand{\twoRows}[1]{\multirow{2}{*}{#1}}
+\newcommand{\threeRows}[1]{\multirow{3}{*}{#1}}
+\newcommand{\twoCols}[1]{\multicolumn{2}{c|}{#1}}
+\newcommand{\threeCols}[1]{\multicolumn{3}{|c|}{#1}}
+\newcommand{\twoColsNB}[1]{\multicolumn{2}{c}{#1}}
+\newcommand{\goesto}[2]{\xrightarrow[#1\:\to\:#2]{}}
+\newcommand{\liminfty}{\lim_{x\to+\oo}}
+\newcommand{\limminfty}{\lim_{x\to-\oo}}
+\newcommand{\limzero}{\lim_{x\to0}}
+\newcommand{ \const}{\text{cste}}
+\newcommand{\et}{\:\text{et}\:}
+\newcommand{\ou}{\:\text{ou}\:}
+\newcommand{\placeholder}{\diamond}
+\newcommand{\mediateur}{\:\text{med}\:}
+\newcommand{\milieu}{\:\text{mil}\:}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newenvironment{descriptiona}{\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries The longest label}]}{\end{description}}
+\renewcommand{\arraystretch}{1.4}
+\newcommand{\point}[2]{(#1;\;#2)}
+\newcommand{\spacepoint}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
+
+\title{Exercices: Trinômes du second degré}
+\author{Ewen Le Bihan}
+\date{2020-06-07}
+
+\begin{document}
+\maketitle
+
+\abstract{}
+Chaque section est un exercice, le nom de la section représente a le format suivant:
+\texttt{@<page> <exercice>}, avec \texttt{<exercice>} le numéro de l'exercice et \texttt{<page>} le numéro de la page.
+
+Par défaut, les exercices du livre le plus courant sont assumés, mais l'on peut préciser le livre avec la syntaxe suivante:
+
+\texttt{<livre>@<page> <exercice>}.
+Exemple:
+
+\texttt{Sésamath@218 24} représente l'exercice numéro \emph{24} du livre \emph{Sésamath} à la page \emph{218}
+
+\section{Calculus@60 110}
+
+On a:
+\begin{align*}
+	f(x) &= (x^2-3)(1-\sqrt{x} )(|x|-6)(|4x+3|) \\
+.\end{align*}
+
+
+
+\section{Calculus@60 113}
+\subsection{} \label{113 a)}
+%TODO définir l'ensemble!!
+\begin{align*}
+	\sqrt{x-1} -\sqrt{2x-3} &\gtreqless 0 \\
+	\iff \sqrt{x-1} &\gtreqless \sqrt{2x-3} \\
+	\iff x-1 &\gtreqless 2x-3 \\
+	\iff x &\gtreqless 2x-2 \\
+	\iff -x &\gtreqless -2 \\
+	\iff x &\gtreqless_\text{inv} 2
+.\end{align*}
+\subsection{}
+Les quantités sont définies pour tout $x \in \R$.
+On sépare les cas:
+\begin{itemize}
+	\item quand $2x-3 \ge  0$
+	\item quand $x-1 \ge  0 \implies x \ge  1$ 
+	\item quand ils ne le sont pas.
+\end{itemize}
+Quand $2x-3\ge 0$, les solutionns sont les mêmes que pour \ref{113 a)}.
+Quand $x-1\ge 0$
+\begin{align*}
+	\sqrt{x-1} -\sqrt{2x-3} &\gtreqless 0 \\
+	\iff \sqrt{x-1} &\gtreqless \sqrt{2x-3} \\
+	\iff x-1 &\gtreqless 2x-3 \\
+.\end{align*}
+
+\end{document}

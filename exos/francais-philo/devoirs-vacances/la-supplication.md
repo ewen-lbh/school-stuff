@@ -110,15 +110,46 @@ plutôt qu'une conversation. Certaines prises de paroles sont courtes, d'autres 
 - p. 215: redéfinir la mort ("Parfois, je réfléchis et je cherche des consolations : peut-être que la mort
 n’est pas la fin de tout")
 - p. 223: garder des possesions de la personne (veste)
--
+- p. 26–29: continuer de faire comme si il existait
+- p. 43: allonger le cercueil sur la porte de la maison (?)
+- p. 51: par les croyances en la religion/Dieu
+- p. 53: se noyer dans alcool
+- le suicide
+
 
 
 ### 10
 
+> Je vais vous raconter une histoire drôle. Un prisonnier évadé se cache
+> dans la zone de trente kilomètres autour de Tchernobyl. On finit par
+> l’attraper. On le fait passer au dosimètre. Il “brille” à un point tel qu’il est
+> impossible de le mettre en prison ou à l’hôpital. Mais on ne peut pas le
+> laisser en liberté, non plus. Vous ne riez pas ? _(Il rit.)_
+—page 91
 
+Cet histoire illumine ~~(et c'est le cas de le dire)~~ l'horreur et la manière dont ces gens qui vivaient
+dedans encore aujourd'hui ont besoin de cet humour. C'est assez flagrant ici: "Vous ne riez pas? _(Il rit)_".
+Ceci nous montre bien sans plus d'analyse que l'histoire n'est pas drôle en soi, mais que lui la trouve drôle,
+puisqu'il _avait besoin_ de la trouver drôle pour survivre.
+
+Cet histoire évoque l'absurdité de la situation, et à quel point l'on ne sait quoi faire de cette radiation:
+on ne sait pas où la ranger, où la contenir: ici, l'Homme est impossible à contenir, on fuit tellement cette radiation,
+qui est portant omniprésente.
+
+L'expression "il brille à un point tel" montre aussi la dangerosité et les conditions extrême de radiation à Tchernobyl.
+Le verbe "briller" illustre aussi un certain côté "mystique": la radiation ne fait pas briller, mais le manque d'éducation,
+le secret gardé par le gouvernement et, par conséquent, les rumeurs propagées sont les causes de ce pseudo-symptôme.
+Ceci montre à quel point les habitants ignorent ce qu'est la radiation.
 
 ### 11
 
 - assurer sa descendance
 - faire survivre la mémoire
--
+
+
+
+
+> ous sommes tous des fatalistes. Nous n’entreprenons rien parce que
+> nous croyons que rien ne peut changer. Notre histoire ? Chaque génération a
+> vécu une guerre... Comment pourrions-nous être différents ? Nous sommes
+> des fatalistes.
