@@ -77,7 +77,7 @@
 	\emph{Tout les exercices ici proviennent du livre "Calculus" disponible 
 	\href{https://www.amazon.fr/Calculus-\%C3\%A9dition-approfondir-connaissances-math\%C3\%A9matiques/dp/2820807178/}{\underline{sur amazon}}}
 \end{center}
-\section{}
+\section{} %difficulty=1
 
 Montrons par récurrence:
 
@@ -126,10 +126,10 @@ En fin de compte, on obtient $\mathcal{P}_{n+1}$:
 }
 
 $\mathcal{P}_n$ est donc initialisée et héréditaire, 
-donc $\mathcal{P}_n$ est vraie pour tout $n$ dans $\N^\ast$ \qed
+donc $\mathcal{P}_n$ est vraie pour tout $n$ dans $\N^\ast$ $\qed$
 
 
-\section{*}
+\section{} %difficulty=2
 
 Montrons par récurrence
 
@@ -200,14 +200,14 @@ $\mathcal{P}_0$ est donc validée.
 		&= u_0^{2^{n+1}}
 }
 
-$\mathcal{P}_{n+1}$ est donc validée, $\mathcal{P}_{n}$ est initialisée et héréditaire donc vraie, ce qui valide également la conjecture, autrement dit: $u_n = u_n^{2^{n+1}}$ \qed
+$\mathcal{P}_{n+1}$ est donc validée, $\mathcal{P}_{n}$ est initialisée et héréditaire donc vraie, ce qui valide également la conjecture, autrement dit: $u_n = u_n^{2^{n+1}}$ $\qed$
 
 
-\section{}
+\section{} %difficulty=3
 
-\section{}
+\section{} %difficulty=2
 
-\section{}
+\section{} %difficulty=2
 
 À chaque transmission, la probabilité que le message soit correct est $p$. Autrement dit,
 pour le premier opérateur, il y a une transmission, pour le deuxième deux transmissions,
@@ -234,7 +234,7 @@ On pose $q = 1 - p$
 	u_2 &= p^2 + q^2 \\
 	u_3 &= p^3 + pqq + qqp + qpq = p^3 + 3q^2p \\
 	u_4 &= p^4 + qqpp + pqqp + ppqq + qpqp + pqpq + qppq + q^4 = p^4 + 6q^2p^2 + q^4 \\
-.\end{align*}
+\end{align*}
 
 \begin{align*}
 	i &= x\mapsto \begin{cases}
@@ -242,11 +242,135 @@ On pose $q = 1 - p$
 		1 & \text{sinon}
 	\end{cases} \\
 	u_n &= n \mapsto p^n + (2^n-i(n))q^{\frac{2^n}{2}}p^{\frac{2^n}{2}} + i(n)q^n \\
-.\end{align*}
+\end{align*}
 
-\section{}
+\section{} %difficulty=2
 \begin{align*}
 	f \circ f &= x \mapsto  \frac{\frac{x}{\sqrt{1+cx^2} }}{\sqrt{1+c\frac{x}{\sqrt{1+cx^2} }} } \\
-.\end{align*}
+\end{align*}
 
+\section{} %difficulty=1
+
+\paragraph{Initialisation} Pour tout $n \in \N$, soit $P_n$ l'assertion $u_n = 2^{n} + 3^{n}$.
+
+\begin{align*}
+	u_0 &= 2 = 2^{0} + 3^{0} \implies P_0\quad\text{est vraie} \\
+	u_1 &= 5 = 2^{1} + 3^{1} \implies P_1\quad\text{est vraie} \\
+\end{align*}
+
+\paragraph{Hérédité} On suppose que, pour un certain $n \in \N$, $P_n$ et $P_{n+1}$ sont vraies. Montrons qu'alors $P_{n+2}$ est aussi vraie.
+
+\begin{align*}
+	u_{n+2} &= 5u_{n+1} - 6u_n \\
+		&= 5(2^{n+1}+3^{n+1}) - 6(2^{n}+3^{n}) \\
+		&= (2+3)(2^{n+1}+3^{n+1}) - 6(2^{n}+3^{n}) \\
+		&= 2^{n+2}+2 \cdot 3^{n+1} + 3 \cdot 2^{n+1} + 3^{n+2} - 6 \cdot 2^{n} - 6 \cdot 3^{n} \\
+		&= 2^{n+2} + \cancel{2 \cdot 3 \cdot 3^{n}} + \cancel{3 \cdot 2 \cdot 2^{n}} + 3^{n+2} - \cancel{3 \cdot 2 \cdot 2^{n}} - \cancel{2 \cdot 3 \cdot 3^{n}}\\
+		&= 2^{n+2} + 3^{n+2} \\
+		&\implies P_{n+2}\;\text{est vraie}
+\end{align*}
+
+\section{} %difficulty=2
+\begin{align*}
+	u_2 &= \frac{u_1^2}{u_0} = \frac{4}{1} = 4 \\
+	u_3&= \frac{u_2^2}{u_1} = \frac{16}{2} = 8 \\
+	u_4&= \frac{u_3^2}{u_2} = \frac{64}{4} = 16 \\
+\end{align*}
+
+\paragraph{Initialisation} Pour tout $n \in \N$, soit $P_n$ l'assertion $u_n = 2^n$.
+
+\begin{align*}
+	u_0 &= 1 = 2^{0}  \\
+	u_1&= 2 = 2^{1} \\
+\end{align*}
+
+\paragraph{Hérédité} On considère que, pout un certain $n \in \N$, $P_{n}$ et $P_{n+1}$ sont vraies. Montrons qu'alors $P_{n+2}$ est aussi vraie.
+\begin{align*}
+	u_{n+2} &= \frac{u_{n+1}^2}{u_n} \\
+		&= \frac{(2^{n+1})^2}{2^{n}} \\
+		&= \frac{2 \cdot \cancel{2^n} \cdot 2 \cdot 2^{n}}{\cancel{2^{n}}} \\
+		&= 2 \cdot 2 \cdot 2^{n} \\
+		&= 2^{n+2} \\
+		&\implies P_{n+2}\quad\text{est vraie}
+\end{align*}
+
+\section{} %difficulty=3
+\section{} %difficulty=2
+
+Soit, pour tout $n$ dans $\N$, $\lambda_n = \frac{\alpha^{n}}{\sqrt{5} }$.
+
+Si la différence entre $\lambda_n$ et $F_n$ est inférieure à 0.5, il n'y a aucun entier plus proche de $\lambda_n$.
+On cherchera donc à prouver l'assertion $P_n$: Soit, pour tout $n \in \N$, $P_n$ l'assertion $|\lambda_n-F_n|<0.5$.
+
+% \paragraph{Initialisation} À $n = 0$
+% \begin{align*}
+% 	|\lambda_0 - F_0| &= |\frac{\alpha^{0}}{\sqrt{5} } - 0| \\
+% 	&= |\frac{1}{\sqrt{5} }|\\
+% 	&< 0.5\quad\text{car $\sqrt$ est croissante, $\sqrt 4=2$ et $5 > 4$} \\
+% 	&\implies P_0\quad\text{est vraie}
+% \end{align*}
+% 
+% \paragraph{Hérédité} On suppose que, pour un certain $n \in \N$, $P_n$ est vraie. Montrons qu'alors $P_{n+1}$ est aussi vraie.
+% 
+% \begin{align*}
+% 	|\lambda_{n+1} - F_{n+1}| &= \left|\frac{\alpha^{n+1}}{\sqrt{5} } - F_{n+1}\right| \\
+% 	              &= \left|\frac{\alpha^{n}}{\sqrt{5} } \cdot \frac{\alpha}{\sqrt{5} }-(F_{n-1}+F_n)\right| \\
+% 
+% \end{align*}
+
+\begin{align*}
+	| \frac{\alpha^{n}}{\sqrt{5} } - F_n | &= | \frac{\alpha^{n}}{\sqrt{5} } - \frac{\alpha^{n}-\beta^{n}}{\sqrt{5} } \\
+					       &= \left| \cancel{\frac{\alpha^{n}}{\sqrt{5} }-\frac{\alpha^{n}}{\sqrt{5} }} - \frac{\beta^{n}}{\sqrt{5} } \right|\\
+					       &= \frac{\beta^{n}}{\sqrt{5} } \\
+					       &= \left(\frac{1-\sqrt{5} }{2}\right)^{n} \cdot \frac{1}{\sqrt{5} }\\
+					       &= \left( \frac{1}{2} - \frac{\sqrt{5}}{2} \right)^{n} \frac{1}{\sqrt{5} } \\
+\end{align*}
+
+Or, comme
+
+\begin{align*}
+	\frac{1}{2} &> \frac{1}{2}-\frac{\sqrt{5} }{2} \\
+		    &> \left( \frac{1}{2}-\frac{\sqrt{5} }{2} \right) ^{n}\quad\text{car $n > 0$} \\
+\end{align*}
+
+et
+
+\begin{align*}
+	\frac{1}{\sqrt{5} } &< \frac{1}{2}
+\end{align*}
+
+alors 
+
+\begin{align*}
+	\left( \frac{1}{2} - \frac{\sqrt{5}}{2} \right)^{n} \frac{1}{\sqrt{5} } &< \frac{1}{2} \\
+	\implies | \frac{\alpha^{n}}{\sqrt{5} } - F_n | &< 0.5
+\end{align*}.
+
+donc, pour $n \in \N$, $F_n$ est l'entier le plus proche de $\frac{\alpha^{n}}{\sqrt{5} }$
+
+\section{} %difficulty=3
+\section{} %difficulty=3
+\section{} %difficulty=4
+\section{} %difficulty=2
+
+\subsection{}
+
+\begin{align*}
+	(x^2+y^2)(x'^2+y'^2)&= x^2x'^2+x^2y'^2+y^2x'^2+y^2y'^2 \\
+	(x x' - yy')^2+(xy'+yx')^2 &= x^2x'^2\cancel{-2(x'xy'y)}+yy'^2+x^2y'^2\cancel{+2(x'xy'y)}+y'^2x^2 \\
+	&= x^2x'^2+x^2y'^2+y^2x'^2+y^2y'^2 \\
+\end{align*}
+
+Donc
+
+\begin{align*}
+	(x^2+y^2)(x'^2+y'^2)&=(x x' - yy')^2+(xy'+yx')^2
+\end{align*}
+
+\subsection{}
+
+
+
+% don't delete dis, baka ↓
 \end{document}
+

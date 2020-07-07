@@ -1,0 +1,174 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tensor}
+\newcommand{\torseur}[7]{
+\tensor[_{#1}]{\left\{ \begin{array}{cc}
+    #2 & #5 \
+    #3 & #6 \
+    #4 & #7
+\end{array} \right\}}{_{(\vec{x};\vec{y};\vec{z})}}
+}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}}
+\newcommand{\deftable}[2]{%
+%\hline
+\textbf{B.A.M.E}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llp{130mm}}%
+        %& unité/type & Explication \ \hline
+        #1
+    \end{tabular}
+    \label{tab:#2_units}
+\end{table}%
+}
+\newcommand{\deftablevar}[3]{%
+    $#1$ & $\si{#2}$ & #3 \
+}
+\newcommand{\deftableobj}[3]{%
+    $#1$ & \textit{#2} & #3 \
+}
+\newcommand{\bame}[1]{%
+%\hline
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llllp{130mm}}%
+        Nom & Vecteur & Direction & Sens & Norme \hline
+        #1
+    \end{tabular}
+\end{table}%
+}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+
+\title{2018 Métropole}
+\author{Ewen Le Bihan}
+\date{2020-06-12}
+
+\begin{document}
+
+\maketitle
+\setcounter{section}{13}
+\section{}
+Par lecture graphique, 
+\[
+	E_{\text{revalorisée}} \approx \SI{110}{\mega\joule}
+\] 
+\section{}
+
+\begin{align*}
+	E_{\text{restituée}} &= E_{\text{revalorisée}} \cdot \eta_\text{mv}\color{green}^2 \\
+			     &\approx 110 \cdot 0.84 \\
+			     &\approx \SI{92.4}{\mega\joule}
+\end{align*}
+
+\section{}
+Par lecture graphique, l'écart maximal entre $E_\text{restituée}$ et $E_\text{simulée}$ est à $t = \SI{250}{\second}$.
+
+\paragraph{}
+À $t = \SI{250}{\second}$:
+
+\begin{align*}
+	\text{ER} &= \frac{E_\text{simulée} - E_\text{mesurée}}{E_\text{simulée}} \\
+	&= \frac{25 - 17.5}{25} \\
+	&= 0.3\quad\text{soit}\quad 30\% \\
+	&\implies \color{green}{\text{le modèle n'est pas valide}}
+\end{align*}
+
+\section{}
+Il réduire le paramètre $J_{\text{SSI}}$: la vitesse ralentit trop lentement et augmente trop, en baissant l'intertie, on arrivera à un stockage d'énergie moins élevé, car le système aura enmagasiné moins d'énergie, et aura pour conséquence une décélération plus forte, puisque moins d'énergie à évacuer.
+
+\textcolor{green}{Il faut augmenter le couple de frottement}
+
+\section{}
+Par lecture graphique,
+\[
+	\sigma_\text{maxi} = \SI{462}{\mega\pascal}
+\] 
+
+\emph{Correction à partir de là} 
+
+\section{}
+
+L'énergie cinétique stockée est de $\SI{38.6}{\mega\joule}$ d'après la figure 8. La variation d'énergie cinétique maximale est $\Delta E_c = 38.6 - 6.7 = \SI{31.9}{\mega\joule}$ 
+
+La valeur $J_{\text{SSI}}$ paramétrée dans le modèle est le moment d'inertie équivalent ramené sur l'axe moteur: $J_\text{SSI} = \SI{376}{\kilo\gram\per\meter\squared}$.
+
+Or $E_{c\text{max}} = \frac{1}{2}J_{\text{SSI}}\omega^2_\text{max}$ 
+
+La vitesse de rotation maximale du volant d'inertie vaut: $\omega_\text{max} = \sqrt{\frac{2E_{c\text{max}}}{J_\text{SSI}}} = \SI{453}{\radian\per\second}$
+
+\section{}
+\begin{align*}
+	\text{CS} &= \frac{R_e}{\sigma_\text{maxi}} \\
+	&= \frac{551.5}{462} \\
+	&= 1.2 \\
+	&< 2 \\
+	&\implies \text{Le volant n'est pas en mesure de supporter cette survitesse}
+\end{align*}
+
+L'énergie excédentaire sera donc dissipée par les rhéostats
+
+\section{}
+
+\section{}
+La loi d'entrée-sortie du capteur donne l'équation de droite ci-dessous
+
+\[
+	U_e = 0.25 \cdot T_e + 2.5
+\] 
+
+Pour $T_e = 4\degree C$
+
+\[
+	U_e = \SI{3.5}{\volt}
+\] 
+
+\section{}
+\begin{align*}
+	q &= \frac{Ue_\text{max}-Ue_\text{min}}{2^{n}} \\
+	  &= \frac{10-0}{2^{n}} \\
+	  &= \SI{0.039}{\volt}
+\end{align*}
+
+\emph{il manque un truc} 
+
+\section{}
+
+\ldots \\
+Si $T_e \leq 89(10)$ \\
+\ldots \\
+Alors $Ch \leftarrow 0$ \\
+\ldots
+
+\section{}
+Amplification statique: $K = \frac{\Delta S}{\Delta E} = \frac{12}{750} = \SI{0.016}{\celsius\per\volt}$
+
+$\tau = 70 - 10 = \SI{60}{\second}$
+
+\section{}
+
+\begin{itemize}
+	\item La simulation n°1 correspond au fonctionnement attendu
+	\item $T = \SI{50}{\second}$ et le rapport cyclique $\alpha=\frac{t_\text{ON}}{T} = \frac{33}{50} = 0.66$ 
+	\item gain énergétique réalisable: $(1-0.66) \cdot 100 = 34\%$
+
+\end{itemize}
+
+\section{}
+\emph{Rédiger une phrase\ldots} 
+\begin{itemize}
+	\item dénivelés importants dans zones aériennes (adhérance des roues)
+	\item intervalles prohibés
+	\item incidents mineurs
+	\item Mettre en place 2e SSI ou rempl volant par plsu important
+	\item Limiter zones ext pour limiter chauffe des voies
+\end{itemize}
+
+\end{document}
