@@ -1,0 +1,46 @@
+extraction liq-liq
+	mise en œuvre
+		1. introduction du solv extrac
+		2. agitation
+		3. décantation
+		4. séparation
+	choix du solvant extracteur
+		espece doit être + soluble dans solv extract que dans solv d'orig
+		solv extrac & orig non-solubles
+		pas de danger pr santé, env
+	phases
+		aqueuse
+			solvant=eau
+		organique
+			solvant=cyclohex, éther, etc
+
+chromatographie
+	materiel	
+		plaque de silice
+		cuve à chromato w/ éluant
+	mise en œuvre
+		ligne de dépot tracé au crayon
+		apres élation
+		front de l'éluant tracé au crayon
+		-> chromathogramme
+	interprétation
+		tâches meme hauteur pour meme espece meme si espece dans mélange => identification+séperation en comparant à des références
+
+filtration sous vide
+	materiel
+		papier filtre
+		entonnoir büchner
+		joint conique
+		fiole à vide con. à tuyau rigide con. à de l'eau
+
+	mise en oeuvre
+		humidifer papier filtre
+
+	avantages
+		plus rapide, efficace
+
+rendement
+	calc n initiales des réactifs
+	déduire le réact limit
+	calc m_max ou n_max
+	\eta = m_exp/m_max (ou n_exp/n_max)
