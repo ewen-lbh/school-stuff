@@ -21,13 +21,29 @@ en ordonnant au dosimétristes et aux médecins de garder secret le plus d'infor
 
 ### 2
 
+Il est clair que les inserts en italique et/ou entre parenthèses sont des remarques ou précisions ajoutées 
+par l'auteure. En ce sens, les témoignages ont subi l'intervention de l'auteure. Cependant, en ce qui concerne
+le corps du texte lui-même, on ne peut savoir précisément si il a été altéré par l'auteure ou si elle a simplement
+demandé aux témoins de raconter d'une certaine manière. Certains passages en italique tel que "_elle pleure_" ou autres
+apportent un certain réalisme au discours des témoins et pourrait nous laisser penser que les témoignages
+sont rapportés sans modification quelconque.
+
 ### 3
+
+Il est clair que certains thèmes sont récurrents, les paroles de chacun montrent la misère et le désespoir ainsi que
+la haine pour ce gouvernement qui cache la vérité et qui est à l'origine d'un tel drame.
+Au début, on a plus de descriptions de malades, de scènes dans les hopitaux. On passe ensuite à la description
+de la vie quotidienne des habitants de villages mis en quarantaine, puis de descriptions des travaux
+donnés aux citoyens et militaires par le gouvernement.
 
 ## Décomposition
 
 ### 4
 
-l'atteinte aux _forces vitales de la nature_?
+% WIP
+Au moment des faits, la nature se voit transformée, mutée autour du réacteur, beaucoup d'animaux meurent, redeviennent sauvages
+ ou affichent des comportements étranges. Cependant, avec l'Homme qui abandonne cet endroit, sur le long terme, c'est la nature
+ qui reprend le dessus.
 
 ### 5
 
@@ -69,9 +85,15 @@ la mémoire humaine devient de moins en moins fiable, et l'on oublie, ne gardant
 
 ### 8
 
+
+
 ### 9
 
+
+
 ### 10
+
+
 
 ### 11
 
