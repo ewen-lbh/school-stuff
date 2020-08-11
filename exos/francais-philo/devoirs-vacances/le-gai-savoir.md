@@ -26,4 +26,23 @@ voir @aph.303 aussi
 
 ### 6
 
+## Hommages suspects et récupérations douteuses
 
+### 7
+
+Elle cherchera à orienter les textes de Nietzsche vers le nazisme qu'elle supporte après avoir marié un
+antisémite, Bernhard Förster. Cependant, elle rappelle également comment Nietzsche était opposé à
+l'antisémitisme, empêchant les racistes d'utiliser les écrits transformés de _La Volonté de puissance_
+pour soutenir leur projets.
+
+### 8
+
+
+
+### 9
+
+Nietzsche, dans son aphorie N° 338, dénonce les philantropes et la manière dont ils tentent de "sauver"
+des inconnus le plus vite possible, sans connaître leur passé et les circonstances de leur malheur. Il 
+évoque aussi la nécéssité du malheur comme resource de développement personnel. Il recommande enfin
+à chacun de ne pas céder à la tentation d'aider un inconnu malheureux mais de se limiter aux personnes
+que l'on connaît bien (i.e. les amis), puisque l'on peut ainsi comprendre la véritable cause de leur malheur.
