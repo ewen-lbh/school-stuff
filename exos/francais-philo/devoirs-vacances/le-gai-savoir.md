@@ -12,6 +12,8 @@ wtf
 
 ### 3
 
+- Nietzsche, dans l'aphorisme N°294, dénonce comment certains on considère systématiquement tout penchant
+- naturel comme une dégenérésence qu'il faut punir. Autrement dit, il dénonce l'auto-
 @aph.294 ?
 
 ### 4
@@ -22,7 +24,15 @@ vulnérable face à la douleur, jusqu'à ne plus avoir goût à la vie, càd y r
 
 ### 5
 
-voir @aph.303 aussi
+Dans
+
+> Vous ne voulez pas comprendre que les hommes prophétiques sont des hommes qui souffrent beaucoup
+> —aphor 316
+
+- aphor. 316: la souffrance permet de prédire le danger (chez les animaux) (?)
+- aphor. 318: la souffrance nous indique de "vivre avec une énergie réduite" et à certains, qu'il faut 
+  considérer comme ceux qui font progresser notre espèce, de, au contraire, devenir plus belliqueux.
+- 
 
 ### 6
 
@@ -37,7 +47,9 @@ pour soutenir leur projets.
 
 ### 8
 
-
+- Nietzsche souhaite "élever" _tout_ les Hommes pour permettre à tout le monde d'exprimer avec la plus grande précision possible les sentiments humains et pensées.
+- Nietzsche ne souhaite pas "normaliser" les Hommes par sont "élèvage", et promeut la reconnaissance de la variété des Hommes.
+- Il emploi le terme de "race" avec un sens bien différent de celui habituellement employé: le mot ne désigne pas une idée de "pureté du sang", ce que Nietzsche récuse régulièrement.
 
 ### 9
 
