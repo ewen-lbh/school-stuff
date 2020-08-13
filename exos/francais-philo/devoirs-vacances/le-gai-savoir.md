@@ -13,8 +13,8 @@ wtf
 ### 3
 
 - Nietzsche, dans l'aphorisme N°294, dénonce comment certains on considère systématiquement tout penchant
-- naturel comme une dégenérésence qu'il faut punir. Autrement dit, il dénonce l'auto-
-@aph.294 ?
+  naturel comme une dégenérésence qu'il faut punir.
+- Dans l'aphorisme N°318, Nietzsche met sur un pied d'égalité la douleur et le plaisir, et affirme que les deux possèdent autant de sagesse.
 
 ### 4
 
@@ -36,6 +36,11 @@ Dans
 
 ### 6
 
+Nietzsche reproche au romantisme son pessimisme. Il parle de deux origines différentes de ce pessimisme, l'Homme "dionysien", qui 
+
+Nietzsche raconte comment il pensait le pessimisme philosophique du XIXè siècle comme une sorte d'amélioration par rapport à celui du siècle précédent, mais explique qu'il se trompait, et que ce pessimisme est en fait marqué par du _romantisme_. 
+Il reproche au romantisme de répondre aux besoins des Hommes souffrants de _surabondance de vie_ — c'est à dire des Hommes "dionysiens", qui apprécient la destruction — et de ceux souffrants de _d'appauvrissement de la vie_, qui ont besoin de calme, de silence ou bien au contraire d'ivresse, de folie.
+
 ## Hommages suspects et récupérations douteuses
 
 ### 7
@@ -43,7 +48,7 @@ Dans
 Elle cherchera à orienter les textes de Nietzsche vers le nazisme qu'elle supporte après avoir marié un
 antisémite, Bernhard Förster. Cependant, elle rappelle également comment Nietzsche était opposé à
 l'antisémitisme, empêchant les racistes d'utiliser les écrits transformés de _La Volonté de puissance_
-pour soutenir leur projets.
+pour soutenir leurs projets.
 
 ### 8
 
