@@ -1,0 +1,303 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage[bookmarks,hidelinks]{hyperref}
+\usepackage{amsmath, amssymb}
+\usepackage{chemformula}
+\usepackage{float}
+\usepackage{cancel}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{calc}  
+\usepackage{enumitem}  
+\usepackage{graphicx}
+\usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}% 
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
+\parskip 1ex
+\graphicspath{ {./} }
+\usetikzlibrary{shapes.arrows}
+\let\ce\ch
+\newcommand{\im}{\text{Im}\,}
+\newcommand{\re}{\text{Re}\,}
+\newcommand{\img}{\text{Img}\,}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\Aff}{\text{Aff}}
+\newcommand{\oo}{\infty}
+\newcommand{\twoRows}[1]{\multirow{2}{*}{#1}}
+\newcommand{\threeRows}[1]{\multirow{3}{*}{#1}}
+\newcommand{\twoCols}[1]{\multicolumn{2}{c|}{#1}}
+\newcommand{\threeCols}[1]{\multicolumn{3}{|c|}{#1}}
+\newcommand{\twoColsNB}[1]{\multicolumn{2}{c}{#1}}
+\newcommand{\goesto}[2]{\xrightarrow[#1\:\to\:#2]{}}
+\newcommand{\liminfty}{\lim_{x\to+\oo}}
+\newcommand{\limminfty}{\lim_{x\to-\oo}}
+\newcommand{\limzero}{\lim_{x\to0}}
+\newcommand{ \const}{\text{cste}}
+\newcommand{\et}{\:\text{et}\:}
+\newcommand{\ou}{\:\text{ou}\:}
+\newcommand{\placeholder}{\diamond}
+\newcommand{\mediateur}{\:\text{med}\:}
+\newcommand{\milieu}{\:\text{mil}\:}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newenvironment{descriptiona}{\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries The longest label}]}{\end{description}}
+\renewcommand{\arraystretch}{1.4}
+\newcommand{\point}[2]{(#1;\;#2)}
+\newcommand{\spacepoint}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
+
+\title{Exercices: Trigonométrie}
+\author{Ewen Le Bihan}
+\date{2020-08-02}
+
+\begin{document}
+\maketitle
+
+\abstract{}
+Chaque section est un exercice, le nom de la section représente a le format suivant:
+\texttt{@<page> <exercice>}, avec \texttt{<exercice>} le numéro de l'exercice et \texttt{<page>} le numéro de la page.
+
+Par défaut, les exercices du livre le plus courant sont assumés, mais l'on peut préciser le livre avec la syntaxe suivante:
+
+\texttt{<livre>@<page> <exercice>}.
+Exemple:
+
+\texttt{Sésamath@218 24} représente l'exercice numéro \emph{24} du livre \emph{Sésamath} à la page \emph{218}
+
+\section*{}
+
+\section{Calculus@50 65} %difficulty=1
+\begin{align*}
+	\cos\left( \frac{\pi}{3} - \frac{\pi}{4} \right) &= \cos\frac{\pi}{3} \cos\frac{\pi}{4} + \sin\frac{\pi}{3} \sin\frac{\pi}{4} \\
+							 &= \frac{1}{2} \frac{\sqrt{2} }{2} + \frac{\sqrt{3} }{2} \frac{\sqrt{2} }{2} \\
+							 &= \frac{\sqrt{2} }{4} + \frac{\sqrt{3} \sqrt{2} }{4} \\
+							 &= \frac{\sqrt{2} + \sqrt{3} \sqrt{2} }{4} \\
+							 &= \frac{\sqrt{6} - \sqrt{2} }{4} \\
+\end{align*}
+
+\begin{align*}
+	\sin\left( \frac{\pi}{3}-\frac{\pi}{4} \right) &= \sin\frac{\pi}{3}\cos\frac{\pi}{4}-\sin\frac{\pi}{4}\cos\frac{\pi}{3} \\
+	&= \frac{\sqrt{2} }{2} \frac{\sqrt{3} }{2} - \frac{1}{2}\frac{\sqrt{2} }{2} \\
+	&= \frac{\sqrt{2} \sqrt{3} - \sqrt{2} }{4} \\
+	&= \frac{\sqrt{6} -\sqrt{2} }{4} \\
+\end{align*}
+
+\section{Calculus@50 66} %difficulty=1
+
+\section{Calculus@50 67} %difficulty=2
+
+$ \sin$ a pour maximum 1. Or, d'après la formule de duplication pour $ \sin$, $ \sin(2x)=\mathbf{2}\cos x\sin x$. Donc $\cos x \sin x$ a pour maximum dans $\R$ $\frac{1}{2}$.
+
+\section{Calculus@50 68} %difficulty=2
+
+\section{Calculus@50 69} %difficulty=1
+
+On pose $y = 2x$
+
+\begin{align*}
+	\cos(3x) &= \cos(x+y) \\
+	  	&= \cos x \cos y - \sin x \sin y \\
+		  &= \cos x \cos(2x) - \sin x \sin(2x) \\
+		  &= \cos x 2\cos^2x-1 - \sin x 2\sin x \cos x\\
+.\end{align*}
+
+Or $ \sin x = \cos\left( \frac{\pi}{2}-x \right) $
+
+\begin{align*}
+	\cos (3x)   &= \cos x 2\cos^2x-1 - \sin x 2\sin x \cos x\\
+		    &= \cos x 2 \cos^2x - 1 - \cos(\frac{\pi}{2}-x) 2 \cos(\frac{\pi}{2}-x) \cos x \\
+		    &= \cos x 2 \cos ^2x-1 - 3\left( \cos \frac{\pi}{2} \cos x + \sin \frac{\pi}{2} \sin x \right) \cos x   \\
+		    &= \cos x 2 \cos^2x-1 - 3\left( 0  \cos x + 1 \sin x \right) \cos x \\
+		    &= \cos x 2 \cos^2x-1-3\sin x \cos x  \\
+		    &= \cos x 2 \cos^2x-1-3\cos\left( \frac{\pi}{2}-x \right) \cos x \\
+		    &=  \text{fuck this shit} \\
+.\end{align*}
+
+\section{Calculus@51 70} %difficulty=3
+
+Soit, pour tout $n \in \N^{\ast}$, l'assertion $P_n$: $u_n = 2\cos\left( \frac{\pi}{2^{n+1}} \right) $.
+
+\paragraph{Initialisation} Pour $n = 1$
+
+\begin{align*}
+	2\cos\left( \frac{\pi}{2^{2}} \right) &= 2\cos\frac{\pi}{4} \\
+	&= 2 \frac{\sqrt{2} }{2}  \\
+	&= \sqrt{2}  \\
+.\end{align*}
+
+\begin{align*}
+	u_1 &= \prod_{k=1}^{1} u_1  \\
+	&= u_1 \\
+	&= \sqrt{2}  \\
+.\end{align*}
+
+$P_1$ est donc vraie.
+
+\paragraph{Hérédité} Supposons que, pour un certain $n \in \N^{\ast}$, $P_n$ est vraie. Montrons qu'alors $P_{n+1}$ est également vraie.
+\begin{align*}
+	u_{n+1} &= \sqrt{2+u_n}  \\
+		&= \sqrt{2+2\cos\left( \frac{\pi}{2^{n+1}} \right) }  \\
+		&= \sqrt{2+\text{fuck this shit}}  \\
+.\end{align*}
+
+\section{Calculus@51 71} %difficulty=3
+\subsection{}
+
+\section{Calculus@52 72} %difficulty=1
+\subsection{}
+\begin{align*}
+	\cos x &= \frac{1}{2} \\
+	       &= \cos \frac{\pi}{3} \\
+	\iff x &\equiv \pm \frac{\pi}{3}\quad[2\pi] \\
+.\end{align*}
+
+\subsection{}
+\begin{align*}
+	\sin(2x) &= \frac{\sqrt{2} }{2}  \\
+		 &= \sin \frac{\pi}{4} \\
+	\iff 2x &\equiv \frac{\pi}{4} \quad[2\pi]\quad\text{ou}\quad \frac{\pi}{4}+\pi\quad[2\pi]\\
+	\iff x &\equiv \frac{\pi}{8}\quad [2\pi] \quad\text{ou}\quad \frac{\pi}{8} + \pi\quad[2\pi] 
+.\end{align*}
+
+\section{Calculus@52 73} %difficulty=2
+
+\[
+	\left[ \frac{\pi}{4}, 0 \right] \cup \left[ \frac{5\pi}{4}, 2\pi \right]
+.\]
+
+\section{Calculus@52 74} %difficulty=1
+
+Pour tout $x \in  \R$, 
+
+\begin{align*}
+	\cos x \in [0, 1] &\implies \cos x \ge 0 \\
+			  &\implies ( \cos^2x \ge 0 \\
+			  &\land 4\cos x \ge 0 ) \\
+			  &\implies \cos^2x + 4\cos x \ge 0 \\
+			  &\implies \cos^2x + 4\cos x + 1 \ge  0 \\
+\end{align*}
+
+Or:
+
+\begin{align*}
+	2\cos^2x + 4\cos x + 1 &= 2\cos^2x - 2 + 3 + 4\cos x  \\
+			       &= 2(\cos^2x - 1) + 4\cos x + 3  \\
+			       &= 2\cos(2x)+4\cos x + 3  \\
+.\end{align*}
+
+Donc
+
+\[
+	2\cos(2x)+4\cos x + 3 \ge 0
+.\] 
+
+%TODO: pour quelles valeurs de x \in \R 2cos(x)+4cos(x)+3 = 0 ?
+
+\section{Calculus@52 75} %difficulty=2
+
+\begin{align*}
+	a\cos x + b\sin x &= \sqrt{a^2+b^2} \cos(x-\phi) \\
+			  &= \text{((WIP))} \\
+.\end{align*}
+
+
+\section{Calculus@52 76} %difficulty=2
+
+\begin{align*}
+	\cos x + \sin x &= \sqrt{\frac{3}{2}}  \\
+	\iff (\cos x + \sin x)^2 &= \frac{3}{2} \\
+	\iff \cos^2x + 2\cos x \sin x + \sin^2x &= \frac{3}{2} \\
+	\iff \cos^2x + \sin(2x) + \sin^2x &= \frac{3}{2} \\
+	\iff 2(\cos^2x+ \sin(2x) + \sin^2x) &=  3 \\
+	\iff 2\cos^2x + 2\sin(2x) + 2\sin^2x &= 3 \\
+	\iff 2\cos^2x - 1 + 1 + 2\sin(2x) + 2\sins^2x &= 3 \\
+	\iff \cos(2x) + 1 + 2\sin(2x) + 2\sin^2x &=  3 \\
+	\iff \cos(2x) + 2\sin(2x) + 2\sin^2x &= 2 \\
+	\iff 2(\frac{1}{2}\cos(2x) + \sin(2x) + \sin^2x) &=  2 \\
+	\frac{1}{2}\cos(2x) + \sin(2x) + \sin^2x &=  1 \\
+						 &\text{ma vie est une blague lol}
+.\end{align*}
+
+\section{Calculus@54 79} %difficulty=1
+
+\begin{align*}
+	\tan x &= \frac{\sin x}{\cos x} \\
+	\cos (x+y) &= \cos x \cos y - \sin x \sin y \\
+	\sin(x+y) &= \sin x \cos y + \sin y \cos x \\
+	\tan(x+y) &= \frac{\sin x \cos y + \sin y \cos x}{\cos x \cos y - \sin x \sin y} \\
+		  &= \frac{\cos y (\sin x + \frac{\sin y \cos x}{\cos y}}{\cos y (\cos x - \frac{\sin x \sin y}{\cos y}} \\
+		  &= \frac{\sin x + \tan y \cos x}{\cos x + \sin x \tan y} \\
+		  &= \frac{\cos x \left( \frac{\sin x}{\cos x} + \frac{\tan y \cos x}{\cos x} \right) }{\cos x \left( 1 + \frac{\sin x \tan y}{\cos x} \right) } \\
+		  &= \frac{\tan x + \tan y}{1 + \tan x \tan y} \\
+.\end{align*}
+
+\section{Calculus@54 80} %difficulty=1
+\begin{align*}
+	\tan (2x) &= \tan ( x+x) \\
+	&= \frac{\tan x + \tan x}{1+\tan x \tan x} \\
+	&= \frac{2\tan x}{1+\tan^2x} \\
+.\end{align*}
+
+On en déduis donc la valeur de $\tan\frac{\pi}{8}$:
+
+\begin{align}
+	\tan \frac{\pi}{4} &= \frac{2\tan\frac{\pi}{8}}{1+\tan^2\frac{\pi}{8}} \\
+	\iff 1 &= \frac{2\tan\frac{\pi}{8}}{1+\tan^2 \frac{\pi}{8}} \\
+	\iff 1+\tan^2 \frac{\pi}{8} &= 2\tan\frac{\pi}{8} \\
+	\iff \tan^2 \frac{\pi}{8} - 2\tan\frac{\pi}{8} +1 &= 0
+.\end{align}
+
+On remarque que $(4)$ est de la forme $x^2+2x+1=0$: On cherche donc la/les racines du polynôme du second degré $x^2+2x+1$.
+
+\begin{align*}
+	\Delta &= 4 - 4 \\
+	       &= 0 \\
+	       \implies x_0 &= \frac{-2}{2} \\
+	       &= -1 \\
+.\end{align*}
+
+On a donc:
+
+\begin{align*}
+	\tan^2\frac{\pi}{8} - 2\tan\frac{\pi}{8}+1 &= 0 \\
+	\iff \tan\frac{\pi}{8} &= -1 \\
+.\end{align*}
+
+Sauf que c'est faux. Et je sais pas pourquoi.
+
+\section{Calculus@54 81} %difficulty=1
+On sait que:
+\begin{align*}
+	\frac{1}{\cos^2x} &= 1+\tan^2x \\
+.\end{align*}
+
+\begin{align*}
+	\frac{1}{\cos^2x} &= 1+\tan^2x \\
+	\iff \cos^2x &= \frac{1}{1+\tan^2x} \\
+	\iff \cos x &= \frac{\frac{1}{1+\tan^2x}}{\cos x} \\
+	&= \frac{1}{1+\tan^2x\cos x} \\
+	&= \frac{1}{1+\tan^2x\cos x} \frac{1-\tan^2x}{1-\tan^2x}\\
+	&= \frac{1-\tan^2x}{(1+\tan^2x\cos x)(1-\tan^2x)} \\
+	&= \frac{1-\tan^2x}{1+\tan^2x\cos x -\tan^2x -\tan^2x(\tan^2x\cos x)} \\
+	&= \frac{1-\tan^2x}{1+\tan^2x \cos x -\tan^2x -\tan^{4}x -\tan^2x \cosx} \\
+	&\text{fml}
+.\end{align*}
+
+\begin{align*}
+	\sin x &= \frac{2t}{1+t^2} \\
+	       &\text{Nan mais ça sert plus à rien de continuer là jvais juste apprendre des formules par coeur m\^eme la correction je la comprends pas depuis genre ~10 exos}
+.\end{align*}
+
+
+\end{document}
