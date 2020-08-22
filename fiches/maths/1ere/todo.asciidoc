@@ -6,35 +6,29 @@ TODO
 
 [horizontal]
 7.1.0 :: Représentation graphique de √x et |x|
-7.3.0 :: Démontrer que √ est croissante sur ℝ⁺
-7.4.0 :: Justifier les positions relatives des
-courbes représentatives de x|->x, x|->x² et √
-5.5.0 :: algos
-         - obtenir liste de termes d'une suite
-         - calculer terme d'un rang donné
+// 7.3.0 :: Démontrer que √ est croissante sur ℝ⁺
+// 7.4.0 :: Justifier les positions relatives des courbes représentatives de x|->x, x|->x² et √
+// 5.5.0 :: algos
+//          - obtenir liste de termes d'une suite
+//          - calculer terme d'un rang donné
 5.3.0 :: démos
-2.2.2 :: utiliser la fonction de colinéarité pour déterminer une équation cartésienne
+// 2.2.2 :: utiliser la fonction de colinéarité pour déterminer une équation cartésienne
 de droite connaissant un vecteur
 directeur et un point.
-2.2.3 :: Déterminer un vecteur directeur d’une
-droite définie par une équation
-cartésienne.
-2.5 :: Expression d’un vecteur du
-plan en fonction de deux
-vecteurs non colinéaires.
-8.1 :: Mesure d'un angle orienté
-8.1 :: Mesure principale
-? :: Théorème de la médiane
-6.5 :: Vecteur normal à une droite:
+// 2.2.3 :: Déterminer un vecteur directeur d’une droite définie par une équation cartésienne.
+// 2.5 :: Expression d’un vecteur du plan en fonction de deux vecteurs non colinéaires.
+// 8.1 :: Mesure d'un angle orienté
+// 8.1 :: Mesure principale
+// ? :: Théorème de la médiane
+// 6.5 :: Vecteur normal à une droite:
        - Déterminer un vecteur normal à une droite définie par une équation cartésienne.
 	   - Déterminer une équation cartésienne de droite connaissant un point et un vecteur normal.
-? :: Déterminer une équation de cercle défini par son centre et son rayon ou par son
-diamètre.
-8.3.1 :: démonstration: `cos(a-b) = cos a cos b + sin a sin b`
-8.3 :: formule d'addition & duplication cos/sin
+// ? :: Déterminer une équation de cercle défini par son centre et son rayon ou par son diamètre.
+// 8.3.1 :: démonstration: `cos(a-b) = cos a cos b + sin a sin b`
+// 8.3 :: formule d'addition & duplication cos/sin
 3.3 :: diagramme en boite
 3.2 :: faire les démonstrations des formules
-4.5.2 :: clarifier tableau
+// 4.5.2 :: clarifier tableau
 4.? :: expliquer les coefs binomiaux + symétrie des coefs binomiaux
 4.5.4 :: triangle de pascal
 2.3 :: (see TODO)
