@@ -1,3 +1,5 @@
+## Thème grammatical, 20 phrases
+
 Lequel d’entre vous pourrait m’expliquer les raisons de la crise économique mondiale?
 Which one of you could explain 
 
@@ -57,3 +59,17 @@ We can ask ourselves if the decision of increasing salaries by three percent is 
 
 S’il y avait eu un accident, c’est vous qui auriez été tenu pour responsable!
 If there was an acciden, it is you who would've been help responsible!
+
+## Se tenir au courant de l'actualité
+
+## Synthèse de type khôlle
+
+### Résumé
+
+On June 9, 2020, at Houston, politicians and relatives of the police violence victim George Floyd spoke at his funeral. A 17-minute procession was held, where some noticed that more and more non-black people are raising up against racial injustice in the United States.
+
+George Floyd was sent to prison for 4 years after being guilty of armed aggravated robbery, and after being released, was set on helping people avoid his own mistakes. But after some suspected him of paying with a counterfeit $20 bill, Minneapolis officers confronted him and are now facing criminal charges, as one of them kneeled on George Floyd for almost nine minutes, killing him despite his calls for help and the now-famous "I can't breathe". This man has become a symbol of police brutality against black people. 
+
+## Commentaire
+
+

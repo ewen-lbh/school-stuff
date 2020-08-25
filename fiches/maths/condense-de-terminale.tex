@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
-\usepackage[bookmarks, hidelinks]{hyperref}
+\usepackage[bookmarks, hidelinks, unicode]{hyperref}
 \usepackage{amsmath, amssymb}
 \usepackage{chemfig}
 \usepackage{chemformula}
@@ -39,15 +39,15 @@
 \newcommand{\cotan}{\operatorname{cotan}}
 \newcommand{\conj}[1]{\overline{#1}}
 \newcommand{\Aff}{\text{Aff}}
-\newcommand{\oo}{\infty}
+\newcommand{\infty}{\infty}
 \newcommand{\twoRows}[1]{\multirow{2}{*}{#1}}
 \newcommand{\threeRows}[1]{\multirow{3}{*}{#1}}
 \newcommand{\twoCols}[1]{\multicolumn{2}{c|}{#1}}
 \newcommand{\threeCols}[1]{\multicolumn{3}{|c|}{#1}}
 \newcommand{\twoColsNB}[1]{\multicolumn{2}{c}{#1}}
 \newcommand{\goesto}[2]{\xrightarrow[#1\:\to\:#2]{}}
-\newcommand{\liminfty}{\lim_{x\to+\oo}}
-\newcommand{\limminfty}{\lim_{x\to-\oo}}
+\newcommand{\liminfty}{\lim_{x\to+\infty}}
+\newcommand{\limminfty}{\lim_{x\to-\infty}}
 \newcommand{\limzero}{\lim_{x\to0}}
 \newcommand{ \const}{\text{cste}}
 \newcommand{\et}{\:\text{et}\:}
@@ -82,12 +82,14 @@
 	$\searrow$ & Décroissant \\
 	$a \gtreqless b$ & Revient à écrire $a > b$, $a = b$ et $a > b$ \\
 	$\land$ & "et"\\
+	$\lor$ & "ou"\\
 	$\img z$ & Point d'affixe $z$\\
 	$\placeholder$ & Caractère utilisé pour représenter plusieurs opérations\\
 	$\operatorname{sgn}(x)$ & $x \mapsto \begin{cases}
 		-1 &\text{si}\quad x < 0 \\
 		1 &\text{sinon}
 	\end{cases}$ \\
+		$\{A | C\}$ & L'ensemble de tout les $A$ tel que $C$
 \end{tabular}
 \pagestyle{empty}
 \newpage
@@ -180,8 +182,8 @@ u_{n+1} = u_n \cdot q
 
 \subsection{Limites}
 \begin{descriptiona}
-\item[Suite convergeante vers $L$] $\displaystyle \lim_{n\to+\oo} u_n = L$
-\item[Suite divergeante] $\displaystyle \lim_{n\to+\oo} u_n \not= L$
+\item[Suite convergeante vers $L$] $\displaystyle \lim_{n\to+\infty} u_n = L$
+\item[Suite divergeante] $\displaystyle \lim_{n\to+\infty} u_n \not= L$
 \end{descriptiona}
 
 \begin{minipage}{\textwidth}
@@ -210,7 +212,7 @@ Soit ($u_n$) une suite définie sur les rangs dans $I$ et $L$ un réel
 \item[Suite bornée] Suite majorée \textit{et} minorée
 \end{descriptiona}
 
-\[\lim_{n\to+\oo} u_n \dots\]
+\[\lim_{n\to+\infty} u_n \dots\]
 
 \begin{table}[H]
     \centering
@@ -218,13 +220,13 @@ Soit ($u_n$) une suite définie sur les rangs dans $I$ et $L$ un réel
                 & \multicolumn{2}{c}{Majorée (par $L$)}   & \multicolumn{2}{c}{Minorée (par $L$)}    \\
                 & Oui               & Non                 & Oui                 & Non                \\
                 \hline
-    $\nearrow$  & $\leq L$          & $= +\oo$            &                     &                    \\
-    $\searrow$  &                   &                     & $\geq L$            & $=-\oo$
+    $\nearrow$  & $\leq L$          & $= +\infty$            &                     &                    \\
+    $\searrow$  &                   &                     & $\geq L$            & $=-\infty$
     \end{tabular}
 \end{table}
 
 Soit $f$ la fonction associée à $u_n$
-\[\lim_{n\to+\oo} u_n = L \implies \lim_{n\to+\oo} u_{n+1} = f(L)\]
+\[\lim_{n\to+\infty} u_n = L \implies \lim_{n\to+\infty} u_{n+1} = f(L)\]
 
 \subsection{Opérations sur les limites}
 
@@ -233,15 +235,15 @@ Soit $f$ la fonction associée à $u_n$
 \subsection{Comparaisons et limites}
 
 Soit $L \in \R$, ($u_n$), ($v_n$) et ($w_n$) trois suites
-et $l_A$ la limite quand $n \to +\oo$ de la suite $A_n$
+et $l_A$ la limite quand $n \to +\infty$ de la suite $A_n$
 
 \begin{table}[H]
     \centering
     \begin{tabular}{l|lll|l}
         Nom du théorème & \twoColsNB{Conditions} & Résultat & Explication graphique \\
         \hline
-        \twoRows{Par comparaison} & $u_n \leq v_n$           & $l_u = +\oo$     & $\implies l_v = +\oo$ & ($u_n$) emporte ($v_n$) vers $+\oo$\\
-                                  & $u_n \geq v_n$           & $l_u = -\oo$     & $\implies l_v = -\oo$ & ($u_n$) emporte ($v_n$) vers $-\oo$\\
+        \twoRows{Par comparaison} & $u_n \leq v_n$           & $l_u = +\infty$     & $\implies l_v = +\infty$ & ($u_n$) emporte ($v_n$) vers $+\infty$\\
+                                  & $u_n \geq v_n$           & $l_u = -\infty$     & $\implies l_v = -\infty$ & ($u_n$) emporte ($v_n$) vers $-\infty$\\
         Théorème des gendarmes    & $w_n \geq v_n \geq u_n$  & $l_u = l_w = L$  & $\implies l_v = L$    & ($u_n$) et ($w_n$) forcent ($v_n$) à tendre vers $L$\\
     \end{tabular}
 \end{table}
@@ -377,6 +379,13 @@ Si la loi de $X$ admet $f$ comme densité de probabilité et que, pour tout $\la
     \end{split}
 \end{equation*}
 
+\paragraph{Propriétés}
+\begin{align*}
+	E(X) &= 0 \quad\iff\text{centrée}\\
+	\sigma &= 1 \quad\iff\text{réduite}\\
+	\iff V &= 1 \\
+.\end{align*}
+
 \subsubsection{Probabilité d'intervalle centrée en 0}
 
 \begin{equation*}
@@ -392,24 +401,33 @@ Si la loi de $X$ admet $f$ comme densité de probabilité et que, pour tout $\la
 	u_{0.01} &= 2.58 \\
 .\end{align*}
 
-\subsubsection{Propriétés}
-%TODO: les propriétés sont applicables seulement à N(0, 1) ou à toutes les lois normales? Si seulement à N(0, 1), il faut que ce soit dans la section 2.13.1.
+
+\subsubsection{Théorème de Moivre-Laplace}
 \begin{align*}
-	E(X) &= 0 \quad\iff\text{centrée}\\
-	\sigma &= 1 \quad\iff\text{réduite}\\
-	\iff V &= 1 \\
-.\end{align*}
+	X_n &\sim \mathcal{B}(n, p) \\
+	\land\quad p &\in [0, 1] \\
+	\land\quad Z_n &= \frac{X_n-np}{\sqrt{np(1-p)} } \\
+	\implies \lim_{n \to \infty} Z_n &= \mathcal N(0, 1) \\
+\end{align*}
 
-%TODO: théorème Moivre-Laplace (pas de demo)
-%TODO: N(\mu, \sigma^2)
+\subsubsection{Lois normales $\mathcal N(\mu, \sigma^2)$}
 
+\[
+	\mu \in \R,\quad \sigma\in \R_{+},\quad Y := \frac{X-\mu}{\sigma}
+\] 
 
+\begin{align*}
+	Y \sim \mathcal N(0, 1) &\implies X \sim \mathcal N(\mu, \sigma^2) \\
+							&\implies E(X) = \mu \\
+							&\implies V = \sigma^2 \\
+							&\implies \sigma\text{ (écart type)} = \sigma
+\end{align*}
 
 \newpage\section{Limites $\lim$}
 
 \subsection{Notation}
 
-Soit $x$, $C$ et $D$ des nombres et $\Psi$ un réel, $+\oo$ ou $-\oo$
+Soit $x$, $C$ et $D$ des nombres et $\Psi$ un réel, $+\infty$ ou $-\infty$
 
 \begin{equation*}
     \begin{split}
@@ -464,12 +482,12 @@ Les opérations entre deux limites réelles sont comparables aux opérations sur
 
 $x,\:\:\: y$                             & \multicolumn{2}{c}{$x+y$}     & \multicolumn{2}{c}{$x\cdot y$}           & \multicolumn{2}{c}{$x/y$}              \\
 \hline\hline
-\twoRows{$\pm\oo$}                       & Signes $=$     & $\pm\oo$     & \twoCols{\twoRows{(règle des signes)}}   & \twoColsNB{\twoRows{FI}}               \\
+\twoRows{$\pm\infty$}                       & Signes $=$     & $\pm\infty$     & \twoCols{\twoRows{(règle des signes)}}   & \twoColsNB{\twoRows{FI}}               \\
                                          & Signes $\not=$ & FI           &                                          &                                   \\
 \hline
-\twoRows{\threeRows{$\R$ ou $\pm\oo$}}   & \twoCols{\threeRows{$\pm\oo$}}& $x = 0$          & FI                    & $y = 0$       & FI                     \\
-                                         &                               && $x > 0$          & $\pm\oo$              & $y= \pm\oo$   & 0                      \\
-                                         &                               && $x < 0$          & $\mp\oo$              & $x = \pm\oo \et y \in \R^\ast$  & $\pm\oo$               \\
+\twoRows{\threeRows{$\R$ ou $\pm\infty$}}   & \twoCols{\threeRows{$\pm\infty$}}& $x = 0$          & FI                    & $y = 0$       & FI                     \\
+                                         &                               && $x > 0$          & $\pm\infty$              & $y= \pm\infty$   & 0                      \\
+                                         &                               && $x < 0$          & $\mp\infty$              & $x = \pm\infty \et y \in \R^\ast$  & $\pm\infty$               \\
 
 \end{tabular}
 \end{table}
@@ -482,8 +500,8 @@ Soit $L \in \R$, $f$ une fonction, $\Gamma$ la courbe d'équation $y = f(x)$ et 
     \begin{split}
         f(x) \goesto{x}{\Psi} L &\iff \text{$\Gamma$ admet en $\Psi$ une asymptote (horizontale) d'équation $y = L$}\\
         \begin{cases}
-            f(x) \goesto{x}{L^+} \pm\oo\\
-            f(x) \goesto{x}{L^-} \pm\oo
+            f(x) \goesto{x}{L^+} \pm\infty\\
+            f(x) \goesto{x}{L^-} \pm\infty
         \end{cases} &\iff \text{$\Gamma$ admet en $L$ une asymptote (verticale) d'équation $x = L$}
     \end{split}
 \end{equation*}
@@ -492,7 +510,7 @@ Soit $L \in \R$, $f$ une fonction, $\Gamma$ la courbe d'équation $y = f(x)$ et 
 
 \subsubsection{Polynômes}
 
-Pour les limites en $+\oo$ ou en $-\oo$, on peut simplifier la limite d'un polynôme à la limite du terme de plus haut degré:
+Pour les limites en $+\infty$ ou en $-\infty$, on peut simplifier la limite d'un polynôme à la limite du terme de plus haut degré:
 \[\liminfty 2x^3 - 4x + 1 = \liminfty 2x^3\]
 
 Ça marche aussi avec les fractions:
@@ -500,7 +518,7 @@ Pour les limites en $+\oo$ ou en $-\oo$, on peut simplifier la limite d'un polyn
 
 \subsection{Fonctions composées}
 
-Soit $a,\:b$ et $c\:\in \R \cup \{ -\oo; +\oo \}$, $f$ et $g$ des fonctions
+Soit $a,\:b$ et $c\:\in \R \cup \{ -\infty; +\infty \}$, $f$ et $g$ des fonctions
 
 $$\begin{cases}
 f(x) \goesto{x}{a} b\\
@@ -550,7 +568,7 @@ $$
 
 \noindent(1) quand elle ne l'est pas, on étudie séparémment chaque intervalle où la fonction est strictement monotone
 \vspace{2pt}
-\noindent(2) si $a$ ou $b = \pm\oo$, on calcule la limite pour l'intervalle image:\\
+\noindent(2) si $a$ ou $b = \pm\infty$, on calcule la limite pour l'intervalle image:\\
 \textit{Montrer que $f(x) = k$ n'admet qu'une seule solution dans $\R$}
 \[k \in \left]\limminfty f(x); \liminfty f(x)\right[\]
 
@@ -737,7 +755,7 @@ Soit $x \in \R$ et $u$ une fonction définie sur $\R$
 \item[Réciproque] $\ln(e^x) = x$
 \item[Signe] $e^x > 0$
 \item[Variations] strictement croissante sur $\R$
-\item[Limites] $e^x \goesto{x}{+\oo} +\oo $\\$ e^x \goesto{x}{-\oo} 0$
+\item[Limites] $e^x \goesto{x}{+\infty} +\infty $\\$ e^x \goesto{x}{-\infty} 0$
 \end{descriptiona}
 
 \subsection{Limites remarquables}
@@ -747,8 +765,8 @@ Soit $x \in \R$ et $u$ une fonction définie sur $\R$
         $\lim$ & $x\to$ & $=$ \\\hline\hline
         $\sfrac{e^x-1}{x}$ & 0 & 1 \\\hline
         \twoColsNB{Par croissance comparée $\downarrow$} & \\\hline
-        $xe^x$ & $-\oo$ & 0 \\\hline
-        $\sfrac{e^x}{x}$ & $+\oo$ & $+\oo$
+        $xe^x$ & $-\infty$ & 0 \\\hline
+        $\sfrac{e^x}{x}$ & $+\infty$ & $+\infty$
     \end{tabular}
 \end{table}
 
@@ -832,7 +850,12 @@ Tracer $(DC)$. La partie du segment qui est sur la face $E$ est la section.
 \end{equation*}
 
 \subsection{Propriétés}
-%TODO: définir les variables (P, d, d', etc)
+%TODO: ajouter des illustrations
+
+Soit $P$, $\Gamma$, $Q$, $P'$ des plans.
+Soit $d$, $ d'$, $ d_1$, $\text{droite}$, $ d_1'$, $\gamma$, $\Delta$ des droites.
+Soit $\text{point}$ un point.
+
 \begin{equation*}
     \begin{split}
         d \parallel d' &\implies P \bot d \quad\forall P \bot d' \\
@@ -850,12 +873,44 @@ Tracer $(DC)$. La partie du segment qui est sur la face $E$ est la section.
 
 \subsection{Coordonnées}
 
-Un triplet $(x; y; z)$.
+Un triplet $(x, y, z)\in \R^3$
 
 Les propriétés de la géométrie planaire (milieu, colinéarité et vecteurs) se traduisent trivialement
 
-%TODO: plan caractérisé par 2 vecteurs non colin. et un point
-%TODO: décomposition d'un vecteur en fonction de trois vecteurs non coplanaires
+\subsection{Vecteurs dans l'espace}
+\subsubsection{Propriétés identiques aux vecteurs bidimensionnels}
+\begin{itemize}
+	\item Relation de Chasles
+	\item Colinéarité
+%	\item Lien entre alignement des points et colinéarité
+%	\item Lien entre parallélisme et colinéarité
+\end{itemize}
+\subsubsection{Propriétés}
+\begin{itemize}
+	% \item $A, B, C\text{ alignés} \iff \vect{AB} \text{ colinéaire } \vect{AC}$
+	% \item $A \neq B \land C \neq D \land (AB) \parallel (CD) \iff \vect{AB} \text{ colinéaire } \vect{CD}$
+	\item $A, B, C\text{ non-alignés. }\forall D \quad\vect{AD} \text{ coplanaire } \vect{AB} \text{ coplanaire }\vect{AC} \iff D \in (ABC)$
+	\item $\exists x, y \in \R \quad \vect{AD} = x\vect{AB} + y\vect{AC} \implies D \in (ABC)$
+	\item $\vec u$, $\vec v$ et $\vec w$ coplanaires$\iff \exists a, b, c \in \R^\ast : a\vec u + b\vec v + c\vec w = \vec 0$
+	\item $\vec u, \vec v \in P$ non colinéaires, $\vec n \neq \vec 0$. $\text{$\vec n$ normal à $P$} \iff \vec n \perp \vec v \land \vec n \perp \vec u$
+\end{itemize}
+
+
+\subsubsection{Caractérisation vectorielle d'objets}
+\paragraph{Droite}
+$A$ point, $\vec u \neq \vec 0$, $x \in \R$, $d$ la droite passant par $A$ de vecteur directeur $\vec u$
+\begin{align*}
+	M =\{ B | \vect{AB} = x\vec u \} &\implies \text{$M$ est la droite $ d$}
+\end{align*}
+\paragraph{Plan}
+$A$ point, $\vec u \:\:\cancel{\text{colinéaire}}\:\:\vec v$, $M$ ensemble de points, $x, y \in \R$, $\vect{AB} := \vec u$, $\vect{AC} := \vec v$
+\begin{align*}
+	M = \{B|\vect{AB} = x\vec u + y\vec v \} \implies \text{$M$ est un plan $(ABC)$}
+\end{align*}
+
+\emph{C'est l'ensemble de tout les points dans le repère $(A, \vec u, \vec v)$} 
+
+%wtf? -> TODO: décomposition d'un vecteur en fonction de trois vecteurs non coplanaires
 
 \subsection{Équations paramétriques}
 
@@ -899,7 +954,7 @@ Soit...
 On a:
 \begin{equation*}
     \begin{split}
-        M \in D &\iff
+        M \in P &\iff
         \begin{cases}
             x = x_ut + x_wt' + x_A \\
             y = y_ut + y_wt' + y_A \\
@@ -909,15 +964,33 @@ On a:
 \end{equation*}
 
 %TODO: Le produit scalaire‽ (def, propriétés) (étendue de la def du prod. scalaire dans le plan)
+
+\subsection{Produit scalaire}
+\subsubsection{Propriétés}
+\begin{itemize}
+	\item $\vec u^2 = \vec u  \cdot \vec u =  \|\vec u\|^2$
+	\item $\vec v \cdot \vec u = \vec u \cdot \vec v$
+	\item $\vec u \cdot (k\vec v) = (k\vec u) \cdot \vec v = k(\vec u \cdot \vec v)$
+	\item $\vec u \cdot (\vec v+\vec w) = \vec u \cdot \vec v + \vec u  \cdot \vec w$
+	\item $\vec v \perp \vec u \iff \vec v \cdot \vec u = 0$
+\end{itemize}
+
+
 %TODO: revoir le cours pour la partie géométrie, il manque pleins de trucs:
 % - déterminer si un vecteur est normal a un plan (ok)
 % - [démo] caractériser les points d'un plan de l'espace par une relation $ax+by+cz+d=0\quad a, b, c \in \R^\ast$
-% - déterminéer une équation cartésienne d'un plan connaissant un point et un vecteur normal
+% - déterminéer une équation cartésienne d'un plan connaissant un point et un vecteur normal (ok)
 % - déterminer un vecteur normal à un plan défini par une équation cartésienne
 % - démontrer qu'une droite est orthogonale à toute droite d'un plan si et seulement si elle est orthogonale à deux droites sécantes de ce plan
 % - choisir la forme la plus adaptée entre équation cartésienne et représentation paramétrique pour:
 % 	- déterminer l'intersection d'une droite et d'un plan
 %	- étudier la position relative de deux plans
+
+\subsection{Équations cartésienne d'un plan}
+Soit $a, b, c\in \R$, $P$ un plan, $\vec n := (a, b, c)$ le vecteur normal à $P$ et $A := (x, y, z)$
+\begin{align*}
+	A \in P &\iff ax+by+cz+d= 0 \\
+\end{align*}
 
 \newpage
 \section{Le logarithme népérien $\ln$}
@@ -930,8 +1003,8 @@ Aussi appelé "logarithme naturel" ou "logarithme base $e$"
 	\item[Réciproque] $\exp$
 	\item[Ensemble] $\R_+^\ast \to \R$
 	\item[Limites]
-	    $\displaystyle \lim_{x\to0^+} \ln{x} = -\oo$ \\
-	    $\displaystyle \lim_{x\to+\oo} \ln{x} = +\oo$
+	    $\displaystyle \lim_{x\to0^+} \ln{x} = -\infty$ \\
+	    $\displaystyle \lim_{x\to+\infty} \ln{x} = +\infty$
 	\item[Dérivée d'une variable] $\dfrac{1}{x}$
 	\item[Dérivée d'une fonction] $u'\ln u$
 	\item[Variations] Croissante sur $\R_+^\ast$
@@ -943,7 +1016,7 @@ Aussi appelé "logarithme naturel" ou "logarithme base $e$"
 
 \begin{equation*}
     \begin{split}
-        \lim_{x\to+\oo} \frac{\ln x}{x} &= 0 \\
+        \lim_{x\to+\infty} \frac{\ln x}{x} &= 0 \\
         \lim_{x\to0^+} x\ln x &= 0
     \end{split}
 \end{equation*}
@@ -995,8 +1068,8 @@ $\forall x \in \R$
 
 
 \newpage
-\label{integrales}
 \section{Intégrales $\int$}
+\label{integrales}
 
 \subsection{Notation}
 
