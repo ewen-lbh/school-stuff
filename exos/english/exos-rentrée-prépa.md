@@ -64,6 +64,8 @@ If there was an acciden, it is you who would've been help responsible!
 
 ## Synthèse de type khôlle
 
+> Sujet 1
+
 ### Résumé
 
 On June 9, 2020, at Houston, politicians and relatives of the police violence victim George Floyd spoke at his funeral. A 17-minute procession was held, where some noticed that more and more non-black people are raising up against racial injustice in the United States.
@@ -72,4 +74,8 @@ George Floyd was sent to prison for 4 years after being guilty of armed aggravat
 
 ## Commentaire
 
+George Floyd's death has definitely become a symbol of police officers being way too brutal and racist, around the whole world. Racism is definitely a big issue, especially in America where it's deeply rooted in the country's history and even genesis. 
 
+But what we see today - and, don't get me wrong, it is by all means understandable — is a mindset of revenge: instead of trying to make all ethnicities equal, we're trying to compensate injustices of the past by going the other way around. This is not a viable long-term solution, as we might see in the more-or-less distant future a society where non-black people are opressed, for example. Now, this is definitely not the case today, and obvisouly something must be made to get rid of this racial injustice. Racism is by no means a simple issue, but symptoms of this "revenge mindset" are visible throughout these interviews, especially Mariah Almack's.
+
+But, as what I just said can be easily seen as extremely controversial — people are _really_ quick to judge these days — I want to make something clear: The actions of George Floyd's murderer are _not_ defendable in any way, and all of the consequences of those actions are not only understandable, but totally justified.
