@@ -6,7 +6,12 @@
 *.fdb_latexmk
 *.fls
 *.synctex.gz
+*.synctex(busy)
 *.dvi
 
 # Manual hide
 *.hidden.*
+
+# swap/lock files
+.~lock.*
+*.swp.*

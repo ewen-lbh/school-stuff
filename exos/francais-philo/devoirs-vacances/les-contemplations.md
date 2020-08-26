@@ -12,7 +12,7 @@ Victor Hugo décide donc de quitter la Belgique et part pour l'Angleterre (Jerse
 
 ### 2
 
-[wip] Dans le poème III du livre V, Victor Hugo répond à un marquis qu'il connaissait jeune et consacre ce poème à son renoncement au monarchisme pour devenir jacobiniste.
+Dans le poème III du livre V, Victor Hugo répond à un marquis qu'il connaissait jeune et consacre ce poème à son renoncement au monarchisme pour devenir jacobiniste.
 
 ### 3
 
@@ -41,7 +41,7 @@ Les deux tomes sont divisés en trois livres, traitant chacun d'une époque de l
 
 ### 5
 
-[todo: add 1-2 examples] Victor Hugo décrit sa vie à travers tout ces poèmes, et c'est pour cela que l'ouvrage est structuré et ordonné chronologiquement. Cependant, il n'écrit pas _À ma fille_, livre I, en 1842: à cette date, Victor Hugo a {{age(of: VictorHugo, at: 1842, in: years)}} ans, mais n'a alors pas le recul nécéssaire à l'écriture de ce poème. Victor Hugo fait une analyse de sa vie à travers ces poèmes, et toute analyse demande recul, considération.
+[todo: add 1-2 examples] Victor Hugo décrit sa vie à travers tout ces poèmes, et c'est pour cela que l'ouvrage est structuré et ordonné chronologiquement. Cependant, il n'écrit pas _À ma fille_, livre I, en 1842: à cette date, Victor Hugo a 40 ans, mais n'a alors pas le recul nécéssaire à l'écriture de ce poème. Victor Hugo fait une analyse de sa vie à travers ces poèmes, et toute analyse demande recul, considération.
 
 Victor Hugo souhaite garder cette dimension chronologique qui est importante à l'œuvre, de manière autant temporelle (avec les fausses datations) que spatiale (avec les faux lieux).
 
@@ -54,3 +54,20 @@ Victor Hugo souhaite garder cette dimension chronologique qui est importante à 
 - (p. 138) _Melancholia_, livre III: l'âge, le temps
 - (p. 164) _La Chouette_, livre III: [wip]
 -
+
+### 7
+
+1. Trois ans après
+2. «Oh ! je fus comme fou…»
+3. «On vit, on parle…»
+4. Veni, vidi, vixi
+
+D'ans "Trois ans après", a perdu la force d'écrire: après la mort de sa mère, sa fille était la seule raison pour laquelle il écrivait. Dans "Oh! je fus comme fou…", il parle des premiers instants du deuil, et commence à parler de désespoir et de souffrance. Ensuite, dans "On vit, on parle…", il nous fait part d'un certain pessimisme face à la fatalité de la mort. Enfin, dans "Veni, vidi, vixi", il arrive à la conclusion que la mort est la seule solution à sa souffrance.
+
+### 8
+
+Dans la pièce XII du livre IV, le poète prend part dans un débat qu'il crée entre deux opinions: il faut mourir, ou il faut _vivre_, pour pleurer ses morts. Cela suggère que Hugo renonce au désir de la mort, du suicide, et pense qu'il préfère vivre pour honorer ses morts.
+
+### 9
+
+

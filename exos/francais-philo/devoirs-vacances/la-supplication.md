@@ -45,6 +45,8 @@ Au moment des faits, la nature se voit transformée, mutée autour du réacteur,
  ou affichent des comportements étranges. Cependant, avec l'Homme qui abandonne cet endroit, sur le long terme, c'est la nature
  qui reprend le dessus.
 
+Comment comprendre que tout est irradié alors que tout vit encore? (-> Monologue sur ce dont on peut parler avec les vivants et les morts)
+
 ### 5
 
 Parce que tout est le plus possible gardé dans le secret et que personne n'a reçu d'éducation et ne 
@@ -143,10 +145,30 @@ Ceci montre à quel point les habitants ignorent ce qu'est la radiation.
 
 ### 11
 
-- assurer sa descendance
-- faire survivre la mémoire
+- prologue: met au monde un garçon => survivre la descendance
+- Monologue sur ce dont on peut parler avec les vivants et les morts: parler avec les morts => faire comme si de rien était
+- Monologue d’un village : comment appeler les âmes du paradis pour pleurer et manger avec elles: se sentent libre  => faire comme si de rien était
+- Monologue sur la joie d’une poule qui trouve un ver: il faut vivre car on ne peut pas combattre la radiation  => faire comme si de rien était
+- Monologue sur une chanson sans paroles: désir de garder en vie un être cher
+- Trois monologues sur une peur très ancienne: ignorent la peur de la radioactivité => faire comme si de rien était
+- le chœur des soldats: sens du devoir => patriotisme
+- monologue vielle prophéties: met au monde une fillme => survivre la descendance
+- monologue diff vivre sans tcheckov tolstoi: comprendre le msytère de tchernobly  => savoir pourquoi
+- monologue chose inconnue rampe soi: rumeurs de tchernobly => savoir pourquoi
+- monologue regret rôle sujet: devoir de la memoire => devoir de memoire
+- chœur populaire  => patriotisme
+- ignorons mort si belle: rêve de sa vie d'avant => faire comme si de rien était
+- légèreté devenir poussière  => patriotisme & vodka
+- symboles grand pays => patriotisme
+- chose horribles paisible naturelle => faire comme si de rien était
+- liberté rêve mort ordinaire  => sentiemtn de liberté
+- ajouter vie quotd comprendre => alcool
+- éternle maudit coupable => patriotisme
+- une autre voix solitaire  => amour
 
-
+- Continuer de vivre: faire comme si rien n'avait changé, ignorer la réalité
+- Patriotisme: par sens du devoir ou fierté pour sa nation
+- L'amour: vivre pour garder un autre en vie, vivre pour assurer sa descendance ou simplement par amour aveuglant pour un autre.
 
 
 > ous sommes tous des fatalistes. Nous n’entreprenons rien parce que
