@@ -40,12 +40,12 @@ donnés aux citoyens et militaires par le gouvernement.
 
 ### 4
 
-% WIP
-Au moment des faits, la nature se voit transformée, mutée autour du réacteur, beaucoup d'animaux meurent, redeviennent sauvages
- ou affichent des comportements étranges. Cependant, avec l'Homme qui abandonne cet endroit, sur le long terme, c'est la nature
- qui reprend le dessus.
+#### Sur le court terme:
+Les animaux continuent à vivre, et l'on peut avoir l'impression que tout ce passe normalement: après tout, la radiation est indétectable par nos sens. Comment comprendre alors que tout est gravement irradié ?
+(cf. Monologue sur ce dont on peut parler avec les vivants et les morts)
 
-Comment comprendre que tout est irradié alors que tout vit encore? (-> Monologue sur ce dont on peut parler avec les vivants et les morts)
+#### Sur le long terme:
+Après dès années, le paradoxe qui se manifeste au moment des faits subsiste: aujourd'hui encore, les niveaux de radiations restent élevés et, excepté certains symptômes visibles (comme la "forêt rousse", les arbres ayant un feuillage roux dû à la radiation), la nature semble continuer à vivre.
 
 ### 5
 
@@ -129,7 +129,7 @@ n’est pas la fin de tout")
 > laisser en liberté, non plus. Vous ne riez pas ? _(Il rit.)_
 —page 91
 
-Cet histoire illumine ~~(et c'est le cas de le dire)~~ l'horreur et la manière dont ces gens qui vivaient
+Cet histoire illumine l'horreur et la manière dont ces gens qui vivaient
 dedans encore aujourd'hui ont besoin de cet humour. C'est assez flagrant ici: "Vous ne riez pas? _(Il rit)_".
 Ceci nous montre bien sans plus d'analyse que l'histoire n'est pas drôle en soi, mais que lui la trouve drôle,
 puisqu'il _avait besoin_ de la trouver drôle pour survivre.
@@ -145,6 +145,7 @@ Ceci montre à quel point les habitants ignorent ce qu'est la radiation.
 
 ### 11
 
+<!--
 - prologue: met au monde un garçon => survivre la descendance
 - Monologue sur ce dont on peut parler avec les vivants et les morts: parler avec les morts => faire comme si de rien était
 - Monologue d’un village : comment appeler les âmes du paradis pour pleurer et manger avec elles: se sentent libre  => faire comme si de rien était
@@ -165,13 +166,15 @@ Ceci montre à quel point les habitants ignorent ce qu'est la radiation.
 - ajouter vie quotd comprendre => alcool
 - éternle maudit coupable => patriotisme
 - une autre voix solitaire  => amour
+-->
 
 - Continuer de vivre: faire comme si rien n'avait changé, ignorer la réalité
 - Patriotisme: par sens du devoir ou fierté pour sa nation
 - L'amour: vivre pour garder un autre en vie, vivre pour assurer sa descendance ou simplement par amour aveuglant pour un autre.
 
-
+<!--
 > ous sommes tous des fatalistes. Nous n’entreprenons rien parce que
 > nous croyons que rien ne peut changer. Notre histoire ? Chaque génération a
 > vécu une guerre... Comment pourrions-nous être différents ? Nous sommes
 > des fatalistes.
+-->

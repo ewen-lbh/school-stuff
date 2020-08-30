@@ -4,9 +4,15 @@
 
 ### 1
 
-wtf
+Le poème ouvrant le livre quatre porte le titre "Sanctus Januarius", ce qui signifie en latin "Saint Janvier". Ce poème représente janvier comme un mois brise-glace, un mois qui évoque un certain renouveau dans l'âme.
+
+L'aphorisme 276 nous montre bien que Nietzsche considère effectivement ce mois comme le marqueur d'un certain renouveau, il est optimiste et tourné vers l'avenir. Cet optimisme se manifeste tout au long du livre. Dans l'aphorisme 324, Nietzsche fait une sorte d'apogée de la vie, et explique que l'on peut vivre et rire gaiement. Il évoque aussi que l'évolution de ce sentiment _au fil des années_.
 
 ### 2
+
+Dans le dossier est évoqué l'origine affective de notre besoin presque viscéral d'établir la vérité, mais aussi de chercher à classer et identifier toute chose. Nietzsche explique bien que ces aphorismes ne sont que du ressort de son esprit, conscient mais également subconscient et même inconscient, et ne sont en aucun cas des systèmes philosophiques tels que ceux édifiés par Leibnitz ou Kant.
+
+Cependant, si ces pensées sont issues de l'esprit d'un Homme, qui cherche à classer viscéralement, on pourrait trouver une sorte de schéma d'ensemble dans ces collections d'aphorismes, conscient ou pas: par exemple, le livre IV est placé sous le signe du mois de janvier, ce que l'on peut entendre comme une certaine structure dans l'œuvre.
 
 ## Critique et dépassement de la morale chrétienne
 
@@ -24,18 +30,12 @@ vulnérable face à la douleur, jusqu'à ne plus avoir goût à la vie, càd y r
 
 ### 5
 
-Dans
-
-> Vous ne voulez pas comprendre que les hommes prophétiques sont des hommes qui souffrent beaucoup
-> —aphor 316
-
 - aphor. 302: l'absence de souffrance nous prive de la tolérance en les malheurs et difficultés de la vie.
 - aphor. 316: la souffrance permet de prédire le danger (chez les animaux) (?)
-- aphor. 313: wtf
 - aphor. 318: la souffrance nous indique de "vivre avec une énergie réduite" et à certains, qu'il faut 
   considérer comme ceux qui font progresser notre espèce, de, au contraire, devenir plus belliqueux.
 - aphor. 338: on a parfois besoin de cette souffrance, qui apporte un équilibre à notre âme.
-- aphor. 283: Nietzsche conseille de _vivre dangereusement_, ce qui peut inclure vivre avec de la souffrance reçue parfois.
+- aphor. 283: Nietzsche conseille de _vivre dangereusement_, ce qui peut inclure vivre avec de la souffrance reçue au cours de la vie.
 
 ### 6
 
