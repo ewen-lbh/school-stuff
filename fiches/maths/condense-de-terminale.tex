@@ -1212,10 +1212,6 @@ $\frac{\pi}{2}$ & 1 & 0 & & 0 \\
 
 \subsection{Primitives et dérivées de $\pm\cos x$ et $\pm\sin x$}
 
-%TODO: faire des flèches au lieu de décrire
-
-Déplacement en sens trigonométrique: primitive. À l'inverse, dérivée. Example: la primitive de $\sin$ est $-\cos$.
-
 \begin{figure}[h]
 	\centering
 	\begin{tikzpicture}
@@ -1223,9 +1219,11 @@ Déplacement en sens trigonométrique: primitive. À l'inverse, dérivée. Examp
 		\draw (0,0) -- (0,2) node[above] {$\sin$};
 		\draw (0,0) -- (0,-2) node[below] {$-\sin$};
 		\draw (0,0) -- (-2,0) node[left] {$-\cos$};
+		\draw[<-] (0.5,2.5) arc (80:10:2.5) node[right, midway] {primitive};
+		\draw[<-] (0.5,-2.5) arc (-80:-10:2.5) node[right, midway] {dérivée};
 		\draw (0,0) circle (2);
 	\end{tikzpicture}
-	\caption{Cercle des primitives et dérivées de sin et cos}
+	%\caption{Cercle des primitives et dérivées de sin et cos}
 	\label{fig:cercle_primitives_derivees_sin_cos}
 \end{figure}
 
