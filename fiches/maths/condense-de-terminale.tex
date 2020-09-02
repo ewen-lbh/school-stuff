@@ -3,12 +3,9 @@
 \usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
 \usepackage[bookmarks, hidelinks, unicode]{hyperref}
 \usepackage{amsmath, amssymb}
-\usepackage{chemfig}
 \usepackage{chemformula}
 \usepackage{float}
-\usepackage{dsfont}
 \usepackage{cancel}
-\usepackage{pgfplots}
 \usepackage{multirow}
 \usepackage{caption}
 \usepackage{calc}  
@@ -33,13 +30,12 @@
 \newcommand{\re}{\text{Re}\,}
 \newcommand{\img}{\text{Img}\,}
 \newcommand{\R}{\mathds{R}}
-\newcommand{\C}{\mathds{C}}
+\renewcommand{\C}{\mathds{C}}
 \newcommand{\N}{\mathds{N}}
 \newcommand{\Z}{\mathds{Z}}
 \newcommand{\cotan}{\operatorname{cotan}}
 \newcommand{\conj}[1]{\overline{#1}}
 \newcommand{\Aff}{\text{Aff}}
-\newcommand{\infty}{\infty}
 \newcommand{\twoRows}[1]{\multirow{2}{*}{#1}}
 \newcommand{\threeRows}[1]{\multirow{3}{*}{#1}}
 \newcommand{\twoCols}[1]{\multicolumn{2}{c|}{#1}}
@@ -1188,8 +1184,13 @@ $\frac{\pi}{2}$ & 1 & 0 & & 0 \\
 	\end{tabular}
 \end{table}
 
-\subsection{}
+\subsection{Identités}
 
+\begin{align*}
+	\cos^2x+\sin^2x&= 1 \\
+	\cos(a\pm b) &= \cos a \cos b \mp \sin a \sin b \\
+	\sin(a\pm b) &= \cos a \sin b \pm \cos b \sin a \\
+.\end{align*}
 
 
 \end{document}

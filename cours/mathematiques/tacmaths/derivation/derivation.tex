@@ -1,0 +1,218 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage[bookmarks,hidelinks,unicode]{hyperref}
+\usepackage{amsmath, amssymb}
+\usepackage{chemformula}
+\usepackage{float}
+\usepackage{cancel}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{calc}  
+\usepackage{enumitem}  
+\usepackage{graphicx}
+\usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}% 
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
+\parskip 1ex
+\graphicspath{ {./} }
+\usetikzlibrary{shapes.arrows}
+\let\ce\ch
+\newcommand{\im}{\text{Im}\,}
+\newcommand{\re}{\text{Re}\,}
+\newcommand{\img}{\text{Img}\,}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\Aff}{\text{Aff}}
+\newcommand{\oo}{\infty}
+\newcommand{\twoRows}[1]{\multirow{2}{*}{#1}}
+\newcommand{\threeRows}[1]{\multirow{3}{*}{#1}}
+\newcommand{\twoCols}[1]{\multicolumn{2}{c|}{#1}}
+\newcommand{\threeCols}[1]{\multicolumn{3}{|c|}{#1}}
+\newcommand{\twoColsNB}[1]{\multicolumn{2}{c}{#1}}
+\newcommand{\goesto}[2]{\xrightarrow[#1\:\to\:#2]{}}
+\newcommand{\liminfty}{\lim_{x\to+\oo}}
+\newcommand{\limminfty}{\lim_{x\to-\oo}}
+\newcommand{\limzero}{\lim_{x\to0}}
+\newcommand{ \const}{\text{cste}}
+\newcommand{\et}{\:\text{et}\:}
+\newcommand{\ou}{\:\text{ou}\:}
+\newcommand{\placeholder}{\diamond}
+\newcommand{\mediateur}{\:\text{med}\:}
+\newcommand{\milieu}{\:\text{mil}\:}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newenvironment{descriptiona}{\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries The longest label}]}{\end{description}}
+\renewcommand{\arraystretch}{1.4}
+\newcommand{\point}[2]{(#1;\;#2)}
+\newcommand{\spacepoint}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
+
+\title{Tacmaths: Dérivation}
+\author{Ewen Le Bihan}
+\date{2020-09-01}
+
+\begin{document}
+\maketitle
+
+\paragraph{Dans tout le chapitre}
+\begin{itemize}
+	\item $f:I\to \R$
+	\item $I$ est un intervalle non-trivial\footnote{Au moins deux éléments}
+	\item $a \in I$
+\end{itemize}
+
+\section{Définition}
+\subsection{Nombre dérivé en un point}
+%TODO: graph
+
+Le nombre dérivé de $f$ en $a$ noté $f'(a)$ est la limite $\lim_{x \to a} \frac{f(x)-f(a)}{x-a}$ si elle existe et est finie
+
+\subsection{Fonction dérivée}
+On dit que $f$ est dérivable sur $x$ pour tout $a\in I$, $f'(a)$ existe, auquel cas on a défini une fonction $f'$ et:
+
+\begin{align*}
+	f'\begin{cases}
+		I&\to \R \\
+		a&\mapsto f'(a)
+	\end{cases}
+.\end{align*}
+
+appellée fonction dérivée de $f$.
+
+\section{Méthode de calcul}
+\subsection{Dérivées usuelles}
+\subsubsection{}
+\begin{align*}
+	f \begin{cases}
+		\R&\to \R \\
+		x&\mapsto x^2
+	\end{cases}
+.\end{align*} est dérivable sur $\R$ de dérivée
+
+\begin{align*}
+	f'\begin{cases}
+		\R\to \R\\
+		x\mapsto 2x
+	\end{cases}
+.\end{align*}
+
+\subsubsection{Plus généralement}
+\begin{align*}
+	f \begin{cases}
+		\R \to \R \\
+		x\mapsto x^n
+	\end{cases}
+.\end{align*} est dérivable sur $\R$ de dérivée
+
+\begin{align*}
+	f'\begin{cases}
+		\R \to \R \\
+		x\mapsto nx^{n-1}
+	\end{cases}
+.\end{align*}
+
+\subsubsection{}
+\begin{align*}
+	f \begin{cases}
+		\R_+^\ast \to \R \\
+		x\mapsto \ln x
+	\end{cases}q
+.\end{align*} est dérivable sur $\R$ de dérivée
+
+\begin{align*}
+	f'\begin{cases}
+		\R_+^\ast \to \R \\
+		x\mapsto \frac{1}{X}
+	\end{cases}
+.\end{align*}
+
+\subsection{Opérations sur les dérivées}
+\paragraph{Théorème}
+
+Soient $u, v : I \to \R$ deux fonctions dérivables sur $I$. Alors:
+
+\subsubsection{}
+Soient $\lambda$ et $\mu$ deux réels.
+
+$\lambda + \mu$  est dérivable et $(\lambda u + \mu v)' = \lambda u' + \mu v'$
+
+\subsubsection{}
+$u\cdot v$ est dérivable de dérivée $u'v+v'u$
+
+\subsubsection{}
+Si $v$ ne s'annule pas, $\sfrac{u}{v}$ est dérivable de dérivée 
+
+\[
+	\frac{u'v-v'u}{v^2}
+.\] 
+
+\subsection{Dérivation des fonctions}
+\paragraph{Notation}
+Si $f \in \mathcal{D}(I, \R)$\footnote{$\mathcal{D}^n(I, O)$ est l'ensemble des fonctions $n$-dérivables définies dans $O$ pour $x \in I$}, alors on peut noter:
+
+\[
+	\frac{d}{dx}f(x) = f'(x)
+.\] 
+
+\paragraph{Example}
+\[
+	\frac{d}{dx}\left( \cos x \right) = -\sin x
+.\] 
+
+\paragraph{Théorème: Dérivation des fonctions composées}
+Soient $u: I\to J$ et $v:J\to \R$ dérivable avec $I, J$ des intervalles.
+
+Alors $\begin{cases}
+	I\to \R \\
+	x\mapsto v(u(x))
+\end{cases}$ est dérivable et $ \frac{d}{dx}\left( v(u(x)) \right) = u'(x)\cdot v'(u(x))$.
+
+\paragraph{Examples}
+
+\begin{itemize}
+	\item $\left( e^{u} \right)' = u'e^u$
+	\item $(\ln u)' = u'\frac{1}{u} = \frac{u'}{u}$
+	\item $\left( u^2 \right)' = u'2u = 2u'u$
+\end{itemize}
+
+\section{Utilisation}
+\subsection{Théorème du signe de la dérivée (TSD)}
+On suppose que $f \in \mathcal{D}(I, J)$
+
+\subsection{}
+Si on a $f'\ge 0$ (resp. $f'>0$) sur $I$ alors f est croissante (resp. strictement croissante) sur $I$.
+
+\subsection{}
+Si on a $f'\le 0$ (resp. $f'<0$) sur $I$ alors f est décroissante (resp. strictement décroissante) sur $I$.
+
+\subsection{}
+Si $f'=0$ sur $I$ alors $f$ croissante sur $I$.
+
+\paragraph{Danger}
+L'hypothèse "$I$ intervalle" est importante: (\emph{$\R^\ast$ n'est pas une intervalle})
+
+\paragraph{Example}
+$\begin{cases}
+	\R^\ast \to \R\\
+	x\mapsto \frac{1}{x}
+\end{cases}$
+
+$f$ n'est pas décroissante \textbf{sur $\R^\ast$}.
+
+\subsection{Signe de la dérivée seconde}
+\subsubsection{}
+$f$ est dite convexe (resp. concave) sur $I$ lorsque $C_f$ est au dessus (resp. en dessous) de toutes ses tangeantes.
+$f$ est convexe (resp. concave) quand, pour tout $x \in D_{f''}$, $f''(x) \le 0$ (resp. $f''(x) \ge 0$).
+%TODO: graphs de x^2, exp & ln
+
+\end{document}
