@@ -19,7 +19,7 @@
     \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
     {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
   }{\textheight}% 
-}{0.5ex}}%
+ v'(x)u(x) dx}{0.5ex}}%
 \stackon[1pt]{#1}{\tmpbox}%
 }
 \parskip 1ex
@@ -1002,7 +1002,7 @@ Aussi appelé "logarithme naturel" ou "logarithme base $e$"
 	    $\displaystyle \lim_{x\to0^+} \ln{x} = -\infty$ \\
 	    $\displaystyle \lim_{x\to+\infty} \ln{x} = +\infty$
 	\item[Dérivée d'une variable] $\dfrac{1}{x}$
-	\item[Dérivée d'une fonction] $u'\ln u$
+	\item[Dérivée d'une fonction] $\dfrac{u'}{u}$
 	\item[Variations] Croissante sur $\R_+^\ast$
 	\item[Continuité] Continue sur $\R_+^\ast$
 	\item[Valeurs remarquables] $\ln{1} = 0$
@@ -1055,13 +1055,29 @@ $\forall x \in \R$
         $f$ & $F$ & $\in I$ ($\R$ par défaut) \\\hline
         $k$ & $kx$ & \\
         $x$ & $\frac{1}{2}x^2$ & \\
-	$x^n$ & $\frac{1}{n+1}x^{n+1}$ & $\R -\{1\}  $\\
-	$\frac{u'(x)}{u(x)}$ & $\ln (\operatorname{sgn}(u(x)) u(x))$
+		$\forall n\in \Z\setminus\{-1\}\quad x^n$ & $\frac{1}{n+1}x^{n+1}$ & $\R \setminus \{1\} \quad\text{($0$ est aussi non-défini quand $n<0$)} $\\
+		$\sfrac{1}{\sqrt{x} }$ & $2\sqrt{x} $ & $\R_+^\ast$
     \end{tabular}
     %\caption{Formes remarquables de primitives}
     \label{tab:primitives_remarquables}
 \end{table}
 
+\subsection{Opérations avec primitives}
+\begin{table}[h]
+	\centering
+	%\caption{Opérations avec primitives}
+	\label{tab:operations_avec_primitives}
+	\begin{tabular}{lll}
+		$f$ & $F$ & Conditions sur $f$ et $I$ \\\hline
+		$\forall n\in \Z\setminus\{-1\} \quad f'f^{n}$ & $\frac{1}{n+1} f^{n+1}$ & \\
+	%	$\forall n\in \N-\{0,1\} $ & $ -\frac{1}{(n-1)f^{n-1}}$ & $f$ ne s'annule pas sur $I$ \\
+		$\sfrac{f'}{f}$ & $\ln f$ & $\forall x\in I\quad f(x)\in \R_+^\ast$ \\
+		$\sfrac{f'}{\sqrt{f} }$ & $2\sqrt{f} $ & \\
+		$f'e^{f}$ & $e^{f}$ & \\
+		$f'\cos f$ & $  \sin f$ & \\
+		$f'\sin f$ & $-\cos f$ & \\
+	\end{tabular}
+\end{table}
 
 \newpage
 \section{Intégrales $\int$}
@@ -1110,6 +1126,12 @@ Pour alléger les notations: $\Finv = f(x)dx$, $\Game = g(x)dx$ et $\int = \int_
 \subsection{Valeur moyenne de $f$ sur $[a; b]$}
 
 \[\frac{1}{b-a}\int_a^b f(x)dx\]
+
+\subsection{Intégration par parties}
+
+\[
+	\int_a^b v(x)u'(x) dx = [u(x)v(x)]_a^b - \int_a^b v'(x)u(x) dx
+\] 
 
 \newpage\section{Échantillonage}
 
@@ -1191,6 +1213,23 @@ $\frac{\pi}{2}$ & 1 & 0 & & 0 \\
 	\cos(a\pm b) &= \cos a \cos b \mp \sin a \sin b \\
 	\sin(a\pm b) &= \cos a \sin b \pm \cos b \sin a \\
 .\end{align*}
+
+\subsection{Primitives et dérivées de $\pm\cos x$ et $\pm\sin x$}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\draw (0,0) -- (2,0) node[right] {$\cos$};
+		\draw (0,0) -- (0,2) node[above] {$\sin$};
+		\draw (0,0) -- (0,-2) node[below] {$-\sin$};
+		\draw (0,0) -- (-2,0) node[left] {$-\cos$};
+		\draw[<-] (0.5,2.5) arc (80:10:2.5) node[right, midway] {primitive};
+		\draw[<-] (0.5,-2.5) arc (-80:-10:2.5) node[right, midway] {dérivée};
+		\draw (0,0) circle (2);
+	\end{tikzpicture}
+	%\caption{Cercle des primitives et dérivées de sin et cos}
+	\label{fig:cercle_primitives_derivees_sin_cos}
+\end{figure}
 
 
 \end{document}
