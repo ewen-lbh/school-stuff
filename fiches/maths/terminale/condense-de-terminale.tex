@@ -33,7 +33,7 @@
 \newcommand{\re}{\text{Re}\,}
 \newcommand{\img}{\text{Img}\,}
 \newcommand{\R}{\mathds{R}}
-\newcommand{\C}{\mathds{C}}
+\newcommand{\mathds{C}}{\mathds{C}}
 \newcommand{\N}{\mathds{N}}
 \newcommand{\Z}{\mathds{Z}}
 \newcommand{\cotan}{\operatorname{cotan}}
@@ -579,9 +579,9 @@ $$
 \newpage\section{Nombres complexes $\mathds{C}$}
 \subsection{Définition}
 \[i^2 := -1,\quad a, b \in \R,\quad z\in\mathds{C}\]
-\[z = a + ib\]
+\[z := a + ib\]
 
-Ensemble des imaginaires purs: $i\R := \C \setminus \R$
+Ensemble des imaginaires purs: $i\R := \mathds{C} \setminus \R$
 
 \subsection{Partie imaginaire $\im$ et réelle $\re$}
 \subsubsection{Définition}
@@ -591,8 +591,8 @@ Ensemble des imaginaires purs: $i\R := \C \setminus \R$
 \end{itemize}
 \subsubsection{Propriétés}
 \begin{itemize}
-    \item $\re z = 0 \iff z \in \R$
-    \item $\im z = 0 \iff z \in i\R$
+    \item $\re z = 0 \iff z \in i\R$
+    \item $\im z = 0 \iff z \in \R$
 \end{itemize}
 
 \subsection{Conjugé $\conj{z}$}
@@ -666,7 +666,7 @@ $$
 
 \subsubsection{Module $|z|$}
 
-\[|z| = \sqrt{\re^2z + \im^2z}\]
+\[|z| := \sqrt{\re^2z + \im^2z}\]
 
 \textbf{Propriétés}
 
@@ -677,7 +677,7 @@ $\placeholder$ représente les opérations $\times$ et $\div$
 
 \subsubsection{Argument $\arg$}
 
-\[\forall z \in \C^\ast\]
+\[\forall z \in \mathds{C}^\ast\]
 
 \begin{equation*}
     \begin{split}
@@ -1046,7 +1046,7 @@ $\forall x \in \R$
 \subsection{Propriétés}
 
 \begin{itemize}
-    \item $\forall C \in \mathds{U}\quad x \mapsto F(x) + C$ est une primitive de $f$
+    \item $\forall C \in \R\quad x \mapsto F(x) + C$ est une primitive de $f$
     \item $F + G$ primitive de $f + g$
     \item $\forall k \in \R \quad kF$ primitive de $kf$
 \end{itemize}

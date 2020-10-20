@@ -1,0 +1,243 @@
+% Basic stuff
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage[bookmarks, hidelinks, unicode]{hyperref}
+\usepackage[]{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{lmodern}
+\usepackage{soul}
+
+% Packages configuration
+\usetikzlibrary{shapes.arrows}
+\renewcommand{\arraystretch}{1.4}
+
+% Shortcut commands
+\newcommand{\im}{\text{Im}\,}
+\newcommand{\re}{\text{Re}\,}
+\newcommand{\img}{\text{Img}\,}
+\newcommand{\R}{{\mathbb R}}
+%\newcommand{\C}{{\mathbb C}}
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\cotan}{\operatorname{cotan}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\Aff}{\text{Aff}}
+\newcommand{\twoRows}[1]{\multirow{2}{*}{#1}}
+\newcommand{\threeRows}[1]{\multirow{3}{*}{#1}}
+\newcommand{\twoCols}[1]{\multicolumn{2}{c|}{#1}}
+\newcommand{\threeCols}[1]{\multicolumn{3}{|c|}{#1}}
+\newcommand{\twoColsNB}[1]{\multicolumn{2}{c}{#1}}
+\newcommand{\goesto}[2]{\xrightarrow[#1\:\to\:#2]{}}
+\newcommand{\liminfty}{\lim_{x\to+\infty}}
+\newcommand{\limminfty}{\lim_{x\to-\infty}}
+\newcommand{\limzero}{\lim_{x\to0}}
+\newcommand{ \const}{\text{cste}}
+\newcommand{\et}{\:\text{et}\:}
+\newcommand{\ou}{\:\text{ou}\:}
+\newcommand{\placeholder}{\diamond}
+\newcommand{\mediateur}{\:\text{med}\:}
+\newcommand{\milieu}{\:\text{mil}\:}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\point}[2]{(#1;\;#2)}
+\newcommand{\spacepoint}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
+\newcommand{\sh}{\operatorname{sh}}
+\newcommand{\ch}{\operatorname{ch}}
+\renewcommand{\th}{\operatorname{th}}
+\newcommand{\id}{\operatorname{id}}
+\renewcommand{\cong}{\equiv}
+
+% Document
+\begin{document}
+
+\begin{titlepage}
+	\begin{center}
+		\textit{\today}
+		\vfill
+		\textbf{\LARGE{Condensé de la MPSI}\\\Large{Mathématiques}}\\
+		\vfill
+		\large{Ewen Le Bihan\\MPSI -- Daudet}
+	\end{center}
+\end{titlepage}
+
+\newpage
+\tableofcontents
+%\pagestyle{empty}
+\newpage
+
+\section{Processus de démonstration}
+\subsection{Processus élémentaires}
+\subsubsection{Quantification universelle $\forall$}
+\label{quantification_universelle}
+Soit $a \in E$
+
+\subsubsection{Quantification existentielle $\exists$}
+\label{quantification_existentielle}
+Posons $a = \ldots \in E$
+
+\subsubsection{Quantification existentielle unique $\exists!$}
+\paragraph{Existence}
+\emph{cf. \ref{quantification_existentielle}} 
+
+\paragraph{Unicité}
+Posons $b \in E$.
+\emph{Démonstration de $b = a$} 
+
+\subsubsection{Implication $P \implies Q$}
+\label{implication}
+Supposons $P(a)$. Montrons $Q(a)$
+
+\subsubsection{Équivalence $P \iff Q$}
+Procédons par double implication.
+
+$\implies$: \emph{Démonstration de $P \implies Q$} 
+
+$\impliedby$: \emph{Démonstration de $P \impliedby Q$} 
+
+\subsubsection{Inclusion $E \subset F$}
+\emph{Démontrer $\forall x \in \mathbb{E}, x \in E \implies x \in F$}.
+
+\subsubsection{Égalité ensembliste}
+Procédons par double inclusion.
+
+$\subset$: Démonstration de $E \subset F$
+
+$\supset$: Démonstration de $E \supset F$
+
+
+\subsection{Processus de démonstration}
+On commence chaque démonstration utilisant un de ces processus par << Procédons par \emph{nom du processus}  >> 
+
+\subsubsection{Récurrence}
+\emph{Pour montrer une propriété vraie dans $E \subseteq \N$} 
+
+\paragraph{Initialisation}
+\emph{Démontrer la propriété au premier rang} 
+
+\paragraph{Hérédité}
+Démontrer $\forall n \in E, P(n) \implies P(n+1)$
+
+\paragraph{Conclusion}
+La propriété étant initialisée et héréditaire, elle est vraie pour tout $n \in E$.
+
+\subsubsection{Contraposée}
+\emph{Pour montrer $P \implies Q$ quand l'implication directe est trop compliquée}
+
+\emph{Démontrer $\lnot Q \implies \lnot P$} 
+
+\subsubsection{l'Absurde}
+
+\emph{Pour montrer $P$} 
+
+Supposons $\lnot P$
+
+$\vdots$
+
+On obtient une contradiction.
+
+On a donc $P$
+
+\subsubsection{Disjonction des cas}
+
+\paragraph{1er cas: \ldots} \ldots
+
+\paragraph{2ème cas: \ldots} \ldots
+
+$\vdots$
+
+\paragraph{$n$-ième cas: \ldots} \ldots
+
+\paragraph{Conclusion}
+\ldots
+
+\subsubsection{Analyse-Synthèse}
+\emph{Pour trouver les solutions d'une équation, inéquation, \ldots}
+
+\paragraph{Analyse}
+Soit $a \in E$. Supposons $P(a)$.
+
+\emph{Réduire le nombre de candidats possibles pour $a$} 
+
+\paragraph{Synthèse}
+Testons nos candidats
+
+\paragraph{Conclusion}
+Les solutions sont \ldots
+
+\newpage
+\section{Dérivation}
+\emph{Attention aux hypothèses!} 
+\subsection{Nombre dérivé en un point}
+\[
+	f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}
+\] 
+
+\subsection{Dérivée de $f$}
+\[
+	f' = \begin{cases}
+		I\to \R \\
+		a \mapsto f'(a)
+	\end{cases}
+\] 
+
+\subsection{Dérivée usuelles}
+\begin{itemize}
+	\item $\forall n \in \N,\quad  (\text{id}^n)' = n \text{id}^{n-1}$
+	\item $\forall n \in \N,\quad \sqrt[n]{\;}' = \frac{1}{n\sqrt[n]{\;} }  $ 
+	\item $\ln' = \frac{1}{\text{id}}$
+	\item $\exp'=\exp$
+	\item $(a^\text{id})' = x\mapsto \ln(a)a^x$
+	\item $ \sin' = \cos $ 
+	\item $\cos' = -\sin$
+	\item $\tan' = \frac{1}{\cos^2} = 1 + \tan^2$
+	\item $ \sh' = \ch $
+	\item $ \ch' = \sh$
+	\item $\th' = \frac{1}{\ch^2} = 1 + \th^2$
+	\item $\text{acos}' = \frac{-1}{\sqrt{1-\id^2} }$
+	\item $\text{asin}' = \frac{1}{\sqrt{1-\id^2} }$
+	\item $\text{atan}' = \frac{1}{1 + \id^2}$
+\end{itemize}
+
+\subsection{Dérivées de composées}
+\begin{itemize}
+	\item $\forall (\lambda, \mu) \in \R^2,\quad (\lambda u + \mu v)' = \lambda u' + \mu v'$
+	\item $(uv)' = u'v+v'u$
+	\item $(\frac{1}{v})' = \frac{-v'}{v^2}$
+	\item $(\frac{u}{v})' = \frac{u'v-v'u}{v^2}$
+	\item $(u \circ v)' = v' \cdot  (u' \circ v)$
+	\item $(u^{-1})' = \frac{1}{u' \circ u^{-1}}$
+\end{itemize}
+
+\section{Trigonométrie}
+\subsection{Cercle trigonométrique ou unité $\mathcal C$}
+
+Cercle de centre $\point{0}{0}$ et de rayon $1$.
+
+\[
+	\mathcal C = \{ \point{x}{y} \in \R^2,\: x^2 + y^2 = 1 \} = \{ \point{\cos x}{\sin x},\: x \in \R \} 
+\] 
+
+\subsection{Congruence $\cdot \cong \cdot [\cdot]$}
+
+\[
+	a \cong b\ [t] \stackrel{\text{def}}{\iff} \exists k\in \Z,\ a = b + kt
+
+\] 
+\subsubsection{Propriétés}
+
+\begin{itemize}
+	\item $\forall a, b, c, d\in \R,\ \begin{cases}
+			a \cong b\ [t]\\
+			c \cong d\ [t]
+		\end{cases} \implies a + c \cong c + d\ [t]$
+	\item $\forall a, b, \lambda \in \R,\ a\cong b\ [t] \implies \lambda a \cong \lambda b\ [\lambda t] \ \et \begin{cases}
+			\lambda a \cong \lambda b\ [t] \\
+			\lambda \in \Z
+	\end{cases}$
+\item $ \cdot \cong \cdot \ [ \cdot ]$ est \st{un RAT} une relation d'équivalence
+\end{itemize}
+
+
+
+\end{document}
