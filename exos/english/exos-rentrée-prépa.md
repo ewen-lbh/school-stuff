@@ -1,16 +1,16 @@
 ## Thème grammatical, 20 phrases
 
 Lequel d’entre vous pourrait m’expliquer les raisons de la crise économique mondiale?
-Which one of you could explain 
+Which one of you could explain to me causes of the worldwide economic crisis?
 
 Il lui faudra changer les serrures après leur départ.
-He'll have to change keyholes after we leave
+He'll have to change keyholes after we leave.
 
 Nous l’avons vu se noyer sans pouvoir le secourir.
 We saw him drown without being able to save him.
 
 Tout le monde devrait connaitre par cœur le discours de Martin Luther King.
-Everyone should know by heart MLK's speech.
+Everyone should know MLK's speech by heart.
 
 Cela fait plusieurs heures que les enfants regardent la télévision.
 The children have been watching TV for several hours.
@@ -43,13 +43,13 @@ Quand j’étais jeune, j’écoutais la radio pendant que je travaillais.
 When I was young, I listened to radio while working.
 
 Les partis disposaient de trop peu de temps pour exposer clairement leurs théories économiques.
-Parties have not enough time to clearly explain their economical theories.
+Parties didn't have enough time to clearly explain their economical theories.
 
 Dès qu’ils allumeront la radio, ils apprendront la tragique nouvelle de la pire éruption qui ait jamais touché le pays.
 Upon turning on the radio, they'll learn the tragic news about the worst erruption that has ever touched the country.
 
 Nous pouvons nous demander dans quelle mesure c’est la vérité.
-~We can ask ourselves to what point it is the truth.
+We can ask ourselves up to what point is it the truth.
 
 La première génération de robots a été introduite pour remplacer les ouvriers et faire baisser les coûts.
 The first generation of robots was introduced to replace workers and lower costs.
@@ -58,7 +58,7 @@ On peut se demander si la décision d’augmenter les salaires de 3% est une bon
 We can ask ourselves if the decision of increasing salaries by three percent is a good thing.
 
 S’il y avait eu un accident, c’est vous qui auriez été tenu pour responsable!
-If there was an acciden, it is you who would've been help responsible!
+If there was an accident, it is you who would've been held responsible!
 
 ## Se tenir au courant de l'actualité
 
@@ -76,6 +76,11 @@ George Floyd was sent to prison for 4 years after being guilty of armed aggravat
 
 George Floyd's death has definitely become a symbol of police officers being way too brutal and racist, around the whole world. Racism is definitely a big issue, especially in America where it's deeply rooted in the country's history and even genesis. 
 
-But what we see today - and, don't get me wrong, it is by all means understandable — is a mindset of revenge: instead of trying to make all ethnicities equal, we're trying to compensate injustices of the past by going the other way around. This is not a viable long-term solution, as we might see in the more-or-less distant future a society where non-black people are opressed, for example. Now, this is definitely not the case today, and obvisouly something must be made to get rid of this racial injustice. Racism is by no means a simple issue, but symptoms of this "revenge mindset" are visible throughout these interviews, especially Mariah Almack's.
+There are a number of reasons why many countries stopped killing people for crimes they comitted: 
+- What if the judge was mistaken? that person would be dead while having done nothing.
+- What if humans could learn from their mistakes (and they do), and deserved a second chance? putting them in prison will let them think about their actions deeply and stop from comitting crimes again or, even better,  try to help others in the same situation as theirs (as George Floyd tried to do).
+- What if killing someone was just not ethical? 
 
-But, as what I just said can be easily seen as extremely controversial — people are _really_ quick to judge these days — I want to make something clear: The actions of George Floyd's murderer are _not_ defendable in any way, and all of the consequences of those actions are not only understandable, but totally justified.
+What is even worse here is that George Floyd was _suspected_ of using a fake _$10_ bill. Even if the police officer knew it was true, is killing someone because of fake bill usage justifiable? Anyone can actually posses fake bills without even knowing it, because money changes hands.
+
+On top of all of this, no white man would be arrested by this police officer for this "crime", and we all know that too well.
