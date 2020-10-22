@@ -7,10 +7,12 @@
 \usepackage{tikz}
 \usepackage{lmodern}
 \usepackage{soul}
+\usepackage{float}
 
 % Packages configuration
-\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{shapes.arrows, angles, quotes}
 \renewcommand{\arraystretch}{1.4}
+\restylefloat{table}
 
 % Shortcut commands
 \newcommand{\im}{\text{Im}\,}
@@ -105,6 +107,8 @@ $\subset$: Démonstration de $E \subset F$
 
 $\supset$: Démonstration de $E \supset F$
 
+\subsubsection{Égalité entre applications}
+\emph{Démontrer $\forall x \in E,\ f(x) = g(x)$} 
 
 \subsection{Processus de démonstration}
 On commence chaque démonstration utilisant un de ces processus par << Procédons par \emph{nom du processus}  >> 
@@ -235,9 +239,223 @@ Cercle de centre $\point{0}{0}$ et de rayon $1$.
 			\lambda a \cong \lambda b\ [t] \\
 			\lambda \in \Z
 	\end{cases}$
-\item $ \cdot \cong \cdot \ [ \cdot ]$ est \st{un RAT} une relation d'équivalence
+\item $ \cdot \cong \cdot \ [ \cdot ]$ est une relation d'équivalence
+\end{itemize}
+
+\subsection{cos, sin, tan, cotan}
+\begin{center}
+\begin{tikzpicture}[scale=4]
+	\draw (0, 0) circle (1);
+	\draw (-1.25, 0) -- (1.25, 0);
+	\draw (0, -1.25) -- (0, 1.25);
+	\draw (1, -1.25) -- (1, 1.25);
+	\draw (-1.25, 1) -- (1.732051, 1);
+	\coordinate (O) at (0, 0);
+	\draw (O) node[above, left, fill=white] {$O$};
+	\coordinate (M) at (0.8660254, 0.5);
+	\draw (M) node[above, fill=white] {$M$};
+	\coordinate (I) at (1, 0);
+	\coordinate (J) at (0, 1);
+	\draw (I) node[right, fill=white]{$I$};
+	\draw (J) node[above, fill=white]{$J$};
+	\draw (O) -- (M);
+	\draw (M) -- (1, 0.5773503) node[right, fill=white]{$\tan \theta$};
+	\draw (M) -- (0.8660254, 0) node[below, fill=white]{$\cos \theta$};
+	\draw (M) -- (0, 0.5) node[left, fill=white]{$\sin \theta$};
+	\draw (M) -- (1.732051, 1) node[below]{$\cotan \theta$};
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{Théorème de Pythagore}
+\[
+	\cos^2 + \sin^2 = 1
+\] 
+
+\subsubsection{Théorème de Thalès}
+
+\begin{align*}
+	\tan = \frac{\sin}{\cos} \qquad \cotan = \frac{\cos}{\sin}
+\end{align*}
+
+\emph{Ce qui permet de trouver $\mathcal{D}_\tan$ et $\mathcal{D}_\cotan$} 
+
+\subsubsection{Propriétés}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lllll}
+		 & périodicité & positif sur \footnote{ajouter $+\text{périodicité}$ aux bornes}& parité & domaine de définition \\\hline
+		$\cos$ & $2\pi$ &  $[-\frac{\pi}{2} , \frac{\pi}{2} ]$ & paire & $\R$ \\
+		$ \sin$ & $2\pi$ &  $[0 , \pi ]$ & impaire & $\R$ \\
+		$\tan$ & $\pi$ &  $[0, \frac{\pi}{2}[$ & impaire & $\bigcup_{k \in \Z} ]-\frac{\pi}{2}+k\pi, \frac{\pi}{2}+k\pi[$ \\
+		$\cotan$ & $\pi$  & $]0, \frac{\pi}{2}] \cup [-\frac{\pi}{2}, \pi[$ & impaire & $\bigcup_{k \in \Z} ]k\pi, \pi+k\pi[$
+	
+	\end{tabular}
+	\caption{Propriétés des quatres fonctions trigonométriques}
+	\label{tab:proprietes_quatres_fonctions_trigonométriques}
+\end{table}
+
+%TODO: valeurs remarquables
+%TODO: formulaire
+
+\subsubsection{Limite de $ \frac{\sin}{\id}$ en $0$}
+
+\[
+	\frac{\sin x}{x} \xrightarrow[{x\to 0}]{}  1
+\] 
+\subsection{acos, asin, atan}
+
+\[
+	\begin{cases}
+		\forall x \in [-1, 1],\ &\exists! y \in [0, \pi],\ \cos y = x\\
+		\forall x \in [-1, 1],\ &\exists! y\in [-\frac{\pi}{2}, \frac{\pi}{2}],\ \sin y = x \\
+		\forall x \in \R,\ &\exists! y\in\ ]\!-\!\frac{\pi}{2}, \frac{\pi}{2}[,\ \tan y = x
+	\end{cases}
+\] 
+
+\subsection{Équations trigonométriques}
+\[
+	\begin{cases}
+		\cos x = a &\iff
+			\begin{cases}
+				a \in \{\operatorname{acos} a + 2k\pi,\ k \in \Z\}
+					\cup \{\operatorname{acos} a + 2k\pi,\ k\in \Z\}
+					& \text{si}\  a \in [-1, 1]\ \\
+				\emptyset & \text{sinon}
+			\end{cases}\\
+		\sin x = a &\iff \begin{cases}
+				a \in \{\operatorname{asin} a + 2k\pi,\ k\in \Z\}
+				\cup \{\pi - \operatorname{asin} a + 2k\pi,\ k\in \Z\}
+				& \text{si}\ a \in [-1, 1] \\
+			\emptyset & \text{sinon}
+		\end{cases} \\
+		\tan x = a &\iff a \in \{\operatorname{atan} a + k\pi, k \in \Z\} 
+	\end{cases}
+\] 
+
+\subsection{Amplitude $C$ \& déphasage $\phi$}
+
+\[
+	\forall A, B \in \R,\ \exists C, \phi \in \R,\ \forall x \in \R,\ A\cos x + B \sin x = C \cos(x-\phi) \\
+\] 
+
+\[
+	
+	\begin{cases}
+		C > 0 \implies &\text{$C$ est l'amplitude} \\
+					   &\text{$\phi$ est le déphasage}
+	\end{cases}
+\] 
+\subsection{Identités remarquables}
+\begin{itemize}
+	\item $\forall x \in [-1, 1],\ \operatorname{acos} x + \operatorname{asin} x = \frac{\pi}{2}$
+	\item $\forall x \in \R^\ast,\ \operatorname{atan} x + \operatorname{atan} \frac{1}{x} = \frac{\pi}{2}$
 \end{itemize}
 
 
+\section{Logique}
+
+\subsection{Table de vérité}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ccc|c}
+	Variable 1 & $\cdots$ & Variable $n$ & Formule \\\hline
+	$v$ & $\cdots$ & $v$ & $\ldots$ \\
+	$\vdots$ & ($2^n$ lignes) & & $\ldots$\\
+	$f$ & $\cdots$ & $f$ & $\ldots$
+	\end{tabular}
+	\caption{Table de vérité pour une formule à $n$ variables}
+	\label{tab:table_verité_cas_général}
+\end{table}
+
+\subsection{Connecteurs $\land$ $\lor$ $\lnot$, relations $\implies$ $\iff$}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{cc|cccc}
+	$P$ & $Q$ & $P\land Q$ & $P \lor Q$ & $P \implies Q$ & $P \iff Q$ \\\hline
+	$v$ & $v$ & $v$ & $v$ & $v$ & $v$ \\
+	$v$ & $f$ & $f$ & $v$ & $f$ & $f$ \\
+	$f$ & $v$ & $f$ & $v$ & $v$ & $f$ \\
+	$f$ & $f$ & $f$ & $f$ & $v$ & $v$ \\
+	\end{tabular}
+	\caption{Table de vérité pour $\land$, $\lor$, $\implies$ et $\iff$}
+	\label{tab:table_vérité_et_ou_implication_équivalence}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+	$P$ & $\lnot P$ \\\hline
+	$v$ & $f$ \\
+	$f$ & $v$
+	\end{tabular}
+	\caption{Table de vérité pour $\lnot$}
+	\label{tab:table_vérité_non}
+\end{table}
+
+\subsection{Égalité sémantique}
+
+$(P = Q) \iff \text{$P$ a la même table de vérité que $Q$}$
+
+\subsection{Propriétés des connecteurs $\land$ $\lor$ $\lnot$}
+
+\newcommand{\landor}{\stackrel{\land}{\lor}}
+\newcommand{\lorand}{\stackrel{\lor}{\land}}
+
+\emph{Pour $\lor$ et $\land$} 
+\begin{description}
+	\item[Idempotence] $P \landor P = P$
+	\item[Commutativité] $P \landor Q = Q \landor P$
+	\item[Associativité] $P \landor (Q \landor R) = (P \landor Q) \landor R$
+	\item[Distributivités] $P \lorand (Q \landor R) = (P \landor Q) \lorand (P \landor R)$
+\end{description}
+
+\emph{Pour $\lnot$}
+\begin{description}
+	\item[Involutivité] $\lnot \lnot P = P$
+\end{description}
+
+\subsection{Quantification existentielle unique $\exists!$}
+
+\[
+	[\exists! x \in E,\ P(x)] = [\underbrace{
+			\exists x \in E,\ P(x)}_{\text{existence}} \land \underbrace{
+			\forall \gamma_1, \gamma_2 \in E,\ P(\gamma_1) \land P(\gamma_2) \implies \gamma_1 = \gamma_2
+	}_{\text{unicité}}]
+\] 
+
+\subsection{Négation $\lnot$}
+
+\newcommand{\forallexists}{\stackrel{\forall}{\exists}}
+\newcommand{\existsforall}{\stackrel{\exists}{\forall}}
+
+\subsubsection{Négation de quantificateurs $\exists$, $\forall$}
+
+\[
+	\lnot(\forallexists x \in E,\ P(x)) = \existsforall x \in E,\ \lnot P(x)
+\] 
+
+
+\subsubsection{Négation de connecteurs ou lois de De Morgan}
+
+\[
+	\lnot(P \lorand Q) = \lnot P \landor \lnot Q
+\] 
+
+\subsubsection{Identités}
+\begin{itemize}
+	\item $P \land \lnot P = f$
+	\item $P \lor \lnot P = v$
+\end{itemize}
+
+\subsection{Formules}
+
+\begin{itemize}
+	\item $P \implies Q = \lnot P \lor Q$
+	\item $[\forall x \in \emptyset, P(x)] = v$
+	\item $[\exists x \in \emptyset, P(x)] = f$
+\end{itemize}
 
 \end{document}
