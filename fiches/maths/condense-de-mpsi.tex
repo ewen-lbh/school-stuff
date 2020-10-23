@@ -65,9 +65,8 @@
 
 \newpage
 \tableofcontents
-%\pagestyle{empty}
-\newpage
 
+\newpage
 \section{Processus de démonstration}
 \subsection{Processus élémentaires}
 \subsubsection{Quantification universelle $\forall$}
@@ -213,6 +212,7 @@ Les solutions sont \ldots
 	\item $(u^{-1})' = \frac{1}{u' \circ u^{-1}}$
 \end{itemize}
 
+\newpage
 \section{Trigonométrie}
 \subsection{Cercle trigonométrique ou unité $\mathcal C$}
 
@@ -353,6 +353,7 @@ Cercle de centre $\point{0}{0}$ et de rayon $1$.
 \end{itemize}
 
 
+\newpage
 \section{Logique}
 
 \subsection{Table de vérité}
@@ -458,4 +459,87 @@ $(P = Q) \iff \text{$P$ a la même table de vérité que $Q$}$
 	\item $[\exists x \in \emptyset, P(x)] = f$
 \end{itemize}
 
+\newpage
+\section{Équations différentielles}
+
+\subsection{Recherche de la solution particulière $y_p$}
+
+
+\begin{enumerate}
+	\item Identifier la forme du second membre
+	\item Exprimer $y_p$ avec des constantes inconnues
+	\item Développer $y' + ay = \ldots$ avec $y = y_p$
+	\item Trouver les constantes inconnues
+	\item Exprimer $y_p$
+\end{enumerate}
+
+\subsubsection{Forme du second membre}
+
+\begin{itemize}
+	\item Combinaisaon linéaire $at+b$
+	\item Constante $k$ \footnote{Ici l'expression de $y_p$ devient évidente: $y_p = t\mapsto \frac{k}{a}$}
+	\item Polynôme du second degré $at^2+bt+c$
+	\item Exponentielle $ke^{\gamma t}$
+	\item "Trigonométrique" $\alpha \cos(\omega t) + \beta \sin(\omega t)$
+\end{itemize}
+
+
+\subsubsection{Second membre nul}
+
+Second membre $= 0 \implies \begin{cases}
+	\text{équation dite homogène} \\
+	y_p = t\mapsto 0
+\end{cases}$
+
+
+\subsection{Premier ordre $y' + ay$}
+
+\[
+	\{t\mapsto ke^{-at} + y_p(t),\ k\in \R\} 
+\] 
+
+\subsection{Second ordre $ay'' + by' + cy$}
+
+\paragraph{Équation caractéristique} $ar^2 + br + c$
+
+\paragraph{Forme des solutions selon $\Delta$}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c}
+	$\Delta > 0$ & $\Delta = 0$ & $\Delta < 0$ \\\hline
+$Ae^{r_1t}+Be^{r_2t}$ & $(At+B)e^{r_0t}$ & $e^{\re(r_1)t}(A \cos(\im(r_1)t) + B \sin(\im(r_1)t))$
+	\end{tabular}
+	\caption{Forme des solutions d'une équadiff homogène du second ordre selon le signe de $\Delta$}
+	\label{tab:solutions_equadiff_selon_signe_Delta}
+\end{table}
+
+\paragraph{Ensemble des solutions}
+
+\[
+	\{t\mapsto \text{forme des solutions},\ (A, B)\in \R^2\} 
+\] 
+
+\subsection{Problème de Cauchy}
+
+\[
+	\begin{cases}
+		y' + ay &= k \\
+		y'(b) &= c \\
+	\end{cases}\quad\text{(premier ordre)}
+	\qquad
+	\begin{cases}
+		ay'' + by' + cy &= k \\
+		y''(\alpha) &= \beta \\
+		y'(\gamma) &= \delta \\
+	\end{cases}\quad\text{(second ordre)}
+\] 
+
+\begin{enumerate}
+	\item Résoudre l'équadiff
+	\item Résoudre l'équation ou le système en remplaçant $y$ par la forme des solutions
+\end{enumerate}
+
+
 \end{document}
+
