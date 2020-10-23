@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\usepackage{soul}
+\hypersetup{
+	    colorlinks=true,
+		urlcolor=blue,
+}
+\usepackage{xcolor}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\dD}{\mathcal{D}}
+\newcommand{\fF}{\mathcal{F}}
+
+\begin{document}
+\pagestyle{empty}
+
+\section*{Toussaint -- Dérivée \#2}
+
+\[
+	\id \stackrel{\text{def}}{=} \begin{cases}
+		\R_+^\ast &\to \R_+^\ast \\
+		x &\mapsto x
+	\end{cases}
+\]
+
+On a:
+
+\[
+	\begin{cases}
+		{\color{blue}\id} \in \fF(\R_+^\ast, \R_+^\ast) \\
+		{\color{red}\id} \in \fF(\R_+^\ast, \R) & \text{car}\ \R_+^\ast \subseteq \R
+	\end{cases}
+\] 
+
+Donc, d'après la définition 9 du \href{http://mpsi.daudet.free.fr/maths/polys/cours/FonctionsUsuelles/Fonctions_usuelles.pdf}{\underline{poly des fonctions usuelles}}:
+
+\[
+	{\color{blue} \id^{\color{red}{\id}}} = \exp \circ ({\color{red}\id} \cdot (\ln \circ {\color{blue}\id})) = \exp \circ (\ln \cdot \id)
+\] 
+
+De plus,
+
+\[
+	\begin{cases}
+		\exp &\in \cC(\R, \R_+^\ast) \\
+		\id \cdot \ln &\in \cC(\R_+^\ast, \R)
+	\end{cases}
+\] 
+
+D'après le théorème de dérivation des fonctions composées:
+
+\[
+	\begin{cases}
+		\exp \circ (\ln \cdot \id) &\in \dD(\R_+^\ast, \R_+^\ast) \\
+		(\exp\circ(\ln \cdot \id))' &= (\ln \cdot \id)' \cdot \exp' \circ (\ln \cdot \id)
+	\end{cases}
+\] 
+Finalement:
+
+\begin{align*}
+	(\id^{\id})' &= (\exp\circ(\ln \cdot \id))' \\
+	&= (\ln \cdot \id)' \cdot \exp' \circ (\ln \cdot \id) \\
+	&= (\ln' \cdot \id + \id' \cdot \ln) \cdot \exp\circ(\ln \cdot \id) \\
+	&= \left(\frac{\id}{\id} + 1 \cdot \ln\right) \cdot  \exp\circ(\ln \cdot \id)\\
+	&= (1+\ln) \cdot  \exp\circ(\ln \cdot \id)\\
+\end{align*}
+
+Pour ceux qui pensent que la notation avec $x\mapsto $ est mieux \st{ils ont tort}:
+
+\[
+	(x\mapsto x^x)' = x\mapsto (1+\ln x)e^{x \ln x}
+\] 
+\vfill
+\begin{center}
+	
+{\tiny \href{https://open.spotify.com/artist/6tUc6r8aNeiiT1mElcnMx9?si=dIYSUMDrT_uH0d0yJEZnrw}{\underline{Faites-moi des vues sur Spotify}}}
+
+\end{center}
+\end{document}
