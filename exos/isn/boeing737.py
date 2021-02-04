@@ -87,7 +87,7 @@ window.resizable(width=NO,height=NO)
 WIDTH = 480
 HEIGHT = 320
 RADIUS = 15
-SPEED_MODIFIER = 10
+SPEED_MODIFIER = 50
 
 X = WIDTH/2
 Y = HEIGHT/2

@@ -138,4 +138,172 @@ Avec $dq$\footnote{Notation $d\ldots$ pour les petites quantités} la charge él
 	&= \SI{6.25e-17}{} \\
 .\end{align*}
 
+\section{ARQS}
+\begin{definition}
+	\item[régime continu/régime permanent] le flot d'électron dans le conducteur se fait sans changement de débit (ou de vitesse)
+	\item[vitesse de déplacement d'un électron] quelques $\si{\milli\meter\per\second}$
+\end{definition}
+
+%TODO schéma électrique: lampe -> pile -> interrupteur[ouver] -> (loop)
+
+Lorsque l'on ferme l'interrupteur, la lampe s'allume instantanéement
+
+Le courant électrique de la lampe se comporte comme une onde de célérité $c = \SI{3E8}{\meter\per\second}$.
+
+Si le circuit a une longueur $l=\SI{3}{\centi\meter}$, le temps de propagation de l'onde est:
+
+\begin{align*}
+	t &= \frac{l}{c} \\
+	&= \frac{3}{3\cdot 10^8} \\
+	&= \SI{10e-8}{\second} \\
+	&= \SI{10}{\nano\second} \\
+.\end{align*}
+
+$\SI{10}{\nano\second}$ entre le premier et le dernier électron
+
+Si on travaille en régime \emph{variable} (l'intensité dépend du temps), avec un courant par ex. périodique, si il a une fréquence $f=\SI{1}{\kilo\hertz}$
+
+\begin{align*}
+	T&= \frac{1}{f} \\
+	&= \SI{10e-3}{\second} \\
+	&= \SI{1}{\milli\second} \\
+.\end{align*}
+
+On peut donc négliger la durée de propagation.
+
+En revanche, si $f = \SI{2}{\giga\hertz}$:
+
+\begin{align*}
+	T &= \frac{1}{2\cdot 10^9} \\
+	&= \SI{0.5e-9}{\second} \\
+	&= \SI{0.5}{\nano\second} \\
+.\end{align*}
+
+\emph{Dans ces conditions, il faudrait tenir compte de la durée de propagation}
+
+On se placera dans des conditions telles que la durée de propagation soit négligeable, c'est-à-dire tel que:
+
+\begin{align*}
+	\frac{l}{c} &\ll T \\
+	\iff l &\ll cT \\
+	\iff l &\ll \underbrace{\lambda}_{\text{longueur d'onde}}
+.\end{align*}
+
+Pour un ordinateur: $f = \SI{1}{\giga\hertz}$
+
+\begin{align*}
+	l &\ll \frac{c}{f} \\
+	&= \frac{3\cdot 10^8}{10^9} \\
+	&= \SI{0.3}{\meter} \\
+.\end{align*}
+
+En conclusion, dans l' \emph{approximation des régimes quasi-stationnaires} (ARQS)  (ou régimes lentement variables), le temps de propagation est négligeable.
+
+\section{Définitions}
+\begin{definition}
+	%TODO: graph câble avec A, B, U_AB et U_BA, V_B et V_A
+\item[tension électrique] aussi \emph{ddp}\footnote{différence de potentiel} ou différence d'état électrique: $U_{AB}: \text{V} = V_A - V_B$
+\end{definition}
+
+\paragraph{Remarque}
+\begin{align*}
+	U_{BA} = V_B - V_A = -U_{AB}
+.\end{align*}
+
+On fixe souvent arbitrairement dans un circuit une référence pour les potentiels électrique appelée la \emph{masse}, de symbole \texttt{(symbole d'une masse)}, qui signifie que, par convention, $V_{\text{masse}} = 0$
+
+Pour mesure une différence de potentiel, on utilise un voltmètre.
+
+\begin{definition}
+	\item[dipôle] composant électrique possédant deux pôles/bornes (eg. lampe, pile)
+	\item[nœud] intersection d'au moins 3 fils
+	\item[branche] portion de circuit entre 2 nœuds
+	\item[maille] succession de branches qui constituent une boucle
+	\item[réseau] circuit constitué de plusieurs mailles
+\end{definition}
+
+\section{Lois de Kirchhoff}
+\subsection{Lois des nœuds}
+En régime continu ou en régime variable (mais dans l'ARQS), il ne peut y avoir nin accumulation de charge, ni déficit de charge.
+
+%TODO: schéma nod
+
+\begin{align*}
+	i_1+i_2+i_3&=i_5+i_4 \\
+	\iff i_1 + i_2 + i_3 - i_4 - i_5 &= 0 \\
+.\end{align*}
+
+%TODO: example plus simple avec la "rivière"
+
+\paragraph{Forme généralisée}
+\begin{align*}
+	\sum_{k}^{} \epsilon_k i_k &= 0 \\
+	\text{avec}\quad \epsilon_k &= \begin{cases}
+		+1 &\text{$i_k$ arrive dans le nœud} \\
+		-1 &\text{$i_k$ part du nœud}
+	\end{cases} \\
+.\end{align*}
+
+\subsection{Loi des mailles}
+%TODO: graphe avec ABCD en carré, quatres dipoles et les flèches de tension
+
+\begin{align*}
+	U_{AD}+U_{BA}+U_{CB}+U_{DC} &= V_A-V_D+V_B-V_A+V_C-V_B+V_D-V_C \\
+	&= 0 \\
+.\end{align*}
+
+(voir sur le polycopié)
+
+\paragraph{Forme générale}
+
+\begin{align*}
+	\sum_{k}^{} \epsilon_k U_k &= 0 \\
+	\epsilon_k &= \begin{cases}
+		+1 &\text{$U_k$ est dans le même sens que le sens de parcours} \\
+		-1 &\text{sinon}
+	\end{cases} \\
+.\end{align*}
+
+\subsection{Puissance}
+Soit un dipôle
+
+%TODO: graph dipole \mathcal{D} avec i et u
+
+Énergie électrique reçue:
+
+\begin{align*}
+	\delta_w &:= u \cdot dq \\
+	\text{or}\quad i &= \frac{dq}{dt} \\
+	\text{donc}\quad dq &= i\cdot dt \\
+	\text{et}\quad \delta_w: J = i\cdot u\cdot dt
+.\end{align*}
+
+\begin{align*}
+	P &= u\cdot i \\
+.\end{align*}
+
+Si $P > 0$, le dipôle est un récepteur. sinon il fournit, et est un générateur.
+
+\subsection{Tension dans un fil}
+Soit un fil
+
+%TODO grapg fil A->B with i
+
+Les point $A$ et $B$ sont au même état électrique: $V_A = V_B \implies U_{AB}=0$, \emph{même si un courant circule}.
+
+Soit un interrupteur ouvert
+
+%TODO graph
+
+\begin{align*}
+	I=0
+.\end{align*}
+
+car l'interrupteur ouvert n'est traversé par aucun courant.
+
+\paragraph{Attention} $U_{AB}$ n'est cependant pas connue:
+une prise EDF a une tension non-nulle, mais nulle lorsque disjonctée.
+
+Lorsque l'interrupteur est fermé, il est équivalent à un fil.
+
 \end{document}

@@ -13,6 +13,7 @@ def estEgyptienne(lst):
 ## 1/b
 
 from copy import deepcopy
+from typing import List
 
 
 def prod(l):
@@ -34,6 +35,8 @@ def rationnel(lst):
         numerator_part.remove(i)
         numerator += [prod(numerator_part)]
     return sum(numerator), prod(lst)
+
+# 1/c
 
 """
   k  |  a | b    | m | lst = L
@@ -82,8 +85,21 @@ b_(k+1) = b_k * m_k
 ## 1/e
 
 """
-1 <= a_(k+1) < a_k
+[bk/ak]         < bk/ak      car si b_k/a_k = [b_k/a_k], alors b_k/a_k in NN et donc a_k divise b_k, mais a_(k+1) n'est défini que si a_k ne divise pas b_k
+ak[bk/ak+1]     < bk+ak
+ak[bk/ak +1]-bk < ak
+ak+1            < ak
+"""
 
+## 1 / f
+
+"""
+a_(k+1)/b_(k+1) = a_k * m_k - b_k  /  a_k * m_k
+                = 1  -  b_k/(a_k * m_k)
+
+a_k/b_k - a_(k+1)/b_(k+1) = a_k/b_k - 1 + b_k/(a_k * m_k)
+                          = (a_k² * m_k - a_k * m_k + b_k²)/(b_k * a_k * m_k)
+                          = ()
 """
 
 ## 2/a
@@ -110,7 +126,7 @@ Le bord de abababa est ababa
 def bord(u):
     """
     éxécution de bord("undébutuntructrucundébut")
-    i  suffix                  estPrefixe
+    i  suffix                  estPréfixe
     23 ndébutuntructrucundébut False
     22 débutuntructrucundébut  False
     21 ébutuntructrucundébut   False
@@ -129,6 +145,7 @@ def bord(u):
     8  cundébut                False
     7  undébut                 True
     """
+    suffix = ""
     for i in reversed(range(0, len(u))):
         suffix = u[len(u)-i:len(u)]
         if estPréfixe(u, suffix):
@@ -137,6 +154,20 @@ def bord(u):
 
 # 2/c
 
+def estFacteur(u, v):
+    if len(v) > len(u):
+        return False
+    for i in range(len(u)):
+        chunk = u[i:i+len(v)]
+        if estPréfixe(chunk, v):
+            return True
+    return False
 
+print(estFacteur("unmotavecunfacteuravectree", "unf"))
 
 # v.join([w₁, w₂]) = w
+
+# 2 / d
+
+def estFacteurMP(u, v, bord: List[int]) -> bool:
+    pass
