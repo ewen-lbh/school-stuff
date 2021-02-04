@@ -125,6 +125,7 @@ le seul cas où 2. pourra se produire est si la ville x ou y n'existe pas dans l
 
 ## Exercice 2.5
 
+
 def compute_routes(plan: Plan) -> list[list[int]]:
     routes: Plan = plan[0][1] * créerTabVide(2)
     for city, city_neighbors in enumerate(plan[1 : plan[0][0] + 1]):
@@ -140,6 +141,7 @@ def compute_routes(plan: Plan) -> list[list[int]]:
             ):
                 ajouteDansTab(routes, [city, neighbor])
     return routes
+
 
 def afficheToutesLesRoutes(plan: Plan) -> None:
     routes = compute_routes(plan)
@@ -215,23 +217,28 @@ def voisinesDeCouleur(
     plan: Plan, couleur: list[int], target_city: int, target_color: int
 ) -> list[int]:
     neighbors = créerTabVide(plan[target_city][0])
-    for neighbor in plan[target_city][1:plan[target_city][0]+1]:
+    for neighbor in plan[target_city][1 : plan[target_city][0] + 1]:
         print(neighbor, couleur[neighbor])
         if couleur[neighbor] == target_color:
             ajouteDansTab(neighbors, neighbor)
     return neighbors
+
 
 header(3, 2, "Voisines de 1 ayant la couleur 2")
 print(voisinesDeCouleur(fig_2, fig_2_colors, 1, 2))
 
 ## 3.3
 
-def voisinesDeLaListeDeCouleur(plan: Plan, couleur: list[int], liste: list[int], c: int):
+
+def voisinesDeLaListeDeCouleur(
+    plan: Plan, couleur: list[int], liste: list[int], c: int
+):
     neighbors = créerTabVide(sum(plan[city][0] for city in liste))
     for city in liste:
         for neighbor in voisinesDeCouleur(plan, couleur, city, c)[1:]:
             ajouteDansTab(neighbors, neighbor)
     return neighbors
+
 
 header(3, 3, "Voisines de 1, 5, 7 ayant la couleur 2")
 print(voisinesDeLaListeDeCouleur(fig_2, fig_2_colors, [1, 5, 7], 2))
@@ -240,7 +247,20 @@ print(voisinesDeLaListeDeCouleur(fig_2, fig_2_colors, [1, 5, 7], 2))
 ## 3.4
 
 header(3, 4, "Existance d'un chemin en arc-en-ciel ?")
-def existeCheminArcEnCiel(plan: Plan, couleur: list[int], k: int, s: int, t: int) -> bool:
-    current_route = []
-    for route in compute_routes(plan):
-        start, stop = route
+
+
+def existeCheminArcEnCiel(
+    plan: Plan, couleur: list[int], k: int, s: int, t: int
+) -> bool:
+    current_path = []
+    start, end = [None]*2
+    print(compute_routes(plan))
+    for route in compute_routes(plan)[1:plan[0]+1]:
+        # Check if this route forms a path with the preceding
+        if route[0] != end:
+            continue
+        start,end = route
+        current_path += route
+        print(current_path)
+
+existeCheminArcEnCiel(fig_2, fig_2_colors, 3, 6, 4)
