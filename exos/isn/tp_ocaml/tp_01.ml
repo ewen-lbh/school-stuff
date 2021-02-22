@@ -132,7 +132,7 @@ let () =
 	!count *)
 
 let rec n_adic_valuation n x = match x with
-	|_ when x mod 2 = 1 -> 0
+	|_ when x mod 2 != 0 -> 0
 	|_ -> 1 + n_adic_valuation n (x/n)
 
 let v2 = n_adic_valuation 2
